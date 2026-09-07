@@ -54,4 +54,4 @@ Feature-detected WebMCP tools expose menu/cart reads and validated cart quantity
 
 ## Sushi journal
 
-The site now includes a searchable German/Ukrainian knowledge library at `/wissen`, 45 sourced articles, and 28 product detail pages at `/menu/{id}`. See `docs/sushi-knowledge.md` for provenance, editing and validation. Run `npm test` for the knowledge/cart regression suite. The downloadable structured knowledge file is regenerated from `lib/knowledge-data.json` during every build.
+The site now includes a searchable German/Ukrainian knowledge library at `/wissen`, 46 sourced articles, and 40 product detail pages at `/menu/{id}`. See `docs/sushi-knowledge.md` for provenance, editing and validation. Run `npm test` for the knowledge/cart regression suite. The downloadable structured knowledge file is regenerated from `lib/knowledge-data.json` during every build.

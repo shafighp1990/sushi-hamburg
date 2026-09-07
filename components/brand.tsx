@@ -1,0 +1,1 @@
+export function Brand(){return <a className="brand restaurant-brand" href="/" aria-label="Sushi HH · Hamburg"><img src="/brand/sushi-hh-logo.svg" width="114" height="87" alt="Sushi HH" fetchPriority="high"/></a>}

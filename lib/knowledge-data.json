@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "reviewed": "2026-09-07",
   "sources": [
     {
@@ -238,6 +238,13 @@
       "title": "Neue Rollen / Новинки",
       "publisher": "Sushi Hamburg · vom Restaurant bereitgestellt",
       "url": "/menus/new.jpg",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "menu-signature",
+      "title": "Philadelphia, California & Drachen / Філадельфія, Каліфорнія та дракони",
+      "publisher": "Sushi HH · vom Restaurant bereitgestellt",
+      "url": "/menus/signature.jpg",
       "accessed": "2026-09-07"
     }
   ],
@@ -945,15 +952,17 @@
       },
       "body": {
         "de": [
-          "Tobiko sind kleine Eier vom Flugfisch. Gesalzen werden sie unter anderem als Sushi-Topping verwendet. Tobiko und Masago sind nicht derselbe Rogen. Unsere aktuelle Karte nennt Masago; Tobiko ist hier ein Begriff zum Vergleichen."
+          "Tobiko sind kleine Eier vom Flugfisch. Gesalzen werden sie unter anderem als Sushi-Topping verwendet. Tobiko und Masago sind nicht derselbe Rogen. Die ergänzte Karte nennt Tobiko etwa bei California mit Lachs und Goldenem Drachen.",
+          "Bei Rotem Drachen steht im Original „сир тобіко“ (wörtlich „Tobiko-Käse“). Die genaue Bedeutung dieser ungewöhnlichen Bezeichnung bitte mit dem Restaurant klären."
         ],
         "uk": [
-          "Тобіко — дрібні ікринки летючої риби. Засоленими їх використовують, зокрема, як верхній шар суші. Тобіко й масаго — різна ікра. В актуальному меню зазначено масаго; тобіко наведено для порівняння."
+          "Тобіко — дрібні ікринки летючої риби. Засоленими їх використовують, зокрема, як верхній шар суші. Тобіко й масаго — різна ікра. У доданому меню тобіко зазначено, наприклад, у Каліфорнії з лососем і Золотому драконі.",
+          "У складі Червоного дракона в оригіналі написано «сир тобіко». Точне значення цього незвичного позначення уточнюйте в ресторані."
         ]
       },
       "sources": [
         "tobiko",
-        "menu-new"
+        "menu-signature"
       ],
       "related": [
         "masago"
@@ -1538,6 +1547,33 @@
           "Дотримуйтеся холодового ланцюга; швидкопсувні начинки й суші, які не їсте одразу, зберігайте за температури не вище 4 °C. Працюйте малими порціями.",
           "Термічно оброблювані начинки готуйте повністю: коротке обсмаження цього не замінює. Швидко охолоджуйте й працюйте чистим інвентарем."
         ]
+      }
+    },
+    {
+      "id": "salat",
+      "category": "ingredients",
+      "title": {
+        "de": "Salat · California mit Aal",
+        "uk": "Салат · Каліфорнія з вугрем"
+      },
+      "body": {
+        "de": [
+          "Die ergänzte Speisekarte nennt Salat als Zutat der California-Rolle mit Aal. Eine bestimmte Blattsalatsorte ist nicht angegeben. Maßgeblich ist die Zusammensetzung des jeweiligen Produkts; Salat wird nicht für andere Rollen vorausgesetzt."
+        ],
+        "uk": [
+          "Додане меню вказує салат у складі Каліфорнії з вугрем. Конкретний сорт листового салату не зазначений. Дивіться склад відповідної страви: це не означає наявності салату в інших ролах."
+        ]
+      },
+      "sources": [
+        "menu-signature"
+      ],
+      "related": [
+        "unagi",
+        "uramaki"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
       }
     }
   ]
