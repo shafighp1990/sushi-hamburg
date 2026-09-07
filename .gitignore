@@ -40,3 +40,5 @@ next-env.d.ts
 # Full-resolution photo archive stays on the project drive (1.1 GB).
 /assets/originals/
 .dev.vars*
+
+*.tsbuildinfo
