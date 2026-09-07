@@ -1,0 +1,43 @@
+export type Language = 'de'|'uk';
+export type Category = 'sets'|'new'|'classics'|'maki';
+export type Product = {id:string;category:Category;name:Record<Language,string>;description:Record<Language,string>;price:number;weight?:number;poster:'sets'|'new'|'classics';crop:[number,number,number,number];};
+const make=(id:string,category:Category,de:string,uk:string,price:number,weight:number|undefined,descDe:string,descUk:string,poster:Product['poster'],crop:Product['crop']):Product=>({id,category,name:{de,uk},description:{de:descDe,uk:descUk},price:price*100,weight,poster,crop});
+export const products:Product[]=[
+make('mix','sets','Mix Set','Сет «Мікс»',41,1100,'Philadelphia Classic, California mit Lachs, California mit Aal und Gurken-Maki. Weitere Bestandteile bitte erfragen.','Філадельфія класична, Каліфорнія з лососем, Каліфорнія з вугрем, макі з огірком. Повний склад уточнюйте.','sets',[0,105,414,199]),
+make('salmon-hit','sets','Lachs Hit Set','Сет «Лососевий хіт»',41,1100,'Philadelphia Classic, Käserolle mit Lachs und Käserolle mit Garnele. Weitere Bestandteile bitte erfragen.','Філадельфія класична, сирний рол з лососем, сирний рол з креветкою. Повний склад уточнюйте.','sets',[443,105,418,199]),
+make('bonsai','sets','Bonsai Set','Бонсай сет',36,1100,'Bonito, Philadelphia, Kurimi und Kabia.','Боніто рол, Філадельфія рол, Курімі рол, Кабія рол.','sets',[872,105,408,199]),
+make('dragons','sets','Drei Drachen Set','Сет три дракони',38,810,'Roter Drache, Goldener Drache und Grüner Drache.','Червоний дракон, Золотий дракон, Зелений дракон.','sets',[0,442,419,185]),
+make('maki-set','sets','Maki Set','Макі сет',30,620,'2 × Sake-Maki, Avocado-Maki, Spicy-Maki, Unagi-Maki und Gurken-Maki.','Макі сяке 2 шт., макі з авокадо, макі спайсі, макі уґай, макі з огірком.','sets',[443,442,418,185]),
+make('premium','sets','Premium Set','Преміум сет',46,1100,'Grüner Drache, Goldener Drache, Philadelphia Premium und Ebi.','Зелений дракон рол, Золотий дракон, Філадельфія преміум рол, Ебі.','sets',[872,442,408,185]),
+make('bonito','new','Bonito Roll','Боніто рол',9,undefined,'Reis, Nori, Lachs, Avocado, Gurke, Röstzwiebeln.','Рис, норі, лосось, авокадо, огірок, смажена цибуля.','new',[0,68,260,142]),
+make('wild-shrimp','new','Wild Shrimp Roll','Дика креветка рол',10,undefined,'Reis, Nori, Sesam, Schneekrabbe, Garnele, Gurke, Spicy-Sauce.','Рис, норі, кунжут, сніжний краб, креветка, огірок, спайсі соус.','new',[265,68,245,142]),
+make('ebi-premium','new','Ebi Premium Roll','Ебі Преміум рол',12,undefined,'Reis, Nori, Tigergarnele, Lachs, Gurke, Philadelphia-Frischkäse, Masago.','Рис, норі, креветка тигрова, лосось, огірок, сир Філадельфія, ікра масаго.','new',[514,68,249,142]),
+make('kabia','new','Kabia Roll','Кабія рол',9,undefined,'Reis, Nori, Schneekrabbe, Avocado, Masago.','Рис, норі, сніжний краб, авокадо, ікра масаго.','new',[772,68,247,142]),
+make('kurimi','new','Kurimi Roll','Курімі рол',9,undefined,'Reis, Nori, Garnele, Avocado, Gurke, Philadelphia-Frischkäse.','Рис, норі, креветка, авокадо, огірок, сир Філадельфія.','new',[1020,68,260,142]),
+make('sakana','new','Sakana Roll','Сакана рол',10,undefined,'Reis, Nori, Lachs, Gurke, Schneekrabbe, Avocado.','Рис, норі, лосось, огірок, сніжний краб, авокадо.','new',[0,352,253,153]),
+make('salmon-tartare','new','Cheese Salmon Tartare','Сирний рол з лососевим тартаром',12,undefined,'Nori, Lachs-Krabben-Tatar, Masago, Cheddar, Reis, Gurke, Spicy-Sauce.','Норі, тартар лосось–сніжний краб, ікра масаго, тостерний сир Чеддер, рис, огірок, соус Спайсі.','new',[260,352,248,153]),
+make('tarutarosu','new','Tarutarosu Roll','Тарутаросу рол',10,undefined,'Reis, Nori, Lachs, Sesam, Schneekrabbe, Philadelphia-Frischkäse, Gurke, Spicy-Sauce.','Рис, норі, лосось, кунжут, сніжний краб, сир Філадельфія, огірок, соус спайсі.','new',[516,352,248,153]),
+make('sesame-shrimp','new','Sesam Philadelphia · Garnele','Філадельфія в кунжуті з підсмаженою креветкою',12,undefined,'Nori, Reis, gebratene Garnele, Sesam, Lachs, Philadelphia-Frischkäse, Gurke.','Норі, рис, підсмажена креветка, кунжут, лосось, сир Філадельфія, огірок.','new',[772,352,248,153]),
+make('yakuza','new','Yakuza Roll','Якудза рол',13,undefined,'Gebraten. Reis, Nori, Tigergarnele, Philadelphia-Frischkäse, Masago, Hartkäse, Krabbenfleisch, Spicy-Mayonnaise.','Підсмажений. Рис, норі, креветка тигрова, сир Філадельфія, ікра масаго, твердий сир, крабове м’ясо, спайсі майонез.','new',[1020,352,260,153]),
+make('cheese-shrimp','classics','Cheese Roll · Garnele','Сирний рол з креветкою',9,250,'Reis, Nori, Philadelphia-Frischkäse, Gurke, Cheddar, Garnele.','Рис, норі, сир Філадельфія, огірок, сир Чеддер, креветка.','classics',[0,58,315,142]),
+make('cheese-salmon','classics','Cheese Roll · Lachs','Сирний рол з лососем',9,250,'Reis, Nori, Philadelphia-Frischkäse, Cheddar, Lachs, Gurke.','Рис, норі, сир Філадельфія, сир Чеддер, лосось, огірок.','classics',[319,58,315,142]),
+make('futomaki-salmon','classics','Futomaki · Lachs','Футомакі з лососем',9,240,'Reis, Nori, Philadelphia-Frischkäse, Lachs, Gurke.','Рис, норі, сир Філадельфія, лосось, огірок.','classics',[636,58,310,142]),
+make('futomaki-surimi','classics','Futomaki · Surimi','Футомакі сурімі',8,240,'Reis, Nori, Philadelphia-Frischkäse, Surimi, Gurke.','Рис, норі, сир Філадельфія, сурімі, огірок.','classics',[953,58,311,142]),
+make('futomaki-avocado','classics','Futomaki · Avocado & Gurke','Футомакі з огірком та авокадо',7,240,'Reis, Nori, Philadelphia-Frischkäse, Avocado, Gurke.','Рис, норі, сир Філадельфія, авокадо, огірок.','classics',[0,302,315,141]),
+make('maki-takuan','maki','Takuan Maki','Макі Текуан',5,130,'Reis, Nori, eingelegter Rettich (Takuan).','Рис, норі, текуан.','classics',[319,302,315,141]),
+make('maki-philadelphia','maki','Philadelphia Maki','Макі Філадельфія',5,120,'Reis, Nori, Philadelphia-Frischkäse.','Рис, норі, Філадельфія.','classics',[636,302,310,141]),
+make('maki-spicy','maki','Spicy Maki','Макі спайсі',5,120,'Reis, Nori, Garnele, Spicy-Sauce.','Рис, норі, креветка, соус спайсі.','classics',[953,302,311,141]),
+make('maki-avocado','maki','Avocado Maki','Макі з авокадо',4,120,'Reis, Nori, Avocado.','Рис, норі, авокадо.','classics',[0,552,315,164]),
+make('maki-sake','maki','Sake Maki','Макі сяке',5,130,'Reis, Nori, Lachs.','Рис, норі, лосось.','classics',[319,552,315,164]),
+make('maki-cucumber','maki','Gurken Maki','Макі з огірком',4,120,'Reis, Nori, Gurke.','Рис, норі, огірок.','classics',[636,552,310,164]),
+make('maki-unagi','maki','Unagi Maki','Макі з вугрем',6,120,'Reis, Nori, Aal, Unagi-Sauce, Sesam.','Рис, норі, вугор, соус унагі, кунжут.','classics',[953,552,311,164]),
+];
+export const money=(cents:number)=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(cents/100);
+export type Cart=Record<string,number>;
+export function cleanCart(input:unknown):Cart {if(!input||typeof input!=='object'||Array.isArray(input))return {}; const result:Cart={};for(const p of products){const q=(input as Cart)[p.id];if(Number.isInteger(q)&&q>0&&q<=50)result[p.id]=q;}return result;}
+export const subtotal=(cart:Cart)=>products.reduce((sum,p)=>sum+p.price*(cart[p.id]||0),0);
+export function berlinNow(now=new Date()){const p=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(now).map(x=>[x.type,x.value]));return {date:`${p.year}-${p.month}-${p.day}`,time:`${p.hour}:${p.minute}`};}
+export function deliveryDates(now=new Date()){const local=berlinNow(now);const result:string[]=[];for(let i=0;i<22;i++){const day=new Date(local.date+'T12:00:00Z');day.setUTCDate(day.getUTCDate()+i);const date=day.toISOString().slice(0,10);if([0,4,5,6].includes(day.getUTCDay())&&(i!==0||local.time<'13:00'))result.push(date);}return result;}
+export function deliveryFee(zone:string):number|null {return zone==='A'?600:zone==='B'?900:null;}
+export function validateDelivery(date:string,time:string,now=new Date()){const local=berlinNow(now);return deliveryDates(now).includes(date)&&/^([01]\d|2[01]):[0-5]\d$/.test(time)&&time<='21:00'&&(date!==local.date||time>local.time);}
+export const TELEGRAM='https://t.me/sushi_hamburg_chat';
