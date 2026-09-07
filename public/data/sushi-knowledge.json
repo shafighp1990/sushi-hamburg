@@ -1,0 +1,1544 @@
+{
+  "version": 1,
+  "reviewed": "2026-09-07",
+  "sources": [
+    {
+      "id": "maff-history",
+      "title": "Fermented fishery products",
+      "publisher": "MAFF · Japan",
+      "url": "https://www.maff.go.jp/e/policies/market/dento_syoku/bunrui/suisan-hakkou.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "jta-history",
+      "title": "Sushi: from preservation to a local specialty",
+      "publisher": "Japan Tourism Agency",
+      "url": "https://www.mlit.go.jp/tagengo-db/en/R1-01241.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "embassy",
+      "title": "Sushi: its history and varieties",
+      "publisher": "Embassy of Japan · Singapore",
+      "url": "https://www.sg.emb-japan.go.jp/JCC/E-Magazine-Apr-2023-Sushi.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "jnto",
+      "title": "Sushi in Japan",
+      "publisher": "Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/guide/sushi-in-japan/",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "glossary",
+      "title": "Sushi",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/sushi.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "global",
+      "title": "Transition and Diversification of Sushi",
+      "publisher": "Kikkoman Food Forum · Japan",
+      "url": "https://www.kikkoman.com/en/culture/foodforum/the-japanese-table/38-4_sushi.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "hosomaki",
+      "title": "Making Nori-maki",
+      "publisher": "Kikkoman Food Forum · Japan",
+      "url": "https://www.kikkoman.com/en/culture/foodforum/japanese-style/26-1.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "futomaki",
+      "title": "Futomaki-zushi",
+      "publisher": "MAFF · Japan",
+      "url": "https://www.maff.go.jp/e/policies/market/japan-cuisine/japan/2/index.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "chiba",
+      "title": "Futomaki-zushi · Chiba",
+      "publisher": "MAFF · Japan",
+      "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/1166/index.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "temaki",
+      "title": "Temaki-zushi",
+      "publisher": "Kikkoman Food Forum · Japan",
+      "url": "https://www.kikkoman.com/en/culture/foodforum/recipe/traditional-38-1.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "inari",
+      "title": "Inari-zushi · Aichi",
+      "publisher": "MAFF · Japan",
+      "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/5322/index.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "oshi",
+      "title": "Oshizushi · Tokushima",
+      "publisher": "MAFF · Japan",
+      "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/3121/index.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "gunkan",
+      "title": "Gunkan with prawn and cucumber",
+      "publisher": "Kikkoman · Europe",
+      "url": "https://www.kikkoman.eu/recipes/detail/gunkan-maki-sushi-with-prawn-cucumber",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "temari",
+      "title": "Temari Sushi",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/recipe/00001866.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "chirashi",
+      "title": "Chirashi-zushi",
+      "publisher": "MAFF · Japan",
+      "url": "https://www.maff.go.jp/e/policies/market/japan-cuisine/japan/20/index.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "california",
+      "title": "California Roll",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/recipe/00007094.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "insideout",
+      "title": "Avocado and Shrimp Sushi Rolls",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/recipe/00001865.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "jumbo",
+      "title": "Futo-maki (Jumbo Sushi Rolls)",
+      "publisher": "Kikkoman Food Forum · Japan",
+      "url": "https://www.kikkoman.com/en/culture/foodforum/recipe/traditional-28-1.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "rice",
+      "title": "How to make sushi rice",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/basic/rice/sushimeshi.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "nori",
+      "title": "Roasted nori",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/yakinori.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "wasabi",
+      "title": "Wasabi",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/wasabi.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "tuna",
+      "title": "Tuna",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/sashimimaguro.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "eel",
+      "title": "Eel: unagi and anago",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/eel.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "tobiko",
+      "title": "Tobiko",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/tobiko.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "soy",
+      "title": "Soy sauce",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/soysauce.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "kombu",
+      "title": "Kombu",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/kombu.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "ginger",
+      "title": "Ginger",
+      "publisher": "Kikkoman · Japan",
+      "url": "https://www.kikkoman.com/en/cookbook/glossary/shouga.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "takuan",
+      "title": "Takuan: pickled daikon",
+      "publisher": "Kikkoman Food Forum · Japan",
+      "url": "https://www.kikkoman.com/en/culture/foodforum/recipe/traditional-28-2.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "masago",
+      "title": "Seasoned capelin roe",
+      "publisher": "JFC · Japanese food group, USA",
+      "url": "https://www.jfc.com/product/item/89879",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "surimi",
+      "title": "Alaska pollock and surimi products",
+      "publisher": "Nissui · Japan",
+      "url": "https://www.nissui.co.jp/english/innovative_food_solutions/009.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "safe",
+      "title": "The Making of Safe Sushi and Sashimi",
+      "publisher": "Centre for Food Safety · Hong Kong",
+      "url": "https://www.cfs.gov.hk/english/programme/programme_haccp/programme_haccp_making.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "raw",
+      "title": "Raw Aquatic Food Products",
+      "publisher": "Centre for Food Safety · Hong Kong",
+      "url": "https://www.cfs.gov.hk/english/multimedia/multimedia_pub/multimedia_pub_fsf_118_01.html",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "menu",
+      "title": "Original-Speisekarten / Оригінальні меню",
+      "publisher": "Sushi Hamburg · vom Restaurant bereitgestellt",
+      "url": "/menus/classics.jpg",
+      "accessed": "2026-09-07"
+    },
+    {
+      "id": "menu-new",
+      "title": "Neue Rollen / Новинки",
+      "publisher": "Sushi Hamburg · vom Restaurant bereitgestellt",
+      "url": "/menus/new.jpg",
+      "accessed": "2026-09-07"
+    }
+  ],
+  "articles": [
+    {
+      "id": "geschichte",
+      "category": "history",
+      "title": {
+        "de": "Von konserviertem Fisch zu Sushi",
+        "uk": "Від збереження риби до суші"
+      },
+      "body": {
+        "de": [
+          "Vorläufer des Sushi nutzten Salz, Reis und Fermentation, um Fisch haltbar zu machen. Japanische Quellen verorten diese Tradition in Teilen Südostasiens beziehungsweise Chinas; ein einziger eindeutig belegter Erfindungsort lässt sich daraus nicht ableiten.",
+          "In Japan ist Sushi seit dem 8. Jahrhundert schriftlich belegt. Beim frühen Narezushi diente Reis der Fermentation; gegessen wurde vor allem der Fisch. In der Muromachi-Zeit verkürzte sich die Reifung, und auch der Reis wurde gegessen.",
+          "Mit zugesetztem Essig konnte man den säuerlichen Reis ohne lange Fermentation herstellen. Diese Entwicklung führte zum schnellen Sushi und später zu den heute bekannten Formen."
+        ],
+        "uk": [
+          "Попередники суші використовували сіль, рис і ферментацію для збереження риби. Японські джерела пов’язують цю традицію з частинами Південно-Східної Азії або Китаю; вони не встановлюють єдиного безсумнівного місця винайдення.",
+          "У Японії письмові згадки про суші відомі з VIII століття. У ранніх наредзуші рис допомагав ферментації, а їли переважно рибу. У період Муроматі витримка скоротилася, і рис теж стали їсти.",
+          "Додавання оцту дозволило отримувати кислуватий рис без тривалої ферментації. Так розвинулися швидкі суші й згодом знайомі сьогодні форми."
+        ]
+      },
+      "sources": [
+        "maff-history",
+        "jta-history"
+      ],
+      "related": [
+        "narezushi",
+        "nigiri",
+        "sushi-reis"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "narezushi",
+      "category": "types",
+      "title": {
+        "de": "Narezushi · fermentierte Tradition",
+        "uk": "Наредзуші · ферментована традиція"
+      },
+      "body": {
+        "de": [
+          "Fisch wird zusammen mit Salz und Reis über längere Zeit fermentiert. Funazushi ist ein bekanntes japanisches Beispiel. Das ist ein anderes Verfahren als heutige Rollen mit Essigreis.",
+          "Diese historische Beschreibung ist keine Anleitung zur Fermentation zu Hause."
+        ],
+        "uk": [
+          "Рибу тривалий час ферментують із сіллю та рисом. Відомий японський приклад — фунадзуші. Це інший процес, ніж приготування сучасних ролів з оцтовим рисом.",
+          "Історичний опис не є інструкцією для домашньої ферментації."
+        ]
+      },
+      "sources": [
+        "maff-history"
+      ],
+      "related": [
+        "geschichte"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "nigiri",
+      "category": "types",
+      "title": {
+        "de": "Nigiri · von Hand geformt",
+        "uk": "Ніґірі · сформовані вручну"
+      },
+      "body": {
+        "de": [
+          "Eine kleine, längliche Portion Essigreis trägt einen Belag: etwa Fisch, gegarte Meeresfrüchte oder Omelett. Nigiri ist nicht automatisch roh. Die Form wurde im späten Edo-Zeitalter populär."
+        ],
+        "uk": [
+          "На невелику довгасту порцію оцтового рису кладуть рибу, приготовані морепродукти або омлет. Ніґірі не обов’язково сирі. Ця форма набула популярності наприкінці періоду Едо."
+        ]
+      },
+      "sources": [
+        "glossary"
+      ],
+      "related": [
+        "sushi-reis",
+        "maguro",
+        "sicherheit"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "hosomaki",
+      "category": "types",
+      "title": {
+        "de": "Hosomaki · die schmale Rolle",
+        "uk": "Хосомакі · тонкий рол"
+      },
+      "body": {
+        "de": [
+          "Eine schmale Nori-Rolle mit Reis und meist einer Hauptfüllung, zum Beispiel Gurke oder Fisch. Eine Bambusmatte hilft beim Rollen; anschließend wird die Rolle in mundgerechte Stücke geschnitten."
+        ],
+        "uk": [
+          "Тонкий рол із норі, рисом і зазвичай однією основною начинкою, наприклад огірком або рибою. Бамбуковий килимок допомагає скрутити рол, який потім нарізають на невеликі шматочки."
+        ]
+      },
+      "sources": [
+        "hosomaki"
+      ],
+      "related": [
+        "nori",
+        "rollen",
+        "gurke",
+        "lachs"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "futomaki",
+      "category": "types",
+      "title": {
+        "de": "Futomaki · mehrere Füllungen",
+        "uk": "Футомакі · кілька начинок"
+      },
+      "body": {
+        "de": [
+          "Eine dickere Rolle kombiniert mehrere Zutaten im Nori-Mantel. Fisch ist möglich, aber nicht erforderlich. Regionale Festtagsrollen aus Chiba können beim Anschneiden aufwendige Muster zeigen. Die Frischkäsevarianten auf unserer Karte sind die Rezepte dieses Restaurants."
+        ],
+        "uk": [
+          "Товстіший рол поєднує кілька інгредієнтів усередині норі. Риба можлива, але не обов’язкова. Святкові роли з Тіби можуть утворювати складні візерунки на зрізі. Варіанти з крем-сиром у нашому меню — рецепти цього ресторану."
+        ]
+      },
+      "sources": [
+        "futomaki",
+        "chiba"
+      ],
+      "related": [
+        "rollen",
+        "nori",
+        "frischkaese"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "uramaki",
+      "category": "types",
+      "title": {
+        "de": "Uramaki · Reis außen",
+        "uk": "Урамакі · рис зовні"
+      },
+      "body": {
+        "de": [
+          "Bei Inside-out-Rollen liegt der Reis außen und Nori innen. California Rolls sind ein bekanntes Beispiel; Füllungen unterscheiden sich je nach Rezept. Eine Kombination ist Surimi mit Avocado. Masago, Tobiko und Sesam sind unterschiedliche mögliche Toppings."
+        ],
+        "uk": [
+          "У ролах навиворіт рис розташований зовні, а норі — всередині. Відомий приклад — Каліфорнія; начинка залежить від рецепта. Один із варіантів — сурімі з авокадо. Масаго, тобіко й кунжут — різні можливі посипки."
+        ]
+      },
+      "sources": [
+        "california"
+      ],
+      "related": [
+        "inside-out-rollen",
+        "surimi",
+        "masago",
+        "tobiko"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "temaki",
+      "category": "types",
+      "title": {
+        "de": "Temaki · in der Hand gerollt",
+        "uk": "Темакі · ручний рол"
+      },
+      "body": {
+        "de": [
+          "Ein Nori-Blatt wird mit Reis und Füllung zur Tüte gerollt. Temaki wird einzeln gegessen und nicht in Scheiben geteilt. Erst kurz vor dem Essen rollen, damit das Nori seine Textur behält."
+        ],
+        "uk": [
+          "Лист норі з рисом і начинкою згортають у конус. Темакі їдять цілим, не нарізаючи на кружальця. Формуйте перед їжею, щоб норі зберегли текстуру."
+        ]
+      },
+      "sources": [
+        "temaki"
+      ],
+      "related": [
+        "temaki-zuhause",
+        "nori"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "gunkan",
+      "category": "types",
+      "title": {
+        "de": "Gunkan · ein kleines Schiffchen",
+        "uk": "Ґункан · маленький човник"
+      },
+      "body": {
+        "de": [
+          "Ein Nori-Streifen bildet einen Rand um ein ovales Reisbett. So bleiben lockere Toppings an ihrem Platz. Möglich sind etwa Fischrogen oder eine Mischung aus gegarter Garnele und Gurke."
+        ],
+        "uk": [
+          "Смужка норі утворює бортик навколо овальної основи з рису. Так розсипчаста начинка тримається на місці. Зверху може бути ікра або суміш приготованої креветки з огірком."
+        ]
+      },
+      "sources": [
+        "gunkan"
+      ],
+      "related": [
+        "masago",
+        "tobiko",
+        "garnele"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "chirashi",
+      "category": "types",
+      "title": {
+        "de": "Chirashi · Sushi in der Schale",
+        "uk": "Тірасі · суші в мисці"
+      },
+      "body": {
+        "de": [
+          "Essigreis wird mit verteilten Zutaten angerichtet statt gerollt. Je nach Rezept gehören Gemüse, Ei und Fisch oder Meeresfrüchte dazu. Nicht jede Schale mit rohem Fisch ist automatisch Chirashi: Entscheidend ist hier der Sushi-Reis."
+        ],
+        "uk": [
+          "Інгредієнти розкладають на оцтовому рисі, а не загортають у рол. Залежно від рецепта додають овочі, яйце, рибу або морепродукти. Не кожна миска з сирою рибою є тірасі: тут основа — рис для суші."
+        ]
+      },
+      "sources": [
+        "chirashi"
+      ],
+      "related": [
+        "sushi-reis",
+        "tamago"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "oshizushi",
+      "category": "types",
+      "title": {
+        "de": "Oshizushi · gepresstes Sushi",
+        "uk": "Осідзуші · пресовані суші"
+      },
+      "body": {
+        "de": [
+          "Reis und Belag werden in einer Form geschichtet, zusammengedrückt und portioniert. Regionale Varianten unterscheiden sich deutlich: In Tokushima kann beispielsweise Yuzu-Essig den Reis würzen."
+        ],
+        "uk": [
+          "Рис і начинку викладають шарами у форму, притискають і ділять на порції. Регіональні варіанти різняться: наприклад, у Токусімі рис можуть заправляти оцтом із юдзу."
+        ]
+      },
+      "sources": [
+        "oshi"
+      ],
+      "related": [
+        "sushi-reis",
+        "regionen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "inari",
+      "category": "types",
+      "title": {
+        "de": "Inari · Sushi in der Tofutasche",
+        "uk": "Інарі · суші в тофу-кишеньці"
+      },
+      "body": {
+        "de": [
+          "Eine gewürzte Tasche aus frittiertem Tofu wird mit Essigreis gefüllt. Die Würzflüssigkeit kann Sojasauce, Süße und Dashi enthalten. Deshalb bedeutet eine Tofuhülle allein noch nicht, dass jedes Rezept vegan ist."
+        ],
+        "uk": [
+          "Приправлену кишеньку зі смаженого тофу наповнюють оцтовим рисом. Заправка може містити соєвий соус, солодкі компоненти й дасі. Тому сама оболонка з тофу не означає, що будь-який рецепт веганський."
+        ]
+      },
+      "sources": [
+        "inari"
+      ],
+      "related": [
+        "sojasauce",
+        "sushi-reis"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "temari",
+      "category": "types",
+      "title": {
+        "de": "Temari · kleine Sushi-Kugeln",
+        "uk": "Темарі · маленькі кульки суші"
+      },
+      "body": {
+        "de": [
+          "Reis wird mit dünnem Belag zu kleinen Kugeln geformt. Fisch, Gemüse oder Ei sind möglich. Eine saubere lebensmittelechte Folie kann beim Formen helfen und wird vor dem Servieren vollständig entfernt."
+        ],
+        "uk": [
+          "Рис із тонким шаром начинки формують у невеликі кульки. Можна використати рибу, овочі або яйце. Чиста харчова плівка допомагає надати форму; перед подачею її повністю знімають."
+        ]
+      },
+      "sources": [
+        "temari"
+      ],
+      "related": [
+        "tamago",
+        "sushi-reis"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "mushizushi",
+      "category": "types",
+      "title": {
+        "de": "Mushizushi · warm gedämpft",
+        "uk": "Мусідзуші · теплі суші на парі"
+      },
+      "body": {
+        "de": [
+          "Auch warmes Sushi gehört zur japanischen Vielfalt. Bei Mushizushi wird angerichteter Sushi-Reis mit Zutaten gedämpft. Sushi bezeichnet also weder ausschließlich kalte Speisen noch ausschließlich rohen Fisch."
+        ],
+        "uk": [
+          "Теплі суші теж належать до японської традиції. Для мусідзуші рис для суші з інгредієнтами прогрівають на парі. Отже, суші — це не лише холодна страва й не лише сира риба."
+        ]
+      },
+      "sources": [
+        "glossary"
+      ],
+      "related": [
+        "sushi-reis",
+        "regionen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "sashimi",
+      "category": "types",
+      "title": {
+        "de": "Sashimi · Fisch ohne Sushi-Reis",
+        "uk": "Сашімі · риба без рису для суші"
+      },
+      "body": {
+        "de": [
+          "Sashimi besteht aus aufgeschnittenem rohem Fisch oder anderen rohen Meeresfrüchten und wird ohne Sushi-Reis serviert. Es ist deshalb keine Sushi-Sorte im engeren Sinn. Auf unserer aktuellen Karte gibt es keine separate Sashimi-Portion."
+        ],
+        "uk": [
+          "Сашімі — нарізана сира риба або інші сирі морепродукти, які подають без рису для суші. Тому у вузькому значенні це не різновид суші. В актуальному меню немає окремої порції сашімі."
+        ]
+      },
+      "sources": [
+        "jnto"
+      ],
+      "related": [
+        "nigiri",
+        "sicherheit"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "regionen",
+      "category": "history",
+      "title": {
+        "de": "Ein Land, viele Sushi-Traditionen",
+        "uk": "Одна країна, багато традицій суші"
+      },
+      "body": {
+        "de": [
+          "Neben Nigiri gibt es regionale Spezialitäten: Kyoto ist etwa für gepresstes Makrelen-Sushi in länglicher Form bekannt. Toyama verbindet gepresstes Sushi mit Forelle. In Ishikawa gibt es Kaburazushi aus Rübe und Fisch. Formen, Würzung und Haltbarmachung erzählen unterschiedliche lokale Geschichten."
+        ],
+        "uk": [
+          "Окрім ніґірі, існують регіональні страви: Кіото відоме довгастими пресованими суші зі скумбрією. У Тоямі готують пресовані суші з фореллю. В Ісікаві є кабурадзуші з ріпою та рибою. Форма, заправка й способи збереження відображають місцеві традиції."
+        ]
+      },
+      "sources": [
+        "embassy"
+      ],
+      "related": [
+        "oshizushi",
+        "narezushi"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "moderne-rollen",
+      "category": "history",
+      "title": {
+        "de": "Von Japan in die Welt",
+        "uk": "З Японії у світ"
+      },
+      "body": {
+        "de": [
+          "Sushi entwickelt sich auch außerhalb Japans weiter. Inside-out-Rollen und neue Füllungen wurden international verbreitet und beeinflussten wiederum Angebote in Japan. Lachs gewann auch durch Importe aus Skandinavien an Bedeutung.",
+          "Namen wie Yakuza, Kabia oder Drei Drachen sind auf dieser Website Produktnamen aus der Restaurantkarte, keine festgelegten historischen Sushi-Gattungen. Ihr Inhalt steht auf der jeweiligen Produktseite."
+        ],
+        "uk": [
+          "Суші розвиваються й за межами Японії. Роли навиворіт та нові начинки поширилися світом і вплинули на меню в Японії. Лосось набув популярності також завдяки імпорту зі Скандинавії.",
+          "Назви Якудза, Кабія або Три дракони на цьому сайті — назви страв із меню ресторану, а не усталені історичні типи суші. Склад наведено на сторінці кожного продукту."
+        ]
+      },
+      "sources": [
+        "global",
+        "menu-new"
+      ],
+      "related": [
+        "uramaki",
+        "lachs"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "sushi-reis",
+      "category": "ingredients",
+      "title": {
+        "de": "Sushi-Reis · Shari / Sumeshi",
+        "uk": "Рис для суші · шарі / сумесі"
+      },
+      "body": {
+        "de": [
+          "Gekochter, mit Essig gewürzter Reis bildet die Sushi-Grundlage. Japanischer Rundkornreis soll zusammenhalten, ohne breiig zu werden. Die passende Wassermenge hängt von Reis und Kochmethode ab."
+        ],
+        "uk": [
+          "Основа суші — зварений рис, заправлений оцтом. Японський круглозернистий рис має триматися разом, не стаючи кашею. Кількість води залежить від рису й способу варіння."
+        ]
+      },
+      "sources": [
+        "rice"
+      ],
+      "related": [
+        "reis-kochen",
+        "nori"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "nori",
+      "category": "ingredients",
+      "title": {
+        "de": "Nori · die Algenhülle",
+        "uk": "Норі · оболонка з водоростей"
+      },
+      "body": {
+        "de": [
+          "Für Sushi werden getrocknete, zu Blättern verarbeitete und meist geröstete Algen verwendet. Nori hält viele Rollen zusammen. Trocken lagern und erst kurz vor dem Rollen aus der Packung nehmen; Feuchtigkeit macht die Blätter weich."
+        ],
+        "uk": [
+          "Для суші використовують висушені, сформовані в листи й зазвичай обсмажені водорості. Норі утримують багато видів ролів. Зберігайте сухими й діставайте перед скручуванням: від вологи листи м’якшають."
+        ]
+      },
+      "sources": [
+        "nori"
+      ],
+      "related": [
+        "hosomaki",
+        "temaki"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "lachs",
+      "category": "ingredients",
+      "title": {
+        "de": "Lachs · Sake / Salmon",
+        "uk": "Лосось · сяке / salmon"
+      },
+      "body": {
+        "de": [
+          "Lachs steht in vielen unserer Rollen, etwa Sake Maki und Ebi Premium. Die Speisekarte nennt weder die genaue Fischart noch die Herkunft oder eine einheitliche Garstufe. Diese Angaben bitte beim Restaurant erfragen. Lachs allein bestimmt keine Sushi-Form: Er kann eine Füllung oder ein Belag sein."
+        ],
+        "uk": [
+          "Лосось є в багатьох наших ролах, зокрема в макі сяке та Ебі Преміум. Меню не вказує точний вид риби, походження або єдиний спосіб термообробки. Уточнюйте це в ресторані. Сам лосось не визначає форму суші: він може бути начинкою або верхнім шаром."
+        ]
+      },
+      "sources": [
+        "menu",
+        "menu-new"
+      ],
+      "related": [
+        "moderne-rollen",
+        "sicherheit"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "maguro",
+      "category": "ingredients",
+      "title": {
+        "de": "Maguro · Thunfisch",
+        "uk": "Маґуро · тунець"
+      },
+      "body": {
+        "de": [
+          "Thunfisch ist keine einzelne Fischart. In der japanischen Küche werden verschiedene Arten und Zuschnitte verwendet. Akami bezeichnet mageres Fleisch, Chutoro einen mittleren Fettanteil und Otoro besonders fettreiche Bauchpartien. Thunfisch ist derzeit kein separat aufgeführter Bestandteil unserer Karte."
+        ],
+        "uk": [
+          "Тунець — не один вид риби. Японська кухня використовує різні види й частини. Акамі — пісне м’ясо, тюторо — частина із середнім вмістом жиру, оторо — особливо жирна черевна частина. У нашому меню тунець наразі не вказаний окремим інгредієнтом."
+        ]
+      },
+      "sources": [
+        "tuna"
+      ],
+      "related": [
+        "nigiri"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "unagi",
+      "category": "ingredients",
+      "title": {
+        "de": "Unagi & Anago · Aal",
+        "uk": "Унаґі й анаґо · вугор"
+      },
+      "body": {
+        "de": [
+          "Die japanische Küche unterscheidet Unagi und Anago. Aal wird häufig gegart, etwa gegrillt mit einer süßlichen Sojasaucenglasur (Kabayaki). Unsere Karte nennt bei Unagi Maki Aal, Unagi-Sauce und Sesam; die genaue Art und Zubereitung bestätigt das Restaurant."
+        ],
+        "uk": [
+          "Японська кухня розрізняє унаґі та анаґо. Вугра часто готують, наприклад смажать із солодкуватою соєвою глазур’ю кабаякі. Для наших макі з вугрем меню вказує вугра, соус унаґі та кунжут; точний вид і спосіб приготування підтверджує ресторан."
+        ]
+      },
+      "sources": [
+        "eel",
+        "menu"
+      ],
+      "related": [
+        "sojasauce",
+        "sesam"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "garnele",
+      "category": "ingredients",
+      "title": {
+        "de": "Ebi · Garnele",
+        "uk": "Ебі · креветка"
+      },
+      "body": {
+        "de": [
+          "Garnele ist eine Meeresfrüchte-Zutat, keine Sushi-Form. In japanischen Rezepten werden beispielsweise gekochte Garnelen mit Reis und Gemüse gerollt. Unsere Karte unterscheidet Garnele, Tigergarnele und ausdrücklich gebratene Garnele; daraus lässt sich keine Garstufe für alle anderen Rollen ableiten."
+        ],
+        "uk": [
+          "Креветка — інгредієнт із морепродуктів, а не форма суші. У японських рецептах, наприклад, варені креветки загортають із рисом та овочами. Наше меню розрізняє креветку, тигрову креветку й прямо вказану підсмажену креветку; це не визначає термообробку всіх інших ролів."
+        ]
+      },
+      "sources": [
+        "insideout",
+        "menu-new"
+      ],
+      "related": [
+        "sicherheit",
+        "inside-out-rollen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "surimi",
+      "category": "ingredients",
+      "title": {
+        "de": "Surimi · verarbeitetes Fischprodukt",
+        "uk": "Сурімі · продукт із риби"
+      },
+      "body": {
+        "de": [
+          "Surimi ist eine verarbeitete Fischmasse, aus der unter anderem krabbenähnliche Stäbchen hergestellt werden. Nissui beschreibt dafür beispielsweise Alaska-Seelachs. Es handelt sich nicht automatisch um echtes Krabbenfleisch. Zutaten und Allergene hängen vom konkreten Produkt ab."
+        ],
+        "uk": [
+          "Сурімі — перероблена рибна маса, з якої, зокрема, виготовляють палички, подібні до крабового м’яса. Nissui наводить приклад використання минтая. Це не обов’язково справжнє крабове м’ясо. Склад і алергени залежать від конкретного продукту."
+        ]
+      },
+      "sources": [
+        "surimi"
+      ],
+      "related": [
+        "krabbe",
+        "uramaki"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "krabbe",
+      "category": "ingredients",
+      "title": {
+        "de": "Schneekrabbe & Krabbenfleisch",
+        "uk": "Сніжний краб і крабове м’ясо"
+      },
+      "body": {
+        "de": [
+          "Die neuen Rollen nennen teils „Schneekrabbe“, teils „Krabbenfleisch“. Die bereitgestellte Karte erklärt nicht, ob damit jeweils echtes Krabbenfleisch oder ein verarbeitetes Erzeugnis gemeint ist. Wir ersetzen diese Angaben deshalb nicht stillschweigend durch Surimi. Bei Allergien unbedingt das konkrete Produkt erfragen."
+        ],
+        "uk": [
+          "У новинках зазначено «сніжний краб» або «крабове м’ясо». Надане меню не пояснює, чи йдеться в кожному випадку про справжнє м’ясо краба або перероблений продукт. Тому ми не замінюємо ці назви на сурімі. За алергії обов’язково уточнюйте конкретний продукт."
+        ]
+      },
+      "sources": [
+        "menu-new"
+      ],
+      "related": [
+        "surimi"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "masago",
+      "category": "ingredients",
+      "title": {
+        "de": "Masago · Rogen vom Lodden",
+        "uk": "Масаго · ікра мойви"
+      },
+      "body": {
+        "de": [
+          "Masago ist Rogen vom Lodden (Capelin), häufig gewürzt angeboten. Es ist Fischrogen und unterscheidet sich von Tobiko. Die Quelle zeigt ein Handelsprodukt zur Begriffserklärung; sie ist kein Nachweis für den Lieferanten unseres Restaurants."
+        ],
+        "uk": [
+          "Масаго — ікра мойви, яку часто продають приправленою. Це рибна ікра, відмінна від тобіко. Джерело показує товар для пояснення терміна, а не підтверджує постачальника нашого ресторану."
+        ]
+      },
+      "sources": [
+        "masago"
+      ],
+      "related": [
+        "tobiko",
+        "gunkan"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "tobiko",
+      "category": "ingredients",
+      "title": {
+        "de": "Tobiko · Flugfischrogen",
+        "uk": "Тобіко · ікра летючої риби"
+      },
+      "body": {
+        "de": [
+          "Tobiko sind kleine Eier vom Flugfisch. Gesalzen werden sie unter anderem als Sushi-Topping verwendet. Tobiko und Masago sind nicht derselbe Rogen. Unsere aktuelle Karte nennt Masago; Tobiko ist hier ein Begriff zum Vergleichen."
+        ],
+        "uk": [
+          "Тобіко — дрібні ікринки летючої риби. Засоленими їх використовують, зокрема, як верхній шар суші. Тобіко й масаго — різна ікра. В актуальному меню зазначено масаго; тобіко наведено для порівняння."
+        ]
+      },
+      "sources": [
+        "tobiko",
+        "menu-new"
+      ],
+      "related": [
+        "masago"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "takuan",
+      "category": "ingredients",
+      "title": {
+        "de": "Takuan · eingelegter Daikon",
+        "uk": "Такуан · маринований дайкон"
+      },
+      "body": {
+        "de": [
+          "Takuan ist eingelegter Daikon-Rettich, häufig gelb. Er wird beispielsweise als Füllung für Maki verwendet. Auf der bereitgestellten ukrainischen Karte steht „Текуан“; auf dieser Website führen beide Schreibweisen zum gleichen Eintrag."
+        ],
+        "uk": [
+          "Такуан — маринований дайкон, часто жовтого кольору. Його використовують, наприклад, для начинки макі. У наданому меню написано «Текуан»; на цьому сайті обидва написання ведуть до одного матеріалу."
+        ]
+      },
+      "sources": [
+        "takuan",
+        "menu"
+      ],
+      "related": [
+        "hosomaki"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "gurke",
+      "category": "ingredients",
+      "title": {
+        "de": "Gurke · frische Füllung",
+        "uk": "Огірок · свіжа начинка"
+      },
+      "body": {
+        "de": [
+          "Gurke wird für Rollen in schmale Streifen geschnitten. Sie ist in vielen Rezepten eine eigenständige Füllung oder ein Partner für Fisch und Ei. Unsere Gurken-Maki nennt Reis, Nori und Gurke; andere Gurkenrollen enthalten zusätzlich Frischkäse oder Meeresfrüchte."
+        ],
+        "uk": [
+          "Для ролів огірок нарізають тонкими смужками. У багатьох рецептах він є окремою начинкою або доповнює рибу та яйце. Наші макі з огірком містять за меню рис, норі й огірок; інші роли з огірком також мають крем-сир або морепродукти."
+        ]
+      },
+      "sources": [
+        "jumbo",
+        "menu"
+      ],
+      "related": [
+        "hosomaki",
+        "frischkaese"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "avocado",
+      "category": "ingredients",
+      "title": {
+        "de": "Avocado · in modernen Rollen",
+        "uk": "Авокадо · у сучасних ролах"
+      },
+      "body": {
+        "de": [
+          "Avocado findet sich beispielsweise in California- und Inside-out-Rezepten. Bei uns gibt es Avocado-Maki sowie Kombinationen mit Gurke, Fisch oder Garnele. Die Futomaki mit Avocado und Gurke enthält laut Karte auch Frischkäse."
+        ],
+        "uk": [
+          "Авокадо використовують, наприклад, у Каліфорнії та ролах навиворіт. У нас є макі з авокадо й поєднання з огірком, рибою або креветкою. Футомакі з авокадо та огірком за меню також містять крем-сир."
+        ]
+      },
+      "sources": [
+        "california",
+        "menu"
+      ],
+      "related": [
+        "uramaki",
+        "frischkaese"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "frischkaese",
+      "category": "ingredients",
+      "title": {
+        "de": "Philadelphia · Frischkäse",
+        "uk": "Філадельфія · крем-сир"
+      },
+      "body": {
+        "de": [
+          "Die Karte nennt Philadelphia-Frischkäse in zahlreichen Rollen. Er gehört dort zur Füllung; „Philadelphia“ kann außerdem Teil eines Produktnamens sein. Ein Rollenname allein liefert keine vollständige Zutatenliste. Frischkäse ist ein Milchprodukt."
+        ],
+        "uk": [
+          "Меню вказує сир Філадельфія в багатьох ролах як складник начинки. «Філадельфія» також може бути частиною назви страви. Сама назва ролу не замінює повний перелік інгредієнтів. Крем-сир є молочним продуктом."
+        ]
+      },
+      "sources": [
+        "menu",
+        "menu-new"
+      ],
+      "related": [
+        "cheddar",
+        "moderne-rollen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "cheddar",
+      "category": "ingredients",
+      "title": {
+        "de": "Cheddar & Hartkäse",
+        "uk": "Чеддер і твердий сир"
+      },
+      "body": {
+        "de": [
+          "Die Käserollen nennen Cheddar, beim Lachs-Tatar ausdrücklich Toastkäse Cheddar. Die Yakuza Roll nennt zusätzlich Hartkäse ohne genaue Sorte. Diese Begriffe sind nicht austauschbar; die genaue Marke und Zusammensetzung sind nicht angegeben."
+        ],
+        "uk": [
+          "Сирні роли містять за меню Чеддер, а рол із лососевим тартаром — тостерний сир Чеддер. Якудза також містить твердий сир без назви сорту. Ці позначення не взаємозамінні; точну марку й склад не наведено."
+        ]
+      },
+      "sources": [
+        "menu",
+        "menu-new"
+      ],
+      "related": [
+        "frischkaese"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "sesam",
+      "category": "ingredients",
+      "title": {
+        "de": "Sesam · auf und in Rollen",
+        "uk": "Кунжут · у ролах і на них"
+      },
+      "body": {
+        "de": [
+          "Sesam wird etwa außen auf Reisrollen gestreut. Unsere Karte nennt ihn unter anderem bei Wild Shrimp, Tarutarosu und Unagi Maki. Eine andere Garnitur darf daraus nicht für weitere Produkte angenommen werden; maßgeblich ist der jeweilige Eintrag."
+        ],
+        "uk": [
+          "Кунжутом, наприклад, посипають рис зовні ролу. У нашому меню він указаний, зокрема, в Дикій креветці, Тарутаросу та макі з вугрем. Це не означає, що він є в усіх інших стравах: дивіться склад конкретного продукту."
+        ]
+      },
+      "sources": [
+        "california",
+        "menu-new",
+        "menu"
+      ],
+      "related": [
+        "uramaki"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "saucen",
+      "category": "ingredients",
+      "title": {
+        "de": "Spicy-Sauce, Mayonnaise & Unagi-Sauce",
+        "uk": "Спайсі, майонез і соус унаґі"
+      },
+      "body": {
+        "de": [
+          "Die Speisekarte nennt Saucen, liefert aber keine vollständigen Unterzutaten oder Schärfegrade. Spicy-Sauce ist nicht automatisch dieselbe Rezeptur wie Spicy-Mayonnaise. Auch die Unagi-Sauce muss separat geprüft werden. Bei Allergien oder veganer Ernährung bitte die genaue Zusammensetzung bestätigen lassen."
+        ],
+        "uk": [
+          "Меню називає соуси, але не наводить повного складу або ступеня гостроти. Соус спайсі не обов’язково має ту саму рецептуру, що спайсі-майонез. Соус унаґі теж слід перевіряти окремо. За алергії або веганського харчування уточнюйте точний склад."
+        ]
+      },
+      "sources": [
+        "menu",
+        "menu-new"
+      ],
+      "related": [
+        "sojasauce",
+        "unagi"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "roestzwiebeln",
+      "category": "ingredients",
+      "title": {
+        "de": "Röstzwiebeln · Bonito Roll",
+        "uk": "Смажена цибуля · Боніто рол"
+      },
+      "body": {
+        "de": [
+          "Unsere Bonito Roll nennt Röstzwiebeln als Zutat. Der Produktname ist deshalb kein Beleg für Bonitoflocken: In dieser Karte steht Lachs, nicht Bonito-Fisch. Weitere Zutaten einer möglichen Fertigmischung sind nicht angegeben."
+        ],
+        "uk": [
+          "Наш Боніто рол містить за меню смажену цибулю. Отже, назва продукту не підтверджує наявності стружки боніто: у складі вказано лосося, а не рибу боніто. Додатковий склад можливої готової суміші не наведено."
+        ]
+      },
+      "sources": [
+        "menu-new"
+      ],
+      "related": [
+        "lachs",
+        "moderne-rollen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "sojasauce",
+      "category": "ingredients",
+      "title": {
+        "de": "Shoyu · Sojasauce",
+        "uk": "Сьою · соєвий соус"
+      },
+      "body": {
+        "de": [
+          "Traditionell wird Sojasauce aus Sojabohnen, Weizen, Salz und Wasser fermentiert. Sie dient als Würzmittel. Die tatsächliche Rezeptur variiert mit dem Produkt; eine Sauce ist ohne genaue Produktangabe nicht als glutenfrei einzustufen."
+        ],
+        "uk": [
+          "Традиційний соєвий соус ферментують із соєвих бобів, пшениці, солі та води. Його використовують як приправу. Рецептура залежить від продукту; без точної інформації соус не слід вважати безглютеновим."
+        ]
+      },
+      "sources": [
+        "soy"
+      ],
+      "related": [
+        "saucen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "wasabi",
+      "category": "ingredients",
+      "title": {
+        "de": "Wasabi · scharfe Begleitung",
+        "uk": "Васабі · гострий додаток"
+      },
+      "body": {
+        "de": [
+          "Wasabi wird gerieben oder als Paste zu japanischen Gerichten angeboten. Seine Schärfe ist flüchtig. Eine Wasabi-Beilage macht rohen Fisch nicht sicher; die Zutaten einer gekauften Paste müssen separat geprüft werden."
+        ],
+        "uk": [
+          "Васабі подають натертим або у вигляді пасти до японських страв. Його гострота швидко слабшає. Васабі не робить сиру рибу безпечною; склад готової пасти потрібно перевіряти окремо."
+        ]
+      },
+      "sources": [
+        "wasabi",
+        "raw"
+      ],
+      "related": [
+        "sicherheit",
+        "gari"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "gari",
+      "category": "ingredients",
+      "title": {
+        "de": "Gari · eingelegter Ingwer",
+        "uk": "Ґарі · маринований імбир"
+      },
+      "body": {
+        "de": [
+          "Gari ist in süßlichem Essig eingelegter, dünn geschnittener Ingwer, der zu Sushi serviert wird. Die Beilage ist etwas anderes als eine Füllung im Roll. Ob und wie viel mitgeliefert wird, bitte beim Restaurant erfragen."
+        ],
+        "uk": [
+          "Ґарі — тонко нарізаний імбир, маринований у солодкуватому оцті, який подають до суші. Це додаток, а не начинка ролу. Наявність і кількість у замовленні уточнюйте в ресторані."
+        ]
+      },
+      "sources": [
+        "ginger"
+      ],
+      "related": [
+        "wasabi"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "kombu",
+      "category": "ingredients",
+      "title": {
+        "de": "Kombu · Alge für Brühe und Reis",
+        "uk": "Комбу · водорість для бульйону й рису"
+      },
+      "body": {
+        "de": [
+          "Kombu ist eine Alge, die beispielsweise für Dashi-Brühe verwendet wird. Manche Rezepte kochen ein Stück mit dem Reis. Kombu ist nicht dasselbe wie das Nori-Blatt einer Rolle; in unserer bereitgestellten Karte ist es nicht ausdrücklich genannt."
+        ],
+        "uk": [
+          "Комбу — водорість, яку, наприклад, використовують для бульйону дасі. У деяких рецептах шматочок додають під час варіння рису. Комбу — не те саме, що лист норі для ролу; у наданому меню її прямо не зазначено."
+        ]
+      },
+      "sources": [
+        "kombu",
+        "rice"
+      ],
+      "related": [
+        "nori",
+        "reis-kochen"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "tamago",
+      "category": "ingredients",
+      "title": {
+        "de": "Tamago · Ei als Sushi-Zutat",
+        "uk": "Тамаґо · яйце в суші"
+      },
+      "body": {
+        "de": [
+          "Japanische Sushi-Rezepte verwenden auch gegartes Omelett, etwa in dicken Rollen oder als dünnen Belag. Dadurch wird nicht die ganze Rolle automatisch vegetarisch: Andere Zutaten können Fisch enthalten. Ei ist in unserer Karte nicht als separate Hauptfüllung aufgeführt."
+        ],
+        "uk": [
+          "Японські рецепти суші використовують і приготований омлет — наприклад, у товстих ролах або тонким верхнім шаром. Від цього весь рол не стає автоматично вегетаріанським: інші складники можуть містити рибу. Яйце не зазначено в нашому меню як окрема основна начинка."
+        ]
+      },
+      "sources": [
+        "jumbo",
+        "temari"
+      ],
+      "related": [
+        "futomaki",
+        "chirashi"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "reis-kochen",
+      "category": "techniques",
+      "title": {
+        "de": "Sushi-Reis kochen und würzen",
+        "uk": "Як зварити й заправити рис"
+      },
+      "body": {
+        "de": [
+          "Grundmethode für zu Hause; Mengen und Garzeit nach Packung und Gerät wählen."
+        ],
+        "uk": [
+          "Базовий домашній спосіб; кількості й час варіння визначайте за упаковкою та приладом."
+        ]
+      },
+      "sources": [
+        "rice",
+        "safe"
+      ],
+      "related": [
+        "sushi-reis",
+        "sicherheit",
+        "rollen"
+      ],
+      "steps": {
+        "de": [
+          "Reis waschen, abtropfen lassen und nach Packungsangabe garen.",
+          "Reisessig mit Zucker und Salz mischen oder fertige Sushi-Würzung nach Etikett verwenden.",
+          "In den warmen Reis vorsichtig unterheben. Nicht zerdrücken; flach verteilen und zügig abkühlen.",
+          "Frisch verarbeiten. Nicht benötigten Reis zügig kühlen, nicht stundenlang warm stehen lassen."
+        ],
+        "uk": [
+          "Промийте рис, дайте воді стекти й зваріть за упаковкою.",
+          "Змішайте рисовий оцет, цукор і сіль або використайте готову заправку за етикеткою.",
+          "Обережно вмішайте в теплий рис. Не розминайте; розкладіть тонко й швидко охолодіть.",
+          "Використовуйте свіжим. Невикористаний рис швидко охолоджуйте, не залишайте годинами теплим."
+        ]
+      }
+    },
+    {
+      "id": "rollen",
+      "category": "techniques",
+      "title": {
+        "de": "Maki rollen · die Grundbewegung",
+        "uk": "Як скрутити макі"
+      },
+      "body": {
+        "de": [
+          "Grundtechnik für eine Nori-Rolle. Für den ersten Versuch eignen sich Gurke und andere verzehrfertige Füllungen. Die Menge hängt von Blattgröße und Rollenart ab."
+        ],
+        "uk": [
+          "Базова техніка ролу в норі. Для першої спроби підійдуть огірок та інші готові до споживання начинки. Кількість залежить від розміру листа й виду ролу."
+        ]
+      },
+      "sources": [
+        "hosomaki"
+      ],
+      "related": [
+        "hosomaki",
+        "futomaki",
+        "reis-kochen",
+        "sicherheit"
+      ],
+      "steps": {
+        "de": [
+          "Nori auf eine saubere Bambusmatte legen. Hände leicht befeuchten.",
+          "Eine dünne Schicht vorbereiteten Sushi-Reis verteilen; den hinteren Rand frei lassen.",
+          "Füllung quer auflegen. Die Matte nach vorn führen und die Rolle sanft schließen, ohne die Matte einzuwickeln.",
+          "Mit einem scharfen, sauberen Messer portionieren; Klinge zwischendurch feucht abwischen."
+        ],
+        "uk": [
+          "Покладіть норі на чистий бамбуковий килимок. Злегка змочіть руки.",
+          "Розподіліть тонкий шар підготовленого рису, залишивши дальній край вільним.",
+          "Викладіть начинку поперек. Підніміть килимок уперед і обережно закрийте рол, не загортаючи килимок усередину.",
+          "Наріжте гострим чистим ножем, протираючи лезо вологою серветкою між надрізами."
+        ]
+      }
+    },
+    {
+      "id": "inside-out-rollen",
+      "category": "techniques",
+      "title": {
+        "de": "Inside-out rollen · Reis nach außen",
+        "uk": "Як скрутити рол рисом назовні"
+      },
+      "body": {
+        "de": [
+          "Allgemeine Technik, keine bestätigte Rezeptur unserer California- oder Drachen-Sets. Für den Hausgebrauch verzehrfertige oder vollständig gegarte Füllungen wählen."
+        ],
+        "uk": [
+          "Загальна техніка, а не підтверджений рецепт наших сетів Каліфорнія чи Дракони. Удома обирайте готові до споживання або повністю приготовані начинки."
+        ]
+      },
+      "sources": [
+        "insideout"
+      ],
+      "related": [
+        "uramaki",
+        "garnele",
+        "sicherheit"
+      ],
+      "steps": {
+        "de": [
+          "Bambusmatte mit lebensmittelechter Folie abdecken. Nori dünn mit Sushi-Reis belegen.",
+          "Wenden, sodass der Reis auf der Folie liegt. Füllung auf die Nori-Seite legen.",
+          "Mit der Matte schließen und sanft formen. Folie vollständig entfernen und die Rolle schneiden."
+        ],
+        "uk": [
+          "Накрийте килимок харчовою плівкою. Розподіліть тонкий шар рису по норі.",
+          "Переверніть рисом до плівки. Викладіть начинку на бік із норі.",
+          "Закрийте рол килимком і злегка сформуйте. Повністю зніміть плівку та наріжте."
+        ]
+      }
+    },
+    {
+      "id": "temaki-zuhause",
+      "category": "techniques",
+      "title": {
+        "de": "Temaki am Tisch zubereiten",
+        "uk": "Темакі просто за столом"
+      },
+      "body": {
+        "de": [
+          "Eine einfache Variante zum gemeinsamen Selberrollen: vorbereiteter Sushi-Reis, halbierte Nori-Blätter, Gurkenstreifen und vollständig gegarte Garnelen oder Gemüse. Dies ist eine allgemeine Servieridee, keine Restaurantrezeptur."
+        ],
+        "uk": [
+          "Простий варіант для спільного приготування: готовий рис для суші, половинки норі, смужки огірка й повністю приготовані креветки або овочі. Це загальна ідея подачі, а не рецепт ресторану."
+        ]
+      },
+      "sources": [
+        "temaki"
+      ],
+      "related": [
+        "temaki",
+        "reis-kochen",
+        "sicherheit"
+      ],
+      "steps": {
+        "de": [
+          "Nur eine kleine Portion gekühlter Füllungen auf den Tisch stellen.",
+          "Etwas Reis auf eine Seite des Nori geben, Füllungen schräg darauflegen.",
+          "Die untere Ecke über die Füllung führen und zur Tüte schließen. Direkt essen; weitere Rollen frisch formen."
+        ],
+        "uk": [
+          "Виставте на стіл лише невелику порцію охолоджених начинок.",
+          "Покладіть трохи рису на один бік норі, а начинку — по діагоналі.",
+          "Загорніть нижній кут поверх начинки й закрийте конус. Їжте одразу, наступні роли формуйте свіжими."
+        ]
+      }
+    },
+    {
+      "id": "gegart-oder-roh",
+      "category": "techniques",
+      "title": {
+        "de": "Roh, gekocht, gebraten?",
+        "uk": "Сире, варене чи смажене?"
+      },
+      "body": {
+        "de": [
+          "Sushi-Reis wird gekocht. Der Belag oder die Füllung kann roh, gegart oder pflanzlich sein. „Gebraten“ auf einer Karte beantwortet nicht automatisch, wie heiß jedes Innere geworden ist.",
+          "Unsere Karte bezeichnet Yakuza als gebraten und die Garnele der Sesam-Philadelphia ausdrücklich als gebraten. Für die übrigen Fisch- und Garnelenprodukte ist die Garstufe nicht durchgängig angegeben. Das Restaurant kann die konkrete Zubereitung bestätigen."
+        ],
+        "uk": [
+          "Рис для суші варять. Начинка або верхній шар можуть бути сирими, приготованими чи рослинними. Слово «смажений» у меню не визначає, наскільки прогрілася кожна частина всередині.",
+          "У нашому меню Якудза позначений як підсмажений, а креветка у Філадельфії в кунжуті — як підсмажена. Для інших страв із рибою й креветкою термообробку зазначено не всюди. Конкретний спосіб підтвердить ресторан."
+        ]
+      },
+      "sources": [
+        "menu-new",
+        "raw",
+        "jnto"
+      ],
+      "related": [
+        "sicherheit",
+        "lachs",
+        "garnele"
+      ],
+      "steps": {
+        "de": [],
+        "uk": []
+      }
+    },
+    {
+      "id": "sicherheit",
+      "category": "techniques",
+      "title": {
+        "de": "Sushi sorgfältig zubereiten",
+        "uk": "Як готувати суші безпечніше"
+      },
+      "body": {
+        "de": [
+          "Rohe Meeresprodukte können Krankheitserreger und Parasiten enthalten. Essig, Sojasauce, Alkohol oder scharfe Beilagen machen sie nicht zuverlässig unschädlich. Für Sushi zu Hause sind vollständig gegarte Füllungen oder gewaschenes Gemüse der einfachere Einstieg.",
+          "Für rohen Fisch reichen Geruch, Aussehen oder die Bezeichnung „Sushi-Qualität“ allein nicht als Nachweis: Eignung zum Rohverzehr und nötige Vorbehandlung müssen mit einem fachkundigen Lieferanten geklärt sein."
+        ],
+        "uk": [
+          "Сирі морепродукти можуть містити збудників хвороб і паразитів. Оцет, соєвий соус, алкоголь або гострі додатки не знешкоджують їх надійно. Для домашніх суші простіше почати з повністю приготованої начинки чи вимитих овочів.",
+          "Самих запаху, вигляду або позначення «для суші» недостатньо: придатність риби до сирого споживання й потрібну попередню обробку слід уточнити у компетентного постачальника."
+        ]
+      },
+      "sources": [
+        "raw",
+        "safe"
+      ],
+      "related": [
+        "gegart-oder-roh",
+        "reis-kochen"
+      ],
+      "steps": {
+        "de": [
+          "Hände, Messer, Brett und Arbeitsfläche reinigen. Rohe Zutaten von verzehrfertigen Lebensmitteln trennen.",
+          "Kühlkette einhalten; vorbereitete verderbliche Zutaten und nicht direkt verzehrte Sushi bei höchstens 4 °C kühlen. Kleine Mengen verarbeiten.",
+          "Gegarte Füllungen vollständig durchgaren; kurzes Anbraten ist kein Ersatz. Zügig abkühlen und sauber weiterverarbeiten."
+        ],
+        "uk": [
+          "Мийте руки, ножі, дошки та робочу поверхню. Відокремлюйте сирі інгредієнти від готової їжі.",
+          "Дотримуйтеся холодового ланцюга; швидкопсувні начинки й суші, які не їсте одразу, зберігайте за температури не вище 4 °C. Працюйте малими порціями.",
+          "Термічно оброблювані начинки готуйте повністю: коротке обсмаження цього не замінює. Швидко охолоджуйте й працюйте чистим інвентарем."
+        ]
+      }
+    }
+  ]
+}

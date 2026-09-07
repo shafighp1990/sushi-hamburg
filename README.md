@@ -51,3 +51,7 @@ The later Thursdayâ€“Sunday announcement takes precedence over the older Fridayâ
 `npm run check` and `npm run build` pass. Business-logic checks cover catalog uniqueness, integer-cent totals, invalid cart data, delivery fees, operating days, Berlin daylight-saving conversion, the 13:00 cutoff and the 21:00 delivery limit. All 120 original JPEGs and web JPEGs were downloaded and decoded.
 
 Feature-detected WebMCP tools expose menu/cart reads and validated cart quantity changes. They never send orders or take payment. No compatible WebMCP validation context was available; these optional agent tools have not been runtime-verified. Browser interaction testing was not requested.
+
+## Sushi journal
+
+The site now includes a searchable German/Ukrainian knowledge library at `/wissen`, 45 sourced articles, and 28 product detail pages at `/menu/{id}`. See `docs/sushi-knowledge.md` for provenance, editing and validation. Run `npm test` for the knowledge/cart regression suite. The downloadable structured knowledge file is regenerated from `lib/knowledge-data.json` during every build.
