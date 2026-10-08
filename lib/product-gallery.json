@@ -1,0 +1,242 @@
+{
+  "philadelphia": {
+    "images": [
+      {
+        "basename": "philadelphia",
+        "source": "DSC09767.jpg",
+        "width": 1600,
+        "height": 1067,
+        "view": "primary",
+        "crop": [
+          0,
+          0.26,
+          1,
+          0.7044444444
+        ]
+      },
+      {
+        "basename": "philadelphia-angle2",
+        "source": "DSC09782.jpg",
+        "width": 1600,
+        "height": 1200,
+        "view": "front-detail",
+        "crop": [
+          0,
+          0.24,
+          1,
+          0.74
+        ]
+      },
+      {
+        "basename": "philadelphia-angle3",
+        "source": "DSC09784.jpg",
+        "width": 1600,
+        "height": 2400,
+        "view": "overhead",
+        "crop": null
+      }
+    ],
+    "confidence": "same-dish-visual-match",
+    "note": "Full-size raw-salmon exterior, cream cheese and diced cucumber match Philadelphia. The separate DSC09642 family is seared salmon and is not substituted. Gallery images are distinct angles of this same plate."
+  },
+  "philadelphia-unagi": {
+    "images": [
+      {
+        "basename": "philadelphia-unagi",
+        "source": "DSC09598.jpg",
+        "width": 1600,
+        "height": 1067,
+        "view": "primary",
+        "crop": [
+          0,
+          0.26,
+          1,
+          0.7044444444
+        ]
+      },
+      {
+        "basename": "philadelphia-unagi-angle2",
+        "source": "DSC09615.jpg",
+        "width": 1600,
+        "height": 1200,
+        "view": "front-detail",
+        "crop": [
+          0,
+          0.24,
+          1,
+          0.74
+        ]
+      },
+      {
+        "basename": "philadelphia-unagi-angle3",
+        "source": "DSC09620.jpg",
+        "width": 1600,
+        "height": 2400,
+        "view": "overhead",
+        "crop": null
+      }
+    ],
+    "confidence": "same-dish-visual-match",
+    "note": "Full-size inspection shows eel skin/flesh outside with cream cheese and diced cucumber center, matching Philadelphia with eel. Gallery images are distinct angles of this same plate."
+  },
+  "california-salmon": {
+    "images": [
+      {
+        "basename": "california-salmon",
+        "source": "DSC09688.jpg",
+        "width": 1600,
+        "height": 1067,
+        "view": "primary",
+        "crop": [
+          0,
+          0.26,
+          1,
+          0.7044444444
+        ]
+      },
+      {
+        "basename": "california-salmon-angle2",
+        "source": "DSC09713.jpg",
+        "width": 1600,
+        "height": 1200,
+        "view": "front-detail",
+        "crop": [
+          0,
+          0.24,
+          1,
+          0.74
+        ]
+      },
+      {
+        "basename": "california-salmon-angle3",
+        "source": "DSC09716.jpg",
+        "width": 1600,
+        "height": 2400,
+        "view": "overhead",
+        "crop": null
+      }
+    ],
+    "confidence": "same-dish-visual-match",
+    "note": "Full-size red roe outside and salmon, avocado and cream cheese center match the written California Salmon ingredients. The small menu-poster image itself appears inconsistent; use the written ingredient identity, not that crop. Gallery images are distinct angles of this same plate."
+  },
+  "green-dragon": {
+    "images": [
+      {
+        "basename": "green-dragon",
+        "source": "DSC09795.jpg",
+        "width": 1600,
+        "height": 1067,
+        "view": "primary",
+        "crop": [
+          0,
+          0.26,
+          1,
+          0.7044444444
+        ]
+      },
+      {
+        "basename": "green-dragon-angle2",
+        "source": "DSC09804.jpg",
+        "width": 1600,
+        "height": 1200,
+        "view": "front-detail",
+        "crop": [
+          0,
+          0.24,
+          1,
+          0.74
+        ]
+      },
+      {
+        "basename": "green-dragon-angle3",
+        "source": "DSC09808.jpg",
+        "width": 1600,
+        "height": 2400,
+        "view": "overhead",
+        "crop": null
+      }
+    ],
+    "confidence": "same-dish-visual-match",
+    "note": "Full-size avocado slices and sesame outside, with salmon, cream cheese and cucumber center, match Green Dragon. Gallery images are distinct angles of this same plate."
+  },
+  "bonito": {
+    "images": [
+      {
+        "basename": "bonito",
+        "source": "DSC09732.jpg",
+        "width": 1600,
+        "height": 1067,
+        "view": "primary",
+        "crop": [
+          0,
+          0.26,
+          1,
+          0.7044444444
+        ]
+      },
+      {
+        "basename": "bonito-angle2",
+        "source": "DSC09747.jpg",
+        "width": 1600,
+        "height": 1200,
+        "view": "front-detail",
+        "crop": [
+          0,
+          0.24,
+          1,
+          0.74
+        ]
+      },
+      {
+        "basename": "bonito-angle3",
+        "source": "DSC09744.jpg",
+        "width": 1600,
+        "height": 2400,
+        "view": "overhead",
+        "crop": null
+      }
+    ],
+    "confidence": "same-dish-visual-match",
+    "note": "Full-size fried-onion topping, salmon and avocado filling match Bonito; no cream-cheese filling is visible. Gallery images are distinct angles of this same plate."
+  },
+  "ebi-premium": {
+    "images": [
+      {
+        "basename": "ebi-premium",
+        "source": "DSC09820.jpg",
+        "width": 1600,
+        "height": 1067,
+        "view": "primary",
+        "crop": [
+          0,
+          0.26,
+          1,
+          0.7044444444
+        ]
+      },
+      {
+        "basename": "ebi-premium-angle2",
+        "source": "DSC09834.jpg",
+        "width": 1600,
+        "height": 1200,
+        "view": "front-detail",
+        "crop": [
+          0,
+          0.24,
+          1,
+          0.74
+        ]
+      },
+      {
+        "basename": "ebi-premium-angle3",
+        "source": "DSC09829.jpg",
+        "width": 1600,
+        "height": 2400,
+        "view": "overhead",
+        "crop": null
+      }
+    ],
+    "confidence": "same-dish-visual-match",
+    "note": "Full-size inspection shows pink segmented shrimp topping, salmon, cream cheese, cucumber and dark roe: matches Ebi Premium. This is shrimp, not eel. Gallery images are distinct angles of this same plate."
+  }
+}

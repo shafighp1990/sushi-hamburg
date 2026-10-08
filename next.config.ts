@@ -1,3 +1,2 @@
-import type { NextConfig } from 'next';
-const nextConfig: NextConfig = {output:'export'};
-export default nextConfig;
+const config = process.env.SUSHI_STATIC === '1' ? {output:'export' as const} : {};
+export default config;

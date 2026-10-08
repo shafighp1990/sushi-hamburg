@@ -1,0 +1,476 @@
+{
+  "appearance": {
+    "de": "Gestaltung",
+    "uk": "Оформлення",
+    "en": "Appearance",
+    "fa": "ظاهر سایت"
+  },
+  "buttonStyle": {
+    "de": "Button-Stil",
+    "uk": "Стиль кнопок",
+    "en": "Button style",
+    "fa": "سبک دکمه‌ها"
+  },
+  "galleryStyle": {
+    "de": "Galerie-Stil",
+    "uk": "Стиль галереї",
+    "en": "Gallery style",
+    "fa": "سبک گالری"
+  },
+  "solid": {
+    "de": "Gefüllt",
+    "uk": "Заливка",
+    "en": "Solid",
+    "fa": "توپر"
+  },
+  "outline": {
+    "de": "Umrandet",
+    "uk": "Контур",
+    "en": "Outline",
+    "fa": "دورخط"
+  },
+  "rounded": {
+    "de": "Abgerundet",
+    "uk": "Заокруглені",
+    "en": "Rounded",
+    "fa": "گوشه‌گرد"
+  },
+  "ticket": {
+    "de": "Bonstil",
+    "uk": "Стиль чека",
+    "en": "Ticket",
+    "fa": "سبک رسید"
+  },
+  "carousel": {
+    "de": "Karussell",
+    "uk": "Карусель",
+    "en": "Carousel",
+    "fa": "اسلایدی"
+  },
+  "editorial": {
+    "de": "Magazin",
+    "uk": "Журнальний",
+    "en": "Editorial",
+    "fa": "مجله‌ای"
+  },
+  "tiles": {
+    "de": "Kacheln",
+    "uk": "Плитки",
+    "en": "Tiles",
+    "fa": "کاشی‌وار"
+  },
+  "focus": {
+    "de": "Fokus",
+    "uk": "Акцент",
+    "en": "Focus",
+    "fa": "تصویر شاخص"
+  },
+  "offers": {
+    "de": "Angebote",
+    "uk": "Пропозиції",
+    "en": "Offers",
+    "fa": "پیشنهادها"
+  },
+  "discounts": {
+    "de": "Rabatte",
+    "uk": "Знижки",
+    "en": "Discounts",
+    "fa": "تخفیف‌ها"
+  },
+  "reports": {
+    "de": "Berichte",
+    "uk": "Звіти",
+    "en": "Reports",
+    "fa": "گزارش‌ها"
+  },
+  "settings": {
+    "de": "Einstellungen",
+    "uk": "Налаштування",
+    "en": "Settings",
+    "fa": "تنظیمات"
+  },
+  "addDiscount": {
+    "de": "Rabatt hinzufügen",
+    "uk": "Додати знижку",
+    "en": "Add discount",
+    "fa": "افزودن تخفیف"
+  },
+  "code": {
+    "de": "Rabattcode",
+    "uk": "Промокод",
+    "en": "Discount code",
+    "fa": "کد تخفیف"
+  },
+  "percent": {
+    "de": "Prozent",
+    "uk": "Відсоток",
+    "en": "Percentage",
+    "fa": "درصد"
+  },
+  "fixed": {
+    "de": "Fester Betrag",
+    "uk": "Фіксована сума",
+    "en": "Fixed amount",
+    "fa": "مبلغ ثابت"
+  },
+  "amount": {
+    "de": "Betrag",
+    "uk": "Сума",
+    "en": "Amount",
+    "fa": "مبلغ"
+  },
+  "startsOn": {
+    "de": "Gültig ab",
+    "uk": "Діє з",
+    "en": "Starts on",
+    "fa": "تاریخ شروع"
+  },
+  "endsOn": {
+    "de": "Gültig bis",
+    "uk": "Діє до",
+    "en": "Ends on",
+    "fa": "تاریخ پایان"
+  },
+  "minSubtotal": {
+    "de": "Mindestwarenwert",
+    "uk": "Мінімальна сума товарів",
+    "en": "Minimum item subtotal",
+    "fa": "حداقل مبلغ محصولات"
+  },
+  "usageLimit": {
+    "de": "Nutzungslimit insgesamt",
+    "uk": "Загальний ліміт використань",
+    "en": "Total usage limit",
+    "fa": "سقف کل دفعات استفاده"
+  },
+  "perCustomerLimit": {
+    "de": "Limit pro Kunde",
+    "uk": "Ліміт на клієнта",
+    "en": "Limit per customer",
+    "fa": "سقف استفادهٔ هر مشتری"
+  },
+  "customerOnly": {
+    "de": "Bestimmter Kunde",
+    "uk": "Окремий клієнт",
+    "en": "Specific customer",
+    "fa": "مشتری مشخص"
+  },
+  "allCustomers": {
+    "de": "Alle Kunden",
+    "uk": "Усі клієнти",
+    "en": "All customers",
+    "fa": "همهٔ مشتریان"
+  },
+  "apply": {
+    "de": "Anwenden",
+    "uk": "Застосувати",
+    "en": "Apply",
+    "fa": "اعمال"
+  },
+  "discount": {
+    "de": "Rabatt",
+    "uk": "Знижка",
+    "en": "Discount",
+    "fa": "تخفیف"
+  },
+  "invalidCoupon": {
+    "de": "Dieser Code ist ungültig oder passt nicht zu deinem Warenkorb.",
+    "uk": "Цей код недійсний або не підходить для вашого кошика.",
+    "en": "This code is invalid or does not apply to your basket.",
+    "fa": "این کد معتبر نیست یا برای سبد خرید شما قابل استفاده نیست."
+  },
+  "couponLoginRequired": {
+    "de": "Bitte anmelden, um diesen Code zu verwenden.",
+    "uk": "Увійдіть, щоб скористатися цим кодом.",
+    "en": "Sign in to use this code.",
+    "fa": "برای استفاده از این کد وارد حساب شوید."
+  },
+  "couponLimit": {
+    "de": "Das Nutzungslimit für diesen Code ist erreicht.",
+    "uk": "Ліміт використання цього коду вичерпано.",
+    "en": "This code has reached its usage limit.",
+    "fa": "تعداد دفعات مجاز استفاده از این کد تمام شده است."
+  },
+  "offerTitle": {
+    "de": "Angebotstitel",
+    "uk": "Назва пропозиції",
+    "en": "Offer title",
+    "fa": "عنوان پیشنهاد"
+  },
+  "offerDescription": {
+    "de": "Angebotsbeschreibung",
+    "uk": "Опис пропозиції",
+    "en": "Offer description",
+    "fa": "توضیح پیشنهاد"
+  },
+  "featuredProducts": {
+    "de": "Ausgewählte Produkte",
+    "uk": "Вибрані товари",
+    "en": "Featured products",
+    "fa": "محصولات منتخب"
+  },
+  "enabled": {
+    "de": "Aktiviert",
+    "uk": "Увімкнено",
+    "en": "Enabled",
+    "fa": "فعال"
+  },
+  "taxMode": {
+    "de": "Umsatzsteuerstatus",
+    "uk": "Режим ПДВ",
+    "en": "VAT status",
+    "fa": "وضعیت مالیات بر ارزش افزوده"
+  },
+  "taxUnset": {
+    "de": "Nicht eingerichtet",
+    "uk": "Не налаштовано",
+    "en": "Not configured",
+    "fa": "تنظیم نشده"
+  },
+  "taxRegular": {
+    "de": "Regelbesteuerung",
+    "uk": "Загальний режим ПДВ",
+    "en": "Standard VAT accounting",
+    "fa": "نظام عادی مالیات بر ارزش افزوده"
+  },
+  "taxSmallBusiness": {
+    "de": "Kleinunternehmer (§ 19 UStG)",
+    "uk": "Малий підприємець (§ 19 UStG)",
+    "en": "Small-business exemption (§ 19 UStG)",
+    "fa": "معافیت کسب‌وکار کوچک (مادهٔ ۱۹ UStG)"
+  },
+  "taxRate": {
+    "de": "Umsatzsteuersatz",
+    "uk": "Ставка ПДВ",
+    "en": "VAT rate",
+    "fa": "نرخ مالیات بر ارزش افزوده"
+  },
+  "gross": {
+    "de": "Brutto",
+    "uk": "З ПДВ",
+    "en": "Gross",
+    "fa": "مبلغ نهایی"
+  },
+  "net": {
+    "de": "Netto",
+    "uk": "Без ПДВ",
+    "en": "Net",
+    "fa": "مبلغ بدون مالیات"
+  },
+  "vat": {
+    "de": "Umsatzsteuer",
+    "uk": "ПДВ",
+    "en": "VAT",
+    "fa": "مالیات بر ارزش افزوده"
+  },
+  "outputVat": {
+    "de": "Umsatzsteuer aus Verkäufen",
+    "uk": "ПДВ із продажів",
+    "en": "Sales VAT",
+    "fa": "مالیات فروش"
+  },
+  "notTaxPayable": {
+    "de": "Umsatzsteuer aus erfassten Verkäufen vor Vorsteuerabzug und weiteren Korrekturen; keine endgültige Zahllast.",
+    "uk": "ПДВ із зафіксованих продажів до відрахування вхідного ПДВ та інших коригувань; це не остаточна сума до сплати.",
+    "en": "Sales VAT before input VAT and other adjustments; not the final VAT payable.",
+    "fa": "مالیات فروش‌های ثبت‌شده، پیش از کسر اعتبار مالیات خرید و اصلاحات دیگر؛ این مبلغ مالیات نهایی قابل‌پرداخت نیست."
+  },
+  "taxPending": {
+    "de": "Die umsatzsteuerliche Behandlung wurde noch nicht eingerichtet.",
+    "uk": "Порядок оподаткування ПДВ ще не налаштовано.",
+    "en": "VAT treatment has not been configured.",
+    "fa": "نحوهٔ اعمال مالیات بر ارزش افزوده تنظیم نشده است."
+  },
+  "smallBusinessNotice": {
+    "de": "Umsatzsteuerbefreit nach § 19 UStG. Keine Umsatzsteuer ausgewiesen.",
+    "uk": "Звільнення від ПДВ за § 19 UStG. ПДВ окремо не зазначається.",
+    "en": "VAT-exempt under § 19 UStG. No VAT stated separately.",
+    "fa": "معاف از مالیات بر ارزش افزوده طبق مادهٔ ۱۹ UStG؛ مالیات به‌صورت جداگانه درج نمی‌شود."
+  },
+  "deliverySettings": {
+    "de": "Liefereinstellungen",
+    "uk": "Налаштування доставки",
+    "en": "Delivery settings",
+    "fa": "تنظیمات ارسال"
+  },
+  "hamburgOnly": {
+    "de": "Lieferung nur innerhalb Hamburgs",
+    "uk": "Доставка лише в межах Гамбурга",
+    "en": "Delivery within Hamburg only",
+    "fa": "ارسال فقط در محدودهٔ هامبورگ"
+  },
+  "deliveryQuoteMode": {
+    "de": "Lieferpreis nach Bestätigung",
+    "uk": "Вартість доставки після підтвердження",
+    "en": "Delivery price by confirmation",
+    "fa": "هزینهٔ ارسال پس از تأیید"
+  },
+  "deliveryZoneMode": {
+    "de": "Lieferpreise nach Zonen",
+    "uk": "Вартість доставки за зонами",
+    "en": "Delivery prices by zone",
+    "fa": "هزینهٔ ارسال بر اساس منطقه"
+  },
+  "postcode": {
+    "de": "Postleitzahl",
+    "uk": "Поштовий індекс",
+    "en": "Postcode",
+    "fa": "کد پستی"
+  },
+  "city": {
+    "de": "Stadt",
+    "uk": "Місто",
+    "en": "City",
+    "fa": "شهر"
+  },
+  "deliveryAreaError": {
+    "de": "Bitte eine Lieferadresse innerhalb Hamburgs mit passender Postleitzahl angeben.",
+    "uk": "Вкажіть адресу доставки в межах Гамбурга з відповідним поштовим індексом.",
+    "en": "Enter a delivery address within Hamburg with the matching postcode.",
+    "fa": "آدرس ارسال داخل هامبورگ و کد پستی مطابق آن را وارد کنید."
+  },
+  "saveSettings": {
+    "de": "Einstellungen speichern",
+    "uk": "Зберегти налаштування",
+    "en": "Save settings",
+    "fa": "ذخیرهٔ تنظیمات"
+  },
+  "photos": {
+    "de": "Fotos",
+    "uk": "Фото",
+    "en": "Photos",
+    "fa": "عکس‌ها"
+  },
+  "addPhoto": {
+    "de": "Foto hinzufügen",
+    "uk": "Додати фото",
+    "en": "Add photo",
+    "fa": "افزودن عکس"
+  },
+  "removePhoto": {
+    "de": "Foto entfernen",
+    "uk": "Видалити фото",
+    "en": "Remove photo",
+    "fa": "حذف عکس"
+  },
+  "primaryPhoto": {
+    "de": "Hauptfoto",
+    "uk": "Головне фото",
+    "en": "Main photo",
+    "fa": "عکس اصلی"
+  },
+  "preview": {
+    "de": "Vorschau",
+    "uk": "Попередній перегляд",
+    "en": "Preview",
+    "fa": "پیش‌نمایش"
+  },
+  "downloadCsv": {
+    "de": "CSV herunterladen",
+    "uk": "Завантажити CSV",
+    "en": "Download CSV",
+    "fa": "دانلود CSV"
+  },
+  "periodFrom": {
+    "de": "Zeitraum von",
+    "uk": "Період від",
+    "en": "Period from",
+    "fa": "بازه از"
+  },
+  "periodTo": {
+    "de": "Zeitraum bis",
+    "uk": "Період до",
+    "en": "Period to",
+    "fa": "بازه تا"
+  },
+  "paidOrders": {
+    "de": "Bezahlte Bestellungen",
+    "uk": "Оплачені замовлення",
+    "en": "Paid orders",
+    "fa": "سفارش‌های پرداخت‌شده"
+  },
+  "paymentReview": {
+    "de": "Zahlungsprüfung",
+    "uk": "Перевірка оплати",
+    "en": "Payment review",
+    "fa": "بررسی پرداخت"
+  },
+  "offerBadge": {
+    "de": "Angebotslabel",
+    "uk": "Позначка пропозиції",
+    "en": "Offer badge",
+    "fa": "برچسب پیشنهاد"
+  },
+  "copyCode": {
+    "de": "Code kopieren",
+    "uk": "Скопіювати код",
+    "en": "Copy code",
+    "fa": "کپی کد"
+  },
+  "discountsHint": {
+    "de": "Gültigkeit, Mindestwarenwert und Nutzungslimits festlegen. Der Rabatt wird vor der Steuerberechnung berücksichtigt.",
+    "uk": "Укажіть строк дії, мінімальну суму товарів і ліміти використання. Знижка враховується до розрахунку ПДВ.",
+    "en": "Set validity dates, minimum item subtotal and usage limits. The discount is applied before VAT is calculated.",
+    "fa": "تاریخ اعتبار، حداقل مبلغ محصولات و سقف استفاده را تعیین کنید. تخفیف پیش از محاسبهٔ مالیات اعمال می‌شود."
+  },
+  "privateDiscountHint": {
+    "de": "Ein persönlicher Code gilt nur für den ausgewählten Kunden nach Anmeldung.",
+    "uk": "Особистий код діє лише для вибраного клієнта після входу.",
+    "en": "A personal code works only for the selected customer after sign-in.",
+    "fa": "کد اختصاصی فقط برای مشتری انتخاب‌شده و پس از ورود به حساب قابل استفاده است."
+  },
+  "allLanguages": {
+    "de": "Alle Sprachen",
+    "uk": "Усі мови",
+    "en": "All languages",
+    "fa": "همهٔ زبان‌ها"
+  },
+  "shopOpen": {
+    "de": "Bestellungen möglich",
+    "uk": "Замовлення відкрито",
+    "en": "Ordering open",
+    "fa": "ثبت سفارش باز است"
+  },
+  "shopClosed": {
+    "de": "Bestellungen pausiert",
+    "uk": "Замовлення призупинено",
+    "en": "Ordering paused",
+    "fa": "ثبت سفارش متوقف است"
+  },
+  "receipt": {
+    "de": "Beleg",
+    "uk": "Квитанція",
+    "en": "Receipt",
+    "fa": "رسید"
+  },
+  "offerSection": {
+    "de": "Angebotsbereich",
+    "uk": "Розділ пропозицій",
+    "en": "Offers section",
+    "fa": "بخش پیشنهادها"
+  },
+  "offerApplies": {
+    "de": "Gilt für",
+    "uk": "Діє для",
+    "en": "Applies to",
+    "fa": "شامل"
+  },
+  "minimum": {
+    "de": "Mindestens",
+    "uk": "Мінімум",
+    "en": "Minimum",
+    "fa": "حداقل"
+  },
+  "validUntil": {
+    "de": "Gültig bis",
+    "uk": "Діє до",
+    "en": "Valid until",
+    "fa": "معتبر تا"
+  },
+  "discountPreview": {
+    "de": "Rabattvorschau",
+    "uk": "Перегляд знижки",
+    "en": "Discount preview",
+    "fa": "پیش‌نمایش تخفیف"
+  }
+}

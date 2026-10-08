@@ -1,0 +1,11 @@
+Sushi HH storefront · October 2026
+
+Local sample library: /Volumes/projects/Samples/Samples
+Header: Headers/headers/header-07.html — asymmetric brand block, separate service and navigation rows; rebuilt for real shop links, basket and four-language navigation.
+Footer: Footers/footers/footer-45.html (Dinner Ticket) — receipt-inspired framing and dashed separators; restaurant hours, delivery rates and account links replace all sample copy.
+Buttons: Buttons gallery models 01 Solid Block, 03 Soft Square, 04 Arrow Capsule — adapted to restrained square corners and the restaurant palette.
+Icons: lucide-react line icons, matching the local icon sample system; no decorative or nonfunctional placeholders.
+Fonts: self-hosted Unbounded (display), Golos Text (Latin/Cyrillic text), Estedad (Persian). Font licenses accompany the assets.
+Persian font source: https://github.com/aminabedi68/Estedad
+
+Product photography: original Wfolio shoot, full originals preserved in assets/originals. lib/product-images.json records exact matches and missing coverage. No menu-poster crops.

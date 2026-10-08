@@ -1,0 +1,352 @@
+{
+  "philadelphia": {
+    "source": "DSC09767.jpg",
+    "basename": "philadelphia",
+    "status": "matched",
+    "confidence": "visual-match",
+    "reason": "Full-size raw-salmon exterior, cream cheese and diced cucumber match Philadelphia. The separate DSC09642 family is seared salmon and is not substituted.",
+    "crop": [
+      0,
+      0.26,
+      1,
+      0.7044444444
+    ]
+  },
+  "philadelphia-shrimp": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "california-unagi": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "golden-dragon": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "Previously considered DSC09820 family is shrimp-topped Ebi Premium, not eel-topped Golden Dragon. No reliable Golden Dragon photo identified.",
+    "crop": null
+  },
+  "philadelphia-unagi": {
+    "source": "DSC09598.jpg",
+    "basename": "philadelphia-unagi",
+    "status": "matched",
+    "confidence": "visual-match",
+    "reason": "Full-size inspection shows eel skin/flesh outside with cream cheese and diced cucumber center, matching Philadelphia with eel.",
+    "crop": [
+      0,
+      0.26,
+      1,
+      0.7044444444
+    ]
+  },
+  "california-salmon": {
+    "source": "DSC09688.jpg",
+    "basename": "california-salmon",
+    "status": "matched",
+    "confidence": "visual-match",
+    "reason": "Full-size red roe outside and salmon, avocado and cream cheese center match the written California Salmon ingredients. The small menu-poster image itself appears inconsistent; use the written ingredient identity, not that crop.",
+    "crop": [
+      0,
+      0.26,
+      1,
+      0.7044444444
+    ]
+  },
+  "philadelphia-sesame": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "green-dragon": {
+    "source": "DSC09795.jpg",
+    "basename": "green-dragon",
+    "status": "matched",
+    "confidence": "visual-match",
+    "reason": "Full-size avocado slices and sesame outside, with salmon, cream cheese and cucumber center, match Green Dragon.",
+    "crop": [
+      0,
+      0.26,
+      1,
+      0.7044444444
+    ]
+  },
+  "philadelphia-combo": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "california-shrimp": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "philadelphia-lux": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "red-dragon": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "The similar raw-salmon DSC09767 family shows Philadelphia with cucumber and cream cheese; avocado/roe required for Red Dragon are not established. No reliable Red Dragon photo identified.",
+    "crop": null
+  },
+  "mix": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "salmon-hit": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "bonsai": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "dragons": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "Full-size overhead DSC09858 shows four rows including fried-onion Bonito, not the three-roll Three Dragons set. No exact set photograph identified.",
+    "crop": null
+  },
+  "maki-set": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "premium": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "bonito": {
+    "source": "DSC09732.jpg",
+    "basename": "bonito",
+    "status": "matched",
+    "confidence": "visual-match",
+    "reason": "Full-size fried-onion topping, salmon and avocado filling match Bonito; no cream-cheese filling is visible.",
+    "crop": [
+      0,
+      0.26,
+      1,
+      0.7044444444
+    ]
+  },
+  "wild-shrimp": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "ebi-premium": {
+    "source": "DSC09820.jpg",
+    "basename": "ebi-premium",
+    "status": "matched",
+    "confidence": "visual-match",
+    "reason": "Full-size inspection shows pink segmented shrimp topping, salmon, cream cheese, cucumber and dark roe: matches Ebi Premium. This is shrimp, not eel.",
+    "crop": [
+      0,
+      0.26,
+      1,
+      0.7044444444
+    ]
+  },
+  "kabia": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "kurimi": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "sakana": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "salmon-tartare": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "tarutarosu": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "sesame-shrimp": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "yakuza": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "cheese-shrimp": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "cheese-salmon": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "futomaki-salmon": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "futomaki-surimi": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "futomaki-avocado": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "The superficially similar gallery roll has black roe on rice, not a nori exterior. No matching futomaki photograph identified.",
+    "crop": null
+  },
+  "maki-takuan": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "maki-philadelphia": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "maki-spicy": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "maki-avocado": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "maki-sake": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "maki-cucumber": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  },
+  "maki-unagi": {
+    "source": null,
+    "basename": null,
+    "status": "missing",
+    "confidence": "unverified",
+    "reason": "No distinct matching photograph identified among the 120 supplied gallery originals. Do not substitute another dish or a menu-poster crop.",
+    "crop": null
+  }
+}

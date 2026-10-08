@@ -1,7 +1,8 @@
-export type Language = 'de'|'uk';
+import translations from './product-translations.json';
+export type Language = 'de'|'uk'|'en'|'fa';
 export type Category = 'sets'|'new'|'classics'|'maki'|'signature';
-export type Product = {id:string;category:Category;name:Record<Language,string>;description:Record<Language,string>;price:number;weight?:number;poster:'sets'|'new'|'classics'|'signature';crop:[number,number,number,number];};
-const make=(id:string,category:Category,de:string,uk:string,price:number,weight:number|undefined,descDe:string,descUk:string,poster:Product['poster'],crop:Product['crop']):Product=>({id,category,name:{de,uk},description:{de:descDe,uk:descUk},price:price*100,weight,poster,crop});
+export type Product = {images?:string[];taxRate?:number;image?:string;active?:boolean;version?:number;id:string;category:Category;name:Record<Language,string>;description:Record<Language,string>;price:number;weight?:number;poster:'sets'|'new'|'classics'|'signature';crop:[number,number,number,number];};
+const make=(id:string,category:Category,de:string,uk:string,price:number,weight:number|undefined,descDe:string,descUk:string,poster:Product['poster'],crop:Product['crop']):Product=>({id,category,name:{de,uk,en:(translations as any)[id].en.name,fa:(translations as any)[id].fa.name},description:{de:descDe,uk:descUk,en:(translations as any)[id].en.description,fa:(translations as any)[id].fa.description},price:price*100,weight,poster,crop});
 export const products:Product[]=[
 make("philadelphia","signature","Philadelphia","Філадельфія",9,250,"Reis, Nori, Philadelphia-Frischkäse, Gurke, Lachs.","Рис, норі, сир Філадельфія, огірок, лосось.","signature",[0, 68, 319, 122]),
 make("philadelphia-shrimp","signature","Philadelphia · Garnele","Філадельфія з креветкою",10,250,"Reis, Nori, Philadelphia-Frischkäse, Gurke, Garnele.","Рис, норі, сир Філадельфія, огірок, креветка.","signature",[323, 68, 314, 122]),

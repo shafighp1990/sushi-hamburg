@@ -254,7 +254,9 @@
       "category": "history",
       "title": {
         "de": "Von konserviertem Fisch zu Sushi",
-        "uk": "Від збереження риби до суші"
+        "uk": "Від збереження риби до суші",
+        "en": "From preserved fish to sushi",
+        "fa": "از نگهداری ماهی تا پیدایش سوشی"
       },
       "body": {
         "de": [
@@ -266,6 +268,16 @@
           "Попередники суші використовували сіль, рис і ферментацію для збереження риби. Японські джерела пов’язують цю традицію з частинами Південно-Східної Азії або Китаю; вони не встановлюють єдиного безсумнівного місця винайдення.",
           "У Японії письмові згадки про суші відомі з VIII століття. У ранніх наредзуші рис допомагав ферментації, а їли переважно рибу. У період Муроматі витримка скоротилася, і рис теж стали їсти.",
           "Додавання оцту дозволило отримувати кислуватий рис без тривалої ферментації. Так розвинулися швидкі суші й згодом знайомі сьогодні форми."
+        ],
+        "en": [
+          "Predecessors of sushi used salt, rice and fermentation to preserve fish. Japanese sources place this tradition in parts of Southeast Asia or China; they do not establish a single, conclusively documented birthplace.",
+          "Written records of sushi in Japan date back to the eighth century. In early narezushi, rice supported fermentation and people mainly ate the fish. During the Muromachi period, maturation became shorter and the rice was eaten too.",
+          "Adding vinegar made it possible to prepare tangy rice without lengthy fermentation. This development led to quick sushi and later to the forms familiar today."
+        ],
+        "fa": [
+          "در شکل‌های اولیهٔ سوشی، نمک، برنج و تخمیر برای نگهداری ماهی به کار می‌رفت. منابع ژاپنی این سنت را به بخش‌هایی از جنوب شرق آسیا یا چین مرتبط می‌دانند؛ از این منابع نمی‌توان یک زادگاه قطعی و واحد برای آن تعیین کرد.",
+          "قدیمی‌ترین اشاره‌های مکتوب به سوشی در ژاپن به قرن هشتم میلادی بازمی‌گردد. در نارزوشی اولیه، برنج به تخمیر کمک می‌کرد و بیشتر خود ماهی خورده می‌شد. در دورهٔ موروماچی، زمان رسیدن کوتاه‌تر شد و خوردن برنج هم رواج یافت.",
+          "اضافه کردن سرکه امکان تهیهٔ برنج ترش‌مزه را بدون تخمیر طولانی فراهم کرد. این تحول به سوشی سریع و سپس شکل‌های آشنای امروزی انجامید."
         ]
       },
       "sources": [
@@ -279,7 +291,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -287,7 +301,9 @@
       "category": "types",
       "title": {
         "de": "Narezushi · fermentierte Tradition",
-        "uk": "Наредзуші · ферментована традиція"
+        "uk": "Наредзуші · ферментована традиція",
+        "en": "Narezushi · a fermented tradition",
+        "fa": "نارزوشی؛ سنت تخمیر"
       },
       "body": {
         "de": [
@@ -297,6 +313,14 @@
         "uk": [
           "Рибу тривалий час ферментують із сіллю та рисом. Відомий японський приклад — фунадзуші. Це інший процес, ніж приготування сучасних ролів з оцтовим рисом.",
           "Історичний опис не є інструкцією для домашньої ферментації."
+        ],
+        "en": [
+          "Fish is fermented with salt and rice over a long period. Funazushi is a well-known Japanese example. This process is different from making modern rolls with vinegared rice.",
+          "This historical description is not a guide to fermenting food at home."
+        ],
+        "fa": [
+          "ماهی همراه نمک و برنج برای مدتی طولانی تخمیر می‌شود. فونازوشی نمونه‌ای شناخته‌شده از این سنت در ژاپن است. این فرایند با تهیهٔ رول‌های امروزی با برنج سرکه‌دار تفاوت دارد.",
+          "این توضیح تاریخی، دستور تخمیر مواد غذایی در خانه نیست."
         ]
       },
       "sources": [
@@ -307,7 +331,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -315,7 +341,9 @@
       "category": "types",
       "title": {
         "de": "Nigiri · von Hand geformt",
-        "uk": "Ніґірі · сформовані вручну"
+        "uk": "Ніґірі · сформовані вручну",
+        "en": "Nigiri · shaped by hand",
+        "fa": "نیگیری؛ شکل‌گرفته با دست"
       },
       "body": {
         "de": [
@@ -323,6 +351,12 @@
         ],
         "uk": [
           "На невелику довгасту порцію оцтового рису кладуть рибу, приготовані морепродукти або омлет. Ніґірі не обов’язково сирі. Ця форма набула популярності наприкінці періоду Едо."
+        ],
+        "en": [
+          "A small, oblong portion of vinegared rice carries a topping such as fish, cooked seafood or omelette. Nigiri is not necessarily raw. This form became popular in the late Edo period."
+        ],
+        "fa": [
+          "روی یک سهم کوچک و کشیده از برنج سرکه‌دار، ماهی، غذای دریایی پخته یا املت قرار می‌گیرد. نیگیری لزوماً خام نیست. این شکل از سوشی در اواخر دورهٔ ادو محبوب شد."
         ]
       },
       "sources": [
@@ -335,7 +369,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -343,7 +379,9 @@
       "category": "types",
       "title": {
         "de": "Hosomaki · die schmale Rolle",
-        "uk": "Хосомакі · тонкий рол"
+        "uk": "Хосомакі · тонкий рол",
+        "en": "Hosomaki · the slender roll",
+        "fa": "هوسوماکی؛ رول باریک"
       },
       "body": {
         "de": [
@@ -351,6 +389,12 @@
         ],
         "uk": [
           "Тонкий рол із норі, рисом і зазвичай однією основною начинкою, наприклад огірком або рибою. Бамбуковий килимок допомагає скрутити рол, який потім нарізають на невеликі шматочки."
+        ],
+        "en": [
+          "A slender nori roll contains rice and usually one main filling, such as cucumber or fish. A bamboo mat helps shape the roll, which is then cut into bite-sized pieces."
+        ],
+        "fa": [
+          "رولی باریک از نوری و برنج که معمولاً یک مادهٔ اصلی، مانند خیار یا ماهی، درون آن قرار می‌گیرد. حصیر بامبو به پیچیدن رول کمک می‌کند؛ سپس رول به قطعه‌های کوچک تقسیم می‌شود."
         ]
       },
       "sources": [
@@ -364,7 +408,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -372,7 +418,9 @@
       "category": "types",
       "title": {
         "de": "Futomaki · mehrere Füllungen",
-        "uk": "Футомакі · кілька начинок"
+        "uk": "Футомакі · кілька начинок",
+        "en": "Futomaki · several fillings",
+        "fa": "فوتوماکی؛ چند ترکیب در یک رول"
       },
       "body": {
         "de": [
@@ -380,6 +428,12 @@
         ],
         "uk": [
           "Товстіший рол поєднує кілька інгредієнтів усередині норі. Риба можлива, але не обов’язкова. Святкові роли з Тіби можуть утворювати складні візерунки на зрізі. Варіанти з крем-сиром у нашому меню — рецепти цього ресторану."
+        ],
+        "en": [
+          "A thicker roll combines several ingredients inside a nori wrapper. Fish may be included but is not essential. Regional celebration rolls from Chiba can reveal intricate patterns when sliced. The cream-cheese versions on our menu are this restaurant’s own recipes."
+        ],
+        "fa": [
+          "رولی ضخیم‌تر که چند ماده را داخل پوشش نوری کنار هم قرار می‌دهد. می‌تواند ماهی داشته باشد، اما وجود ماهی ضروری نیست. رول‌های جشن در منطقهٔ چیبا گاهی پس از برش نقش‌های پیچیده‌ای نشان می‌دهند. مدل‌های دارای پنیر خامه‌ای در منوی ما، دستورهای همین رستوران هستند."
         ]
       },
       "sources": [
@@ -393,7 +447,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -401,7 +457,9 @@
       "category": "types",
       "title": {
         "de": "Uramaki · Reis außen",
-        "uk": "Урамакі · рис зовні"
+        "uk": "Урамакі · рис зовні",
+        "en": "Uramaki · rice on the outside",
+        "fa": "اوراماکی؛ برنج در لایهٔ بیرونی"
       },
       "body": {
         "de": [
@@ -409,6 +467,12 @@
         ],
         "uk": [
           "У ролах навиворіт рис розташований зовні, а норі — всередині. Відомий приклад — Каліфорнія; начинка залежить від рецепта. Один із варіантів — сурімі з авокадо. Масаго, тобіко й кунжут — різні можливі посипки."
+        ],
+        "en": [
+          "Inside-out rolls have rice on the outside and nori on the inside. California rolls are a familiar example, with fillings that vary by recipe. Surimi with avocado is one combination. Masago, tobiko and sesame are different possible toppings."
+        ],
+        "fa": [
+          "در رول‌های پشت‌ورو، برنج بیرون و نوری داخل قرار می‌گیرد. رول کالیفرنیا نمونه‌ای شناخته‌شده است که مواد داخل آن بسته به دستور فرق می‌کند. سوریمی با آووکادو یکی از ترکیب‌های ممکن است. ماساگو، توبیکو و کنجد گزینه‌های متفاوتی برای پوشش بیرونی هستند."
         ]
       },
       "sources": [
@@ -422,7 +486,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -430,7 +496,9 @@
       "category": "types",
       "title": {
         "de": "Temaki · in der Hand gerollt",
-        "uk": "Темакі · ручний рол"
+        "uk": "Темакі · ручний рол",
+        "en": "Temaki · a hand roll",
+        "fa": "تماکی؛ رول دستی"
       },
       "body": {
         "de": [
@@ -438,6 +506,12 @@
         ],
         "uk": [
           "Лист норі з рисом і начинкою згортають у конус. Темакі їдять цілим, не нарізаючи на кружальця. Формуйте перед їжею, щоб норі зберегли текстуру."
+        ],
+        "en": [
+          "A sheet of nori is rolled into a cone around rice and fillings. Temaki is eaten individually without being sliced. Roll it just before eating so the nori keeps its texture."
+        ],
+        "fa": [
+          "یک ورق نوری همراه برنج و مواد داخل آن به شکل قیف پیچیده می‌شود. تماکی به صورت یک‌تکه خورده می‌شود و برش نمی‌خورد. آن را درست پیش از خوردن بپیچید تا بافت نوری حفظ شود."
         ]
       },
       "sources": [
@@ -449,7 +523,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -457,7 +533,9 @@
       "category": "types",
       "title": {
         "de": "Gunkan · ein kleines Schiffchen",
-        "uk": "Ґункан · маленький човник"
+        "uk": "Ґункан · маленький човник",
+        "en": "Gunkan · a little boat",
+        "fa": "گونکان؛ قایقی کوچک"
       },
       "body": {
         "de": [
@@ -465,6 +543,12 @@
         ],
         "uk": [
           "Смужка норі утворює бортик навколо овальної основи з рису. Так розсипчаста начинка тримається на місці. Зверху може бути ікра або суміш приготованої креветки з огірком."
+        ],
+        "en": [
+          "A strip of nori forms a rim around an oval bed of rice, keeping loose toppings in place. Possible toppings include fish roe or a mixture of cooked shrimp and cucumber."
+        ],
+        "fa": [
+          "نواری از نوری دور پایه‌ای بیضی‌شکل از برنج، لبه ایجاد می‌کند تا مواد روی آن نریزند. تخم ماهی یا ترکیبی از میگوی پخته و خیار می‌تواند روی این پایه قرار بگیرد."
         ]
       },
       "sources": [
@@ -477,7 +561,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -485,7 +571,9 @@
       "category": "types",
       "title": {
         "de": "Chirashi · Sushi in der Schale",
-        "uk": "Тірасі · суші в мисці"
+        "uk": "Тірасі · суші в мисці",
+        "en": "Chirashi · sushi in a bowl",
+        "fa": "چیراشی؛ سوشی در کاسه"
       },
       "body": {
         "de": [
@@ -493,6 +581,12 @@
         ],
         "uk": [
           "Інгредієнти розкладають на оцтовому рисі, а не загортають у рол. Залежно від рецепта додають овочі, яйце, рибу або морепродукти. Не кожна миска з сирою рибою є тірасі: тут основа — рис для суші."
+        ],
+        "en": [
+          "Ingredients are arranged over vinegared rice instead of being rolled. Depending on the recipe, these may include vegetables, egg, fish or seafood. Not every bowl of raw fish is chirashi: sushi rice is the defining base here."
+        ],
+        "fa": [
+          "مواد روی برنج سرکه‌دار چیده می‌شوند و به شکل رول درنمی‌آیند. بسته به دستور، سبزیجات، تخم‌مرغ، ماهی یا غذای دریایی به آن اضافه می‌شود. هر کاسه‌ای که ماهی خام دارد چیراشی نیست؛ پایهٔ مشخص‌کنندهٔ این غذا برنج سوشی است."
         ]
       },
       "sources": [
@@ -504,7 +598,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -512,7 +608,9 @@
       "category": "types",
       "title": {
         "de": "Oshizushi · gepresstes Sushi",
-        "uk": "Осідзуші · пресовані суші"
+        "uk": "Осідзуші · пресовані суші",
+        "en": "Oshizushi · pressed sushi",
+        "fa": "اوشیزوشی؛ سوشی فشرده"
       },
       "body": {
         "de": [
@@ -520,6 +618,12 @@
         ],
         "uk": [
           "Рис і начинку викладають шарами у форму, притискають і ділять на порції. Регіональні варіанти різняться: наприклад, у Токусімі рис можуть заправляти оцтом із юдзу."
+        ],
+        "en": [
+          "Rice and toppings are layered in a mould, pressed together and portioned. Regional versions vary considerably: in Tokushima, for example, yuzu vinegar may be used to season the rice."
+        ],
+        "fa": [
+          "برنج و مواد روی آن لایه‌لایه در قالب قرار می‌گیرند، فشرده می‌شوند و به بخش‌های کوچک تقسیم می‌شوند. مدل‌های منطقه‌ای تفاوت زیادی دارند؛ برای نمونه، در توکوشیما ممکن است برنج را با سرکهٔ یوزو مزه‌دار کنند."
         ]
       },
       "sources": [
@@ -531,7 +635,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -539,7 +645,9 @@
       "category": "types",
       "title": {
         "de": "Inari · Sushi in der Tofutasche",
-        "uk": "Інарі · суші в тофу-кишеньці"
+        "uk": "Інарі · суші в тофу-кишеньці",
+        "en": "Inari · sushi in a tofu pocket",
+        "fa": "ایناری؛ سوشی در پاکت توفو"
       },
       "body": {
         "de": [
@@ -547,6 +655,12 @@
         ],
         "uk": [
           "Приправлену кишеньку зі смаженого тофу наповнюють оцтовим рисом. Заправка може містити соєвий соус, солодкі компоненти й дасі. Тому сама оболонка з тофу не означає, що будь-який рецепт веганський."
+        ],
+        "en": [
+          "A seasoned pocket of fried tofu is filled with vinegared rice. Its seasoning liquid may contain soy sauce, sweet ingredients and dashi. A tofu wrapper alone therefore does not mean that every recipe is vegan."
+        ],
+        "fa": [
+          "پاکتی مزه‌دار از توفوی سرخ‌شده با برنج سرکه‌دار پر می‌شود. مایع مزه‌دارکننده ممکن است سس سویا، مواد شیرین و داشی داشته باشد. بنابراین وجود پوشش توفو به‌تنهایی به معنای وگان بودن همهٔ دستورها نیست."
         ]
       },
       "sources": [
@@ -558,7 +672,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -566,7 +682,9 @@
       "category": "types",
       "title": {
         "de": "Temari · kleine Sushi-Kugeln",
-        "uk": "Темарі · маленькі кульки суші"
+        "uk": "Темарі · маленькі кульки суші",
+        "en": "Temari · small sushi balls",
+        "fa": "تماری؛ توپک‌های سوشی"
       },
       "body": {
         "de": [
@@ -574,6 +692,12 @@
         ],
         "uk": [
           "Рис із тонким шаром начинки формують у невеликі кульки. Можна використати рибу, овочі або яйце. Чиста харчова плівка допомагає надати форму; перед подачею її повністю знімають."
+        ],
+        "en": [
+          "Rice and a thin topping are shaped into small balls. Fish, vegetables or egg may be used. Clean, food-safe film can help with shaping and must be removed completely before serving."
+        ],
+        "fa": [
+          "برنج همراه یک لایهٔ نازک از مواد به شکل توپک درمی‌آید. ماهی، سبزیجات یا تخم‌مرغ می‌تواند در آن به کار برود. روکش پلاستیکی تمیز و مخصوص مواد غذایی به شکل دادن کمک می‌کند و باید پیش از سرو کاملاً برداشته شود."
         ]
       },
       "sources": [
@@ -585,7 +709,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -593,7 +719,9 @@
       "category": "types",
       "title": {
         "de": "Mushizushi · warm gedämpft",
-        "uk": "Мусідзуші · теплі суші на парі"
+        "uk": "Мусідзуші · теплі суші на парі",
+        "en": "Mushizushi · served warm and steamed",
+        "fa": "موشیزوشی؛ سوشی گرم و بخارپز"
       },
       "body": {
         "de": [
@@ -601,6 +729,12 @@
         ],
         "uk": [
           "Теплі суші теж належать до японської традиції. Для мусідзуші рис для суші з інгредієнтами прогрівають на парі. Отже, суші — це не лише холодна страва й не лише сира риба."
+        ],
+        "en": [
+          "Warm sushi is also part of Japan’s culinary variety. For mushizushi, arranged sushi rice and ingredients are steamed. Sushi therefore does not refer exclusively to cold food or to raw fish."
+        ],
+        "fa": [
+          "سوشی گرم هم بخشی از تنوع غذایی ژاپن است. در موشیزوشی، برنج سوشی که با مواد دیگر چیده شده، بخارپز می‌شود. پس سوشی فقط غذای سرد یا فقط ماهی خام نیست."
         ]
       },
       "sources": [
@@ -612,7 +746,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -620,7 +756,9 @@
       "category": "types",
       "title": {
         "de": "Sashimi · Fisch ohne Sushi-Reis",
-        "uk": "Сашімі · риба без рису для суші"
+        "uk": "Сашімі · риба без рису для суші",
+        "en": "Sashimi · fish without sushi rice",
+        "fa": "ساشیمی؛ ماهی بدون برنج سوشی"
       },
       "body": {
         "de": [
@@ -628,6 +766,12 @@
         ],
         "uk": [
           "Сашімі — нарізана сира риба або інші сирі морепродукти, які подають без рису для суші. Тому у вузькому значенні це не різновид суші. В актуальному меню немає окремої порції сашімі."
+        ],
+        "en": [
+          "Sashimi consists of sliced raw fish or other raw seafood, served without sushi rice. Strictly speaking, it is therefore not a type of sushi. Our current menu does not offer a separate sashimi portion."
+        ],
+        "fa": [
+          "ساشیمی از برش‌های ماهی خام یا دیگر غذاهای دریایی خام تشکیل می‌شود و بدون برنج سوشی سرو می‌شود. بنابراین در تعریف دقیق، یک نوع سوشی نیست. در منوی فعلی ما ساشیمی به صورت جداگانه ارائه نشده است."
         ]
       },
       "sources": [
@@ -639,7 +783,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -647,7 +793,9 @@
       "category": "history",
       "title": {
         "de": "Ein Land, viele Sushi-Traditionen",
-        "uk": "Одна країна, багато традицій суші"
+        "uk": "Одна країна, багато традицій суші",
+        "en": "One country, many sushi traditions",
+        "fa": "یک کشور و سنت‌های گوناگون سوشی"
       },
       "body": {
         "de": [
@@ -655,6 +803,12 @@
         ],
         "uk": [
           "Окрім ніґірі, існують регіональні страви: Кіото відоме довгастими пресованими суші зі скумбрією. У Тоямі готують пресовані суші з фореллю. В Ісікаві є кабурадзуші з ріпою та рибою. Форма, заправка й способи збереження відображають місцеві традиції."
+        ],
+        "en": [
+          "Alongside nigiri, there are regional specialities: Kyoto, for example, is known for elongated pressed mackerel sushi. Toyama pairs pressed sushi with trout. Ishikawa has kaburazushi made with turnip and fish. Shapes, seasonings and preservation methods reflect different local traditions."
+        ],
+        "fa": [
+          "در کنار نیگیری، غذاهای ویژهٔ منطقه‌ای هم وجود دارند؛ برای مثال کیوتو به سوشی فشرده و کشیده با ماهی خال‌مخالی معروف است. در تویاما سوشی فشرده را با قزل‌آلا تهیه می‌کنند. در ایشیکاوا کابورازوشی با شلغم و ماهی وجود دارد. شکل، چاشنی و روش نگهداری، روایتگر سنت‌های متفاوت محلی است."
         ]
       },
       "sources": [
@@ -666,7 +820,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -674,7 +830,9 @@
       "category": "history",
       "title": {
         "de": "Von Japan in die Welt",
-        "uk": "З Японії у світ"
+        "uk": "З Японії у світ",
+        "en": "From Japan to the world",
+        "fa": "از ژاپن به جهان"
       },
       "body": {
         "de": [
@@ -684,6 +842,14 @@
         "uk": [
           "Суші розвиваються й за межами Японії. Роли навиворіт та нові начинки поширилися світом і вплинули на меню в Японії. Лосось набув популярності також завдяки імпорту зі Скандинавії.",
           "Назви Якудза, Кабія або Три дракони на цьому сайті — назви страв із меню ресторану, а не усталені історичні типи суші. Склад наведено на сторінці кожного продукту."
+        ],
+        "en": [
+          "Sushi continues to evolve outside Japan. Inside-out rolls and new fillings spread internationally and, in turn, influenced menus in Japan. Salmon also became more prominent through imports from Scandinavia.",
+          "Names such as Yakuza, Kabia and Three Dragons on this website are product names from the restaurant’s menu, not established historical categories of sushi. Their ingredients are listed on their individual product pages."
+        ],
+        "fa": [
+          "سوشی بیرون از ژاپن هم به تکامل ادامه می‌دهد. رول‌های پشت‌ورو و ترکیب‌های جدید در جهان رواج یافتند و خود بر منوهای ژاپن تأثیر گذاشتند. واردات از اسکاندیناوی هم به افزایش جایگاه سالمون کمک کرد.",
+          "نام‌هایی مانند یاکوزا، کابیا و سه اژدها در این وب‌سایت، نام محصولات منوی رستوران هستند و گونه‌های تاریخی و تعریف‌شدهٔ سوشی محسوب نمی‌شوند. ترکیبات هرکدام در صفحهٔ همان محصول آمده است."
         ]
       },
       "sources": [
@@ -696,7 +862,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -704,7 +872,9 @@
       "category": "ingredients",
       "title": {
         "de": "Sushi-Reis · Shari / Sumeshi",
-        "uk": "Рис для суші · шарі / сумесі"
+        "uk": "Рис для суші · шарі / сумесі",
+        "en": "Sushi rice · shari / sumeshi",
+        "fa": "برنج سوشی؛ شاری یا سومشی"
       },
       "body": {
         "de": [
@@ -712,6 +882,12 @@
         ],
         "uk": [
           "Основа суші — зварений рис, заправлений оцтом. Японський круглозернистий рис має триматися разом, не стаючи кашею. Кількість води залежить від рису й способу варіння."
+        ],
+        "en": [
+          "Cooked rice seasoned with vinegar is the foundation of sushi. Japanese short-grain rice should hold together without turning mushy. The right amount of water depends on the rice and cooking method."
+        ],
+        "fa": [
+          "برنج پخته و مزه‌دارشده با سرکه، پایهٔ سوشی است. برنج دانه‌کوتاه ژاپنی باید به هم بچسبد، اما خمیر نشود. مقدار مناسب آب به نوع برنج و روش پخت بستگی دارد."
         ]
       },
       "sources": [
@@ -723,7 +899,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -731,7 +909,9 @@
       "category": "ingredients",
       "title": {
         "de": "Nori · die Algenhülle",
-        "uk": "Норі · оболонка з водоростей"
+        "uk": "Норі · оболонка з водоростей",
+        "en": "Nori · the seaweed wrapper",
+        "fa": "نوری؛ پوشش جلبکی"
       },
       "body": {
         "de": [
@@ -739,6 +919,12 @@
         ],
         "uk": [
           "Для суші використовують висушені, сформовані в листи й зазвичай обсмажені водорості. Норі утримують багато видів ролів. Зберігайте сухими й діставайте перед скручуванням: від вологи листи м’якшають."
+        ],
+        "en": [
+          "Sushi uses seaweed that has been dried, made into sheets and usually roasted. Nori holds many rolls together. Store it dry and take it out of the packet just before rolling; moisture softens the sheets."
+        ],
+        "fa": [
+          "در سوشی از جلبکی استفاده می‌شود که خشک شده، به شکل ورق درآمده و معمولاً برشته شده است. نوری بسیاری از رول‌ها را کنار هم نگه می‌دارد. آن را خشک نگه دارید و درست پیش از پیچیدن از بسته خارج کنید؛ رطوبت ورق‌ها را نرم می‌کند."
         ]
       },
       "sources": [
@@ -750,7 +936,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -758,7 +946,9 @@
       "category": "ingredients",
       "title": {
         "de": "Lachs · Sake / Salmon",
-        "uk": "Лосось · сяке / salmon"
+        "uk": "Лосось · сяке / salmon",
+        "en": "Salmon · sake",
+        "fa": "سالمون؛ ساکه"
       },
       "body": {
         "de": [
@@ -766,6 +956,12 @@
         ],
         "uk": [
           "Лосось є в багатьох наших ролах, зокрема в макі сяке та Ебі Преміум. Меню не вказує точний вид риби, походження або єдиний спосіб термообробки. Уточнюйте це в ресторані. Сам лосось не визначає форму суші: він може бути начинкою або верхнім шаром."
+        ],
+        "en": [
+          "Salmon appears in many of our rolls, including Sake Maki and Ebi Premium. The menu does not state the exact species, origin or a consistent level of cooking. Please ask the restaurant for these details. Salmon alone does not define a sushi style: it can be a filling or a topping."
+        ],
+        "fa": [
+          "سالمون در بسیاری از رول‌های ما، از جمله ماکی سالمون و ابی پریمیوم، وجود دارد. منو گونهٔ دقیق ماهی، خاستگاه یا وضعیت پخت یکسانی برای همهٔ محصولات مشخص نمی‌کند. این اطلاعات را از رستوران بپرسید. سالمون به‌تنهایی نوع سوشی را تعیین نمی‌کند؛ می‌تواند داخل رول یا روی آن قرار بگیرد."
         ]
       },
       "sources": [
@@ -778,7 +974,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -786,7 +984,9 @@
       "category": "ingredients",
       "title": {
         "de": "Maguro · Thunfisch",
-        "uk": "Маґуро · тунець"
+        "uk": "Маґуро · тунець",
+        "en": "Maguro · tuna",
+        "fa": "ماگورو؛ ماهی تن"
       },
       "body": {
         "de": [
@@ -794,6 +994,12 @@
         ],
         "uk": [
           "Тунець — не один вид риби. Японська кухня використовує різні види й частини. Акамі — пісне м’ясо, тюторо — частина із середнім вмістом жиру, оторо — особливо жирна черевна частина. У нашому меню тунець наразі не вказаний окремим інгредієнтом."
+        ],
+        "en": [
+          "Tuna is not a single species of fish. Japanese cooking uses different species and cuts. Akami refers to lean meat, chutoro to a moderately fatty cut and otoro to particularly fatty belly cuts. Tuna is not currently listed as a separate ingredient on our menu."
+        ],
+        "fa": [
+          "ماهی تن فقط یک گونه نیست. در آشپزی ژاپنی از گونه‌ها و برش‌های مختلف آن استفاده می‌شود. آکامی به گوشت کم‌چرب، چوتورو به برشی با چربی متوسط و اوتورو به بخش‌های بسیار چرب شکم گفته می‌شود. در منوی فعلی ما تن به عنوان ماده‌ای جداگانه ذکر نشده است."
         ]
       },
       "sources": [
@@ -804,7 +1010,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -812,7 +1020,9 @@
       "category": "ingredients",
       "title": {
         "de": "Unagi & Anago · Aal",
-        "uk": "Унаґі й анаґо · вугор"
+        "uk": "Унаґі й анаґо · вугор",
+        "en": "Unagi & anago · eel",
+        "fa": "اوناگی و آناگو؛ مارماهی"
       },
       "body": {
         "de": [
@@ -820,6 +1030,12 @@
         ],
         "uk": [
           "Японська кухня розрізняє унаґі та анаґо. Вугра часто готують, наприклад смажать із солодкуватою соєвою глазур’ю кабаякі. Для наших макі з вугрем меню вказує вугра, соус унаґі та кунжут; точний вид і спосіб приготування підтверджує ресторан."
+        ],
+        "en": [
+          "Japanese cuisine distinguishes between unagi and anago. Eel is often cooked, for example grilled with a sweet soy-sauce glaze (kabayaki). Our Unagi Maki entry lists eel, unagi sauce and sesame; the restaurant can confirm the exact species and preparation."
+        ],
+        "fa": [
+          "آشپزی ژاپنی میان اوناگی و آناگو تفاوت می‌گذارد. مارماهی اغلب پخته می‌شود؛ برای نمونه با لعاب شیرین سس سویا کباب می‌شود که کابایاکی نام دارد. در ماکی مارماهی ما، مارماهی، سس اوناگی و کنجد ذکر شده است؛ گونهٔ دقیق و روش آماده‌سازی را رستوران تأیید می‌کند."
         ]
       },
       "sources": [
@@ -832,7 +1048,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -840,7 +1058,9 @@
       "category": "ingredients",
       "title": {
         "de": "Ebi · Garnele",
-        "uk": "Ебі · креветка"
+        "uk": "Ебі · креветка",
+        "en": "Ebi · shrimp",
+        "fa": "ابی؛ میگو"
       },
       "body": {
         "de": [
@@ -848,6 +1068,12 @@
         ],
         "uk": [
           "Креветка — інгредієнт із морепродуктів, а не форма суші. У японських рецептах, наприклад, варені креветки загортають із рисом та овочами. Наше меню розрізняє креветку, тигрову креветку й прямо вказану підсмажену креветку; це не визначає термообробку всіх інших ролів."
+        ],
+        "en": [
+          "Shrimp is a seafood ingredient, not a style of sushi. Japanese recipes may roll cooked shrimp with rice and vegetables. Our menu distinguishes shrimp, tiger shrimp and explicitly fried shrimp; this does not establish how the shrimp in all other rolls is cooked."
+        ],
+        "fa": [
+          "میگو یکی از مواد دریایی است، نه یک شکل سوشی. در بعضی دستورهای ژاپنی، میگوی پخته همراه برنج و سبزیجات پیچیده می‌شود. منوی ما میان میگو، میگوی ببری و میگویی که صریحاً سرخ‌شده توصیف شده تفاوت می‌گذارد؛ از این اطلاعات نمی‌توان وضعیت پخت میگوی تمام رول‌های دیگر را نتیجه گرفت."
         ]
       },
       "sources": [
@@ -860,7 +1086,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -868,7 +1096,9 @@
       "category": "ingredients",
       "title": {
         "de": "Surimi · verarbeitetes Fischprodukt",
-        "uk": "Сурімі · продукт із риби"
+        "uk": "Сурімі · продукт із риби",
+        "en": "Surimi · a processed fish product",
+        "fa": "سوریمی؛ فرآوردهٔ ماهی"
       },
       "body": {
         "de": [
@@ -876,6 +1106,12 @@
         ],
         "uk": [
           "Сурімі — перероблена рибна маса, з якої, зокрема, виготовляють палички, подібні до крабового м’яса. Nissui наводить приклад використання минтая. Це не обов’язково справжнє крабове м’ясо. Склад і алергени залежать від конкретного продукту."
+        ],
+        "en": [
+          "Surimi is a processed fish paste used, among other things, to make crab-like sticks. Nissui describes Alaska pollock as one fish used for this purpose. Surimi is not automatically real crab meat. Ingredients and allergens depend on the specific product."
+        ],
+        "fa": [
+          "سوریمی خمیری فرآوری‌شده از ماهی است که از آن، از جمله، قطعه‌های شبیه گوشت خرچنگ می‌سازند. شرکت نیسویی برای این کاربرد از پولاک آلاسکا نام می‌برد. سوریمی لزوماً گوشت واقعی خرچنگ نیست. ترکیبات و مواد حساسیت‌زا به محصول مشخص بستگی دارند."
         ]
       },
       "sources": [
@@ -887,7 +1123,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -895,7 +1133,9 @@
       "category": "ingredients",
       "title": {
         "de": "Schneekrabbe & Krabbenfleisch",
-        "uk": "Сніжний краб і крабове м’ясо"
+        "uk": "Сніжний краб і крабове м’ясо",
+        "en": "Snow crab & crab meat",
+        "fa": "خرچنگ برفی و گوشت خرچنگ"
       },
       "body": {
         "de": [
@@ -903,6 +1143,12 @@
         ],
         "uk": [
           "У новинках зазначено «сніжний краб» або «крабове м’ясо». Надане меню не пояснює, чи йдеться в кожному випадку про справжнє м’ясо краба або перероблений продукт. Тому ми не замінюємо ці назви на сурімі. За алергії обов’язково уточнюйте конкретний продукт."
+        ],
+        "en": [
+          "Some new rolls list “snow crab”, while others list “crab meat”. The supplied menu does not explain whether these refer to real crab meat or a processed product in each case. We therefore do not silently replace these terms with surimi. If you have an allergy, always ask about the specific product."
+        ],
+        "fa": [
+          "در برخی رول‌های جدید «خرچنگ برفی» و در برخی دیگر «گوشت خرچنگ» آمده است. منوی ارائه‌شده توضیح نمی‌دهد که در هر مورد منظور گوشت واقعی خرچنگ است یا یک فرآورده. بنابراین این نام‌ها را بی‌توضیح به سوریمی تغییر نمی‌دهیم. اگر حساسیت غذایی دارید، حتماً دربارهٔ محصول دقیق سؤال کنید."
         ]
       },
       "sources": [
@@ -913,7 +1159,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -921,7 +1169,9 @@
       "category": "ingredients",
       "title": {
         "de": "Masago · Rogen vom Lodden",
-        "uk": "Масаго · ікра мойви"
+        "uk": "Масаго · ікра мойви",
+        "en": "Masago · capelin roe",
+        "fa": "ماساگو؛ تخم ماهی کاپلین"
       },
       "body": {
         "de": [
@@ -929,6 +1179,12 @@
         ],
         "uk": [
           "Масаго — ікра мойви, яку часто продають приправленою. Це рибна ікра, відмінна від тобіко. Джерело показує товар для пояснення терміна, а не підтверджує постачальника нашого ресторану."
+        ],
+        "en": [
+          "Masago is capelin roe, often sold seasoned. It is fish roe and differs from tobiko. The source shows a commercial product to explain the term; it does not establish who supplies our restaurant."
+        ],
+        "fa": [
+          "ماساگو تخم ماهی کاپلین است و اغلب به صورت مزه‌دار فروخته می‌شود. این تخم ماهی با توبیکو تفاوت دارد. منبع، یک محصول تجاری را برای توضیح اصطلاح نشان می‌دهد و مدرکی دربارهٔ تأمین‌کنندهٔ رستوران ما نیست."
         ]
       },
       "sources": [
@@ -940,7 +1196,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -948,7 +1206,9 @@
       "category": "ingredients",
       "title": {
         "de": "Tobiko · Flugfischrogen",
-        "uk": "Тобіко · ікра летючої риби"
+        "uk": "Тобіко · ікра летючої риби",
+        "en": "Tobiko · flying-fish roe",
+        "fa": "توبیکو؛ تخم ماهی پرنده"
       },
       "body": {
         "de": [
@@ -958,6 +1218,14 @@
         "uk": [
           "Тобіко — дрібні ікринки летючої риби. Засоленими їх використовують, зокрема, як верхній шар суші. Тобіко й масаго — різна ікра. У доданому меню тобіко зазначено, наприклад, у Каліфорнії з лососем і Золотому драконі.",
           "У складі Червоного дракона в оригіналі написано «сир тобіко». Точне значення цього незвичного позначення уточнюйте в ресторані."
+        ],
+        "en": [
+          "Tobiko are the small eggs of flying fish. Salted tobiko is used, among other things, as a sushi topping. Tobiko and masago are not the same roe. The additional menu lists tobiko in California with salmon and Golden Dragon, for example.",
+          "For Red Dragon, the original says “сир тобіко” (literally “tobiko cheese”). Please clarify the exact meaning of this unusual term with the restaurant."
+        ],
+        "fa": [
+          "توبیکو تخم‌های کوچک ماهی پرنده است. نوع نمک‌زدهٔ آن از جمله برای روی سوشی استفاده می‌شود. توبیکو و ماساگو یک نوع تخم ماهی نیستند. در منوی تکمیلی، برای نمونه، در کالیفرنیا با سالمون و اژدهای طلایی توبیکو ذکر شده است.",
+          "در مورد اژدهای قرمز، متن اصلی «сир тобіко» است که معنای تحت‌اللفظی آن «پنیر توبیکو» است. منظور دقیق این اصطلاح نامعمول را از رستوران بپرسید."
         ]
       },
       "sources": [
@@ -969,7 +1237,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -977,7 +1247,9 @@
       "category": "ingredients",
       "title": {
         "de": "Takuan · eingelegter Daikon",
-        "uk": "Такуан · маринований дайкон"
+        "uk": "Такуан · маринований дайкон",
+        "en": "Takuan · pickled daikon",
+        "fa": "تاکوآن؛ ترب دایکون ترشی‌شده"
       },
       "body": {
         "de": [
@@ -985,6 +1257,12 @@
         ],
         "uk": [
           "Такуан — маринований дайкон, часто жовтого кольору. Його використовують, наприклад, для начинки макі. У наданому меню написано «Текуан»; на цьому сайті обидва написання ведуть до одного матеріалу."
+        ],
+        "en": [
+          "Takuan is pickled daikon radish, often yellow. It can be used as a maki filling. The supplied Ukrainian menu spells it “Текуан”; both spellings lead to the same entry on this website."
+        ],
+        "fa": [
+          "تاکوآن، ترب دایکون ترشی‌شده است که اغلب رنگ زرد دارد. برای نمونه درون ماکی استفاده می‌شود. در منوی اوکراینی ارائه‌شده، املای «Текуан» آمده است؛ هر دو نگارش در این وب‌سایت به یک مطلب می‌رسند."
         ]
       },
       "sources": [
@@ -996,7 +1274,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1004,7 +1284,9 @@
       "category": "ingredients",
       "title": {
         "de": "Gurke · frische Füllung",
-        "uk": "Огірок · свіжа начинка"
+        "uk": "Огірок · свіжа начинка",
+        "en": "Cucumber · a fresh filling",
+        "fa": "خیار؛ ترکیبی تازه در رول"
       },
       "body": {
         "de": [
@@ -1012,6 +1294,12 @@
         ],
         "uk": [
           "Для ролів огірок нарізають тонкими смужками. У багатьох рецептах він є окремою начинкою або доповнює рибу та яйце. Наші макі з огірком містять за меню рис, норі й огірок; інші роли з огірком також мають крем-сир або морепродукти."
+        ],
+        "en": [
+          "Cucumber is cut into thin strips for rolls. In many recipes it is a filling on its own or paired with fish and egg. Our Cucumber Maki lists rice, nori and cucumber; other cucumber rolls also contain cream cheese or seafood."
+        ],
+        "fa": [
+          "خیار برای رول به نوارهای باریک بریده می‌شود. در بسیاری از دستورها به‌تنهایی یا همراه ماهی و تخم‌مرغ داخل رول قرار می‌گیرد. در ماکی خیار ما، برنج، نوری و خیار ذکر شده است؛ دیگر رول‌های حاوی خیار ممکن است پنیر خامه‌ای یا غذای دریایی هم داشته باشند."
         ]
       },
       "sources": [
@@ -1024,7 +1312,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1032,7 +1322,9 @@
       "category": "ingredients",
       "title": {
         "de": "Avocado · in modernen Rollen",
-        "uk": "Авокадо · у сучасних ролах"
+        "uk": "Авокадо · у сучасних ролах",
+        "en": "Avocado · in modern rolls",
+        "fa": "آووکادو در رول‌های امروزی"
       },
       "body": {
         "de": [
@@ -1040,6 +1332,12 @@
         ],
         "uk": [
           "Авокадо використовують, наприклад, у Каліфорнії та ролах навиворіт. У нас є макі з авокадо й поєднання з огірком, рибою або креветкою. Футомакі з авокадо та огірком за меню також містять крем-сир."
+        ],
+        "en": [
+          "Avocado appears in California and inside-out recipes, for example. Our menu includes Avocado Maki and combinations with cucumber, fish or shrimp. According to the menu, Futomaki with avocado and cucumber also contains cream cheese."
+        ],
+        "fa": [
+          "آووکادو برای نمونه در دستورهای کالیفرنیا و رول‌های پشت‌ورو به کار می‌رود. ما ماکی آووکادو و ترکیب‌هایی با خیار، ماهی یا میگو داریم. طبق منو، فوتوماکی آووکادو و خیار، پنیر خامه‌ای هم دارد."
         ]
       },
       "sources": [
@@ -1052,7 +1350,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1060,7 +1360,9 @@
       "category": "ingredients",
       "title": {
         "de": "Philadelphia · Frischkäse",
-        "uk": "Філадельфія · крем-сир"
+        "uk": "Філадельфія · крем-сир",
+        "en": "Philadelphia · cream cheese",
+        "fa": "فیلادلفیا؛ پنیر خامه‌ای"
       },
       "body": {
         "de": [
@@ -1068,6 +1370,12 @@
         ],
         "uk": [
           "Меню вказує сир Філадельфія в багатьох ролах як складник начинки. «Філадельфія» також може бути частиною назви страви. Сама назва ролу не замінює повний перелік інгредієнтів. Крем-сир є молочним продуктом."
+        ],
+        "en": [
+          "The menu lists Philadelphia cream cheese in many rolls. It forms part of their filling; “Philadelphia” may also be part of a product name. A roll’s name alone does not provide a complete ingredient list. Cream cheese is a dairy product."
+        ],
+        "fa": [
+          "منو در بسیاری از رول‌ها پنیر خامه‌ای فیلادلفیا را ذکر می‌کند. این پنیر بخشی از مواد داخل رول است؛ «فیلادلفیا» می‌تواند در نام محصول هم بیاید. نام یک رول به‌تنهایی فهرست کامل مواد آن را مشخص نمی‌کند. پنیر خامه‌ای از محصولات لبنی است."
         ]
       },
       "sources": [
@@ -1080,7 +1388,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1088,7 +1398,9 @@
       "category": "ingredients",
       "title": {
         "de": "Cheddar & Hartkäse",
-        "uk": "Чеддер і твердий сир"
+        "uk": "Чеддер і твердий сир",
+        "en": "Cheddar & hard cheese",
+        "fa": "چدار و پنیر سخت"
       },
       "body": {
         "de": [
@@ -1096,6 +1408,12 @@
         ],
         "uk": [
           "Сирні роли містять за меню Чеддер, а рол із лососевим тартаром — тостерний сир Чеддер. Якудза також містить твердий сир без назви сорту. Ці позначення не взаємозамінні; точну марку й склад не наведено."
+        ],
+        "en": [
+          "The cheese rolls list Cheddar, while the salmon tartare roll specifically lists sliced Cheddar for toasting. Yakuza Roll also lists hard cheese without specifying a variety. These terms are not interchangeable; the exact brands and compositions are not given."
+        ],
+        "fa": [
+          "در رول‌های پنیری چدار ذکر شده و برای رول تارتار سالمون صریحاً پنیر ورقه‌ای چدار مخصوص تست آمده است. رول یاکوزا علاوه بر این، پنیر سخت دارد که نوع آن مشخص نشده است. این اصطلاحات قابل جایگزینی با یکدیگر نیستند؛ نام تجاری و ترکیب دقیق ذکر نشده‌اند."
         ]
       },
       "sources": [
@@ -1107,7 +1425,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1115,7 +1435,9 @@
       "category": "ingredients",
       "title": {
         "de": "Sesam · auf und in Rollen",
-        "uk": "Кунжут · у ролах і на них"
+        "uk": "Кунжут · у ролах і на них",
+        "en": "Sesame · on and in rolls",
+        "fa": "کنجد؛ روی رول و داخل آن"
       },
       "body": {
         "de": [
@@ -1123,6 +1445,12 @@
         ],
         "uk": [
           "Кунжутом, наприклад, посипають рис зовні ролу. У нашому меню він указаний, зокрема, в Дикій креветці, Тарутаросу та макі з вугрем. Це не означає, що він є в усіх інших стравах: дивіться склад конкретного продукту."
+        ],
+        "en": [
+          "Sesame may be sprinkled on the outside of rice rolls. Our menu lists it in Wild Shrimp, Tarutarosu and Unagi Maki, among others. This does not mean that other products have the same garnish; each individual menu entry is the reference."
+        ],
+        "fa": [
+          "کنجد برای نمونه روی لایهٔ بیرونی رول‌های برنجی پاشیده می‌شود. در منوی ما از جمله در رول میگوی وحشی، تاروتاروسو و ماکی مارماهی ذکر شده است. از این موضوع نمی‌توان وجود همان تزئین را در محصولات دیگر نتیجه گرفت؛ توضیح هر محصول ملاک است."
         ]
       },
       "sources": [
@@ -1135,7 +1463,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1143,7 +1473,9 @@
       "category": "ingredients",
       "title": {
         "de": "Spicy-Sauce, Mayonnaise & Unagi-Sauce",
-        "uk": "Спайсі, майонез і соус унаґі"
+        "uk": "Спайсі, майонез і соус унаґі",
+        "en": "Spicy sauce, mayonnaise & unagi sauce",
+        "fa": "سس تند، مایونز و سس اوناگی"
       },
       "body": {
         "de": [
@@ -1151,6 +1483,12 @@
         ],
         "uk": [
           "Меню називає соуси, але не наводить повного складу або ступеня гостроти. Соус спайсі не обов’язково має ту саму рецептуру, що спайсі-майонез. Соус унаґі теж слід перевіряти окремо. За алергії або веганського харчування уточнюйте точний склад."
+        ],
+        "en": [
+          "The menu names sauces but does not provide their complete ingredients or heat levels. Spicy sauce is not necessarily the same recipe as spicy mayonnaise. Unagi sauce must also be checked separately. If you have allergies or follow a vegan diet, please confirm the exact composition."
+        ],
+        "fa": [
+          "منو نام سس‌ها را ذکر می‌کند، اما ترکیبات کامل یا میزان تندی آن‌ها را مشخص نمی‌کند. سس تند لزوماً همان دستور مایونز تند را ندارد. سس اوناگی هم باید جداگانه بررسی شود. در صورت حساسیت غذایی یا رژیم وگان، ترکیبات دقیق را تأیید کنید."
         ]
       },
       "sources": [
@@ -1163,7 +1501,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1171,7 +1511,9 @@
       "category": "ingredients",
       "title": {
         "de": "Röstzwiebeln · Bonito Roll",
-        "uk": "Смажена цибуля · Боніто рол"
+        "uk": "Смажена цибуля · Боніто рол",
+        "en": "Crispy fried onions · Bonito Roll",
+        "fa": "پیاز سرخ‌شده؛ رول بونیتو"
       },
       "body": {
         "de": [
@@ -1179,6 +1521,12 @@
         ],
         "uk": [
           "Наш Боніто рол містить за меню смажену цибулю. Отже, назва продукту не підтверджує наявності стружки боніто: у складі вказано лосося, а не рибу боніто. Додатковий склад можливої готової суміші не наведено."
+        ],
+        "en": [
+          "Our Bonito Roll lists crispy fried onions as an ingredient. Its product name is therefore not evidence of bonito flakes: this menu lists salmon, not bonito fish. Any additional ingredients in a possible ready-made mixture are not specified."
+        ],
+        "fa": [
+          "در رول بونیتوی ما پیاز سرخ‌شده به عنوان یکی از مواد ذکر شده است. نام محصول دلیلی بر وجود پرک بونیتو نیست؛ در این منو سالمون آمده، نه ماهی بونیتو. ترکیبات احتمالی دیگر در صورت استفاده از مخلوط آماده ذکر نشده‌اند."
         ]
       },
       "sources": [
@@ -1190,7 +1538,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1198,7 +1548,9 @@
       "category": "ingredients",
       "title": {
         "de": "Shoyu · Sojasauce",
-        "uk": "Сьою · соєвий соус"
+        "uk": "Сьою · соєвий соус",
+        "en": "Shoyu · soy sauce",
+        "fa": "شویو؛ سس سویا"
       },
       "body": {
         "de": [
@@ -1206,6 +1558,12 @@
         ],
         "uk": [
           "Традиційний соєвий соус ферментують із соєвих бобів, пшениці, солі та води. Його використовують як приправу. Рецептура залежить від продукту; без точної інформації соус не слід вважати безглютеновим."
+        ],
+        "en": [
+          "Traditional soy sauce is fermented from soybeans, wheat, salt and water. It is used as a seasoning. The actual recipe varies between products; without knowing the specific product, a sauce cannot be classified as gluten-free."
+        ],
+        "fa": [
+          "سس سویای سنتی از تخمیر دانهٔ سویا، گندم، نمک و آب تهیه می‌شود و به عنوان چاشنی به کار می‌رود. دستور واقعی بین محصولات فرق می‌کند؛ بدون دانستن محصول مشخص نمی‌توان یک سس را فاقد گلوتن دانست."
         ]
       },
       "sources": [
@@ -1216,7 +1574,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1224,7 +1584,9 @@
       "category": "ingredients",
       "title": {
         "de": "Wasabi · scharfe Begleitung",
-        "uk": "Васабі · гострий додаток"
+        "uk": "Васабі · гострий додаток",
+        "en": "Wasabi · a pungent accompaniment",
+        "fa": "واسابی؛ چاشنی تند"
       },
       "body": {
         "de": [
@@ -1232,6 +1594,12 @@
         ],
         "uk": [
           "Васабі подають натертим або у вигляді пасти до японських страв. Його гострота швидко слабшає. Васабі не робить сиру рибу безпечною; склад готової пасти потрібно перевіряти окремо."
+        ],
+        "en": [
+          "Wasabi is served grated or as a paste with Japanese food. Its pungency fades quickly. A wasabi accompaniment does not make raw fish safe; the ingredients of a bought paste must be checked separately."
+        ],
+        "fa": [
+          "واسابی به صورت رنده‌شده یا خمیر همراه غذاهای ژاپنی ارائه می‌شود. تندی آن زود از بین می‌رود. وجود واسابی در کنار ماهی خام، آن را ایمن نمی‌کند؛ ترکیبات خمیر آماده باید جداگانه بررسی شود."
         ]
       },
       "sources": [
@@ -1244,7 +1612,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1252,7 +1622,9 @@
       "category": "ingredients",
       "title": {
         "de": "Gari · eingelegter Ingwer",
-        "uk": "Ґарі · маринований імбир"
+        "uk": "Ґарі · маринований імбир",
+        "en": "Gari · pickled ginger",
+        "fa": "گاری؛ زنجبیل ترشی‌شده"
       },
       "body": {
         "de": [
@@ -1260,6 +1632,12 @@
         ],
         "uk": [
           "Ґарі — тонко нарізаний імбир, маринований у солодкуватому оцті, який подають до суші. Це додаток, а не начинка ролу. Наявність і кількість у замовленні уточнюйте в ресторані."
+        ],
+        "en": [
+          "Gari is thinly sliced ginger pickled in sweetened vinegar and served with sushi. This accompaniment is different from a filling inside a roll. Please ask the restaurant whether it is included and in what quantity."
+        ],
+        "fa": [
+          "گاری، زنجبیل نازک‌برش‌خورده‌ای است که در سرکهٔ شیرین ترشی می‌شود و همراه سوشی سرو می‌شود. این چاشنی با مواد داخل رول فرق دارد. دربارهٔ همراه بودن آن با سفارش و مقدارش از رستوران سؤال کنید."
         ]
       },
       "sources": [
@@ -1270,7 +1648,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1278,7 +1658,9 @@
       "category": "ingredients",
       "title": {
         "de": "Kombu · Alge für Brühe und Reis",
-        "uk": "Комбу · водорість для бульйону й рису"
+        "uk": "Комбу · водорість для бульйону й рису",
+        "en": "Kombu · seaweed for broth and rice",
+        "fa": "کومبو؛ جلبک برای آب‌غذا و برنج"
       },
       "body": {
         "de": [
@@ -1286,6 +1668,12 @@
         ],
         "uk": [
           "Комбу — водорість, яку, наприклад, використовують для бульйону дасі. У деяких рецептах шматочок додають під час варіння рису. Комбу — не те саме, що лист норі для ролу; у наданому меню її прямо не зазначено."
+        ],
+        "en": [
+          "Kombu is a seaweed used, for example, in dashi stock. Some recipes cook a piece with the rice. Kombu is not the same as the nori sheet around a roll; it is not explicitly listed on the menu supplied to us."
+        ],
+        "fa": [
+          "کومبو نوعی جلبک است که برای نمونه در عصارهٔ داشی استفاده می‌شود. در بعضی دستورها تکه‌ای از آن همراه برنج پخته می‌شود. کومبو با ورق نوری دور رول تفاوت دارد و در منوی ارائه‌شده به ما صریحاً ذکر نشده است."
         ]
       },
       "sources": [
@@ -1298,7 +1686,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1306,7 +1696,9 @@
       "category": "ingredients",
       "title": {
         "de": "Tamago · Ei als Sushi-Zutat",
-        "uk": "Тамаґо · яйце в суші"
+        "uk": "Тамаґо · яйце в суші",
+        "en": "Tamago · egg as a sushi ingredient",
+        "fa": "تاماگو؛ تخم‌مرغ در سوشی"
       },
       "body": {
         "de": [
@@ -1314,6 +1706,12 @@
         ],
         "uk": [
           "Японські рецепти суші використовують і приготований омлет — наприклад, у товстих ролах або тонким верхнім шаром. Від цього весь рол не стає автоматично вегетаріанським: інші складники можуть містити рибу. Яйце не зазначено в нашому меню як окрема основна начинка."
+        ],
+        "en": [
+          "Japanese sushi recipes also use cooked omelette, for example in thick rolls or as a thin topping. This does not automatically make the whole roll vegetarian: other ingredients may contain fish. Our menu does not list egg as a separate main filling."
+        ],
+        "fa": [
+          "دستورهای ژاپنی سوشی از املت پخته هم استفاده می‌کنند؛ برای نمونه در رول‌های ضخیم یا به شکل لایه‌ای نازک روی سوشی. این موضوع به‌تنهایی کل رول را گیاه‌خواری نمی‌کند؛ مواد دیگر ممکن است ماهی داشته باشند. در منوی ما تخم‌مرغ به عنوان مادهٔ اصلی جداگانه ذکر نشده است."
         ]
       },
       "sources": [
@@ -1326,7 +1724,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1334,7 +1734,9 @@
       "category": "techniques",
       "title": {
         "de": "Sushi-Reis kochen und würzen",
-        "uk": "Як зварити й заправити рис"
+        "uk": "Як зварити й заправити рис",
+        "en": "Cooking and seasoning sushi rice",
+        "fa": "پخت و مزه‌دار کردن برنج سوشی"
       },
       "body": {
         "de": [
@@ -1342,6 +1744,12 @@
         ],
         "uk": [
           "Базовий домашній спосіб; кількості й час варіння визначайте за упаковкою та приладом."
+        ],
+        "en": [
+          "A basic method for home use; choose quantities and cooking times according to the packet instructions and your appliance."
+        ],
+        "fa": [
+          "روشی پایه برای خانه؛ مقدار مواد و زمان پخت را با توجه به دستور روی بسته و دستگاه خود انتخاب کنید."
         ]
       },
       "sources": [
@@ -1365,6 +1773,18 @@
           "Змішайте рисовий оцет, цукор і сіль або використайте готову заправку за етикеткою.",
           "Обережно вмішайте в теплий рис. Не розминайте; розкладіть тонко й швидко охолодіть.",
           "Використовуйте свіжим. Невикористаний рис швидко охолоджуйте, не залишайте годинами теплим."
+        ],
+        "en": [
+          "Rinse the rice, drain it and cook according to the packet instructions.",
+          "Mix rice vinegar with sugar and salt, or use ready-made sushi seasoning according to its label.",
+          "Gently fold it into the warm rice. Do not crush the grains; spread the rice out and cool it promptly.",
+          "Use it freshly prepared. Cool unused rice promptly instead of leaving it warm for hours."
+        ],
+        "fa": [
+          "برنج را بشویید، آب آن را بگیرید و مطابق دستور بسته بپزید.",
+          "سرکهٔ برنج را با شکر و نمک مخلوط کنید یا چاشنی آمادهٔ سوشی را طبق برچسب آن به کار ببرید.",
+          "چاشنی را به‌آرامی با برنج گرم مخلوط کنید. دانه‌ها را له نکنید؛ برنج را پهن کنید و سریع خنک کنید.",
+          "برنج تازه را استفاده کنید. باقی‌مانده را سریع سرد کنید و ساعت‌ها گرم نگه ندارید."
         ]
       }
     },
@@ -1373,7 +1793,9 @@
       "category": "techniques",
       "title": {
         "de": "Maki rollen · die Grundbewegung",
-        "uk": "Як скрутити макі"
+        "uk": "Як скрутити макі",
+        "en": "Rolling maki · the basic technique",
+        "fa": "پیچیدن ماکی؛ روش پایه"
       },
       "body": {
         "de": [
@@ -1381,6 +1803,12 @@
         ],
         "uk": [
           "Базова техніка ролу в норі. Для першої спроби підійдуть огірок та інші готові до споживання начинки. Кількість залежить від розміру листа й виду ролу."
+        ],
+        "en": [
+          "A basic technique for a nori roll. Cucumber and other ready-to-eat fillings are suitable for a first attempt. Quantities depend on the sheet size and the type of roll."
+        ],
+        "fa": [
+          "روش پایه برای رول نوری. برای اولین تجربه، خیار و دیگر مواد آمادهٔ مصرف مناسب‌اند. مقدار مواد به اندازهٔ ورق و نوع رول بستگی دارد."
         ]
       },
       "sources": [
@@ -1404,6 +1832,18 @@
           "Розподіліть тонкий шар підготовленого рису, залишивши дальній край вільним.",
           "Викладіть начинку поперек. Підніміть килимок уперед і обережно закрийте рол, не загортаючи килимок усередину.",
           "Наріжте гострим чистим ножем, протираючи лезо вологою серветкою між надрізами."
+        ],
+        "en": [
+          "Place nori on a clean bamboo mat. Lightly moisten your hands.",
+          "Spread a thin layer of prepared sushi rice, leaving the far edge uncovered.",
+          "Lay the filling across the rice. Bring the mat forward and gently close the roll without rolling the mat inside it.",
+          "Cut into portions with a sharp, clean knife, wiping the blade with a damp cloth between cuts."
+        ],
+        "fa": [
+          "نوری را روی حصیر بامبوی تمیز قرار دهید. دست‌ها را کمی مرطوب کنید.",
+          "لایه‌ای نازک از برنج سوشی آماده‌شده پخش کنید و لبهٔ دورتر را خالی بگذارید.",
+          "مواد را در عرض برنج بچینید. حصیر را رو به جلو حرکت دهید و رول را به‌آرامی ببندید، بدون اینکه حصیر داخل آن پیچیده شود.",
+          "با چاقوی تیز و تمیز برش بزنید؛ میان برش‌ها تیغه را با دستمال مرطوب پاک کنید."
         ]
       }
     },
@@ -1412,7 +1852,9 @@
       "category": "techniques",
       "title": {
         "de": "Inside-out rollen · Reis nach außen",
-        "uk": "Як скрутити рол рисом назовні"
+        "uk": "Як скрутити рол рисом назовні",
+        "en": "Inside-out rolls · rice facing out",
+        "fa": "رول پشت‌ورو؛ برنج رو به بیرون"
       },
       "body": {
         "de": [
@@ -1420,6 +1862,12 @@
         ],
         "uk": [
           "Загальна техніка, а не підтверджений рецепт наших сетів Каліфорнія чи Дракони. Удома обирайте готові до споживання або повністю приготовані начинки."
+        ],
+        "en": [
+          "A general technique, not a confirmed recipe for our California or Dragon sets. At home, choose ready-to-eat or fully cooked fillings."
+        ],
+        "fa": [
+          "این یک روش عمومی است، نه دستور تأییدشدهٔ ست‌های کالیفرنیا یا اژدهای ما. برای خانه از مواد آمادهٔ مصرف یا کاملاً پخته استفاده کنید."
         ]
       },
       "sources": [
@@ -1440,6 +1888,16 @@
           "Накрийте килимок харчовою плівкою. Розподіліть тонкий шар рису по норі.",
           "Переверніть рисом до плівки. Викладіть начинку на бік із норі.",
           "Закрийте рол килимком і злегка сформуйте. Повністю зніміть плівку та наріжте."
+        ],
+        "en": [
+          "Cover the bamboo mat with food-safe film. Spread a thin layer of sushi rice over the nori.",
+          "Turn it over so the rice rests on the film. Place the filling on the nori side.",
+          "Close the roll using the mat and shape it gently. Remove all the film and cut the roll."
+        ],
+        "fa": [
+          "حصیر بامبو را با روکش مخصوص مواد غذایی بپوشانید. روی نوری لایه‌ای نازک از برنج سوشی پخش کنید.",
+          "آن را برگردانید تا برنج روی روکش قرار بگیرد. مواد داخل رول را روی سمت نوری بچینید.",
+          "با کمک حصیر رول را ببندید و به‌آرامی شکل دهید. روکش را کاملاً بردارید و رول را برش بزنید."
         ]
       }
     },
@@ -1448,7 +1906,9 @@
       "category": "techniques",
       "title": {
         "de": "Temaki am Tisch zubereiten",
-        "uk": "Темакі просто за столом"
+        "uk": "Темакі просто за столом",
+        "en": "Making temaki at the table",
+        "fa": "تهیهٔ تماکی دور میز"
       },
       "body": {
         "de": [
@@ -1456,6 +1916,12 @@
         ],
         "uk": [
           "Простий варіант для спільного приготування: готовий рис для суші, половинки норі, смужки огірка й повністю приготовані креветки або овочі. Це загальна ідея подачі, а не рецепт ресторану."
+        ],
+        "en": [
+          "An easy way to roll together: prepared sushi rice, halved nori sheets, cucumber strips and fully cooked shrimp or vegetables. This is a general serving idea, not the restaurant’s recipe."
+        ],
+        "fa": [
+          "روشی ساده برای درست کردن رول در جمع: برنج سوشی آماده، ورق‌های نوری نصف‌شده، نوارهای خیار و میگوی کاملاً پخته یا سبزیجات. این یک پیشنهاد عمومی برای سرو است، نه دستور رستوران."
         ]
       },
       "sources": [
@@ -1476,6 +1942,16 @@
           "Виставте на стіл лише невелику порцію охолоджених начинок.",
           "Покладіть трохи рису на один бік норі, а начинку — по діагоналі.",
           "Загорніть нижній кут поверх начинки й закрийте конус. Їжте одразу, наступні роли формуйте свіжими."
+        ],
+        "en": [
+          "Put only a small portion of chilled fillings on the table.",
+          "Place a little rice on one side of the nori and arrange fillings diagonally on top.",
+          "Bring the bottom corner over the filling and close into a cone. Eat immediately and make each new roll fresh."
+        ],
+        "fa": [
+          "فقط مقدار کمی از مواد سردشده را روی میز بگذارید.",
+          "کمی برنج روی یک سمت نوری قرار دهید و مواد را مورب روی آن بچینید.",
+          "گوشهٔ پایین را روی مواد بیاورید و به شکل قیف ببندید. بلافاصله بخورید و هر رول بعدی را تازه بپیچید."
         ]
       }
     },
@@ -1484,7 +1960,9 @@
       "category": "techniques",
       "title": {
         "de": "Roh, gekocht, gebraten?",
-        "uk": "Сире, варене чи смажене?"
+        "uk": "Сире, варене чи смажене?",
+        "en": "Raw, cooked or fried?",
+        "fa": "خام، پخته یا سرخ‌شده؟"
       },
       "body": {
         "de": [
@@ -1494,6 +1972,14 @@
         "uk": [
           "Рис для суші варять. Начинка або верхній шар можуть бути сирими, приготованими чи рослинними. Слово «смажений» у меню не визначає, наскільки прогрілася кожна частина всередині.",
           "У нашому меню Якудза позначений як підсмажений, а креветка у Філадельфії в кунжуті — як підсмажена. Для інших страв із рибою й креветкою термообробку зазначено не всюди. Конкретний спосіб підтвердить ресторан."
+        ],
+        "en": [
+          "Sushi rice is cooked. Its topping or filling may be raw, cooked or plant-based. The word “fried” on a menu does not automatically explain how hot every part of the inside became.",
+          "Our menu describes Yakuza as fried and explicitly describes the shrimp in Sesame Philadelphia as fried. For the other fish and shrimp products, the cooking level is not consistently stated. The restaurant can confirm the specific preparation."
+        ],
+        "fa": [
+          "برنج سوشی پخته می‌شود. مواد روی آن یا داخل آن می‌تواند خام، پخته یا گیاهی باشد. واژهٔ «سرخ‌شده» در منو به‌تنهایی مشخص نمی‌کند تمام قسمت‌های داخل غذا تا چه دمایی گرم شده‌اند.",
+          "منوی ما یاکوزا را سرخ‌شده معرفی می‌کند و میگوی فیلادلفیا کنجدی را هم صریحاً سرخ‌شده می‌نامد. وضعیت پخت دیگر محصولات ماهی و میگو در همهٔ موارد مشخص نشده است. رستوران می‌تواند روش دقیق آماده‌سازی را تأیید کند."
         ]
       },
       "sources": [
@@ -1508,7 +1994,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     },
     {
@@ -1516,7 +2004,9 @@
       "category": "techniques",
       "title": {
         "de": "Sushi sorgfältig zubereiten",
-        "uk": "Як готувати суші безпечніше"
+        "uk": "Як готувати суші безпечніше",
+        "en": "Preparing sushi with care",
+        "fa": "تهیهٔ سوشی با رعایت بهداشت"
       },
       "body": {
         "de": [
@@ -1526,6 +2016,14 @@
         "uk": [
           "Сирі морепродукти можуть містити збудників хвороб і паразитів. Оцет, соєвий соус, алкоголь або гострі додатки не знешкоджують їх надійно. Для домашніх суші простіше почати з повністю приготованої начинки чи вимитих овочів.",
           "Самих запаху, вигляду або позначення «для суші» недостатньо: придатність риби до сирого споживання й потрібну попередню обробку слід уточнити у компетентного постачальника."
+        ],
+        "en": [
+          "Raw seafood can contain pathogens and parasites. Vinegar, soy sauce, alcohol and pungent accompaniments do not reliably make it harmless. For sushi at home, fully cooked fillings or washed vegetables are a simpler starting point.",
+          "Smell, appearance and the label “sushi-grade” alone are not sufficient evidence for raw fish: suitability for eating raw and any necessary pretreatment must be confirmed with a knowledgeable supplier."
+        ],
+        "fa": [
+          "غذاهای دریایی خام ممکن است عامل بیماری‌زا و انگل داشته باشند. سرکه، سس سویا، الکل یا چاشنی تند، آن‌ها را به‌طور قابل‌اعتماد بی‌خطر نمی‌کند. برای تهیهٔ سوشی در خانه، مواد کاملاً پخته یا سبزیجات شسته‌شده شروع ساده‌تری هستند.",
+          "بو، ظاهر یا برچسب «مناسب سوشی» به‌تنهایی برای تأیید ماهی خام کافی نیست؛ مناسب بودن برای مصرف خام و آماده‌سازی اولیهٔ لازم باید با تأمین‌کنندهٔ آگاه بررسی شود."
         ]
       },
       "sources": [
@@ -1546,6 +2044,16 @@
           "Мийте руки, ножі, дошки та робочу поверхню. Відокремлюйте сирі інгредієнти від готової їжі.",
           "Дотримуйтеся холодового ланцюга; швидкопсувні начинки й суші, які не їсте одразу, зберігайте за температури не вище 4 °C. Працюйте малими порціями.",
           "Термічно оброблювані начинки готуйте повністю: коротке обсмаження цього не замінює. Швидко охолоджуйте й працюйте чистим інвентарем."
+        ],
+        "en": [
+          "Clean your hands, knife, board and work surface. Keep raw ingredients separate from ready-to-eat food.",
+          "Maintain the cold chain. Keep prepared perishable ingredients and sushi that will not be eaten immediately refrigerated at 4 °C or below. Work in small batches.",
+          "Cook fillings thoroughly; briefly searing them is not a substitute. Cool them promptly and continue handling them hygienically."
+        ],
+        "fa": [
+          "دست‌ها، چاقو، تخته و سطح کار را تمیز کنید. مواد خام را از غذای آمادهٔ مصرف جدا نگه دارید.",
+          "زنجیرهٔ سرد را حفظ کنید؛ مواد فسادپذیر آماده‌شده و سوشی‌ای را که فوراً نمی‌خورید، در دمای حداکثر ۴ درجهٔ سانتی‌گراد نگه دارید. هر بار مقدار کمی آماده کنید.",
+          "مواد پختنی را کاملاً بپزید؛ تفت کوتاه جایگزین پخت کامل نیست. سریع سرد کنید و ادامهٔ کار را با رعایت بهداشت انجام دهید."
         ]
       }
     },
@@ -1554,7 +2062,9 @@
       "category": "ingredients",
       "title": {
         "de": "Salat · California mit Aal",
-        "uk": "Салат · Каліфорнія з вугрем"
+        "uk": "Салат · Каліфорнія з вугрем",
+        "en": "Lettuce · California with eel",
+        "fa": "کاهو؛ کالیفرنیا با مارماهی"
       },
       "body": {
         "de": [
@@ -1562,6 +2072,12 @@
         ],
         "uk": [
           "Додане меню вказує салат у складі Каліфорнії з вугрем. Конкретний сорт листового салату не зазначений. Дивіться склад відповідної страви: це не означає наявності салату в інших ролах."
+        ],
+        "en": [
+          "The additional menu lists lettuce as an ingredient in California with eel. It does not specify a particular variety of leaf lettuce. Each product’s own ingredient list is the reference; lettuce is not assumed to be present in other rolls."
+        ],
+        "fa": [
+          "منوی تکمیلی، کاهو را از مواد کالیفرنیا با مارماهی معرفی می‌کند. نوع مشخصی از کاهو ذکر نشده است. فهرست مواد همان محصول ملاک است و وجود کاهو را برای رول‌های دیگر فرض نمی‌کنیم."
         ]
       },
       "sources": [
@@ -1573,7 +2089,9 @@
       ],
       "steps": {
         "de": [],
-        "uk": []
+        "uk": [],
+        "en": [],
+        "fa": []
       }
     }
   ]

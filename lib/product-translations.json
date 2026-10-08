@@ -1,0 +1,402 @@
+{
+  "philadelphia": {
+    "en": {
+      "name": "Philadelphia",
+      "description": "Rice, nori, Philadelphia cream cheese, cucumber, salmon."
+    },
+    "fa": {
+      "name": "فیلادلفیا",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، خیار، سالمون."
+    }
+  },
+  "philadelphia-shrimp": {
+    "en": {
+      "name": "Philadelphia · Shrimp",
+      "description": "Rice, nori, Philadelphia cream cheese, cucumber, shrimp."
+    },
+    "fa": {
+      "name": "فیلادلفیا با میگو",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، خیار، میگو."
+    }
+  },
+  "california-unagi": {
+    "en": {
+      "name": "California · Eel",
+      "description": "Rice, nori, sesame, Philadelphia cream cheese, cucumber, lettuce, eel, unagi sauce."
+    },
+    "fa": {
+      "name": "کالیفرنیا با مارماهی",
+      "description": "برنج، نوری، کنجد، پنیر خامه‌ای فیلادلفیا، خیار، کاهو، مارماهی، سس اوناگی."
+    }
+  },
+  "golden-dragon": {
+    "en": {
+      "name": "Golden Dragon",
+      "description": "Rice, nori, Philadelphia cream cheese, tobiko, salmon, cucumber, eel, unagi sauce."
+    },
+    "fa": {
+      "name": "اژدهای طلایی",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، توبیکو، سالمون، خیار، مارماهی، سس اوناگی."
+    }
+  },
+  "philadelphia-unagi": {
+    "en": {
+      "name": "Philadelphia · Eel",
+      "description": "Rice, nori, Philadelphia cream cheese, cucumber, eel."
+    },
+    "fa": {
+      "name": "فیلادلفیا با مارماهی",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، خیار، مارماهی."
+    }
+  },
+  "california-salmon": {
+    "en": {
+      "name": "California · Salmon",
+      "description": "Rice, nori, tobiko, Philadelphia cream cheese, cucumber, avocado, salmon."
+    },
+    "fa": {
+      "name": "کالیفرنیا با سالمون",
+      "description": "برنج، نوری، توبیکو، پنیر خامه‌ای فیلادلفیا، خیار، آووکادو، سالمون."
+    }
+  },
+  "philadelphia-sesame": {
+    "en": {
+      "name": "Philadelphia · Sesame",
+      "description": "Rice, nori, sesame, Philadelphia cream cheese, cucumber, avocado, salmon."
+    },
+    "fa": {
+      "name": "فیلادلفیا کنجدی",
+      "description": "برنج، نوری، کنجد، پنیر خامه‌ای فیلادلفیا، خیار، آووکادو، سالمون."
+    }
+  },
+  "green-dragon": {
+    "en": {
+      "name": "Green Dragon",
+      "description": "Rice, nori, Philadelphia cream cheese, salmon, cucumber, unagi sauce, avocado, sesame."
+    },
+    "fa": {
+      "name": "اژدهای سبز",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، سالمون، خیار، سس اوناگی، آووکادو، کنجد."
+    }
+  },
+  "philadelphia-combo": {
+    "en": {
+      "name": "Philadelphia Combo",
+      "description": "Rice, nori, Philadelphia cream cheese, cucumber, salmon, eel."
+    },
+    "fa": {
+      "name": "فیلادلفیا کمبو",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، خیار، سالمون، مارماهی."
+    }
+  },
+  "california-shrimp": {
+    "en": {
+      "name": "California · Shrimp",
+      "description": "Rice, nori, tobiko, Philadelphia cream cheese, avocado, shrimp."
+    },
+    "fa": {
+      "name": "کالیفرنیا با میگو",
+      "description": "برنج، نوری، توبیکو، پنیر خامه‌ای فیلادلفیا، آووکادو، میگو."
+    }
+  },
+  "philadelphia-lux": {
+    "en": {
+      "name": "Philadelphia Lux",
+      "description": "Rice, nori, Philadelphia cream cheese, shrimp, avocado, salmon."
+    },
+    "fa": {
+      "name": "فیلادلفیا لوکس",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، میگو، آووکادو، سالمون."
+    }
+  },
+  "red-dragon": {
+    "en": {
+      "name": "Red Dragon",
+      "description": "Rice, nori, tobiko, Philadelphia cream cheese, cucumber, avocado, salmon, sesame. The original menu says “сир тобіко” (literally “tobiko cheese”); please confirm this unusual term with the restaurant."
+    },
+    "fa": {
+      "name": "اژدهای قرمز",
+      "description": "برنج، نوری، توبیکو، پنیر خامه‌ای فیلادلفیا، خیار، آووکادو، سالمون، کنجد. در منوی اصلی عبارت «сир тобіко» آمده که معنای تحت‌اللفظی آن «پنیر توبیکو» است؛ منظور دقیق را از رستوران بپرسید."
+    }
+  },
+  "mix": {
+    "en": {
+      "name": "Mix Set",
+      "description": "Philadelphia Classic, California with salmon, California with eel and cucumber maki. Please ask about the remaining ingredients."
+    },
+    "fa": {
+      "name": "ست میکس",
+      "description": "فیلادلفیا کلاسیک، کالیفرنیا با سالمون، کالیفرنیا با مارماهی و ماکی خیار. برای ترکیبات کامل سؤال کنید."
+    }
+  },
+  "salmon-hit": {
+    "en": {
+      "name": "Salmon Hit Set",
+      "description": "Philadelphia Classic, cheese roll with salmon and cheese roll with shrimp. Please ask about the remaining ingredients."
+    },
+    "fa": {
+      "name": "ست سالمون هیت",
+      "description": "فیلادلفیا کلاسیک، رول پنیری با سالمون و رول پنیری با میگو. برای ترکیبات کامل سؤال کنید."
+    }
+  },
+  "bonsai": {
+    "en": {
+      "name": "Bonsai Set",
+      "description": "Bonito, Philadelphia, Kurimi and Kabia."
+    },
+    "fa": {
+      "name": "ست بونسای",
+      "description": "بونیتو، فیلادلفیا، کوریمی و کابیا."
+    }
+  },
+  "dragons": {
+    "en": {
+      "name": "Three Dragons Set",
+      "description": "Red Dragon, Golden Dragon and Green Dragon."
+    },
+    "fa": {
+      "name": "ست سه اژدها",
+      "description": "اژدهای قرمز، اژدهای طلایی و اژدهای سبز."
+    }
+  },
+  "maki-set": {
+    "en": {
+      "name": "Maki Set",
+      "description": "2 × sake maki, avocado maki, spicy maki, unagi maki and cucumber maki."
+    },
+    "fa": {
+      "name": "ست ماکی",
+      "description": "۲ عدد ماکی سالمون، ماکی آووکادو، ماکی اسپایسی، ماکی مارماهی و ماکی خیار."
+    }
+  },
+  "premium": {
+    "en": {
+      "name": "Premium Set",
+      "description": "Green Dragon, Golden Dragon, Philadelphia Premium and Ebi."
+    },
+    "fa": {
+      "name": "ست پریمیوم",
+      "description": "اژدهای سبز، اژدهای طلایی، فیلادلفیا پریمیوم و ابی."
+    }
+  },
+  "bonito": {
+    "en": {
+      "name": "Bonito Roll",
+      "description": "Rice, nori, salmon, avocado, cucumber, crispy fried onions."
+    },
+    "fa": {
+      "name": "رول بونیتو",
+      "description": "برنج، نوری، سالمون، آووکادو، خیار، پیاز سرخ‌شده."
+    }
+  },
+  "wild-shrimp": {
+    "en": {
+      "name": "Wild Shrimp Roll",
+      "description": "Rice, nori, sesame, snow crab, shrimp, cucumber, spicy sauce."
+    },
+    "fa": {
+      "name": "رول میگوی وحشی",
+      "description": "برنج، نوری، کنجد، خرچنگ برفی، میگو، خیار، سس تند."
+    }
+  },
+  "ebi-premium": {
+    "en": {
+      "name": "Ebi Premium Roll",
+      "description": "Rice, nori, tiger shrimp, salmon, cucumber, Philadelphia cream cheese, masago."
+    },
+    "fa": {
+      "name": "رول ابی پریمیوم",
+      "description": "برنج، نوری، میگوی ببری، سالمون، خیار، پنیر خامه‌ای فیلادلفیا، ماساگو."
+    }
+  },
+  "kabia": {
+    "en": {
+      "name": "Kabia Roll",
+      "description": "Rice, nori, snow crab, avocado, masago."
+    },
+    "fa": {
+      "name": "رول کابیا",
+      "description": "برنج، نوری، خرچنگ برفی، آووکادو، ماساگو."
+    }
+  },
+  "kurimi": {
+    "en": {
+      "name": "Kurimi Roll",
+      "description": "Rice, nori, shrimp, avocado, cucumber, Philadelphia cream cheese."
+    },
+    "fa": {
+      "name": "رول کوریمی",
+      "description": "برنج، نوری، میگو، آووکادو، خیار، پنیر خامه‌ای فیلادلفیا."
+    }
+  },
+  "sakana": {
+    "en": {
+      "name": "Sakana Roll",
+      "description": "Rice, nori, salmon, cucumber, snow crab, avocado."
+    },
+    "fa": {
+      "name": "رول ساکانا",
+      "description": "برنج، نوری، سالمون، خیار، خرچنگ برفی، آووکادو."
+    }
+  },
+  "salmon-tartare": {
+    "en": {
+      "name": "Cheese Roll with Salmon Tartare",
+      "description": "Nori, salmon and snow-crab tartare, masago, sliced Cheddar for toasting, rice, cucumber, spicy sauce."
+    },
+    "fa": {
+      "name": "رول پنیری با تارتار سالمون",
+      "description": "نوری، تارتار سالمون و خرچنگ برفی، ماساگو، پنیر ورقه‌ای چدار مخصوص تست، برنج، خیار، سس تند."
+    }
+  },
+  "tarutarosu": {
+    "en": {
+      "name": "Tarutarosu Roll",
+      "description": "Rice, nori, salmon, sesame, snow crab, Philadelphia cream cheese, cucumber, spicy sauce."
+    },
+    "fa": {
+      "name": "رول تاروتاروسو",
+      "description": "برنج، نوری، سالمون، کنجد، خرچنگ برفی، پنیر خامه‌ای فیلادلفیا، خیار، سس تند."
+    }
+  },
+  "sesame-shrimp": {
+    "en": {
+      "name": "Sesame Philadelphia · Fried Shrimp",
+      "description": "Nori, rice, fried shrimp, sesame, salmon, Philadelphia cream cheese, cucumber."
+    },
+    "fa": {
+      "name": "فیلادلفیا کنجدی با میگوی سرخ‌شده",
+      "description": "نوری، برنج، میگوی سرخ‌شده، کنجد، سالمون، پنیر خامه‌ای فیلادلفیا، خیار."
+    }
+  },
+  "yakuza": {
+    "en": {
+      "name": "Yakuza Roll",
+      "description": "Fried. Rice, nori, tiger shrimp, Philadelphia cream cheese, masago, hard cheese, crab meat, spicy mayonnaise."
+    },
+    "fa": {
+      "name": "رول یاکوزا",
+      "description": "سرخ‌شده. برنج، نوری، میگوی ببری، پنیر خامه‌ای فیلادلفیا، ماساگو، پنیر سخت، گوشت خرچنگ، مایونز تند."
+    }
+  },
+  "cheese-shrimp": {
+    "en": {
+      "name": "Cheese Roll · Shrimp",
+      "description": "Rice, nori, Philadelphia cream cheese, cucumber, Cheddar, shrimp."
+    },
+    "fa": {
+      "name": "رول پنیری با میگو",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، خیار، پنیر چدار، میگو."
+    }
+  },
+  "cheese-salmon": {
+    "en": {
+      "name": "Cheese Roll · Salmon",
+      "description": "Rice, nori, Philadelphia cream cheese, Cheddar, salmon, cucumber."
+    },
+    "fa": {
+      "name": "رول پنیری با سالمون",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، پنیر چدار، سالمون، خیار."
+    }
+  },
+  "futomaki-salmon": {
+    "en": {
+      "name": "Futomaki · Salmon",
+      "description": "Rice, nori, Philadelphia cream cheese, salmon, cucumber."
+    },
+    "fa": {
+      "name": "فوتوماکی با سالمون",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، سالمون، خیار."
+    }
+  },
+  "futomaki-surimi": {
+    "en": {
+      "name": "Futomaki · Surimi",
+      "description": "Rice, nori, Philadelphia cream cheese, surimi, cucumber."
+    },
+    "fa": {
+      "name": "فوتوماکی با سوریمی",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، سوریمی، خیار."
+    }
+  },
+  "futomaki-avocado": {
+    "en": {
+      "name": "Futomaki · Avocado & Cucumber",
+      "description": "Rice, nori, Philadelphia cream cheese, avocado, cucumber."
+    },
+    "fa": {
+      "name": "فوتوماکی با آووکادو و خیار",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا، آووکادو، خیار."
+    }
+  },
+  "maki-takuan": {
+    "en": {
+      "name": "Takuan Maki",
+      "description": "Rice, nori, pickled daikon (takuan)."
+    },
+    "fa": {
+      "name": "ماکی تاکوآن",
+      "description": "برنج، نوری، ترب دایکون ترشی‌شده (تاکوآن)."
+    }
+  },
+  "maki-philadelphia": {
+    "en": {
+      "name": "Philadelphia Maki",
+      "description": "Rice, nori, Philadelphia cream cheese."
+    },
+    "fa": {
+      "name": "ماکی فیلادلفیا",
+      "description": "برنج، نوری، پنیر خامه‌ای فیلادلفیا."
+    }
+  },
+  "maki-spicy": {
+    "en": {
+      "name": "Spicy Maki",
+      "description": "Rice, nori, shrimp, spicy sauce."
+    },
+    "fa": {
+      "name": "ماکی اسپایسی",
+      "description": "برنج، نوری، میگو، سس تند."
+    }
+  },
+  "maki-avocado": {
+    "en": {
+      "name": "Avocado Maki",
+      "description": "Rice, nori, avocado."
+    },
+    "fa": {
+      "name": "ماکی آووکادو",
+      "description": "برنج، نوری، آووکادو."
+    }
+  },
+  "maki-sake": {
+    "en": {
+      "name": "Sake Maki",
+      "description": "Rice, nori, salmon."
+    },
+    "fa": {
+      "name": "ماکی سالمون",
+      "description": "برنج، نوری، سالمون."
+    }
+  },
+  "maki-cucumber": {
+    "en": {
+      "name": "Cucumber Maki",
+      "description": "Rice, nori, cucumber."
+    },
+    "fa": {
+      "name": "ماکی خیار",
+      "description": "برنج، نوری، خیار."
+    }
+  },
+  "maki-unagi": {
+    "en": {
+      "name": "Unagi Maki",
+      "description": "Rice, nori, eel, unagi sauce, sesame."
+    },
+    "fa": {
+      "name": "ماکی مارماهی",
+      "description": "برنج، نوری، مارماهی، سس اوناگی، کنجد."
+    }
+  }
+}

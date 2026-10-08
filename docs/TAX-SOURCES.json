@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-10-08",
+  "jurisdiction": "Germany; domestic supplies in Hamburg",
+  "currency": "EUR",
+  "scope": "Current restaurant menu of prepared sushi food sold for takeaway or delivery in Germany. No beverages currently offered. This is a researched configuration basis, not a determination of the owner’s tax registration, tax election or every future product classification.",
+  "businessTaxStatus": "unknown — must be confirmed by the owner; no inference from order volume, restaurant name or website settings",
+  "sources": [
+    {
+      "id": "ustg12",
+      "title": "UStG § 12 · Steuersätze",
+      "url": "https://www.gesetze-im-internet.de/ustg_1980/__12.html",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz · Gesetze im Internet",
+      "supports": [
+        "Standard rate 19%; qualifying goods listed in Annex 2: 7%; restaurant/catering services excluding drinks: 7%."
+      ],
+      "sections": [
+        "12(1)",
+        "12(2)1",
+        "12(2)15"
+      ]
+    },
+    {
+      "id": "bmf2026food",
+      "title": "BMF-Schreiben vom 22.12.2025 · Restaurant- und Verpflegungsdienstleistungen ab 01.01.2026",
+      "url": "https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Umsatzsteuer/Umsatzsteuer-Anwendungserlass/2025-12-22-verpflegungsdienstleistungen.pdf",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Finanzen",
+      "supports": [
+        "Reduced rate for restaurant/catering food applies from 1 January 2026; drinks excluded."
+      ],
+      "publishedAt": "2025-12-22"
+    },
+    {
+      "id": "ustg10",
+      "title": "UStG § 10 · Bemessungsgrundlage",
+      "url": "https://www.gesetze-im-internet.de/ustg_1980/__10.html",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz · Gesetze im Internet",
+      "supports": [
+        "Consideration for the supply, excluding legally due VAT, is the tax base."
+      ]
+    },
+    {
+      "id": "ustae-current",
+      "title": "Umsatzsteuer-Anwendungserlass · aktuelle konsolidierte Fassung",
+      "url": "https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Umsatzsteuer/Umsatzsteuer-Anwendungserlass/Umsatzsteuer-Anwendungserlass-aktuell.pdf?__blob=publicationFile",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Finanzen",
+      "supports": [
+        "Prepared food with transport but without other supporting services is a supply of goods.",
+        "Ancillary services follow the principal supply, even when charged separately.",
+        "Discounts/refunds reduce consideration and split into net and VAT.",
+        "VAT is rounded to cents, with the next digit 0–4 down and 5–9 up.",
+        "Separately charged transport for differently taxed supplies must be allocated using suitable criteria such as relative values or weights."
+      ],
+      "documentStand": "2026-06-02",
+      "verificationMethod": "Downloaded the current official PDF and read its cover and specified sections.",
+      "sections": [
+        {
+          "section": "3.6(2)",
+          "printedPage": 96,
+          "pdfPage": 120
+        },
+        {
+          "section": "3.10(5)",
+          "printedPage": 107,
+          "pdfPage": 131
+        },
+        {
+          "section": "10.3(1)",
+          "printedPage": 435,
+          "pdfPage": 459
+        },
+        {
+          "section": "14.5(18)–(21)",
+          "printedPage": 546,
+          "pdfPage": 570
+        }
+      ]
+    },
+    {
+      "id": "ustg17",
+      "title": "UStG § 17 · Änderung der Bemessungsgrundlage",
+      "url": "https://www.gesetze-im-internet.de/ustg_1980/BJNR119530979.html",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz · Gesetze im Internet",
+      "supports": [
+        "Subsequent changes to the taxable consideration require corresponding VAT adjustments."
+      ],
+      "section": "17"
+    },
+    {
+      "id": "ustg16",
+      "title": "UStG § 16 · Steuerberechnung",
+      "url": "https://www.gesetze-im-internet.de/ustg_1980/__16.html",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz · Gesetze im Internet",
+      "supports": [
+        "Deductible input VAT is subtracted when calculating the tax liability; sales VAT by itself is not the amount payable to the tax office."
+      ],
+      "sections": [
+        "16(1)",
+        "16(2)"
+      ]
+    },
+    {
+      "id": "ustg19",
+      "title": "UStG § 19 · Besteuerung der Kleinunternehmer",
+      "url": "https://www.gesetze-im-internet.de/ustg_1980/__19.html",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz · Gesetze im Internet",
+      "supports": [
+        "Qualifying small-business domestic sales are exempt, not taxable at a zero rate.",
+        "Eligibility and any waiver must be established for the actual business."
+      ],
+      "sections": [
+        "19(1)",
+        "19(3)"
+      ]
+    },
+    {
+      "id": "ustdv34a",
+      "title": "UStDV § 34a · Rechnungen von Kleinunternehmern",
+      "url": "https://www.gesetze-im-internet.de/ustdv_1980/__34a.html",
+      "verifiedAt": "2026-10-08",
+      "publisher": "Bundesministerium der Justiz / Bundesamt für Justiz · Gesetze im Internet",
+      "supports": [
+        "Qualifying small-business invoices include a reference to the §19 exemption; business identity and other required details remain necessary."
+      ]
+    }
+  ],
+  "taxModes": {
+    "unset": {
+      "vatRatePercent": null,
+      "vatAmount": null,
+      "exemption": null,
+      "customerClaim": "Do not claim VAT-inclusive taxation or §19 exemption while unknown.",
+      "recommendedApplicationBehavior": "Allow catalogue setup; require owner confirmation of tax mode before accepting a final order or issuing a tax invoice. Never turn unknown VAT into zero in reports."
+    },
+    "standard": {
+      "reducedRatePercent": 7,
+      "standardRatePercent": 19,
+      "currentPreparedSushiDefaultPercent": 7,
+      "requiresOwnerConfirmation": true,
+      "sourceIds": [
+        "ustg12",
+        "bmf2026food"
+      ],
+      "classificationScope": "Use 7% only for the current qualifying prepared sushi meals after confirming the operator uses ordinary VAT taxation. New products need a reviewed tax category. The standard rate remains 19%; drinks and exceptional goods must not inherit the food rate automatically."
+    },
+    "kleinunternehmer": {
+      "vatRatePercent": null,
+      "vatAmountCents": 0,
+      "taxable": false,
+      "exemption": "UStG §19",
+      "requiresOwnerConfirmation": true,
+      "sourceIds": [
+        "ustg19",
+        "ustdv34a"
+      ],
+      "eligibilityNote": "The general domestic limits are EUR 25,000 in the preceding calendar year and EUR 100,000 in the current calendar year. Start-up, threshold-crossing and waiver rules require separate review. Total relevant business turnover may include sales outside this website. Choosing a UI setting does not create eligibility or make an election to the tax office.",
+      "presentation": "Keep the customer’s agreed final price; do not extract or separately charge VAT. Show the §19 exemption, not “0% VAT”."
+    }
+  },
+  "delivery": {
+    "currentMenuTreatment": "For the restaurant’s own delivery that is ancillary to its current qualifying sushi-food sale, the delivery charge follows the food’s 7% rate in standard mode, even if shown as a separate charge.",
+    "qualification": "This is an application of the ancillary-supply rule to the described same-supplier food-delivery business, not a ruling that every courier or transport service has 7% VAT.",
+    "exemptMode": "Ancillary delivery within the same §19-exempt sale is also included in the exempt final consideration.",
+    "futureMixedRates": "Allocate ancillary delivery charges across the relevant differently taxed principal supplies using a documented suitable ratio, such as their relative values or weights. Do not tax an entire mixed basket using one food default.",
+    "separateCourier": "A courier independently supplying the customer is a separate supply and requires its own tax treatment.",
+    "sourceIds": [
+      "ustae-current",
+      "ustg10"
+    ]
+  },
+  "discounts": {
+    "rule": "Restaurant-funded discounts reduce the consideration before extracting included VAT. A later refund or discount also requires the corresponding VAT adjustment.",
+    "scope": "Allocate a discount only to items it actually covers; do not reduce delivery unless the promotion covers delivery. Future mixed-rate discounts must be assigned to the applicable tax groups. Third-party-funded coupons and vouchers may require a separate assessment.",
+    "sourceIds": [
+      "ustg10",
+      "ustg17",
+      "ustae-current"
+    ]
+  },
+  "calculation": {
+    "pricing": "Persist customer-facing product prices and agreed delivery fees as final gross amounts in integer euro cents. Do not add VAT a second time.",
+    "formula": "includedVat = grossAfterDiscount × ratePercent / (100 + ratePercent); net = grossAfterDiscount − includedVat",
+    "rounding": "Round VAT to the nearest cent, half up. Use integer or exact decimal arithmetic. For negative correcting entries, reverse the original stored amounts; do not rely on language-specific rounding of negative halves.",
+    "recommendedApplicationPolicy": "Group order consideration by tax rate after allocating discounts and ancillary delivery. Calculate and round each group’s included VAT once. Derive its net amount by subtraction. If line breakdowns are needed, allocate rounding remainders deterministically so line totals equal the saved group totals.",
+    "policyQualification": "The per-order tax-group policy is an implementation choice for consistency, not a claim that German law mandates this particular software grouping algorithm.",
+    "snapshot": "Save the tax mode, product tax classification, rate, discounted gross, delivery allocation, net and VAT used for each order. Later settings changes must not silently rewrite historical orders. Record refunds/corrections separately.",
+    "examples": [
+      {
+        "description": "EUR 41.00 food + EUR 6.00 ancillary delivery, 7% inclusive",
+        "grossCents": 4700,
+        "ratePercent": 7,
+        "vatCents": 307,
+        "netCents": 4393
+      },
+      {
+        "description": "10% discount on EUR 41.00 food only; EUR 6.00 delivery unchanged, 7% inclusive",
+        "originalFoodGrossCents": 4100,
+        "discountCents": 410,
+        "deliveryGrossCents": 600,
+        "grossCents": 4290,
+        "ratePercent": 7,
+        "vatCents": 281,
+        "netCents": 4009
+      },
+      {
+        "description": "The same EUR 47.00 final amount when the sale is confirmed exempt under §19",
+        "grossCents": 4700,
+        "ratePercent": null,
+        "vatCents": 0,
+        "netOrExemptConsiderationCents": 4700,
+        "exemption": "UStG §19"
+      }
+    ],
+    "sourceIds": [
+      "ustg10",
+      "ustae-current"
+    ]
+  },
+  "reports": {
+    "safeLabel": "Sales VAT in recorded orders, before input VAT and other adjustments",
+    "notTaxReturn": "This shop does not know deductible input VAT, all external sales, the operator’s complete accounting or all other tax adjustments. Do not label its output-VAT total as “VAT payable” or a completed tax return.",
+    "payments": "An unpaid cash-on-delivery order is not VAT collected. Keep ordered, paid, fulfilled, cancelled and refunded amounts distinct, with dates. The applicable tax recognition period depends on the business’s accounting/tax circumstances; order-created date alone is insufficient for a statutory VAT return.",
+    "aggregation": "Aggregate saved order VAT amounts and recorded corrections; do not recompute VAT from a whole reporting period’s gross total because rounding and historical rates may differ.",
+    "unknownMode": "Report orders with unknown tax treatment separately; their VAT is unknown, not zero.",
+    "sourceIds": [
+      "ustg16",
+      "ustg17",
+      "ustg19"
+    ]
+  },
+  "invoiceScope": "Tax calculation and an order confirmation do not by themselves produce a legally complete tax invoice. Configure the actual seller name, address and required tax/invoice details; do not invent business information.",
+  "copy": {
+    "customerStandard": {
+      "de": "Preise inklusive der jeweils geltenden Umsatzsteuer. Lieferkosten werden vor der Bestellung angezeigt.",
+      "uk": "Ціни включають відповідний ПДВ. Вартість доставки показано до оформлення замовлення.",
+      "en": "Prices include the applicable VAT. Delivery costs are shown before you place your order.",
+      "fa": "قیمت‌ها شامل مالیات بر ارزش افزودهٔ مربوط هستند. هزینهٔ ارسال پیش از ثبت سفارش نمایش داده می‌شود."
+    },
+    "customerSmallBusiness": {
+      "de": "Umsatzsteuerbefreit nach § 19 UStG. Es wird keine Umsatzsteuer ausgewiesen.",
+      "uk": "Звільнення від ПДВ за § 19 UStG. ПДВ окремо не зазначається.",
+      "en": "VAT-exempt under § 19 UStG. No VAT is stated separately.",
+      "fa": "معاف از مالیات بر ارزش افزوده طبق مادهٔ ۱۹ قانون UStG آلمان. مالیات بر ارزش افزوده به‌صورت جداگانه درج نمی‌شود."
+    },
+    "customerUnset": {
+      "de": "Bestellungen sind verfügbar, sobald das Restaurant seine Steuereinstellungen bestätigt hat.",
+      "uk": "Замовлення будуть доступні після підтвердження рестораном податкових налаштувань.",
+      "en": "Ordering will be available once the restaurant confirms its tax settings.",
+      "fa": "پس از تأیید تنظیمات مالیاتی توسط رستوران، ثبت سفارش در دسترس خواهد بود."
+    },
+    "adminStatus": {
+      "de": "Bitte den tatsächlichen Steuerstatus bestätigen. Diese Einstellung ersetzt keine Erklärung gegenüber dem Finanzamt.",
+      "uk": "Підтвердьте фактичний податковий статус. Це налаштування не замінює заяву до податкового органу.",
+      "en": "Confirm the business’s actual tax status. This setting does not replace a declaration to the tax office.",
+      "fa": "وضعیت مالیاتی واقعی کسب‌وکار را تأیید کنید. این تنظیم جایگزین اعلام رسمی به ادارهٔ مالیات نیست."
+    },
+    "adminRates": {
+      "de": "7 % ist für die derzeitigen begünstigten Sushi-Speisen vorgesehen. Neue Produkte, Getränke und gemischte Warenkörbe benötigen eine passende steuerliche Zuordnung.",
+      "uk": "7 % передбачено для поточних страв суші, що підпадають під пільгову ставку. Нові товари, напої та змішані кошики потребують відповідної податкової класифікації.",
+      "en": "7% is intended for the current qualifying sushi dishes. New products, drinks and mixed baskets need appropriate tax classification.",
+      "fa": "نرخ ۷٪ برای غذاهای سوشی فعلی که مشمول نرخ کاهش‌یافته‌اند در نظر گرفته شده است. محصولات جدید، نوشیدنی‌ها و سبدهای ترکیبی به دسته‌بندی مالیاتی مناسب نیاز دارند."
+    },
+    "adminExemption": {
+      "de": "§ 19 UStG ist eine Steuerbefreiung, kein Steuersatz von 0 %. Die Berechtigung muss für das gesamte Unternehmen feststehen.",
+      "uk": "§ 19 UStG — це звільнення від податку, а не ставка 0 %. Право на нього має бути підтверджено для всього підприємства.",
+      "en": "§ 19 UStG is a tax exemption, not a 0% tax rate. Eligibility must be confirmed for the business as a whole.",
+      "fa": "مادهٔ ۱۹ قانون UStG یک معافیت مالیاتی است، نه نرخ مالیات صفر درصد. واجد شرایط بودن باید برای کل کسب‌وکار تأیید شود."
+    },
+    "adminReport": {
+      "de": "Der Bericht zeigt Umsatzsteuer aus erfassten Verkäufen vor Vorsteuerabzug und weiteren Korrekturen. Er zeigt nicht die endgültige Zahllast und ersetzt keine Steuererklärung.",
+      "uk": "Звіт показує ПДВ із зафіксованих продажів до відрахування вхідного ПДВ та інших коригувань. Це не остаточна сума до сплати й не податкова декларація.",
+      "en": "This report shows sales VAT before input VAT and other adjustments. It is not the final VAT payable or a tax return.",
+      "fa": "این گزارش مالیات فروش‌های ثبت‌شده را پیش از کسر اعتبار مالیات خرید و اصلاحات دیگر نشان می‌دهد. این رقم مالیات نهایی قابل‌پرداخت یا اظهارنامهٔ مالیاتی نیست."
+    },
+    "adminPayments": {
+      "de": "Unbezahlte Bestellungen sind noch keine Zahlungseingänge. Zahlungs- und Lieferdatum bleiben für die Buchhaltung getrennt nachvollziehbar.",
+      "uk": "Неоплачені замовлення ще не є отриманими платежами. Дати оплати й доставки зберігаються окремо для обліку.",
+      "en": "Unpaid orders are not payments received. Payment and delivery dates remain separately traceable for accounting.",
+      "fa": "سفارش پرداخت‌نشده، وجه دریافت‌شده محسوب نمی‌شود. تاریخ پرداخت و تحویل برای حسابداری جداگانه قابل‌پیگیری می‌مانند."
+    },
+    "adminDelivery": {
+      "de": "Eigene Lieferung als Nebenleistung folgt der steuerlichen Behandlung der Speisen. Bei unterschiedlichen Steuersätzen sind Lieferkosten passend aufzuteilen.",
+      "uk": "Власна доставка як супутня послуга має податковий режим страв. За різних ставок ПДВ вартість доставки потрібно належно розподілити.",
+      "en": "The restaurant’s ancillary delivery follows the food’s tax treatment. Delivery costs must be allocated appropriately when rates differ.",
+      "fa": "ارسال خود رستوران، وقتی خدمت جانبی فروش غذا باشد، از وضعیت مالیاتی غذا پیروی می‌کند. در صورت تفاوت نرخ‌ها، هزینهٔ ارسال باید به‌درستی تقسیم شود."
+    },
+    "adminRounding": {
+      "de": "Umsatzsteuer wird aus dem rabattierten Bruttopreis herausgerechnet und auf Cent gerundet. Berichte summieren die gespeicherten Steuerbeträge.",
+      "uk": "ПДВ виділяється з кінцевої ціни після знижки та округлюється до цента. Звіти підсумовують збережені суми податку.",
+      "en": "VAT is extracted from the discounted final price and rounded to cents. Reports add up the saved tax amounts.",
+      "fa": "مالیات از قیمت نهایی پس از تخفیف استخراج و تا یک سنت گرد می‌شود. گزارش‌ها مبالغ مالیاتی ذخیره‌شده را جمع می‌کنند."
+    },
+    "adminInvoice": {
+      "de": "Für Rechnungen sind die tatsächlichen Unternehmens- und Steuerangaben erforderlich. Eine Bestellbestätigung allein ist noch keine vollständige Steuerrechnung.",
+      "uk": "Для рахунків потрібні фактичні реквізити підприємства та податкові дані. Саме підтвердження замовлення ще не є повним податковим рахунком.",
+      "en": "Invoices require the business’s actual identity and tax details. An order confirmation alone is not a complete tax invoice.",
+      "fa": "برای صدور فاکتور، مشخصات واقعی کسب‌وکار و اطلاعات مالیاتی لازم است. تأیید سفارش به‌تنهایی فاکتور مالیاتی کامل نیست."
+    },
+    "includedVat": {
+      "de": "Enthaltene Umsatzsteuer",
+      "uk": "ПДВ у ціні",
+      "en": "VAT included",
+      "fa": "مالیات بر ارزش افزودهٔ داخل قیمت"
+    },
+    "exemptSales": {
+      "de": "Steuerfreie Umsätze nach § 19 UStG",
+      "uk": "Продажі, звільнені від ПДВ за § 19 UStG",
+      "en": "VAT-exempt sales under § 19 UStG",
+      "fa": "فروش معاف از مالیات طبق مادهٔ ۱۹ UStG"
+    },
+    "unknownTax": {
+      "de": "Steuerstatus ungeklärt",
+      "uk": "Податковий статус не визначено",
+      "en": "Tax status not confirmed",
+      "fa": "وضعیت مالیاتی تأیید نشده"
+    }
+  }
+}

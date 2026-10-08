@@ -1,0 +1,494 @@
+{
+  "Navigation": {
+    "de": "Navigation",
+    "uk": "Навігація",
+    "en": "Navigation",
+    "fa": "ناوبری"
+  },
+  "Speisekarte": {
+    "de": "Speisekarte",
+    "uk": "Меню",
+    "en": "Menu",
+    "fa": "منو"
+  },
+  "Sushi-Wissen": {
+    "de": "Sushi-Wissen",
+    "uk": "Про суші",
+    "en": "Sushi knowledge",
+    "fa": "دانستنی‌های سوشی"
+  },
+  "Lieferung": {
+    "de": "Lieferung",
+    "uk": "Доставка",
+    "en": "Delivery",
+    "fa": "ارسال"
+  },
+  "Warenkorb": {
+    "de": "Warenkorb",
+    "uk": "Кошик",
+    "en": "Basket",
+    "fa": "سبد خرید"
+  },
+  "Zum Inhalt": {
+    "de": "Zum Inhalt",
+    "uk": "До змісту",
+    "en": "Skip to content",
+    "fa": "رفتن به محتوا"
+  },
+  "Schnellzugriff": {
+    "de": "Schnellzugriff",
+    "uk": "Швидкі посилання",
+    "en": "Quick links",
+    "fa": "دسترسی سریع"
+  },
+  "Zur Speisekarte": {
+    "de": "Zur Speisekarte",
+    "uk": "До меню",
+    "en": "Back to the menu",
+    "fa": "بازگشت به منو"
+  },
+  "Wissen & Quellen": {
+    "de": "Wissen & Quellen",
+    "uk": "Знання й джерела",
+    "en": "Knowledge & sources",
+    "fa": "دانستنی‌ها و منابع"
+  },
+  "Recherche: 07.09.2026": {
+    "de": "Recherche: 07.09.2026",
+    "uk": "Дослідження: 07.09.2026",
+    "en": "Research: 7 September 2026",
+    "fa": "تاریخ بررسی: ۷ سپتامبر ۲۰۲۶"
+  },
+  "Schritte": {
+    "de": "Schritte",
+    "uk": "кроки",
+    "en": "steps",
+    "fa": "مرحله"
+  },
+  "Mehr erfahren": {
+    "de": "Mehr erfahren",
+    "uk": "Дізнатися більше",
+    "en": "Read more",
+    "fa": "بیشتر بخوانید"
+  },
+  "Quellen & Einordnung": {
+    "de": "Quellen & Einordnung",
+    "uk": "Джерела й контекст",
+    "en": "Sources & context",
+    "fa": "منابع و توضیحات"
+  },
+  "Eigenständige Zusammenfassungen auf Grundlage der verlinkten Quellen. Allgemeine Rezepte beschreiben keine bestätigte Rezeptur von Sushi Hamburg.": {
+    "de": "Eigenständige Zusammenfassungen auf Grundlage der verlinkten Quellen. Allgemeine Rezepte beschreiben keine bestätigte Rezeptur von Sushi Hamburg.",
+    "uk": "Самостійні перекази на основі наведених джерел. Загальні рецепти не є підтвердженими рецептами Sushi Hamburg.",
+    "en": "Independently written summaries based on the linked sources. General recipes are not confirmed recipes of Sushi Hamburg.",
+    "fa": "خلاصه‌هایی با نگارش مستقل بر پایهٔ منابع پیوندشده. دستورهای عمومی، دستور تأییدشدهٔ سوشی هامبورگ نیستند."
+  },
+  "Geprüft am 07.09.2026. Produktangaben stammen aus den bereitgestellten Originalkarten; Rezeptur und Verfügbarkeit bitte beim Restaurant bestätigen.": {
+    "de": "Geprüft am 07.09.2026. Produktangaben stammen aus den bereitgestellten Originalkarten; Rezeptur und Verfügbarkeit bitte beim Restaurant bestätigen.",
+    "uk": "Перевірено 07.09.2026. Дані про страви взято з наданих оригінальних меню; рецептуру й наявність уточнюйте в ресторані.",
+    "en": "Reviewed on 7 September 2026. Product information comes from the original menus supplied to us; please confirm recipes and availability with the restaurant.",
+    "fa": "بررسی‌شده در ۷ سپتامبر ۲۰۲۶. اطلاعات محصولات از منوهای اصلی ارائه‌شده گرفته شده است؛ ترکیبات و موجود بودن را از رستوران تأیید بگیرید."
+  },
+  "Was steckt in deiner Rolle? Entdecke Sushi-Arten, Zutaten und die Handgriffe dahinter — mit Quellen aus Japan und Asien.": {
+    "de": "Was steckt in deiner Rolle? Entdecke Sushi-Arten, Zutaten und die Handgriffe dahinter — mit Quellen aus Japan und Asien.",
+    "uk": "Що всередині твого ролу? Відкрий види суші, інгредієнти й способи приготування — з джерелами з Японії та Азії.",
+    "en": "What is inside your roll? Explore sushi styles, ingredients and techniques, with sources from Japan and Asia.",
+    "fa": "داخل رول شما چیست؟ با انواع سوشی، مواد اولیه و روش‌های تهیه آشنا شوید؛ بر پایهٔ منابعی از ژاپن و آسیا."
+  },
+  "Wissensartikel": {
+    "de": "Wissensartikel",
+    "uk": "матеріалів",
+    "en": "knowledge articles",
+    "fa": "مطلب آموزشی"
+  },
+  "Produkte erklärt": {
+    "de": "Produkte erklärt",
+    "uk": "описаних страв",
+    "en": "products explained",
+    "fa": "محصول معرفی‌شده"
+  },
+  "Zwei Sprachen": {
+    "de": "Zwei Sprachen",
+    "uk": "дві мови",
+    "en": "Two languages",
+    "fa": "دو زبان"
+  },
+  "DER URSPRUNG": {
+    "de": "DER URSPRUNG",
+    "uk": "ПОХОДЖЕННЯ",
+    "en": "THE ORIGINS",
+    "fa": "خاستگاه"
+  },
+  "Wie Sushi entstand.": {
+    "de": "Wie Sushi entstand.",
+    "uk": "Як виникли суші.",
+    "en": "How sushi began.",
+    "fa": "سوشی چگونه به وجود آمد؟"
+  },
+  "Von fermentiertem Fisch über Essigreis bis zur modernen Rolle: Sushi hat sich über Jahrhunderte verändert.": {
+    "de": "Von fermentiertem Fisch über Essigreis bis zur modernen Rolle: Sushi hat sich über Jahrhunderte verändert.",
+    "uk": "Від ферментованої риби через оцтовий рис до сучасного ролу: суші змінювалися століттями.",
+    "en": "From fermented fish and vinegared rice to the modern roll: sushi has changed over centuries.",
+    "fa": "از ماهی تخمیرشده و برنج سرکه‌دار تا رول‌های امروزی؛ سوشی طی قرن‌ها تغییر کرده است."
+  },
+  "Die Geschichte entdecken": {
+    "de": "Die Geschichte entdecken",
+    "uk": "Відкрити історію",
+    "en": "Explore the history",
+    "fa": "تاریخچه را بخوانید"
+  },
+  "Wissensbibliothek": {
+    "de": "Wissensbibliothek",
+    "uk": "Бібліотека знань",
+    "en": "Knowledge library",
+    "fa": "کتابخانهٔ سوشی"
+  },
+  "Wissen durchsuchen": {
+    "de": "Wissen durchsuchen",
+    "uk": "Пошук знань",
+    "en": "Search the knowledge library",
+    "fa": "جست‌وجو در دانستنی‌ها"
+  },
+  "Suche nach Lachs, Masago, Maki, Reis …": {
+    "de": "Suche nach Lachs, Masago, Maki, Reis …",
+    "uk": "Шукай лосось, масаго, макі, рис …",
+    "en": "Search salmon, masago, maki, rice …",
+    "fa": "جست‌وجوی سالمون، ماساگو، ماکی، برنج و …"
+  },
+  "Suche leeren": {
+    "de": "Suche leeren",
+    "uk": "Очистити пошук",
+    "en": "Clear search",
+    "fa": "پاک کردن جست‌وجو"
+  },
+  "Kategorie": {
+    "de": "Kategorie",
+    "uk": "Категорія",
+    "en": "Category",
+    "fa": "دسته‌بندی"
+  },
+  "Alles": {
+    "de": "Alles",
+    "uk": "Усе",
+    "en": "All",
+    "fa": "همه"
+  },
+  "Artikel gefunden": {
+    "de": "Artikel gefunden",
+    "uk": "матеріалів знайдено",
+    "en": "articles found",
+    "fa": "مطلب پیدا شد"
+  },
+  "Noch kein Treffer.": {
+    "de": "Noch kein Treffer.",
+    "uk": "Поки немає результатів.",
+    "en": "No results yet.",
+    "fa": "نتیجه‌ای پیدا نشد."
+  },
+  "Versuche einen kürzeren Begriff oder eine andere Kategorie.": {
+    "de": "Versuche einen kürzeren Begriff oder eine andere Kategorie.",
+    "uk": "Спробуй коротше слово або іншу категорію.",
+    "en": "Try a shorter search term or a different category.",
+    "fa": "عبارتی کوتاه‌تر یا دسته‌بندی دیگری را امتحان کنید."
+  },
+  "Alle Artikel anzeigen": {
+    "de": "Alle Artikel anzeigen",
+    "uk": "Показати всі матеріали",
+    "en": "Show all articles",
+    "fa": "نمایش همهٔ مطالب"
+  },
+  "WISSEN MIT QUELLEN": {
+    "de": "WISSEN MIT QUELLEN",
+    "uk": "ЗНАННЯ З ДЖЕРЕЛАМИ",
+    "en": "KNOWLEDGE WITH SOURCES",
+    "fa": "دانستنی‌های مستند"
+  },
+  "Die Quellen der Sammlung.": {
+    "de": "Die Quellen der Sammlung.",
+    "uk": "Джерела колекції.",
+    "en": "The collection’s sources.",
+    "fa": "منابع این مجموعه"
+  },
+  "Wir verbinden Informationen japanischer Behörden, Kulturinstitutionen und Lebensmittelhersteller mit Hinweisen des Centre for Food Safety in Hongkong. Jede Wissensseite nennt ihre Quellen. Die Sammlung deckt wichtige Formen und die Begriffe unserer Karte ab und ist keine vollständige Liste aller regionalen Sushi-Rezepte.": {
+    "de": "Wir verbinden Informationen japanischer Behörden, Kulturinstitutionen und Lebensmittelhersteller mit Hinweisen des Centre for Food Safety in Hongkong. Jede Wissensseite nennt ihre Quellen. Die Sammlung deckt wichtige Formen und die Begriffe unserer Karte ab und ist keine vollständige Liste aller regionalen Sushi-Rezepte.",
+    "uk": "Ми поєднуємо матеріали японських державних установ, культурних організацій і виробників із рекомендаціями Centre for Food Safety у Гонконзі. Кожна сторінка містить джерела. Колекція охоплює основні форми й терміни нашого меню, але не всі регіональні рецепти суші.",
+    "en": "We bring together information from Japanese government bodies, cultural institutions and food producers with guidance from the Centre for Food Safety in Hong Kong. Every knowledge page lists its sources. This collection covers important styles and terms from our menu; it is not a complete list of every regional sushi recipe.",
+    "fa": "اطلاعات نهادهای دولتی، مؤسسات فرهنگی و تولیدکنندگان مواد غذایی ژاپن را همراه راهنمایی‌های مرکز ایمنی مواد غذایی هنگ‌کنگ گرد آورده‌ایم. هر صفحهٔ آموزشی منابع خود را ذکر می‌کند. این مجموعه شکل‌های مهم سوشی و اصطلاحات منوی ما را پوشش می‌دهد و فهرست کامل همهٔ دستورهای منطقه‌ای سوشی نیست."
+  },
+  "Restaurantkarte ≠ allgemeines Rezept": {
+    "de": "Restaurantkarte ≠ allgemeines Rezept",
+    "uk": "Меню ресторану ≠ загальний рецепт",
+    "en": "Restaurant menu ≠ general recipe",
+    "fa": "منوی رستوران ≠ دستور عمومی"
+  },
+  "Produktseiten zeigen den übermittelten Menütext. Nicht belegte Garstufen, Herkunftsangaben und Rezeptdetails werden nicht ergänzt. Die Originalkarten bleiben zugänglich.": {
+    "de": "Produktseiten zeigen den übermittelten Menütext. Nicht belegte Garstufen, Herkunftsangaben und Rezeptdetails werden nicht ergänzt. Die Originalkarten bleiben zugänglich.",
+    "uk": "Сторінки продуктів показують склад із наданого меню. Ми не дописуємо непідтверджені способи термообробки, походження й рецептури. Оригінальні меню доступні для перегляду.",
+    "en": "Product pages show the menu text supplied to us. We do not add unconfirmed cooking methods, origins or recipe details. The original menus remain available to view.",
+    "fa": "صفحه‌های محصولات متن منوی ارائه‌شده را نمایش می‌دهند. وضعیت پخت، خاستگاه مواد و جزئیات دستور را بدون تأیید اضافه نمی‌کنیم. منوهای اصلی هم برای مشاهده در دسترس هستند."
+  },
+  "Wissensdaten mit Quellen herunterladen": {
+    "de": "Wissensdaten mit Quellen herunterladen",
+    "uk": "Завантажити базу знань із джерелами",
+    "en": "Download the knowledge database with sources",
+    "fa": "دانلود بانک دانستنی‌ها همراه منابع"
+  },
+  "Alle Wissensartikel": {
+    "de": "Alle Wissensartikel",
+    "uk": "Усі матеріали",
+    "en": "All knowledge articles",
+    "fa": "همهٔ مطالب آموزشی"
+  },
+  "Schritt für Schritt": {
+    "de": "Schritt für Schritt",
+    "uk": "Крок за кроком",
+    "en": "Step by step",
+    "fa": "مرحله به مرحله"
+  },
+  "Hinweise zu Hygiene und Lagerung": {
+    "de": "Hinweise zu Hygiene und Lagerung",
+    "uk": "Гігієна та зберігання",
+    "en": "Hygiene and storage guidance",
+    "fa": "راهنمای بهداشت و نگهداری"
+  },
+  "Weiter entdecken": {
+    "de": "Weiter entdecken",
+    "uk": "Дізнайся більше",
+    "en": "Explore more",
+    "fa": "بیشتر بدانید"
+  },
+  "Sushi auswählen": {
+    "de": "Sushi auswählen",
+    "uk": "Обрати суші",
+    "en": "Choose sushi",
+    "fa": "انتخاب سوشی"
+  },
+  "AUF UNSERER KARTE": {
+    "de": "AUF UNSERER KARTE",
+    "uk": "У НАШОМУ МЕНЮ",
+    "en": "ON OUR MENU",
+    "fa": "در منوی ما"
+  },
+  "Passende Gerichte aus dem Menü.": {
+    "de": "Passende Gerichte aus dem Menü.",
+    "uk": "Відповідні страви з меню.",
+    "en": "Related dishes on the menu.",
+    "fa": "غذاهای مرتبط در منو"
+  },
+  "Maximal 50 pro Produkt.": {
+    "de": "Maximal 50 pro Produkt.",
+    "uk": "Не більше 50 одиниць продукту.",
+    "en": "Maximum 50 of each product.",
+    "fa": "حداکثر ۵۰ عدد از هر محصول."
+  },
+  "Bitte füge das Produkt über die Speisekarte hinzu. Dein Browser blockiert die Speicherung.": {
+    "de": "Bitte füge das Produkt über die Speisekarte hinzu. Dein Browser blockiert die Speicherung.",
+    "uk": "Додай продукт через меню: браузер блокує збереження.",
+    "en": "Please add this product through the menu. Your browser is blocking storage.",
+    "fa": "لطفاً این محصول را از صفحهٔ منو اضافه کنید. مرورگر شما ذخیره‌سازی را مسدود کرده است."
+  },
+  "Foto aus der Original-Speisekarte": {
+    "de": "Foto aus der Original-Speisekarte",
+    "uk": "Фото з оригінального меню",
+    "en": "Photo from the original menu",
+    "fa": "تصویر از منوی اصلی"
+  },
+  "Noch einmal hinzufügen": {
+    "de": "Noch einmal hinzufügen",
+    "uk": "Додати ще",
+    "en": "Add another",
+    "fa": "یکی دیگر اضافه کنید"
+  },
+  "In den Warenkorb": {
+    "de": "In den Warenkorb",
+    "uk": "Додати в кошик",
+    "en": "Add to basket",
+    "fa": "افزودن به سبد خرید"
+  },
+  "Im Warenkorb.": {
+    "de": "Im Warenkorb.",
+    "uk": "У кошику.",
+    "en": "Added to your basket.",
+    "fa": "به سبد خرید اضافه شد."
+  },
+  "Warenkorb öffnen": {
+    "de": "Warenkorb öffnen",
+    "uk": "Відкрити кошик",
+    "en": "Open basket",
+    "fa": "باز کردن سبد خرید"
+  },
+  "Preis laut Karte, Lieferung zusätzlich. Anfrage und Zahlungsart werden im Telegram-Chat abgestimmt.": {
+    "de": "Preis laut Karte, Lieferung zusätzlich. Anfrage und Zahlungsart werden im Telegram-Chat abgestimmt.",
+    "uk": "Ціна за меню, доставка окремо. Заявку й спосіб оплати узгоджуємо в Telegram.",
+    "en": "Menu price; delivery is extra. Order enquiries and payment methods are arranged in the Telegram chat.",
+    "fa": "قیمت طبق منو است و هزینهٔ ارسال جداگانه محاسبه می‌شود. درخواست سفارش و روش پرداخت در گفت‌وگوی تلگرام هماهنگ می‌شود."
+  },
+  "WAS STECKT DRIN?": {
+    "de": "WAS STECKT DRIN?",
+    "uk": "ЩО ВСЕРЕДИНІ?",
+    "en": "WHAT IS INSIDE?",
+    "fa": "چه موادی دارد؟"
+  },
+  "Die Zutaten verstehen.": {
+    "de": "Die Zutaten verstehen.",
+    "uk": "Зрозумій інгредієнти.",
+    "en": "Understanding the ingredients.",
+    "fa": "آشنایی با مواد اولیه"
+  },
+  "Tippe auf eine Zutat, um mehr darüber zu erfahren. Diese Begriffe stammen aus der Originalkarte.": {
+    "de": "Tippe auf eine Zutat, um mehr darüber zu erfahren. Diese Begriffe stammen aus der Originalkarte.",
+    "uk": "Натисни на інгредієнт, щоб дізнатися більше. Ці назви взято з оригінального меню.",
+    "en": "Select an ingredient to learn more. These terms come from the original menu.",
+    "fa": "برای اطلاعات بیشتر، روی نام یک ماده بزنید. این نام‌ها از منوی اصلی گرفته شده‌اند."
+  },
+  "Die Set-Karte nennt Rollen, aber keine vollständige Liste aller Einzelzutaten. Aus einem Rollennamen leiten wir keine Rezeptur ab. Den vollständigen Set-Inhalt und die Zutaten bitte bestätigen lassen.": {
+    "de": "Die Set-Karte nennt Rollen, aber keine vollständige Liste aller Einzelzutaten. Aus einem Rollennamen leiten wir keine Rezeptur ab. Den vollständigen Set-Inhalt und die Zutaten bitte bestätigen lassen.",
+    "uk": "Меню сетів називає роли, але не всі окремі інгредієнти. Ми не визначаємо рецепт лише за назвою. Уточнюйте повний вміст сету й склад.",
+    "en": "The set menu lists rolls but does not give a complete list of every ingredient. We do not infer a recipe from a roll’s name. Please confirm the full contents and ingredients of each set.",
+    "fa": "منوی ست‌ها نام رول‌ها را ذکر می‌کند، اما فهرست کامل همهٔ مواد را ندارد. از روی نام یک رول، دستور آن را حدس نمی‌زنیم. لطفاً محتویات کامل و ترکیبات هر ست را تأیید کنید."
+  },
+  "Passende Einzelrollen zum Nachlesen": {
+    "de": "Passende Einzelrollen zum Nachlesen",
+    "uk": "Відповідні окремі роли для ознайомлення",
+    "en": "Read about related individual rolls",
+    "fa": "آشنایی با رول‌های تکی مرتبط"
+  },
+  "Diese Links erklären passende Kartenprodukte; sie sind keine Bestätigung aller Set-Bestandteile oder Portionsgrößen.": {
+    "de": "Diese Links erklären passende Kartenprodukte; sie sind keine Bestätigung aller Set-Bestandteile oder Portionsgrößen.",
+    "uk": "Ці посилання пояснюють відповідні страви з меню, але не підтверджують повний склад сету або розміри порцій.",
+    "en": "These links explain related menu products; they do not confirm all set contents or portion sizes.",
+    "fa": "این پیوندها محصولات مرتبط منو را معرفی می‌کنند و تأییدی بر همهٔ محتویات ست یا اندازهٔ سهم‌ها نیستند."
+  },
+  "Allergene & genaue Zusammensetzung": {
+    "de": "Allergene & genaue Zusammensetzung",
+    "uk": "Алергени й точний склад",
+    "en": "Allergens & exact ingredients",
+    "fa": "مواد حساسیت‌زا و ترکیبات دقیق"
+  },
+  "Die Karte ersetzt keine vollständige Allergeninformation: Saucen, verarbeitete Zutaten und mögliche Kreuzkontakte sind nicht abschließend dokumentiert. Bei Unverträglichkeiten die Zusammensetzung vor der Bestellung mit dem Restaurant klären.": {
+    "de": "Die Karte ersetzt keine vollständige Allergeninformation: Saucen, verarbeitete Zutaten und mögliche Kreuzkontakte sind nicht abschließend dokumentiert. Bei Unverträglichkeiten die Zusammensetzung vor der Bestellung mit dem Restaurant klären.",
+    "uk": "Меню не замінює повної інформації про алергени: соуси, перероблені інгредієнти й можливі перехресні контакти описані не повністю. За непереносимості уточнюйте склад до замовлення.",
+    "en": "The menu does not replace complete allergen information: sauces, processed ingredients and possible cross-contact are not fully documented. If you have food intolerances, clarify the ingredients with the restaurant before ordering.",
+    "fa": "منو جایگزین اطلاعات کامل مواد حساسیت‌زا نیست؛ ترکیبات سس‌ها، مواد فرآوری‌شده و احتمال تماس متقاطع به‌طور کامل مشخص نشده‌اند. اگر عدم تحمل غذایی دارید، پیش از سفارش ترکیبات را با رستوران بررسی کنید."
+  },
+  "Das Restaurant fragen": {
+    "de": "Das Restaurant fragen",
+    "uk": "Запитати ресторан",
+    "en": "Ask the restaurant",
+    "fa": "از رستوران بپرسید"
+  },
+  "FORM & ZUBEREITUNG": {
+    "de": "FORM & ZUBEREITUNG",
+    "uk": "ФОРМА Й ПРИГОТУВАННЯ",
+    "en": "STYLE & PREPARATION",
+    "fa": "شکل و روش تهیه"
+  },
+  "Mehr über diese Rolle.": {
+    "de": "Mehr über diese Rolle.",
+    "uk": "Більше про цей рол.",
+    "en": "More about this roll.",
+    "fa": "دربارهٔ این رول بیشتر بدانید"
+  },
+  "Die Wissensartikel erklären allgemeine Stile und Handgriffe. Mengen, Saucenrezepturen und nicht ausdrücklich genannte Garstufen dieses Produkts wurden nicht übermittelt.": {
+    "de": "Die Wissensartikel erklären allgemeine Stile und Handgriffe. Mengen, Saucenrezepturen und nicht ausdrücklich genannte Garstufen dieses Produkts wurden nicht übermittelt.",
+    "uk": "Матеріали пояснюють загальні стилі й техніки. Кількості, рецептури соусів і прямо не зазначені способи термообробки цього продукту не надано.",
+    "en": "The knowledge articles explain general styles and techniques. Quantities, sauce recipes and any cooking levels not explicitly stated for this product have not been supplied.",
+    "fa": "مطالب آموزشی، شکل‌ها و روش‌های عمومی را توضیح می‌دهند. مقدار مواد، دستور سس‌ها و وضعیت پختی که صریحاً برای این محصول ذکر نشده، به ما ارائه نشده است."
+  },
+  "Im Original steht „сир тобіко“. Die genaue Bedeutung bitte im Chat bestätigen lassen.": {
+    "de": "Im Original steht „сир тобіко“. Die genaue Bedeutung bitte im Chat bestätigen lassen.",
+    "uk": "В оригіналі написано «сир тобіко». Уточни точне значення в чаті.",
+    "en": "The original says “сир тобіко”. Please confirm the exact meaning in the chat.",
+    "fa": "در متن اصلی «сир тобіко» آمده است. معنای دقیق آن را در گفت‌وگو با رستوران تأیید کنید."
+  },
+  "Die Originalkarte bezeichnet diese Rolle als gebraten.": {
+    "de": "Die Originalkarte bezeichnet diese Rolle als gebraten.",
+    "uk": "Оригінальне меню позначає цей рол як підсмажений.",
+    "en": "The original menu describes this roll as fried.",
+    "fa": "منوی اصلی این رول را سرخ‌شده معرفی می‌کند."
+  },
+  "Die Garnele ist laut Karte gebraten; zum Lachs steht dort keine Garstufe.": {
+    "de": "Die Garnele ist laut Karte gebraten; zum Lachs steht dort keine Garstufe.",
+    "uk": "Креветка за меню підсмажена; термообробку лосося не зазначено.",
+    "en": "The menu says the shrimp is fried; it does not state how the salmon is cooked.",
+    "fa": "طبق منو، میگو سرخ‌شده است؛ وضعیت پخت سالمون ذکر نشده است."
+  },
+  "Originalkarte ansehen": {
+    "de": "Originalkarte ansehen",
+    "uk": "Переглянути оригінальне меню",
+    "en": "View original menu",
+    "fa": "مشاهدهٔ منوی اصلی"
+  },
+  "Sushi-Arten": {
+    "de": "Sushi-Arten",
+    "uk": "Види суші",
+    "en": "Sushi styles",
+    "fa": "انواع سوشی"
+  },
+  "Zutaten": {
+    "de": "Zutaten",
+    "uk": "Інгредієнти",
+    "en": "Ingredients",
+    "fa": "مواد اولیه"
+  },
+  "Zubereitung": {
+    "de": "Zubereitung",
+    "uk": "Приготування",
+    "en": "Preparation",
+    "fa": "روش تهیه"
+  },
+  "Geschichte": {
+    "de": "Geschichte",
+    "uk": "Історія",
+    "en": "History",
+    "fa": "تاریخچه"
+  },
+  "Sushi verstehen.": {
+    "de": "Sushi verstehen.",
+    "uk": "Більше про суші.",
+    "en": "Understanding sushi.",
+    "fa": "آشنایی با سوشی"
+  },
+  "Vier Sprachen": {
+    "de": "Vier Sprachen",
+    "uk": "Чотири мови",
+    "en": "Four languages",
+    "fa": "چهار زبان"
+  },
+  "Foto aus der Originalgalerie": {
+    "de": "Foto aus der Originalgalerie",
+    "uk": "Фото з оригінальної галереї",
+    "en": "Photo from the original gallery",
+    "fa": "عکس از گالری اصلی"
+  },
+  "Preis laut Karte, Lieferung zusätzlich. Die verfügbaren Zahlungsarten werden beim Bestellen angezeigt.": {
+    "de": "Preis laut Karte, Lieferung zusätzlich. Die verfügbaren Zahlungsarten werden beim Bestellen angezeigt.",
+    "uk": "Ціна за меню, доставка окремо. Доступні способи оплати показано під час оформлення замовлення.",
+    "en": "Menu price; delivery is extra. Available payment methods are shown at checkout.",
+    "fa": "قیمت طبق منو است و ارسال جداگانه محاسبه می‌شود. روش‌های پرداخت موجود هنگام ثبت سفارش نمایش داده می‌شوند."
+  },
+  "Sushi-Journal": {
+    "de": "Sushi-Journal",
+    "uk": "Журнал про суші",
+    "en": "Sushi journal",
+    "fa": "مجلهٔ سوشی"
+  },
+  "Set": {
+    "de": "Set",
+    "uk": "Сет",
+    "en": "Set",
+    "fa": "ست"
+  },
+  "Rolle": {
+    "de": "Rolle",
+    "uk": "Рол",
+    "en": "Roll",
+    "fa": "رول"
+  },
+  "Sprache": {
+    "de": "Sprache",
+    "uk": "Мова",
+    "en": "Language",
+    "fa": "زبان"
+  }
+}

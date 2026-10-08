@@ -1,0 +1,60 @@
+SUSHI HH — Store setup and deployment
+
+Source of truth: /Volumes/projects/sushi-hamburg
+Pipeline: this checkout -> GitHub shafighp1990/sushi-hamburg -> Cloudflare Pages sushi-hamburg.
+The existing Git integration builds `npm run build`; output `dist/client`.
+Functions in functions/api/[[path]].ts provide the backend. Never deploy only a static copy and claim the checkout is active.
+
+LOCAL PREVIEW
+npm run build:worker
+Apply each pending drizzle/*.sql using wrangler d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file <migration>.
+.dev.vars (ignored): AUTH_SECRET=<random >=32 characters>, LOCAL_DEMO=1.
+npm run dev
+node scripts/seed-local-admin.mjs
+Open http://127.0.0.1:5173/admin — admin / admin. These credentials exist ONLY in the local database. Do not copy LOCAL_DEMO or the local database to production.
+
+CLOUDFLARE PAGES SETTINGS
+Enable nodejs_compat. Set compatibility date 2026-05-15 or newer.
+Create D1 database sushi-hamburg and bind as DB in production and preview as appropriate. Use separate preview data.
+Create R2 bucket sushi-hamburg-media and bind as BUCKET only if the owner enables R2. Existing gallery photographs can already be selected without R2. Uploaded product photos are served through /api/media/*.
+Apply schema-only migrations from drizzle in order before the first backend deployment. Default product data comes from the source catalogue; admin edits are stored as versioned overrides.
+Set AUTH_SECRET as a secret (at least 32 random characters), SHOP_ORIGIN=https://sushi-hamburg.pages.dev (or final custom domain). Never commit secrets. Preview deployments must use their own origin or leave SHOP_ORIGIN unset to use same-origin requests.
+Owner: register the owner's real account, verify it is theirs, then run scripts/provision-admin.mjs <email> and apply the generated SQL to the intended DB. There is no anonymous admin claim or public admin/admin account.
+
+PAYMENTS
+Checkout opens only after at least one real staff account has been provisioned. This prevents public orders reaching an unstaffed shop. Cash on delivery is then available immediately.
+Stripe also processes Visa/Mastercard credit and debit cards through hosted Checkout.
+STRIPE_SECRET_KEY + STRIPE_WEBHOOK_SECRET: create webhook /api/webhooks/stripe for checkout.session.completed, checkout.session.async_payment_succeeded, charge.refunded and charge.dispute.created.
+PAYPAL_CLIENT_ID + PAYPAL_CLIENT_SECRET + PAYPAL_WEBHOOK_ID; PAYPAL_ENV=sandbox or live. Optionally PAYPAL_MERCHANT_ID to validate the receiving merchant. Webhook /api/webhooks/paypal: CHECKOUT.ORDER.APPROVED, PAYMENT.CAPTURE.COMPLETED, PAYMENT.CAPTURE.REFUNDED, PAYMENT.CAPTURE.REVERSED.
+Use sandbox/test credentials first. Merchant onboarding, provider account approval and live acceptance are external prerequisites. Payment options remain unavailable until configured; no simulated success path exists.
+Hamburg delivery fees currently require a restaurant quote before online payment. Once a payment attempt starts, its amount is locked. Refunds/disputes are handled in the provider's dashboard; verified reversal notifications mark the payment for restaurant review. No automatic refund UI is offered.
+Verify a real sandbox transaction for each provider before live sales. Automated tests use mocked provider responses and do not prove a merchant account is connected.
+
+EMAIL
+Optional RESEND_API_KEY + verified EMAIL_FROM enable password-reset email. Without them, the form explicitly directs customers to the restaurant; it does not claim an email was sent. Admin can create a one-time recovery/invitation link to share privately with a verified customer. Password hashes are never returned by customer APIs.
+
+OPERATIONS
+Orders are persisted in D1 and appear in the restaurant desk; desk refreshes every 30 seconds while visible. Keep the desk open to monitor new orders. External SMS/push notifications are not configured.
+All order totals are computed server-side. Client prices are checked for changes. A request key prevents accidental duplicate submissions. Guest tracking uses a random private capability token, stored only as a hash in the database.
+Staff access is checked server-side. Staff can add/edit/hide products, upload JPEG/PNG/WebP, view/edit/disable/delete customer accounts, generate reset links and manage order status. Customer account deletion retains existing order records.
+Complete the legal operator identity, service address, retention terms and restaurant-confirmed allergen data before public sales launch.
+
+PHOTO COVERAGE
+120 original files contain repeated angles of a small number of dishes. Six menu products have confidently matching individual photographs; 34 do not. Missing products use honest text-first cards until the restaurant uploads the correct photos. All originals remain on the project drive.
+
+CURRENT INFRASTRUCTURE (2026-10-08)
+Production D1 and preview D1 are provisioned separately. R2 sushi-hamburg-media and sushi-hamburg-preview-media are enabled and bound. The owner uploads directly in the website admin panel; no Cloudflare login is needed for daily operations.
+Migrations 0000 and 0001 include coupon reservations guarded by a database trigger to prevent concurrent over-redemption. Never replay an already applied migration.
+
+MERCHANDISING AND TAX
+Admin > Offers / Settings: four button styles, four gallery layouts, four-language special offer, featured products, dated fixed/percentage coupons, minimum spend, usage limits, customer restrictions and product restrictions. Deactivate a coupon to remove it from use; existing orders retain their discount snapshot. Cancelling an unpaid order releases its coupon reservation.
+Products support up to five images and primary-image selection; six confidently identified catalogue dishes have three original gallery views, available at 800/1600/2400 pixels. The 120 originals are preserved under assets/originals, outside Git.
+Delivery is limited to Hamburg. City and official postcode screening do not prove an individual address is in the delivery area; staff must verify the street/address when confirming the quote. Postal data attribution: Freie und Hansestadt Hamburg, Landesbetrieb Geoinformation und Vermessung, DL-DE-BY 2.0. Default delivery mode is restaurant quote, pending the owner's final fee formula. Legacy A/B prices are an explicit optional setting, not a new assumption.
+Tax mode defaults to unset, as requested. Admin can choose regular taxation or the §19 small-business exemption. Prices are gross; regular taxation uses each product's configured 7%/19% rate, applies discounts before VAT, and allocates ancillary delivery by discounted item value. Tax regime/rates/discount shares are snapshotted per order. Changing shop settings does not rewrite existing orders.
+Reports cover payment dates in Europe/Berlin, show gross receipts and output VAT, identify unknown tax treatment or reversed payments, and export CSV. This is not a calculation of tax ultimately payable: input VAT, other costs, accounting methods and tax adjustments are outside the store.
+Print from a private order page to save an order receipt as PDF. A receipt is not represented as a legally complete VAT invoice; legal operator identity and tax details remain missing. See docs/TAX-SOURCES.json for official sources.
+
+VERIFICATION
+npm run check; npm test
+node tests/integration.mjs; node tests/commerce-integration.mjs (local-only, never production).
+Browser QA covers guest checkout, private tracking, admin CRUD, R2 image upload/readback, four gallery previews, tax settings and Persian mobile layout.
