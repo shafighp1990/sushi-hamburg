@@ -86,13 +86,24 @@ export async function startPayment(
     fail('PAYMENT_UNAVAILABLE', 503);
   const now = Date.now();
   await env.DB.prepare(
-    'INSERT OR IGNORE INTO payments(order_id,provider,amount,attempt,created_at,updated_at) VALUES(?,?,?,?,?,?)',
+    "INSERT OR IGNORE INTO payments(order_id,provider,amount,attempt,created_at,updated_at) SELECT ?,?,?,?,?,? FROM orders WHERE id=? AND total=? AND status!='cancelled' AND paid=0",
   )
-    .bind(order.id, provider, order.total, crypto.randomUUID(), now, now)
+    .bind(
+      order.id,
+      provider,
+      order.total,
+      crypto.randomUUID(),
+      now,
+      now,
+      order.id,
+      order.total,
+    )
     .run();
   let p = await env.DB.prepare('SELECT * FROM payments WHERE order_id=?')
     .bind(order.id)
     .first<any>();
+  if (!p) fail('PAYMENT_NOT_READY');
+  if (p.state === 'review_required') fail('PAYMENT_REVIEW_REQUIRED', 409);
   if (p.amount !== order.total) fail('PAYMENT_AMOUNT_CHANGED', 409);
   if (p.state === 'paid') return { paid: true };
   if (p.state === 'expired') {
@@ -202,6 +213,8 @@ export async function reconcilePayment(
     .bind(orderId)
     .first<any>();
   if (!p?.provider_id) return { paid: false };
+  if (p.state === 'review_required')
+    return { paid: false, state: 'review_required' };
   if (p.state === 'paid') return { paid: true };
   if (p.provider === 'stripe') {
     const s = await stripe(

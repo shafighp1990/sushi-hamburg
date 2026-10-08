@@ -579,7 +579,7 @@ export async function handleShop(
         fail('PAYMENT_PROVIDER_ONLY');
       if (old.paid && b.status === 'cancelled') fail('REFUND_REQUIRED');
       if (
-        delivery !== old.delivery &&
+        (delivery !== old.delivery || b.status === 'cancelled') &&
         (await env.DB.prepare('SELECT order_id FROM payments WHERE order_id=?')
           .bind(id)
           .first())
@@ -604,7 +604,7 @@ export async function handleShop(
           : undefined,
       );
       const result = await env.DB.prepare(
-        'UPDATE orders SET status=?,delivery=?,total=?,paid=?,paid_at=?,tax=?,updated_at=?,version=version+1 WHERE id=? AND version=? RETURNING id',
+        "UPDATE orders SET status=?,delivery=?,total=?,paid=?,paid_at=?,tax=?,updated_at=?,version=version+1 WHERE id=? AND version=? AND ((delivery IS ? AND ?!='cancelled') OR NOT EXISTS(SELECT 1 FROM payments WHERE order_id=orders.id)) RETURNING id",
       )
         .bind(
           b.status,
@@ -616,6 +616,8 @@ export async function handleShop(
           now,
           id,
           b.version,
+          delivery,
+          b.status,
         )
         .first();
       if (!result) fail('EDIT_CONFLICT', 409);
