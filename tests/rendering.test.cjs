@@ -265,9 +265,88 @@ function run(project) {
       // Optional review artifact; capture never bypasses the assertions below.
       if (process.env.SUSHI_RENDER_CAPTURE_PATH) {
         captured[file + '-' + name + '-' + index] = actual;
-        fs.writeFileSync(process.env.SUSHI_RENDER_CAPTURE_PATH, JSON.stringify(captured, null, 2) + '\n');
+        fs.writeFileSync(
+          process.env.SUSHI_RENDER_CAPTURE_PATH,
+          JSON.stringify(captured, null, 2) + '\n',
+        );
       }
       assert.equal(actual, expected[file + '-' + name + '-' + index]);
+    });
+  }
+  if (project === 'sushi') {
+    void test('section labels follow the current language across account, staff, checkout, tracking and gallery views', () => {
+      const { t } = after(path.join(root, 'lib/shop-copy.ts'));
+      const initialUser = shop.user;
+      const initialLanguage = shop.lang;
+      try {
+        for (const lang of ['de', 'uk', 'en', 'fa']) {
+          shop.lang = lang;
+          for (const { file, name, key, prefix, signedOut } of [
+            {
+              file: 'account',
+              name: 'Account',
+              key: 'account',
+              prefix: false,
+              signedOut: false,
+            },
+            {
+              file: 'account',
+              name: 'Account',
+              key: 'account',
+              prefix: true,
+              signedOut: true,
+            },
+            {
+              file: 'admin-login',
+              name: 'AdminLogin',
+              key: 'admin',
+              prefix: true,
+              signedOut: false,
+            },
+            {
+              file: 'checkout',
+              name: 'Checkout',
+              key: 'checkout',
+              prefix: false,
+              signedOut: false,
+            },
+            {
+              file: 'order-tracking',
+              name: 'OrderTracking',
+              key: 'track',
+              prefix: false,
+              signedOut: false,
+            },
+            {
+              file: 'info-pages',
+              name: 'Gallery',
+              key: 'gallery',
+              prefix: false,
+              signedOut: false,
+            },
+          ]) {
+            shop.user = signedOut ? null : initialUser;
+            const componentModule = after(
+              path.join(root, 'components', file + '.tsx'),
+            );
+            const text = renderToStaticMarkup(
+              React.createElement(componentModule[name], {}),
+            )
+              .replace(/<[^>]*>/g, '')
+              .replaceAll('&amp;', '&');
+            const expectedLabel = prefix
+              ? `SUSHI HH / ${t(lang, key)}`
+              : `${t(lang, key)} / HH`;
+            assert.ok(
+              text.includes(expectedLabel),
+              `${name} must display its section label in ${lang}`,
+            );
+          }
+        }
+      } finally {
+        shop.user = initialUser;
+        shop.lang = initialLanguage;
+      }
     });
   }
 }

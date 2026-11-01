@@ -460,9 +460,9 @@ export function AdminView({
             onClick={async () => {
               try {
                 await navigator.clipboard.writeText(link);
-                setNotice(t(lang, "copied"));
+                setNotice("copied");
               } catch {
-                setError(t(lang, "error"));
+                setError("SERVER_ERROR");
               }
             }}
           >

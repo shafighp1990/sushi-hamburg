@@ -16,7 +16,8 @@ import { styles } from "./NewsletterLink.styles";
 export function NewsletterLink() {
   const { lang } = useShop(),
     [state, setState] = useState(""),
-    [error, setError] = useState("");
+    [errorCode, setError] = useState("");
+  const error = errorCode ? errorText(lang, errorCode) : "";
   const locationValue = useBrowserLocation();
   const params = locationValue ? new URLSearchParams(locationValue.split("#")[1] || "") : null;
   const action =
@@ -43,7 +44,7 @@ export function NewsletterLink() {
                 );
                 setState(s.state);
               } catch (e) {
-                setError(errorText(lang, (e as Error).message));
+                setError(e instanceof Error ? e.message : "SERVER_ERROR");
               }
             }}
           >

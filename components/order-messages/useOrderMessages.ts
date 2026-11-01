@@ -19,8 +19,8 @@ export function useOrderMessages({ orderId, lang, token, staff = false }: OrderM
   const [draft, setDraft] = useState("");
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
-  const [error, setError] = useState("");
-  const [notice, setNotice] = useState("");
+  const [errorCode, setError] = useState("");
+  const [noticeKey, setNotice] = useState<"" | "sent">("");
   const attempt = useRef<{ text: string; id: string } | null>(null);
   const fetchMessages = useCallback((before?: string, signal?: AbortSignal) =>
     api<MessagePage>(endpoint + (before ? `?before=${encodeURIComponent(before)}` : ""), {
@@ -32,8 +32,8 @@ export function useOrderMessages({ orderId, lang, token, staff = false }: OrderM
     else setCursor((current) => current === undefined ? page.nextCursor : current);
     setError("");
   }).catch((failure: unknown) => {
-    setError(errorText(lang, failure instanceof Error ? failure.message : "SERVER_ERROR"));
-  }).finally(() => setLoading(false)), [fetchMessages, lang]);
+    setError(failure instanceof Error ? failure.message : "SERVER_ERROR");
+  }).finally(() => setLoading(false)), [fetchMessages]);
   useEffect(() => {
     const controller = new AbortController();
     const poll = () => {
@@ -46,7 +46,7 @@ export function useOrderMessages({ orderId, lang, token, staff = false }: OrderM
         setLoading(false);
       }).catch((failure: unknown) => {
         if (controller.signal.aborted) return;
-        setError(errorText(lang, failure instanceof Error ? failure.message : "SERVER_ERROR"));
+        setError(failure instanceof Error ? failure.message : "SERVER_ERROR");
         setLoading(false);
       });
     };
@@ -54,7 +54,7 @@ export function useOrderMessages({ orderId, lang, token, staff = false }: OrderM
     const timer = window.setInterval(poll, 15000);
     document.addEventListener("visibilitychange", poll);
     return () => { controller.abort(); window.clearInterval(timer); document.removeEventListener("visibilitychange", poll); };
-  }, [fetchMessages, lang]);
+  }, [fetchMessages]);
   async function submit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     const text = draft.trim();
@@ -67,10 +67,10 @@ export function useOrderMessages({ orderId, lang, token, staff = false }: OrderM
         body: JSON.stringify({ text, clientMessageId: attempt.current.id }),
       });
       setMessages((current) => mergeMessages(current, [response.message]));
-      setDraft(""); attempt.current = null; setNotice(copy.sent);
+      setDraft(""); attempt.current = null; setNotice("sent");
     } catch (failure) {
-      setError(errorText(lang, failure instanceof Error ? failure.message : "SERVER_ERROR"));
+      setError(failure instanceof Error ? failure.message : "SERVER_ERROR");
     } finally { setSending(false); }
   }
-  return { lang, staff, copy, messages, cursor, draft, setDraft, loading, sending, error, notice, load, submit };
+  return { lang, staff, copy, messages, cursor, draft, setDraft, loading, sending, error: errorCode ? errorText(lang, errorCode) : "", notice: noticeKey ? copy[noticeKey] : "", load, submit };
 }

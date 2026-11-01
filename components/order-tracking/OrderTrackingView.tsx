@@ -11,7 +11,7 @@ import { TaxBreakdown } from "../tax-breakdown";
 import { Check, Copy } from "lucide-react";
 import { ShopShell } from "../shop-shell";
 
-import { t, statusKey, errorText } from "@/lib/shop-copy";
+import { t, statusKey } from "@/lib/shop-copy";
 import { money, TELEGRAM } from "@/lib/catalog";
 import { Text } from "@/components/primitives/Text";
 import { Heading } from "@/components/primitives/Heading";
@@ -43,7 +43,7 @@ export function OrderTrackingView({
       <div className={styles.div}>
         <div>
           <Text as="span" className={styles.text}>
-            ORDER / HH
+            {t(lang, "track")} / HH
           </Text>
           <Heading as="h1">{t(lang, "track")}</Heading>
         </div>
@@ -201,7 +201,7 @@ export function OrderTrackingView({
                       a.click();
                       setTimeout(() => URL.revokeObjectURL(url), 1000);
                     } catch (e) {
-                      setError(errorText(lang, (e as Error).message));
+                      setError((e as Error).message);
                     }
                   }}
                 >

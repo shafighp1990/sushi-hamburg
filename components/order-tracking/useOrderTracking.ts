@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useShop } from "../shop-context";
 import { api, type Order } from "@/lib/shop-api";
 import type { OrderDetail, OrderEvent } from "@/lib/shop-types";
-import { t, errorText } from "@/lib/shop-copy";
+import { errorText } from "@/lib/shop-copy";
 import { useBrowserLocation, useBrowserStorage, readSavedOrders, writeBrowserStorage } from "../use-browser-state";
 
 export function useOrderTracking() {
@@ -19,7 +19,7 @@ export function useOrderTracking() {
   const token = explicitToken || saved.find((entry) => entry.id === id)?.token || "";
   const [orderResult, setOrder] = useState<Order | null>(null),
     [events, setEvents] = useState<OrderEvent[]>([]),
-    [error, setError] = useState(""),
+    [errorCode, setError] = useState(""),
     [busy, setBusy] = useState(false),
     [copied, setCopied] = useState(false);
   const order = orderResult?.id === id ? orderResult : null;
@@ -37,9 +37,9 @@ export function useOrderTracking() {
     }).then((result) => {
       setOrder(result.order); setEvents(result.events); setError("");
     }).catch((cause: unknown) => {
-      setError(errorText(lang, cause instanceof Error ? cause.message : "SERVER_ERROR"));
+      setError(cause instanceof Error ? cause.message : "SERVER_ERROR");
     });
-  }, [id, token, lang]);
+  }, [id, token]);
   useEffect(() => {
     void load();
     const timer = setInterval(() => {
@@ -57,21 +57,21 @@ export function useOrderTracking() {
       if (result.url) location.assign(result.url);
       else await load();
     } catch (cause) {
-      setError(errorText(lang, cause instanceof Error ? cause.message : "SERVER_ERROR"));
+      setError(cause instanceof Error ? cause.message : "SERVER_ERROR");
     } finally { setBusy(false); }
   }
   useEffect(() => {
     if (!id || !paymentReturn) return;
     history.replaceState(null, "", `/order?id=${id}${token ? "#token=" + token : ""}`);
     void requestPayment("sync").then(() => load()).catch((cause: unknown) => {
-      setError(errorText(lang, cause instanceof Error ? cause.message : "SERVER_ERROR"));
+      setError(cause instanceof Error ? cause.message : "SERVER_ERROR");
     });
-  }, [id, paymentReturn, token, requestPayment, load, lang]);
+  }, [id, paymentReturn, token, requestPayment, load]);
   async function copy() {
     try {
       await navigator.clipboard.writeText(`${location.origin}/order?id=${id}${token ? "#token=" + token : ""}`);
       setCopied(true);
-    } catch { setError(t(lang, "error")); }
+    } catch { setError("SERVER_ERROR"); }
   }
-  return { lang, order, events, saved, id, token, error, setError, busy, copied, load, payment, copy };
+  return { lang, order, events, saved, id, token, error: errorCode ? errorText(lang, errorCode) : "", setError, busy, copied, load, payment, copy };
 }

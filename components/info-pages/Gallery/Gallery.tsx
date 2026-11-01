@@ -14,7 +14,7 @@ export function Gallery() {
     <ShopShell>
       <div className={styles.div}>
         <Text as="span" className={styles.text}>
-          PHOTO ARCHIVE / HH
+          {t(lang, "gallery")} / HH
         </Text>
         <Heading as="h1">{t(lang, "gallery")}</Heading>
       </div>

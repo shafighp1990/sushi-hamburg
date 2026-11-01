@@ -48,7 +48,7 @@ export function CheckoutView({
       </Link>
       <div className={styles.div}>
         <Text as="span" className={styles.text}>
-          CHECKOUT / HH
+          {t(lang, "checkout")} / HH
         </Text>
         <Heading as="h1">{t(lang, "checkout")}</Heading>
       </div>

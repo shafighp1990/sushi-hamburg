@@ -17,6 +17,7 @@ import {
 import { api, type Customer } from "@/lib/shop-api";
 import { defaultSettings, type ShopSettings } from "@/lib/commerce";
 import { useLanguagePreference } from "./useLanguagePreference";
+import { usePageLanguage } from "./usePageLanguage";
 import { useBrowserStorage, writeBrowserStorage } from "../use-browser-state";
 import type { ShopProviderProps } from "./shop-context.types";
 
@@ -41,6 +42,7 @@ const ShopContext = createContext<Context | null>(null);
 export function ShopProvider({ children, initialLanguage = "de" }: ShopProviderProps) {
   const [settings, setSettings] = useState<ShopSettings>(defaultSettings);
   const { lang, setLang } = useLanguagePreference(initialLanguage);
+  usePageLanguage(lang);
   const [products, setProducts] = useState<Product[]>(defaults),
     [reviewMode, setReviewMode] = useState(false),
     [user, setUser] = useState<Customer | null>(null),
@@ -69,10 +71,6 @@ export function ShopProvider({ children, initialLanguage = "de" }: ShopProviderP
   useEffect(() => {
     void Promise.all([reload(), refreshUser()]).finally(() => setLoading(false));
   }, [reload, refreshUser]);
-  useEffect(() => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
-  }, [lang]);
   useEffect(() => {
     document.documentElement.dataset.buttonStyle = settings.buttonStyle;
   }, [settings.buttonStyle]);
@@ -117,7 +115,7 @@ export function ShopProvider({ children, initialLanguage = "de" }: ShopProviderP
         refreshUser,
       }}
     >
-      {children}
+      <div className="sushi-language-content" lang={lang} dir={lang === "fa" ? "rtl" : "ltr"}>{children}</div>
     </ShopContext.Provider>
   );
 }

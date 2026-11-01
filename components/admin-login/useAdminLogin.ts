@@ -9,7 +9,7 @@ export function useAdminLogin() {
   const { lang, user, loading, reviewMode, refreshUser } = useShop();
   const [username, setUsername] = useState(""),
     [password, setPassword] = useState(""),
-    [error, setError] = useState(""),
+    [errorCode, setError] = useState(""),
     [busy, setBusy] = useState(false);
   useEffect(() => {
     if (!loading && user?.admin) location.replace("/admin");
@@ -26,12 +26,12 @@ export function useAdminLogin() {
       const me = await api<{ user: ShopTypes.Customer | null }>("/me");
       await refreshUser();
       if (!me.user?.admin) {
-        setError(t(lang, "adminDenied"));
+        setError("ADMIN_DENIED");
         return;
       }
       location.replace("/admin");
     } catch (e) {
-      setError(errorText(lang, (e as Error).message));
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
     } finally {
       setBusy(false);
       setPassword("");
@@ -45,7 +45,7 @@ export function useAdminLogin() {
     setUsername,
     password,
     setPassword,
-    error,
+    error: errorCode === "ADMIN_DENIED" ? t(lang, "adminDenied") : errorCode ? errorText(lang, errorCode) : "",
     busy,
     login,
   };

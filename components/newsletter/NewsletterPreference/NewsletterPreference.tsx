@@ -20,7 +20,8 @@ export function NewsletterPreference() {
     [enabled, setEnabled] = useState(false),
     [frequency, setFrequency] = useState("weekly"),
     [busy, setBusy] = useState(false),
-    [error, setError] = useState("");
+    [errorCode, setError] = useState("");
+  const error = errorCode ? errorText(lang, errorCode) : "";
   useEffect(() => {
     api<ShopTypes.NewsletterPreference>("/me/newsletter")
       .then((s) => {
@@ -28,8 +29,8 @@ export function NewsletterPreference() {
         setEnabled(s.state !== "unsubscribed");
         setFrequency(s.frequency);
       })
-      .catch((e) => setError(errorText(lang, e.message)));
-  }, [lang]);
+      .catch((e) => setError(e instanceof Error ? e.message : "SERVER_ERROR"));
+  }, []);
   return (
     <form
       className={styles.form}
@@ -45,7 +46,7 @@ export function NewsletterPreference() {
           });
           setState(s.state);
         } catch (e) {
-          setError(errorText(lang, (e as Error).message));
+          setError(e instanceof Error ? e.message : "SERVER_ERROR");
         } finally {
           setBusy(false);
         }

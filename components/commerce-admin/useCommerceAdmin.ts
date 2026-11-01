@@ -18,8 +18,8 @@ export function useCommerceAdmin({ customers }: CommerceAdminProps) {
     [language, setLanguage] = useState<Language>(lang),
     [coupons, setCoupons] = useState<CouponRecord[]>([]),
     [coupon, setCoupon] = useState<Coupon | null>(null),
-    [error, setError] = useState(''),
-    [notice, setNotice] = useState(''),
+    [errorCode, setError] = useState(''),
+    [noticeKey, setNotice] = useState<'' | 'saved'>(''),
     [busy, setBusy] = useState(false),
     [orders, setOrders] = useState<(Order & { paymentState?: string })[]>([]),
     [from, setFrom] = useState(
@@ -39,17 +39,17 @@ export function useCommerceAdmin({ customers }: CommerceAdminProps) {
   useEffect(() => {
     void api<{ coupons: CouponRecord[] }>('/admin/coupons')
       .then((r) => setCoupons(r.coupons))
-      .catch((e) => setError(errorText(lang, e.message)));
-  }, [lang]);
+      .catch((e) => setError(e instanceof Error ? e.message : "SERVER_ERROR"));
+  }, []);
   async function run(fn: () => Promise<void>) {
     setBusy(true);
     setError('');
     setNotice('');
     try {
       await fn();
-      setNotice(t(lang, 'saved'));
+      setNotice('saved');
     } catch (e) {
-      setError(errorText(lang, (e as Error).message));
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
     } finally {
       setBusy(false);
     }
@@ -148,9 +148,9 @@ export function useCommerceAdmin({ customers }: CommerceAdminProps) {
     setCoupons,
     coupon,
     setCoupon,
-    error,
+    error: errorCode ? errorText(lang, errorCode) : "",
     setError,
-    notice,
+    notice: noticeKey ? t(lang, noticeKey) : "",
     setNotice,
     busy,
     orders,

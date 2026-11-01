@@ -22,8 +22,9 @@ export function DeliverySlotChange({
     slots = deliveryOptions(settings.schedule),
     [date, setDate] = useState(""),
     [time, setTime] = useState(""),
-    [error, setError] = useState(""),
+    [errorCode, setError] = useState(""),
     [busy, setBusy] = useState(false);
+  const error = errorCode ? errorText(lang, errorCode) : "";
   if (validSlot(settings.schedule, order.date, order.time)) return null;
   return (
     <form
@@ -39,7 +40,7 @@ export function DeliverySlotChange({
           });
           await onSaved();
         } catch (e) {
-          setError(errorText(lang, (e as Error).message));
+          setError(e instanceof Error ? e.message : "SERVER_ERROR");
         } finally {
           setBusy(false);
         }

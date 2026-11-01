@@ -1,0 +1,16 @@
+.language-startup { display: none; }
+.sushi-language-content { display: contents; }
+html[data-language-pending] .sushi-language-content { display: none; }
+html[data-language-pending] .language-startup {
+  display: grid;
+  min-height: 50vh;
+  place-content: center;
+  padding: 2rem;
+  color: #263f34;
+  text-align: center;
+}
+.language-startup span { display: none; }
+html[data-language-pending="de"] .language-startup [lang="de"],
+html[data-language-pending="en"] .language-startup [lang="en"],
+html[data-language-pending="uk"] .language-startup [lang="uk"],
+html[data-language-pending="fa"] .language-startup [lang="fa"] { display: block; }

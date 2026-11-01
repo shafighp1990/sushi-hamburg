@@ -21,13 +21,17 @@ export function readLanguage(
   storage: LanguageStorage,
   fallback: Language,
 ): Language {
-  const cookie = languageFromCookie(storage.cookie);
-  if (cookie) return cookie;
   try {
     const saved = storage.read();
     if (isLanguage(saved)) return saved;
   } catch {
     /* Private browsing can deny storage. */
+  }
+  try {
+    const cookie = languageFromCookie(storage.cookie);
+    if (cookie) return cookie;
+  } catch {
+    /* Some privacy settings also deny access to cookies. */
   }
   return fallback;
 }

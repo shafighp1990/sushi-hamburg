@@ -55,7 +55,7 @@ export function AccountView({
         <div className={styles.div}>
           <div className={styles.div2}>
             <Text as="span" className={styles.text}>
-              SUSHI HH / ACCOUNT
+              SUSHI HH / {t(lang, "account")}
             </Text>
             <Heading as="h1">
               {reset ? t(lang, "changePassword") : t(lang, "account")}
@@ -91,7 +91,7 @@ export function AccountView({
       <div className={styles.div5}>
         <div>
           <Text as="span" className={styles.text2}>
-            ACCOUNT / HH
+            {t(lang, "account")} / HH
           </Text>
           <Heading as="h1">{user.name}</Heading>
         </div>

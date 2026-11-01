@@ -10,8 +10,8 @@ export function useAccount({ reset = false }: AccountProps) {
   const { lang, user, loading, reviewMode, refreshUser } = useShop();
   const [newsletter, setNewsletter] = useState(false);
   const [mode, setMode] = useState<"signIn" | "signUp" | "forgot">("signIn"),
-    [error, setError] = useState(""),
-    [notice, setNotice] = useState(""),
+    [errorCode, setError] = useState(""),
+    [noticeKey, setNotice] = useState<"" | "saved" | "resetSent">(""),
     [busy, setBusy] = useState(false),
     [orders, setOrders] = useState<Order[]>([]);
   const [form, setForm] = useState({
@@ -32,9 +32,9 @@ export function useAccount({ reset = false }: AccountProps) {
     if (user) {
       api<{ orders: ShopTypes.Order[] }>("/orders")
         .then((r) => setOrders(r.orders))
-        .catch((e) => setError(errorText(lang, e.message)));
+        .catch((e) => setError(e instanceof Error ? e.message : "SERVER_ERROR"));
     }
-  }, [user, lang]);
+  }, [user]);
   async function action(fn: () => Promise<void>) {
     setError("");
     setNotice("");
@@ -42,7 +42,7 @@ export function useAccount({ reset = false }: AccountProps) {
     try {
       await fn();
     } catch (e) {
-      setError(errorText(lang, (e as Error).message));
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
     } finally {
       setBusy(false);
     }
@@ -56,7 +56,7 @@ export function useAccount({ reset = false }: AccountProps) {
           token,
           newPassword: form.newPassword,
         });
-        setNotice(t(lang, "saved"));
+        setNotice("saved");
         return;
       }
       const email = form.email;
@@ -65,7 +65,7 @@ export function useAccount({ reset = false }: AccountProps) {
           email,
           redirectTo: location.origin + "/account/reset",
         });
-        setNotice(t(lang, "resetSent"));
+        setNotice("resetSent");
         return;
       }
       await send(
@@ -99,9 +99,9 @@ export function useAccount({ reset = false }: AccountProps) {
     setNewsletter,
     mode,
     setMode,
-    error,
+    error: errorCode ? errorText(lang, errorCode) : "",
     setError,
-    notice,
+    notice: noticeKey ? t(lang, noticeKey) : "",
     setNotice,
     busy,
     orders,

@@ -1,11 +1,10 @@
 "use client";
 import type * as ShopTypes from "@/lib/shop-types";
 import { deliveryOptions, validSlot } from "@/lib/operations";
-import { ct } from "@/lib/commerce-copy";
 import { useEffect, useRef, useState, type SubmitEvent } from "react";
 import { useShop } from "../shop-context";
 import { deliveryFee } from "@/lib/catalog";
-import { t, errorText } from "@/lib/shop-copy";
+import { errorText } from "@/lib/shop-copy";
 import { readSavedOrders, readBrowserStorage, useBrowserMinute, useBrowserStorage, writeBrowserStorage } from "../use-browser-state";
 import { api, send } from "@/lib/shop-api";
 
@@ -29,7 +28,7 @@ export function useCheckout() {
     [payment, setPayment] = useState("cash_on_delivery"),
     [methods, setMethods] = useState<Record<string, boolean>>({ stripe: false, paypal: false, revolut: false, sumup: false }),
     [busy, setBusy] = useState(false),
-    [error, setError] = useState("");
+    [errorCode, setError] = useState("");
   const savedCoupon = useBrowserStorage("session", "sushi-coupon");
   const [editedCoupon, setCoupon] = useState<string | null>(null);
   const coupon = editedCoupon ?? savedCoupon;
@@ -63,7 +62,7 @@ export function useCheckout() {
     mode, couponCode: coupon, zone,
     items: products.filter((product) => cart[product.id]).map((product) => ({ id: product.id, quantity: cart[product.id], price: product.price })),
   });
-  const quoteFingerprint = JSON.stringify([quotePayload, user?.id, lang, settings]);
+  const quoteFingerprint = JSON.stringify([quotePayload, user?.id, settings]);
   useEffect(() => {
     if (!count) return;
     let active = true;
@@ -72,27 +71,24 @@ export function useCheckout() {
         if (active) setQuote({ fingerprint: quoteFingerprint, pricing, error: "" });
       }).catch((cause: unknown) => {
         const message = cause instanceof Error ? cause.message : "SERVER_ERROR";
-        const error = ["INVALID_COUPON", "COUPON_LOGIN_REQUIRED", "COUPON_LIMIT"].includes(message)
-          ? ct(lang, message === "COUPON_LOGIN_REQUIRED" ? "couponLoginRequired" : message === "COUPON_LIMIT" ? "couponLimit" : "invalidCoupon")
-          : errorText(lang, message);
-        if (active) setQuote({ fingerprint: quoteFingerprint, pricing: null, error });
+        if (active) setQuote({ fingerprint: quoteFingerprint, pricing: null, error: message });
       });
     }, 350);
     return () => { active = false; clearTimeout(timer); };
-  }, [quotePayload, quoteFingerprint, count, lang]);
+  }, [quotePayload, quoteFingerprint, count]);
   const pricing = quote?.fingerprint === quoteFingerprint ? quote.pricing : null;
-  const quoteError = quote?.fingerprint === quoteFingerprint ? quote.error : "";
+  const quoteError = quote?.fingerprint === quoteFingerprint && quote.error ? errorText(lang, quote.error) : "";
   const fee = settings.deliveryMode === "quote" ? null : deliveryFee(zone);
   const discount = pricing?.discount || 0;
   async function submit(e: SubmitEvent) {
     e.preventDefault();
     setError("");
     if (!ready) {
-      setError(t(lang, "unavailable"));
+      setError("SHOP_UNAVAILABLE");
       return;
     }
     if (!validSlot(settings.schedule, form.date, form.time)) {
-      setError(errorText(lang, "INVALID_DELIVERY"));
+      setError("INVALID_DELIVERY");
       return;
     }
     if (mode === "member" && !user) {
@@ -159,7 +155,7 @@ export function useCheckout() {
       clear();
       location.href = `/order?id=${id}${mode === "guest" ? "#token=" + guestToken : ""}`;
     } catch (e) {
-      setError(errorText(lang, (e as Error).message));
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
     } finally {
       setBusy(false);
     }
@@ -182,7 +178,7 @@ export function useCheckout() {
     setPayment,
     methods,
     busy,
-    error,
+    error: errorCode ? errorText(lang, errorCode) : "",
     coupon,
     setCoupon,
     pricing,

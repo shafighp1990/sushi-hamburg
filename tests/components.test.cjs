@@ -128,6 +128,6 @@ void test("server-rendered shop pages start in the request language", () => {
   }
   for (const language of ["de", "en", "fa", "uk"]) {
     const html = renderToStaticMarkup(React.createElement(ShopProvider, { initialLanguage: language }, React.createElement(LocaleProbe)));
-    assert.equal(html, `<div lang="${language}">${language}</div>`);
+    assert.equal(html, `<div class="sushi-language-content" lang="${language}" dir="${language === "fa" ? "rtl" : "ltr"}"><div lang="${language}">${language}</div></div>`);
   }
 });

@@ -30,8 +30,8 @@ export function useOperationsAdmin() {
     [fields, setFields] = useState<Record<string, Record<string, string>>>({}),
     [date, setDate] = useState(''),
     [busy, setBusy] = useState(false),
-    [error, setError] = useState(''),
-    [notice, setNotice] = useState(''),
+    [errorCode, setError] = useState(''),
+    [noticeKey, setNotice] = useState<'' | 'saved'>(''),
     [campaigns, setCampaigns] = useState<Campaign[]>([]),
     [campaign, setCampaign] = useState<Campaign>(() => ({
       subject: { de: '', uk: '', en: '', fa: '' },
@@ -88,27 +88,22 @@ export function useOperationsAdmin() {
       })
       .catch((error: unknown) => {
         if (active)
-          setError(
-            errorText(
-              lang,
-              error instanceof Error ? error.message : 'SERVER_ERROR',
-            ),
-          );
+          setError(error instanceof Error ? error.message : 'SERVER_ERROR');
       });
     return () => {
       active = false;
     };
-  }, [applyData, lang]);
+  }, [applyData]);
   async function run(fn: () => Promise<unknown>) {
     setBusy(true);
     setError('');
     setNotice('');
     try {
       await fn();
-      setNotice(t(lang, 'saved'));
+      setNotice('saved');
       await refresh();
     } catch (e) {
-      setError(errorText(lang, (e as Error).message));
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
     } finally {
       setBusy(false);
     }
@@ -145,8 +140,8 @@ export function useOperationsAdmin() {
     date,
     setDate,
     busy,
-    error,
-    notice,
+    error: errorCode ? errorText(lang, errorCode) : "",
+    notice: noticeKey ? t(lang, noticeKey) : "",
     campaigns,
     campaign,
     setCampaign,

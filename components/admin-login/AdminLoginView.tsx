@@ -30,7 +30,7 @@ export function AdminLoginView({
       <div className={styles.div}>
         <div className={styles.div2}>
           <Text as="span" className={styles.text}>
-            SUSHI HH / STAFF
+            SUSHI HH / {t(lang, "admin")}
           </Text>
           <Heading as="h1">{ct(lang, "staffLogin")}</Heading>
           <Text>{reviewMode ? reviewCopy(lang).login : ct(lang, "privateDesk")}</Text>

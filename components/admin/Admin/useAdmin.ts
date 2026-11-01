@@ -19,8 +19,8 @@ export function useAdmin() {
     [customers, setCustomers] = useState<ShopTypes.CustomerRecord[]>([]),
     [query, setQuery] = useState(""),
     [status, setStatus] = useState("all"),
-    [error, setError] = useState(""),
-    [notice, setNotice] = useState(""),
+    [errorCode, setError] = useState(""),
+    [noticeKey, setNotice] = useState<"" | "saved" | "copied">(""),
     [busy, setBusy] = useState(false),
     [editingProduct, setEditingProduct] = useState<Product | null>(null),
     [editingOrder, setEditingOrder] = useState<Order | null>(null),
@@ -45,8 +45,8 @@ export function useAdmin() {
       setProducts(c.products);
       setCustomers(d.customers);
     }).catch((e: unknown) => {
-      setError(errorText(lang, e instanceof Error ? e.message : "SERVER_ERROR"));
-    }), [lang]);
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
+    }), []);
   useEffect(() => {
     api<ShopTypes.ShopStatus>("/status")
       .then((s) => setUploadReady(!!s.upload))
@@ -91,9 +91,9 @@ export function useAdmin() {
       await fn();
       await load();
       await reload();
-      setNotice(t(lang, "saved"));
+      setNotice("saved");
     } catch (e) {
-      setError(errorText(lang, (e as Error).message));
+      setError(e instanceof Error ? e.message : "SERVER_ERROR");
     } finally {
       setBusy(false);
     }
@@ -116,9 +116,9 @@ export function useAdmin() {
     setQuery,
     status,
     setStatus,
-    error,
+    error: errorCode ? errorText(lang, errorCode) : "",
     setError,
-    notice,
+    notice: noticeKey ? t(lang, noticeKey) : "",
     setNotice,
     busy,
     editingProduct,

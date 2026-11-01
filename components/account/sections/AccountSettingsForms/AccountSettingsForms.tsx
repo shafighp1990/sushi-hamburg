@@ -45,7 +45,7 @@ export function AccountSettingsForms({
               "PATCH",
             );
             await refreshUser();
-            setNotice(t(lang, "saved"));
+            setNotice("saved");
           });
         }}
       >
@@ -105,7 +105,7 @@ export function AccountSettingsForms({
               email: f.newEmail,
               emailPassword: "",
             }));
-            setNotice(t(lang, "saved"));
+            setNotice("saved");
           });
         }}
       >
@@ -151,7 +151,7 @@ export function AccountSettingsForms({
               newEmail: "",
               emailPassword: "",
             }));
-            setNotice(t(lang, "saved"));
+            setNotice("saved");
           });
         }}
       >
