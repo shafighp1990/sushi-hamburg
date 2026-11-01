@@ -472,5 +472,65 @@
     "uk": "Перегляд знижки",
     "en": "Discount preview",
     "fa": "پیش‌نمایش تخفیف"
+  },
+  "taxNoVat": {
+    "de": "Vorläufig ohne Umsatzsteuer",
+    "uk": "Тимчасово без ПДВ",
+    "en": "Temporarily without VAT",
+    "fa": "موقتاً بدون مالیات"
+  },
+  "noVatNotice": {
+    "de": "Derzeit wird keine Umsatzsteuer berechnet.",
+    "uk": "Наразі ПДВ не нараховується.",
+    "en": "No VAT is currently charged.",
+    "fa": "فعلاً مالیات بر ارزش افزوده محاسبه نمی‌شود."
+  },
+  "staffLogin": {
+    "de": "Mitarbeiter-Anmeldung",
+    "uk": "Вхід для персоналу",
+    "en": "Staff sign in",
+    "fa": "ورود مدیر"
+  },
+  "privateDesk": {
+    "de": "Nur für das Sushi-HH-Team.",
+    "uk": "Лише для команди Sushi HH.",
+    "en": "For Sushi HH staff only.",
+    "fa": "این بخش فقط برای مدیر کیترینگ است."
+  },
+  "username": {
+    "de": "Benutzername / E-Mail",
+    "uk": "Ім’я користувача / пошта",
+    "en": "Username / email",
+    "fa": "نام کاربری / ایمیل"
+  },
+  "liveOrders": {
+    "de": "Bestellungen werden live aktualisiert",
+    "uk": "Замовлення оновлюються наживо",
+    "en": "Orders update live",
+    "fa": "سفارش‌ها زنده به‌روز می‌شوند"
+  },
+  "reconnecting": {
+    "de": "Verbindung wird wiederhergestellt …",
+    "uk": "Відновлення з’єднання…",
+    "en": "Reconnecting…",
+    "fa": "در حال برقراری مجدد ارتباط…"
+  },
+  "newPaidOrder": {
+    "de": "Neue bezahlte Bestellung",
+    "uk": "Нове оплачене замовлення",
+    "en": "New paid order",
+    "fa": "سفارش جدید پرداخت‌شده"
+  },
+  "newDeliveryOrder": {
+    "de": "Neue Bestellung · Zahlung bei Lieferung",
+    "uk": "Нове замовлення · оплата при доставці",
+    "en": "New order · pay on delivery",
+    "fa": "سفارش جدید · پرداخت هنگام تحویل"
+  },
+  "saveAddress": {
+    "de": "Lieferadresse in meinem Konto speichern",
+    "uk": "Зберегти адресу доставки в моєму кабінеті",
+    "en": "Save delivery address to my account",
+    "fa": "نشانی تحویل در حساب من ذخیره شود"
   }
 }

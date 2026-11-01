@@ -3,7 +3,7 @@ import { mergeProps } from '@base-ui/react/merge-props';
 import { useRender } from '@base-ui/react/use-render';
 
 import { cn } from '@/lib/utils';
-import { ChevronRightIcon, MoreHorizontalIcon } from 'lucide-react';
+import { CirclePlusIcon, MoreHorizontalIcon } from 'lucide-react';
 
 function Breadcrumb({ className, ...props }: React.ComponentProps<'nav'>) {
   return (
@@ -63,8 +63,6 @@ function BreadcrumbPage({ className, ...props }: React.ComponentProps<'span'>) {
   return (
     <span
       data-slot="breadcrumb-page"
-      role="link"
-      aria-disabled="true"
       aria-current="page"
       className={cn('text-foreground font-normal', className)}
       {...props}
@@ -85,7 +83,7 @@ function BreadcrumbSeparator({
       className={cn('[&>svg]:size-3.5', className)}
       {...props}
     >
-      {children ?? <ChevronRightIcon className="cn-rtl-flip" />}
+      {children ?? <CirclePlusIcon className="cn-rtl-flip" />}
     </li>
   );
 }

@@ -1,0 +1,26 @@
+// Prepared locally only. Deploy separately only when authorized.
+// AUTH_SECRET must match the Pages application to decrypt saved connections.
+{
+  "name": "sushi-hamburg-jobs",
+  "main": "build/jobs-worker.ts",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sushi-hamburg",
+      "database_id": "ea414759-dd33-4cef-9ba7-f32063b8638a",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "vars": {
+    "SHOP_ORIGIN": "https://sushi-hamburg.pages.dev"
+  },
+  "triggers": {
+    "crons": [
+      "*/5 * * * *"
+    ]
+  }
+}

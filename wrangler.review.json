@@ -1,0 +1,21 @@
+{
+  "name": "sushi-hamburg-review",
+  "pages_build_output_dir": "dist/client",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "sushi-hamburg-review",
+    "database_id": "a24a4c4a-64d8-4218-aaed-f8dcb3b3cae1",
+    "migrations_dir": "drizzle"
+  }],
+  "r2_buckets": [{
+    "binding": "BUCKET",
+    "bucket_name": "sushi-hamburg-review-media"
+  }],
+  "vars": {
+    "REVIEW_MODE": "1",
+    "REVIEW_ORIGIN": "https://sushi-hamburg-review.pages.dev",
+    "SHOP_ORIGIN": "https://sushi-hamburg-review.pages.dev"
+  }
+}

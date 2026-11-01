@@ -1,13 +1,48 @@
-import {hashPassword} from 'better-auth/crypto';
-import {writeFile,mkdir} from 'node:fs/promises';
-import {spawnSync} from 'node:child_process';
-const origin=process.env.SUSHI_LOCAL_URL||'http://127.0.0.1:5173';
-if(!['127.0.0.1','localhost'].includes(new URL(origin).hostname))throw Error('Local preview only');
-const status=await fetch(origin+'/api/status').then(r=>r.json());if(!status.demo)throw Error('LOCAL_DEMO must be enabled only for the loopback preview');
-const email='admin@local.invalid';let response=await fetch(origin+'/api/auth/sign-up/email',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify({name:'Admin',email,password:crypto.randomUUID()})});const result=await response.json();
-const hash=await hashPassword('admin');
-await mkdir('.wrangler',{recursive:true});const sql=`INSERT OR IGNORE INTO staff(user_id,created_at) SELECT id,${Date.now()} FROM user WHERE email='${email}';\nUPDATE account SET password='${hash.replaceAll("'","''")}' WHERE providerId='credential' AND userId IN (SELECT id FROM user WHERE email='${email}');\n`;
-await writeFile('.wrangler/local-admin.sql',sql);
-const run=spawnSync(process.execPath,['node_modules/wrangler/bin/wrangler.js','d1','execute','DB','--local','--config','dist/server/wrangler.json','--persist-to','.wrangler/state','--file','.wrangler/local-admin.sql'],{stdio:'inherit'});if(run.status)process.exit(run.status);
-if(!response.ok&&!(String(result.code||result.error?.code||'').includes('USER_ALREADY_EXISTS')))console.log('Existing account response:',response.status);
-console.log('Local preview ready: username admin / password admin. This account is not copied to production.');
+import { hashPassword } from 'better-auth/crypto';
+import { writeFile, mkdir } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+const origin = process.env.SUSHI_LOCAL_URL || 'http://127.0.0.1:5173';
+if (!['127.0.0.1', 'localhost'].includes(new URL(origin).hostname))
+  throw Error('Local preview only');
+const status = await fetch(origin + '/api/status').then((r) => r.json());
+if (!status.demo)
+  throw Error('LOCAL_DEMO must be enabled only for the loopback preview');
+const email = 'admin@local.invalid';
+const response = await fetch(origin + '/api/auth/sign-up/email', {
+  method: 'POST',
+  headers: { Origin: origin, 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name: 'Admin', email, password: crypto.randomUUID() }),
+});
+const result = await response.json();
+const hash = await hashPassword('admin');
+await mkdir('.wrangler', { recursive: true });
+const sql = `INSERT OR IGNORE INTO staff(user_id,created_at) SELECT id,${Date.now()} FROM user WHERE email='${email}';\nUPDATE account SET password='${hash.replaceAll("'", "''")}' WHERE providerId='credential' AND userId IN (SELECT id FROM user WHERE email='${email}');\n`;
+await writeFile('.wrangler/local-admin.sql', sql);
+const run = spawnSync(
+  process.execPath,
+  [
+    'node_modules/wrangler/bin/wrangler.js',
+    'd1',
+    'execute',
+    'DB',
+    '--local',
+    '--config',
+    'dist/server/wrangler.json',
+    '--persist-to',
+    '.wrangler/state',
+    '--file',
+    '.wrangler/local-admin.sql',
+  ],
+  { stdio: 'inherit' },
+);
+if (run.status) process.exit(run.status);
+if (
+  !response.ok &&
+  !String(result.code || result.error?.code || '').includes(
+    'USER_ALREADY_EXISTS',
+  )
+)
+  console.log('Existing account response:', response.status);
+console.log(
+  'Local preview ready: username admin / password admin. This account is not copied to production.',
+);

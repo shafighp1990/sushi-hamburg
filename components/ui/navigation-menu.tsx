@@ -2,7 +2,7 @@ import { NavigationMenu as NavigationMenuPrimitive } from '@base-ui/react/naviga
 import { cva } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
-import { ChevronDownIcon } from 'lucide-react';
+import { PlusIcon } from 'lucide-react';
 
 function NavigationMenu({
   align = 'start',
@@ -71,7 +71,7 @@ function NavigationMenuTrigger({
       {...props}
     >
       {children}{' '}
-      <ChevronDownIcon
+      <PlusIcon
         className="relative top-px ml-1 size-3 transition duration-300 group-data-open/navigation-menu-trigger:rotate-180 group-data-popup-open/navigation-menu-trigger:rotate-180"
         aria-hidden="true"
       />

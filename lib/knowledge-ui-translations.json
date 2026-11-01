@@ -84,10 +84,10 @@
     "fa": "خلاصه‌هایی با نگارش مستقل بر پایهٔ منابع پیوندشده. دستورهای عمومی، دستور تأییدشدهٔ سوشی هامبورگ نیستند."
   },
   "Geprüft am 07.09.2026. Produktangaben stammen aus den bereitgestellten Originalkarten; Rezeptur und Verfügbarkeit bitte beim Restaurant bestätigen.": {
-    "de": "Geprüft am 07.09.2026. Produktangaben stammen aus den bereitgestellten Originalkarten; Rezeptur und Verfügbarkeit bitte beim Restaurant bestätigen.",
-    "uk": "Перевірено 07.09.2026. Дані про страви взято з наданих оригінальних меню; рецептуру й наявність уточнюйте в ресторані.",
-    "en": "Reviewed on 7 September 2026. Product information comes from the original menus supplied to us; please confirm recipes and availability with the restaurant.",
-    "fa": "بررسی‌شده در ۷ سپتامبر ۲۰۲۶. اطلاعات محصولات از منوهای اصلی ارائه‌شده گرفته شده است؛ ترکیبات و موجود بودن را از رستوران تأیید بگیرید."
+    "de": "Geprüft am 07.09.2026. Produktangaben stammen aus den bereitgestellten Originalkarten; Rezeptur und Verfügbarkeit bitte bei Sushi HH bestätigen.",
+    "uk": "Перевірено 07.09.2026. Дані про страви взято з наданих оригінальних меню; рецептуру й наявність уточнюйте в Sushi HH.",
+    "en": "Reviewed on 7 September 2026. Product information comes from the original menus supplied to us; please confirm recipes and availability with Sushi HH.",
+    "fa": "بررسی‌شده در ۷ سپتامبر ۲۰۲۶. اطلاعات محصولات از منوهای اصلی ارائه‌شده گرفته شده است؛ ترکیبات و موجود بودن را از کیترینگ تأیید بگیرید."
   },
   "Was steckt in deiner Rolle? Entdecke Sushi-Arten, Zutaten und die Handgriffe dahinter — mit Quellen aus Japan und Asien.": {
     "de": "Was steckt in deiner Rolle? Entdecke Sushi-Arten, Zutaten und die Handgriffe dahinter — mit Quellen aus Japan und Asien.",
@@ -216,10 +216,10 @@
     "fa": "اطلاعات نهادهای دولتی، مؤسسات فرهنگی و تولیدکنندگان مواد غذایی ژاپن را همراه راهنمایی‌های مرکز ایمنی مواد غذایی هنگ‌کنگ گرد آورده‌ایم. هر صفحهٔ آموزشی منابع خود را ذکر می‌کند. این مجموعه شکل‌های مهم سوشی و اصطلاحات منوی ما را پوشش می‌دهد و فهرست کامل همهٔ دستورهای منطقه‌ای سوشی نیست."
   },
   "Restaurantkarte ≠ allgemeines Rezept": {
-    "de": "Restaurantkarte ≠ allgemeines Rezept",
-    "uk": "Меню ресторану ≠ загальний рецепт",
-    "en": "Restaurant menu ≠ general recipe",
-    "fa": "منوی رستوران ≠ دستور عمومی"
+    "de": "Speisekarte ≠ allgemeines Rezept",
+    "uk": "Меню Sushi HH ≠ загальний рецепт",
+    "en": "Sushi HH menu ≠ general recipe",
+    "fa": "منوی کیترینگ ≠ دستور عمومی"
   },
   "Produktseiten zeigen den übermittelten Menütext. Nicht belegte Garstufen, Herkunftsangaben und Rezeptdetails werden nicht ergänzt. Die Originalkarten bleiben zugänglich.": {
     "de": "Produktseiten zeigen den übermittelten Menütext. Nicht belegte Garstufen, Herkunftsangaben und Rezeptdetails werden nicht ergänzt. Die Originalkarten bleiben zugänglich.",
@@ -366,16 +366,16 @@
     "fa": "مواد حساسیت‌زا و ترکیبات دقیق"
   },
   "Die Karte ersetzt keine vollständige Allergeninformation: Saucen, verarbeitete Zutaten und mögliche Kreuzkontakte sind nicht abschließend dokumentiert. Bei Unverträglichkeiten die Zusammensetzung vor der Bestellung mit dem Restaurant klären.": {
-    "de": "Die Karte ersetzt keine vollständige Allergeninformation: Saucen, verarbeitete Zutaten und mögliche Kreuzkontakte sind nicht abschließend dokumentiert. Bei Unverträglichkeiten die Zusammensetzung vor der Bestellung mit dem Restaurant klären.",
+    "de": "Die Karte ersetzt keine vollständige Allergeninformation: Saucen, verarbeitete Zutaten und mögliche Kreuzkontakte sind nicht abschließend dokumentiert. Bei Unverträglichkeiten die Zusammensetzung vor der Bestellung mit Sushi HH klären.",
     "uk": "Меню не замінює повної інформації про алергени: соуси, перероблені інгредієнти й можливі перехресні контакти описані не повністю. За непереносимості уточнюйте склад до замовлення.",
-    "en": "The menu does not replace complete allergen information: sauces, processed ingredients and possible cross-contact are not fully documented. If you have food intolerances, clarify the ingredients with the restaurant before ordering.",
-    "fa": "منو جایگزین اطلاعات کامل مواد حساسیت‌زا نیست؛ ترکیبات سس‌ها، مواد فرآوری‌شده و احتمال تماس متقاطع به‌طور کامل مشخص نشده‌اند. اگر عدم تحمل غذایی دارید، پیش از سفارش ترکیبات را با رستوران بررسی کنید."
+    "en": "The menu does not replace complete allergen information: sauces, processed ingredients and possible cross-contact are not fully documented. If you have food intolerances, clarify the ingredients with Sushi HH before ordering.",
+    "fa": "منو جایگزین اطلاعات کامل مواد حساسیت‌زا نیست؛ ترکیبات سس‌ها، مواد فرآوری‌شده و احتمال تماس متقاطع به‌طور کامل مشخص نشده‌اند. اگر عدم تحمل غذایی دارید، پیش از سفارش ترکیبات را با کیترینگ بررسی کنید."
   },
   "Das Restaurant fragen": {
-    "de": "Das Restaurant fragen",
-    "uk": "Запитати ресторан",
-    "en": "Ask the restaurant",
-    "fa": "از رستوران بپرسید"
+    "de": "Sushi HH fragen",
+    "uk": "Запитати Sushi HH",
+    "en": "Ask Sushi HH",
+    "fa": "از کیترینگ بپرسید"
   },
   "FORM & ZUBEREITUNG": {
     "de": "FORM & ZUBEREITUNG",
@@ -399,7 +399,7 @@
     "de": "Im Original steht „сир тобіко“. Die genaue Bedeutung bitte im Chat bestätigen lassen.",
     "uk": "В оригіналі написано «сир тобіко». Уточни точне значення в чаті.",
     "en": "The original says “сир тобіко”. Please confirm the exact meaning in the chat.",
-    "fa": "در متن اصلی «сир тобіко» آمده است. معنای دقیق آن را در گفت‌وگو با رستوران تأیید کنید."
+    "fa": "در متن اصلی «сир тобіко» آمده است. معنای دقیق آن را در گفت‌وگو با کیترینگ تأیید کنید."
   },
   "Die Originalkarte bezeichnet diese Rolle als gebraten.": {
     "de": "Die Originalkarte bezeichnet diese Rolle als gebraten.",

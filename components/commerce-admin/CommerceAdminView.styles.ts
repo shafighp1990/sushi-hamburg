@@ -1,0 +1,17 @@
+export const styles = {
+  section: 'commerce-admin',
+  nav: 'commerce-tabs',
+  fieldMessage: 'error',
+  fieldMessage2: 'notice',
+  div6: 'heading-actions',
+  button2: 'shop-primary',
+  div7: 'coupon-list',
+  button3: 'coupon-card',
+  form3: 'form-grid',
+  button6: 'shop-primary',
+  button7: 'shop-secondary',
+  div11: 'admin-stats',
+  text5: 'notice',
+  text6: 'error',
+  div12: 'report-list',
+} as const;

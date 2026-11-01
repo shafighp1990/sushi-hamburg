@@ -1,0 +1,16 @@
+export const styles = {
+  fieldMessage: "sample-loading",
+  div: "auth-layout",
+  div2: "auth-intro",
+  text: "edition",
+  div3: "account-mark",
+  div5: "page-heading heading-actions",
+  text2: "edition",
+  a: "shop-primary",
+  button3: "shop-secondary",
+  fieldMessage4: "error",
+  fieldMessage5: "notice",
+  div6: "account-layout",
+  div7: "shop-empty",
+  a2: "order-card",
+} as const;

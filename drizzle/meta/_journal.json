@@ -15,6 +15,34 @@
       "when": 1791454903190,
       "tag": "0001_ambitious_legion",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791707231148,
+      "tag": "0002_lush_runaways",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791800000000,
+      "tag": "0003_operations",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1793532723871,
+      "tag": "0004_narrow_stranger",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1793533151455,
+      "tag": "0005_quick_songbird",
+      "breakpoints": true
     }
   ]
 }

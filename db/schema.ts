@@ -81,6 +81,8 @@ export const profiles = sqliteTable('profiles', {
     .references(() => user.id, { onDelete: 'cascade' }),
   phone: text('phone').notNull().default(''),
   address: text('address').notNull().default(''),
+  postcode: text('postcode').notNull().default(''),
+  city: text('city').notNull().default('Hamburg'),
   language: text('language').notNull().default('de'),
   disabled: integer('disabled').notNull().default(0),
 });
@@ -123,6 +125,7 @@ export const orders = sqliteTable(
     createdAt: integer('created_at').notNull(),
     updatedAt: integer('updated_at').notNull(),
     version: integer('version').notNull().default(1),
+    estimatedArrivalAt: integer('estimated_arrival_at'),
   },
   (t) => [
     index('orders_user_idx').on(t.userId),
@@ -201,3 +204,93 @@ export const redemptions = sqliteTable(
     index('redemptions_user_idx').on(t.code, t.userKey),
   ],
 );
+
+export const newsletterSubscribers = sqliteTable('newsletter_subscribers', {
+  id: text('id').primaryKey(),
+  userId: text('user_id')
+    .unique()
+    .references(() => user.id, { onDelete: 'cascade' }),
+  email: text('email').notNull().unique(),
+  language: text('language').notNull().default('de'),
+  state: text('state').notNull().default('pending'),
+  frequency: text('frequency').notNull().default('weekly'),
+  consentVersion: text('consent_version').notNull(),
+  consentAt: integer('consent_at').notNull(),
+  confirmedAt: integer('confirmed_at'),
+  unsubscribedAt: integer('unsubscribed_at'),
+  generation: integer('generation').notNull().default(1),
+  confirmHash: text('confirm_hash'),
+  confirmExpires: integer('confirm_expires'),
+  updatedAt: integer('updated_at').notNull(),
+});
+export const newsletterCampaigns = sqliteTable('newsletter_campaigns', {
+  id: text('id').primaryKey(),
+  data: text('data').notNull(),
+  active: integer('active').notNull().default(0),
+  nextSendAt: integer('next_send_at').notNull(),
+  createdAt: integer('created_at').notNull(),
+  updatedAt: integer('updated_at').notNull(),
+});
+export const mailOutbox = sqliteTable(
+  'mail_outbox',
+  {
+    id: text('id').primaryKey(),
+    kind: text('kind').notNull(),
+    recipient: text('recipient').notNull(),
+    subscriberId: text('subscriber_id').references(
+      () => newsletterSubscribers.id,
+      { onDelete: 'cascade' },
+    ),
+    generation: integer('generation'),
+    payload: text('payload').notNull(),
+    state: text('state').notNull().default('queued'),
+    attempts: integer('attempts').notNull().default(0),
+    nextAt: integer('next_at').notNull(),
+    leaseUntil: integer('lease_until').notNull().default(0),
+    firstAttemptAt: integer('first_attempt_at'),
+    sentAt: integer('sent_at'),
+    providerId: text('provider_id'),
+    error: text('error'),
+    createdAt: integer('created_at').notNull(),
+  },
+  (t) => [index('mail_due_idx').on(t.state, t.nextAt)],
+);
+export const orderDocuments = sqliteTable(
+  'order_documents',
+  {
+    number: integer('number').primaryKey({ autoIncrement: true }),
+    orderId: text('order_id')
+      .notNull()
+      .references(() => orders.id),
+    kind: text('kind').notNull(),
+    snapshot: text('snapshot').notNull(),
+    createdAt: integer('created_at').notNull(),
+  },
+  (t) => [uniqueIndex('order_documents_order_kind').on(t.orderId, t.kind)],
+);
+
+export const orderMessages = sqliteTable(
+  'order_messages',
+  {
+    id: text('id').primaryKey(),
+    orderId: text('order_id')
+      .notNull()
+      .references(() => orders.id, { onDelete: 'cascade' }),
+    sender: text('sender', { enum: ['customer', 'team'] }).notNull(),
+    text: text('text').notNull(),
+    clientId: text('client_id').notNull(),
+    createdAt: integer('created_at').notNull(),
+  },
+  (t) => [
+    uniqueIndex('order_messages_retry_idx').on(t.orderId, t.sender, t.clientId),
+    index('order_messages_order_idx').on(t.orderId, t.createdAt, t.id),
+  ],
+);
+
+export const reviewAccounts = sqliteTable('review_accounts', {
+  alias: text('alias').primaryKey(),
+  userId: text('user_id')
+    .notNull()
+    .unique()
+    .references(() => user.id, { onDelete: 'cascade' }),
+});

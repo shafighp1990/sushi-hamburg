@@ -9,6 +9,9 @@ export type ShopEnv = {
   SHOP_ORIGIN?: string;
   RESEND_API_KEY?: string;
   EMAIL_FROM?: string;
+  LOCAL_DEMO?: string;
+  REVIEW_MODE?: string;
+  REVIEW_ORIGIN?: string;
 };
 export function authFor(
   env: ShopEnv,
@@ -40,7 +43,7 @@ export function authFor(
           onReset(url);
           return;
         }
-        if (!env.RESEND_API_KEY || !env.EMAIL_FROM)
+        if (env.REVIEW_MODE === '1' || !env.RESEND_API_KEY || !env.EMAIL_FROM)
           throw new Error('EMAIL_NOT_CONFIGURED');
         const result = await fetch('https://api.resend.com/emails', {
           method: 'POST',

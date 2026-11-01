@@ -14,7 +14,7 @@ All 40 menu items have static `/menu/{id}` pages with the original menu descript
 
 Ingredient mappings use only the provided menu text. Restaurant trade names do not establish standard sushi styles or fish species. Bonito Roll contains salmon and fried onion per the source card; it is not relabeled as bonito fish. Snow crab is not silently relabeled as surimi. Sets have incomplete ingredient information and only cautious links to matching separately listed rolls. No nutritional values, unverified raw/cooked claims, species, sourcing, complete allergen declarations or restaurant recipes are fabricated. Preparation guides are educational general methods, not proprietary restaurant recipes. The source menu remains authoritative for these supplied product descriptions, subject to restaurant confirmation.
 
-Cart additions from product pages use the same sanitized device-local basket and 50-item limit as the home page. Full page navigation intentionally refreshes the basket; `/?cart=open` opens checkout's cart panel. No customer message is sent by this change, and no payment is collected.
+Cart additions from product pages use the same sanitized device-local basket and 50-item limit as /menu. Full page navigation preserves the saved basket; /checkout opens checkout. No customer message is sent by this change, and no payment is collected.
 
 ## Verification
 

@@ -11,9 +11,9 @@ import {
 import { cn } from '@/lib/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ChevronDownIcon,
+  CircleMinusIcon,
+  CirclePlusIcon,
+  PlusIcon,
 } from 'lucide-react';
 
 function Calendar({
@@ -151,7 +151,7 @@ function Calendar({
         Chevron: ({ className, orientation, ...props }) => {
           if (orientation === 'left') {
             return (
-              <ChevronLeftIcon
+              <CircleMinusIcon
                 className={cn('cn-rtl-flip size-4', className)}
                 {...props}
               />
@@ -160,7 +160,7 @@ function Calendar({
 
           if (orientation === 'right') {
             return (
-              <ChevronRightIcon
+              <CirclePlusIcon
                 className={cn('cn-rtl-flip size-4', className)}
                 {...props}
               />
@@ -168,7 +168,7 @@ function Calendar({
           }
 
           return (
-            <ChevronDownIcon className={cn('size-4', className)} {...props} />
+            <PlusIcon className={cn('size-4', className)} {...props} />
           );
         },
         DayButton: ({ ...props }) => (

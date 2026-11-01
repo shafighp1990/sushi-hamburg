@@ -1,0 +1,54 @@
+Sushi HH isolated review environment
+
+Customer URL: https://sushi-hamburg-review.pages.dev
+Manager login: https://sushi-hamburg-review.pages.dev/admin/login
+
+Purpose
+This is the owner/friends test environment. It has its own D1 database, R2
+image bucket and authentication secret. Orders exercise cash on delivery but
+are explicitly marked as tests. External email, online payments and payment
+reconciliation are disabled. The main sushi-hamburg.pages.dev environment is
+not changed by this release.
+
+Accounts
+The provision script prepares three synthetic accounts: admin (manager),
+kunde and kunde2 (customers). Credentials are provided separately to the owner.
+They work only when REVIEW_MODE=1 and the exact REVIEW_ORIGIN matches. Shared
+test identities cannot be deleted, disabled or have credentials changed by
+the review UI. Customer profile/contact fields can be edited for testing.
+
+Owner test flow
+1. Sign in as manager. Review Products and Offers / Settings.
+2. Change a price or photo, add a product, and enable an offer.
+3. In another browser profile, sign in as a customer and place a COD test order.
+4. Open the incoming order as manager; confirm delivery cost, set status and
+   estimated arrival in Berlin time. Reply using the private conversation.
+5. Check tracking as the customer and reply. Mark delivery and cash received
+   as manager. The second customer must not see the first customer's order.
+
+Deployment
+The canonical review settings are wrangler.review.json. Wrangler 4.92 Pages
+requires a standard config filename, so do not pass --config to Pages deploy.
+Run npm run verify, then node scripts/prepare-review.mjs. This creates the
+ignored .wrangler/review-release directory with the review config and complete
+API sources. Its public directory links to the freshly built dist/client.
+Deploy from the repository root with:
+node node_modules/wrangler/bin/wrangler.js pages deploy --cwd .wrangler/review-release --project-name sushi-hamburg-review --branch review
+AUTH_SECRET is configured in Cloudflare, not committed. Migrations and test
+account provisioning target only the database declared in wrangler.review.json.
+Do not copy .dev.vars into the staged directory for a remote deployment.
+
+Local browser verification
+Apply migrations and the prepared review-account SQL with --local and the
+review config. Stage the release, add a local-only .dev.vars in that ignored
+staging directory with a fresh AUTH_SECRET and both origins set to the local
+server URL, and run Pages dev with the repository's .wrangler/state directory
+as --persist-to. Use tests/review-browser.mjs with SUSHI_REVIEW_URL and an
+installed Playwright module via SUSHI_PLAYWRIGHT_MODULE.
+
+Before real sales
+Confirm the seller identity, address, customer contact, delivery area/hours,
+prices and tax settings. Replace shared review credentials with individual
+owner/customer authentication in the production environment. Confirm the
+existing Telegram contact with the owner. Enable production communication
+only after its sender and delivery behavior have been checked.

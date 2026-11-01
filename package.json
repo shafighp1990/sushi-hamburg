@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "build": "npm run sync:knowledge && SUSHI_STATIC=1 vinext build",
+    "build": "npm run sync:knowledge && SUSHI_STATIC=1 vinext build && npm run check:pages-build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
@@ -15,11 +15,19 @@
     "test": "node --test tests/*.test.cjs",
     "sync:knowledge": "node scripts/sync-knowledge.mjs",
     "db:generate": "drizzle-kit generate",
-    "build:pages": "npm run sync:knowledge && SUSHI_STATIC=1 vinext build",
-    "build:worker": "npm run sync:knowledge && vinext build"
+    "build:pages": "npm run sync:knowledge && SUSHI_STATIC=1 vinext build && npm run check:pages-build",
+    "build:worker": "npm run sync:knowledge && vinext build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test:components": "node --test tests/components.test.cjs tests/rendering.test.cjs",
+    "check:architecture": "node scripts/check-components.cjs",
+    "verify": "npm run check:architecture && npm run check && npm run lint && npm test && npm run test:integration && npm run build-storybook && npm run build",
+    "test:integration": "node tests/run-isolated-api.mjs",
+    "check:pages-build": "node scripts/check-pages-build.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
+    "@pdf-lib/fontkit": "^1.1.1",
     "@shadcn/react": "0.3.0",
     "better-auth": "1.7.7",
     "class-variance-authority": "0.7.1",
@@ -30,6 +38,7 @@
     "embla-carousel-react": "8.5.2",
     "input-otp": "1.4.2",
     "lucide-react": "1.31.0",
+    "pdf-lib": "^1.17.1",
     "react": "19.3.0",
     "react-day-picker": "9.8.1",
     "react-dom": "19.3.0",
@@ -59,7 +68,14 @@
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "vite": "8.3.3",
-    "wrangler": "4.92.0"
+    "wrangler": "4.92.0",
+    "storybook": "10.6.0",
+    "@storybook/react-vite": "10.6.0",
+    "@storybook/addon-docs": "10.6.0",
+    "@storybook/addon-a11y": "10.6.0",
+    "@tailwindcss/vite": "4.3.3",
+    "esbuild": "0.27.3",
+    "miniflare": "4.20260515.0"
   },
   "type": "module"
 }

@@ -1,0 +1,1 @@
+export { LiveProductDetail } from "./LiveProductDetail";

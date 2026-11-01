@@ -1,11 +1,52 @@
-Sushi HH storefront · October 2026
+Sushi HH storefront · 12 October 2026 — local sample refresh
 
-Local sample library: /Volumes/projects/Samples/Samples
-Header: Headers/headers/header-07.html — asymmetric brand block, separate service and navigation rows; rebuilt for real shop links, basket and four-language navigation.
-Footer: Footers/footers/footer-45.html (Dinner Ticket) — receipt-inspired framing and dashed separators; restaurant hours, delivery rates and account links replace all sample copy.
-Buttons: Buttons gallery models 01 Solid Block, 03 Soft Square, 04 Arrow Capsule — adapted to restrained square corners and the restaurant palette.
-Icons: lucide-react line icons, matching the local icon sample system; no decorative or nonfunctional placeholders.
-Fonts: self-hosted Unbounded (display), Golos Text (Latin/Cyrillic text), Estedad (Persian). Font licenses accompany the assets.
-Persian font source: https://github.com/aminabedi68/Estedad
+Source library: /Volumes/projects/Samples/Samples (read-only; Stones folders excluded).
+
+Header 12: Headers/headers/header-12.html — Hairline with central capsule.
+Ported hairlines, central capsule and responsive menu into ShopHeader. Real links,
+current-page indication, keyboard-close mobile menu, logo left, account/cart and
+four language controls replace all demonstration actions and arrows.
+
+Footer 44: Footers/footers/footer-44.html — Morning Club.
+Ported the delivery-hours board, asymmetric two-column layout, vertical divider
+and separate bottom strip. Live merchant delivery hours and actual contact/menu
+links replace sample cafe hours, slogans, reservation/location claims and artwork.
+Soft sage palette matches the catering storefront.
+
+Buttons: Buttons/web/designs-01-20.mjs and Buttons/web/buttons.css.
+02 Pure Pill: main actions (legacy preference solid).
+03 Soft Square: alternate merchant style (legacy preference rounded).
+11 Hairline: secondary actions / legacy preference outline.
+18 Editorial Rules: restrained text/rule actions (legacy preference ticket).
+Responsive CSS equivalents preserve shape and sample lift/press behaviour without
+fixed SVG text widths. Focus, disabled, selected, busy and reduced-motion states
+are shared. All decorative directional arrows removed from active site components.
+Admin appearance selection names the exact sample IDs; saved preference IDs retained.
+
+Services 23: Services/modules/layers.js + layers.css — numbered image catalogue
+leading to a detail view. Adapted for light product cards with original photos,
+price and ingredients, persistent /product URLs and an explicit back link.
+The sample modal is replaced by existing shareable product pages; photos remain
+uncropped and items with no verified photo keep honest placeholders.
+The same card hierarchy carries over to the sushi knowledge index.
+
+Services 35: Services/modules/sliders.js + sliders.css — large photo beside a
+vertical thumbnail rail and selected-image caption. Ported to ProductGallery's
+carousel mode; buttons switch real dish angles and expose selection to assistive
+technology. Existing alternate gallery layouts remain selectable by the merchant.
+
+Font 09: Fonts/fonts/09-Cormorant-Garamond/CormorantGaramond[wght].ttf.
+Self-hosted, losslessly packaged as public/fonts/cormorant-garamond.woff2, with OFL.
+Cormorant Garamond replaces Unbounded for Latin/Cyrillic headings. German and
+Ukrainian glyph coverage verified against the font. Golos Text remains the reading
+and form font; Estedad remains Persian text/headings. No external font requests.
+
+Implementation: app/samples.css, shared shop shell, product gallery and live components.
+No Stones designs or third-party sample copy/assets imported.
 
 Product photography: original Wfolio shoot, full originals preserved in assets/originals. lib/product-images.json records exact matches and missing coverage. No menu-poster crops.
+
+Homepage/navigation reference review — 2026-10-11
+https://www.itsu.com/ — restaurant introduction and explicit menu navigation.
+https://www.sushi-circle.de/ — public food presentation with a separate order destination.
+Used for navigation research only; no third-party copy or assets were imported. The Sushi HH introduction and ordering menu are now separate local routes, pending the owner’s bespoke hero.

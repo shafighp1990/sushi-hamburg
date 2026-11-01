@@ -1,0 +1,1 @@
+export { MiniProduct } from "./MiniProduct";

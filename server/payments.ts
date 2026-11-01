@@ -1,3 +1,10 @@
+import type { OrderRow, PaymentRow } from './types';
+import {
+  paymentResponse,
+  additionalResponse,
+  webhookEvent,
+} from './provider-schemas';
+import { providers } from '../lib/operations';
 import type { ShopEnv } from './auth';
 import { fail } from './validation';
 export type PaymentEnv = ShopEnv & {
@@ -8,14 +15,29 @@ export type PaymentEnv = ShopEnv & {
   PAYPAL_WEBHOOK_ID?: string;
   PAYPAL_ENV?: string;
   PAYPAL_MERCHANT_ID?: string;
+  REVOLUT_SECRET_KEY?: string;
+  REVOLUT_WEBHOOK_SECRET?: string;
+  REVOLUT_ENV?: string;
+  SUMUP_API_KEY?: string;
+  SUMUP_MERCHANT_CODE?: string;
+  PAYMENT_ENABLED?: Record<string, boolean>;
   LOCAL_DEMO?: string;
 };
+function requiredProviderString(value: unknown): string {
+  return typeof value === 'string' && value.length > 0
+    ? value
+    : fail('PAYMENT_PROVIDER_ERROR', 502);
+}
 const paypalBase = (env: PaymentEnv) =>
   env.PAYPAL_ENV === 'live'
     ? 'https://api-m.paypal.com'
     : 'https://api-m.sandbox.paypal.com';
 export function paymentMethods(env: PaymentEnv) {
+  if (env.REVIEW_MODE === '1')
+    return { revolut: false, sumup: false, stripe: false, paypal: false };
   return {
+    revolut: !!(env.REVOLUT_SECRET_KEY && env.REVOLUT_WEBHOOK_SECRET),
+    sumup: !!(env.SUMUP_API_KEY && env.SUMUP_MERCHANT_CODE),
     stripe: !!(env.STRIPE_SECRET_KEY && env.STRIPE_WEBHOOK_SECRET),
     paypal: !!(
       env.PAYPAL_CLIENT_ID &&
@@ -35,7 +57,15 @@ async function paypalToken(env: PaymentEnv) {
     body: 'grant_type=client_credentials',
   });
   if (!r.ok) fail('PAYMENT_UNAVAILABLE', 503);
-  return ((await r.json()) as any).access_token;
+  const payload: unknown = await r.json();
+  if (
+    !payload ||
+    typeof payload !== 'object' ||
+    !('access_token' in payload) ||
+    typeof payload.access_token !== 'string'
+  )
+    return fail('PAYMENT_PROVIDER_ERROR', 502);
+  return payload.access_token;
 }
 async function pp(env: PaymentEnv, path: string, body?: unknown, key?: string) {
   const token = await paypalToken(env);
@@ -48,9 +78,10 @@ async function pp(env: PaymentEnv, path: string, body?: unknown, key?: string) {
     },
     ...(body === undefined ? {} : { body: JSON.stringify(body) }),
   });
-  const data: any = await r.json();
-  if (!r.ok) fail('PAYMENT_PROVIDER_ERROR', 502);
-  return data;
+  const payload: unknown = await r.json();
+  const parsed = paymentResponse.safeParse(payload);
+  if (!r.ok || !parsed.success) return fail('PAYMENT_PROVIDER_ERROR', 502);
+  return parsed.data;
 }
 async function stripe(
   env: PaymentEnv,
@@ -67,13 +98,14 @@ async function stripe(
     },
     ...(form ? { body: form } : {}),
   });
-  const data: any = await r.json();
-  if (!r.ok) fail('PAYMENT_PROVIDER_ERROR', 502);
-  return data;
+  const payload: unknown = await r.json();
+  const parsed = paymentResponse.safeParse(payload);
+  if (!r.ok || !parsed.success) return fail('PAYMENT_PROVIDER_ERROR', 502);
+  return parsed.data;
 }
 export async function startPayment(
   env: PaymentEnv,
-  order: any,
+  order: OrderRow,
   origin: string,
 ) {
   const methods = paymentMethods(env);
@@ -81,7 +113,9 @@ export async function startPayment(
   if (order.status === 'cancelled' || order.total === null)
     fail('PAYMENT_NOT_READY');
   const provider = order.payment;
-  if (provider !== 'stripe' && provider !== 'paypal') fail('PAYMENT_NOT_READY');
+  if (provider === 'cash_on_delivery' || !providers.includes(provider))
+    fail('PAYMENT_NOT_READY');
+  if (env.PAYMENT_ENABLED?.[provider] === false) fail('PAYMENT_DISABLED', 503);
   if (!methods[provider as keyof typeof methods])
     fail('PAYMENT_UNAVAILABLE', 503);
   const now = Date.now();
@@ -101,7 +135,7 @@ export async function startPayment(
     .run();
   let p = await env.DB.prepare('SELECT * FROM payments WHERE order_id=?')
     .bind(order.id)
-    .first<any>();
+    .first<PaymentRow>();
   if (!p) fail('PAYMENT_NOT_READY');
   if (p.state === 'review_required') fail('PAYMENT_REVIEW_REQUIRED', 409);
   if (p.amount !== order.total) fail('PAYMENT_AMOUNT_CHANGED', 409);
@@ -114,11 +148,13 @@ export async function startPayment(
       .run();
     p = await env.DB.prepare('SELECT * FROM payments WHERE order_id=?')
       .bind(order.id)
-      .first<any>();
+      .first<PaymentRow>();
   }
+  if (!p) return fail('PAYMENT_NOT_READY');
   if (p.checkout_url) return { url: p.checkout_url };
   const base = env.SHOP_ORIGIN || origin;
-  let providerId: string, checkoutURL: string;
+  let providerId = '',
+    checkoutURL = '';
   if (provider === 'stripe') {
     const form = new URLSearchParams({
       mode: 'payment',
@@ -135,9 +171,9 @@ export async function startPayment(
       customer_email: JSON.parse(order.customer).email,
     });
     const s = await stripe(env, '/checkout/sessions', form, p.attempt);
-    providerId = s.id;
-    checkoutURL = s.url;
-  } else {
+    providerId = requiredProviderString(s.id);
+    checkoutURL = requiredProviderString(s.url);
+  } else if (provider === 'paypal') {
     const s = await pp(
       env,
       '/v2/checkout/orders',
@@ -167,10 +203,16 @@ export async function startPayment(
       },
       p.attempt,
     );
-    providerId = s.id;
-    checkoutURL = s.links?.find(
-      (l: any) => l.rel === 'payer-action' || l.rel === 'approve',
-    )?.href;
+    providerId = requiredProviderString(s.id);
+    checkoutURL = requiredProviderString(
+      s.links?.find((l) => l.rel === 'payer-action' || l.rel === 'approve')
+        ?.href,
+    );
+  }
+  if (provider === 'sumup' || provider === 'revolut') {
+    const created = await startAdditional(env, provider, p, order, base);
+    providerId = created.id;
+    checkoutURL = created.url;
   }
   if (typeof checkoutURL !== 'string' || !checkoutURL.startsWith('https://'))
     fail('PAYMENT_PROVIDER_ERROR', 502);
@@ -181,7 +223,7 @@ export async function startPayment(
     .run();
   return { url: checkoutURL };
 }
-async function markPaid(env: PaymentEnv, p: any, capture: string) {
+async function markPaid(env: PaymentEnv, p: PaymentRow, capture: string) {
   const now = Date.now();
   await env.DB.batch([
     env.DB.prepare(
@@ -199,6 +241,12 @@ async function markPaid(env: PaymentEnv, p: any, capture: string) {
       "UPDATE payments SET state='paid',capture_id=?,updated_at=? WHERE order_id=?",
     ).bind(capture, now, p.order_id),
   ]);
+  try {
+    const { ensureDocuments } = await import('./documents');
+    await ensureDocuments(env, p.order_id);
+  } catch {
+    console.warn('Order documents queued for scheduled recovery');
+  }
 }
 function cents(value: string) {
   const m = /^(\d+)\.(\d{2})$/.exec(value);
@@ -209,9 +257,10 @@ export async function reconcilePayment(
   orderId: string,
   capture = false,
 ) {
+  if (env.REVIEW_MODE === '1') fail('PAYMENT_UNAVAILABLE', 503);
   const p = await env.DB.prepare('SELECT * FROM payments WHERE order_id=?')
     .bind(orderId)
-    .first<any>();
+    .first<PaymentRow>();
   if (!p?.provider_id) return { paid: false };
   if (p.state === 'review_required')
     return { paid: false, state: 'review_required' };
@@ -244,6 +293,8 @@ export async function reconcilePayment(
         .run();
     return { paid: false, state: s.status };
   }
+  if (p.provider === 'sumup' || p.provider === 'revolut')
+    return reconcileAdditional(env, p);
   let s = await pp(
     env,
     '/v2/checkout/orders/' + encodeURIComponent(p.provider_id),
@@ -278,10 +329,13 @@ export async function reconcilePayment(
   )
     fail('PAYMENT_MISMATCH', 409);
   const captures = units[0].payments?.captures || [];
-  const paid = captures.filter((c: any) => c.status === 'COMPLETED');
+  const paid = captures.filter((c) => c.status === 'COMPLETED');
   if (paid.length === 1) {
     const c = paid[0];
-    if (c.amount?.currency_code !== 'EUR' || cents(c.amount.value) !== p.amount)
+    if (
+      c.amount?.currency_code !== 'EUR' ||
+      cents(c.amount?.value || '') !== p.amount
+    )
       fail('PAYMENT_MISMATCH', 409);
     await markPaid(env, p, c.id);
     return { paid: true };
@@ -299,13 +353,29 @@ export async function paymentWebhook(
   env: PaymentEnv,
   provider: string,
 ) {
+  if (env.REVIEW_MODE === '1') fail('PAYMENT_UNAVAILABLE', 503);
   const raw = await req.text();
   if (raw.length > 1000000) fail('TOO_LARGE', 413);
-  let event: any;
+  let payload: unknown;
   try {
-    event = JSON.parse(raw);
+    payload = JSON.parse(raw);
   } catch {
-    fail('INVALID_JSON');
+    return fail('INVALID_JSON');
+  }
+  const parsedEvent = webhookEvent.safeParse(payload);
+  if (!parsedEvent.success) return fail('INVALID_EVENT');
+  const event = parsedEvent.data;
+  if (provider === 'sumup' || provider === 'revolut') {
+    if (provider === 'revolut') await verifyRevolut(req, env, raw);
+    const id = provider === 'sumup' ? event.id : event.order_id;
+    if (typeof id !== 'string' || id.length > 100) fail('INVALID_EVENT');
+    const p = await env.DB.prepare(
+      'SELECT * FROM payments WHERE provider=? AND provider_id=?',
+    )
+      .bind(provider, id)
+      .first<PaymentRow>();
+    if (p) await reconcileAdditional(env, p);
+    return { ok: true };
   }
   if (provider === 'stripe') {
     if (!env.STRIPE_WEBHOOK_SECRET) fail('PAYMENT_UNAVAILABLE', 503);
@@ -362,8 +432,14 @@ export async function paymentWebhook(
           JSON.stringify(fields).slice(0, -1) + ',"webhook_event":' + raw + '}',
       },
     );
-    const v: any = await verify.json();
-    if (!verify.ok || v.verification_status !== 'SUCCESS')
+    const v: unknown = await verify.json();
+    if (
+      !verify.ok ||
+      !v ||
+      typeof v !== 'object' ||
+      !('verification_status' in v) ||
+      v.verification_status !== 'SUCCESS'
+    )
       fail('INVALID_SIGNATURE', 400);
   } else fail('NOT_FOUND', 404);
   if (typeof event.id !== 'string') fail('INVALID_EVENT');
@@ -379,19 +455,19 @@ export async function paymentWebhook(
     [
       'checkout.session.completed',
       'checkout.session.async_payment_succeeded',
-    ].includes(event.type)
+    ].includes(event.type || '')
   ) {
     const p = await env.DB.prepare(
       "SELECT order_id FROM payments WHERE provider='stripe' AND provider_id=?",
     )
       .bind(event.data?.object?.id || '')
-      .first<any>();
+      .first<{ order_id: string }>();
     if (p) await reconcilePayment(env, p.order_id);
   }
   if (
     provider === 'paypal' &&
     ['CHECKOUT.ORDER.APPROVED', 'PAYMENT.CAPTURE.COMPLETED'].includes(
-      event.event_type,
+      event.event_type || '',
     )
   ) {
     const providerId =
@@ -402,14 +478,14 @@ export async function paymentWebhook(
       "SELECT order_id FROM payments WHERE provider='paypal' AND provider_id=?",
     )
       .bind(providerId || '')
-      .first<any>();
+      .first<{ order_id: string }>();
     if (p) await reconcilePayment(env, p.order_id, true);
   }
   const reversal =
     provider === 'stripe'
-      ? ['charge.refunded', 'charge.dispute.created'].includes(event.type)
+      ? ['charge.refunded', 'charge.dispute.created'].includes(event.type || '')
       : ['PAYMENT.CAPTURE.REFUNDED', 'PAYMENT.CAPTURE.REVERSED'].includes(
-          event.event_type,
+          event.event_type || '',
         );
   if (reversal) {
     const capture =
@@ -420,7 +496,7 @@ export async function paymentWebhook(
       'SELECT order_id FROM payments WHERE provider=? AND capture_id=?',
     )
       .bind(provider, capture || '')
-      .first<any>();
+      .first<{ order_id: string }>();
     if (p)
       await env.DB.batch([
         env.DB.prepare(
@@ -445,4 +521,207 @@ export async function paymentWebhook(
     .bind(eventId, provider, Date.now())
     .run();
   return { ok: true };
+}
+
+const revolutBase = (env: PaymentEnv) =>
+  env.REVOLUT_ENV === 'live'
+    ? 'https://merchant.revolut.com/api'
+    : 'https://sandbox-merchant.revolut.com/api';
+async function additional(
+  env: PaymentEnv,
+  provider: string,
+  path: string,
+  body?: unknown,
+) {
+  const r = await fetch(
+    (provider === 'sumup' ? 'https://api.sumup.com/v0.1' : revolutBase(env)) +
+      path,
+    {
+      method: body === undefined ? 'GET' : 'POST',
+      headers: {
+        Authorization: `Bearer ${provider === 'sumup' ? env.SUMUP_API_KEY : env.REVOLUT_SECRET_KEY}`,
+        'Content-Type': 'application/json',
+        ...(provider === 'revolut'
+          ? { 'Revolut-Api-Version': '2026-08-17' }
+          : {}),
+      },
+      ...(body === undefined ? {} : { body: JSON.stringify(body) }),
+      signal: AbortSignal.timeout(25000),
+    },
+  );
+  if (!r.ok) fail('PAYMENT_PROVIDER_ERROR', 502);
+  const parsed = additionalResponse.safeParse(await r.json());
+  if (!parsed.success) return fail('PAYMENT_PROVIDER_ERROR', 502);
+  return parsed.data;
+}
+async function startAdditional(
+  env: PaymentEnv,
+  provider: string,
+  p: PaymentRow,
+  order: OrderRow,
+  base: string,
+) {
+  // Acquire a short creation lease. Retry lookup uses the stable attempt reference after any interrupted response.
+  const lease = await env.DB.prepare(
+    "UPDATE payments SET state='creating',updated_at=? WHERE order_id=? AND (state='started' OR (state='creating' AND updated_at<?)) RETURNING order_id",
+  )
+    .bind(Date.now(), order.id, Date.now() - 90000)
+    .first();
+  if (!lease) fail('PAYMENT_IN_PROGRESS', 409);
+  const path = provider === 'sumup' ? '/checkouts' : '/orders',
+    query =
+      provider === 'sumup'
+        ? 'checkout_reference'
+        : 'merchant_order_data_reference';
+  {
+    const found = await additional(
+        env,
+        provider,
+        `${path}?${query}=${encodeURIComponent(p.attempt)}`,
+      ),
+      matches = Array.isArray(found) ? found : found.orders;
+    if (!Array.isArray(matches) || matches.length > 1)
+      fail('PAYMENT_REVIEW_REQUIRED', 409);
+    let s = matches[0];
+    if (!s && p.state === 'creating') fail('PAYMENT_REVIEW_REQUIRED', 409);
+    if (!s) {
+      const body =
+        provider === 'sumup'
+          ? {
+              amount: p.amount / 100,
+              currency: 'EUR',
+              checkout_reference: p.attempt,
+              merchant_code: env.SUMUP_MERCHANT_CODE,
+              description: `Sushi HH ${order.id}`,
+              hosted_checkout: { enabled: true },
+              redirect_url: `${base}/order?id=${order.id}&payment=return`,
+              return_url: `${base}/api/webhooks/sumup`,
+            }
+          : {
+              amount: p.amount,
+              currency: 'EUR',
+              capture_mode: 'automatic',
+              description: `Sushi HH ${order.id}`,
+              merchant_order_data: { reference: p.attempt },
+              metadata: { order_id: order.id },
+              redirect_url: `${base}/order?id=${order.id}&payment=return`,
+              expire_pending_after: 'PT30M',
+            };
+      const created = await additional(env, provider, path, body);
+      if (Array.isArray(created)) return fail('PAYMENT_PROVIDER_ERROR', 502);
+      s = created;
+    } else {
+      const existing = await additional(
+        env,
+        provider,
+        `${path}/${encodeURIComponent(requiredProviderString(s.id))}`,
+      );
+      if (Array.isArray(existing)) return fail('PAYMENT_PROVIDER_ERROR', 502);
+      s = existing;
+    }
+    return {
+      id: requiredProviderString(s.id),
+      url: requiredProviderString(
+        provider === 'sumup' ? s.hosted_checkout_url : s.checkout_url,
+      ),
+    };
+  }
+}
+async function reconcileAdditional(env: PaymentEnv, p: PaymentRow) {
+  if (!p.provider_id) return { paid: false };
+  if (p.state === 'review_required')
+    return { paid: false, state: 'review_required' };
+  const s = await additional(
+    env,
+    p.provider,
+    (p.provider === 'sumup' ? '/checkouts/' : '/orders/') +
+      encodeURIComponent(p.provider_id),
+  );
+  if (Array.isArray(s)) return fail('PAYMENT_PROVIDER_ERROR', 502);
+  const amount =
+    p.provider === 'sumup' && typeof s.amount === 'number'
+      ? Math.round(s.amount * 100)
+      : s.amount;
+  if (
+    s.id !== p.provider_id ||
+    amount !== p.amount ||
+    s.currency !== 'EUR' ||
+    (p.provider === 'sumup'
+      ? s.checkout_reference !== p.attempt ||
+        s.merchant_code !== env.SUMUP_MERCHANT_CODE
+      : s.merchant_order_data?.reference !== p.attempt ||
+        s.metadata?.order_id !== p.order_id)
+  )
+    fail('PAYMENT_MISMATCH', 409);
+  const refunded =
+    p.provider === 'revolut'
+      ? (s.refunded_amount || 0) > 0
+      : ['REFUNDED', 'PARTIALLY_REFUNDED', 'CHARGEBACK'].includes(
+          s.status || '',
+        ) ||
+        (s.transactions || []).some((t) =>
+          ['REFUNDED', 'PARTIALLY_REFUNDED', 'CHARGEBACK'].includes(t.status),
+        );
+  if (refunded) {
+    await env.DB.batch([
+      env.DB.prepare(
+        "UPDATE payments SET state='review_required',updated_at=? WHERE order_id=?",
+      ).bind(Date.now(), p.order_id),
+      env.DB.prepare(
+        'UPDATE orders SET paid=0,updated_at=?,version=version+1 WHERE id=? AND paid=1',
+      ).bind(Date.now(), p.order_id),
+    ]);
+    return { paid: false, state: 'review_required' };
+  }
+  if (
+    p.provider === 'sumup'
+      ? s.status === 'PAID'
+      : s.state === 'completed' && s.outstanding_amount === 0
+  ) {
+    await markPaid(env, p, requiredProviderString(s.transaction_id || s.id));
+    return { paid: true };
+  }
+  if (
+    ['expired', 'cancelled', 'failed', 'EXPIRED', 'FAILED'].includes(
+      s.state || s.status || '',
+    )
+  )
+    await env.DB.prepare(
+      "UPDATE payments SET state='expired',checkout_url=NULL WHERE order_id=? AND state!='paid'",
+    )
+      .bind(p.order_id)
+      .run();
+  return { paid: false, state: s.state || s.status };
+}
+async function verifyRevolut(req: Request, env: PaymentEnv, raw: string) {
+  const timestamp = req.headers.get('Revolut-Request-Timestamp') || '';
+  if (!env.REVOLUT_WEBHOOK_SECRET) fail('PAYMENT_UNAVAILABLE', 503);
+  if (
+    !/^\d+$/.test(timestamp) ||
+    Math.abs(Date.now() - Number(timestamp)) > 300000
+  )
+    fail('INVALID_SIGNATURE');
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(env.REVOLUT_WEBHOOK_SECRET),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign'],
+  );
+  const sig = Array.from(
+    new Uint8Array(
+      await crypto.subtle.sign(
+        'HMAC',
+        key,
+        new TextEncoder().encode(`v1.${timestamp}.${raw}`),
+      ),
+    ),
+    (n) => n.toString(16).padStart(2, '0'),
+  ).join('');
+  if (
+    !(req.headers.get('Revolut-Signature') || '')
+      .split(',')
+      .some((v) => constantEqual(v.trim(), 'v1=' + sig))
+  )
+    fail('INVALID_SIGNATURE');
 }

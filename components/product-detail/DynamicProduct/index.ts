@@ -1,0 +1,1 @@
+export { DynamicProduct } from "./DynamicProduct";

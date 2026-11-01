@@ -1,3 +1,8 @@
 import { handleShop } from '../../server/api';
-export const onRequest: PagesFunction = ({ request, env }) =>
-  handleShop(request, env as any);
+import type { PaymentEnv } from '../../server/payments';
+
+export const onRequest: PagesFunction<PaymentEnv> = ({
+  request,
+  env,
+  waitUntil,
+}) => handleShop(request, env, { waitUntil });

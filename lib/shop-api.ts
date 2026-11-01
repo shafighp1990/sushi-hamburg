@@ -1,4 +1,25 @@
-export async function api<T = any>(
+export type {
+  Customer,
+  Order,
+  OrderMessage,
+  OrderMessages,
+} from './shop-types';
+
+function errorCode(value: unknown): string {
+  if (!value || typeof value !== 'object') return 'SERVER_ERROR';
+  const payload = value as Record<string, unknown>;
+  if (typeof payload.code === 'string') return payload.code;
+  if (typeof payload.error === 'string') return payload.error;
+  if (
+    payload.error &&
+    typeof payload.error === 'object' &&
+    'code' in payload.error &&
+    typeof payload.error.code === 'string'
+  )
+    return payload.error.code;
+  return 'SERVER_ERROR';
+}
+export async function api<T = unknown>(
   path: string,
   options: RequestInit = {},
 ): Promise<T> {
@@ -10,63 +31,18 @@ export async function api<T = any>(
     headers,
     credentials: 'same-origin',
   });
-  let result: any;
+  let result: unknown;
   try {
     result = await response.json();
   } catch {
     throw new Error('SHOP_UNAVAILABLE');
   }
-  if (!response.ok)
-    throw new Error(
-      result.code || result.error?.code || result.error || 'SERVER_ERROR',
-    );
-  return result;
+  if (!response.ok) throw new Error(errorCode(result));
+  // Call sites select the response contract for their endpoint. Unspecified responses remain unknown.
+  return result as T;
 }
-export const send = (path: string, body: unknown, method = 'POST') =>
-  api(path, { method, body: JSON.stringify(body) });
-export type Customer = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  address: string;
-  language: string;
-  admin: boolean;
-};
-export type Order = {
-  discount: number;
-  couponCode?: string;
-  tax: import('./commerce').TaxSummary | null;
-  paidAt?: number;
-  id: string;
-  customer: {
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
-    postcode?: string;
-    city?: string;
-    notes: string;
-    utensils: number;
-    language: string;
-  };
-  items: {
-    id: string;
-    name: Record<string, string>;
-    price: number;
-    quantity: number;
-  }[];
-  subtotal: number;
-  delivery: number | null;
-  total: number | null;
-  status: string;
-  payment: string;
-  paid: boolean;
-  date: string;
-  time: string;
-  zone: string;
-  createdAt: number;
-  updatedAt: number;
-  version: number;
-  userId: string | null;
-};
+export const send = <T = unknown>(
+  path: string,
+  body: unknown,
+  method = 'POST',
+) => api<T>(path, { method, body: JSON.stringify(body) });

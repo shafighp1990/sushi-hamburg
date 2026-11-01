@@ -1,0 +1,141 @@
+/* Adapted from /Volumes/projects/Samples/Samples. Exact models: docs/DESIGN-SOURCES.txt. */
+:root { --paper:#fcfaf6; --surface-soft:#eef2ea; --line:#dce1d6; }
+.shop-main h1 {font-weight:500;letter-spacing:-.035em;font-size:clamp(40px,4.8vw,64px);line-height:1.1}
+.shop-main h2 {font-size:32px;line-height:1.2;font-weight:500;letter-spacing:-.025em}
+.shop-main h3 {letter-spacing:0}
+.shop-main {padding-top:48px}
+.edition {font-size:10px;letter-spacing:1.8px}
+/* Header 12 — hairlines, central capsule, separate mobile navigation. */
+.shop-header.sample-header-12 {display:block;background:transparent;border:0;margin:0 auto;max-width:1380px;padding:0 32px}
+.sample-header-12 .header-upper {padding:12px 0;border-bottom:1px solid var(--line);min-height:58px;gap:24px}
+.sample-header-12 .hours-tag {display:block;font-size:11px}
+.sample-header-12 .hours-summary {display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.sample-header-12 .hours-summary small {font-size:11px;color:var(--ink-muted)}
+.sample-header-12 .shop-language button {border-radius:50%;min-width:36px;min-height:36px;padding:6px}
+.sample-header-bar {display:flex;align-items:center;gap:24px;min-height:130px;position:relative}
+.sample-header-12 .brand-cell {border:0;background:transparent;padding:12px 0;flex-shrink:0;gap:5px}
+.sample-header-12 .brand-cell img,.sample-header-12 .brand-cell .restaurant-brand {width:92px;height:70px}
+.sample-header-12 .brand-cell>span {color:var(--ink-muted);font-size:8px;letter-spacing:3px}
+.header-hairline {height:1px;min-width:16px;flex:1;background:var(--line)}
+.sample-nav {display:flex;align-items:center;border:1px solid var(--line-strong);border-radius:40px;padding:5px;gap:2px}
+.sample-nav a {padding:10px 17px;border-radius:30px;font-size:13px;white-space:nowrap}
+.sample-nav a[aria-current='page'] {background:var(--ink);color:white}
+.sample-nav a:hover:not([aria-current]) {background:var(--surface-soft)}
+.sample-header-12 .shop-tools {gap:20px}
+.sample-header-12 .shop-tools .bag-link {border:0;padding:0}
+.nav-toggle {display:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:50%;width:44px;height:44px;align-items:center;justify-content:center}
+/* Button Atlas 02 Pure Pill, 03 Soft Square, 11 Hairline, 18 Editorial Rules.
+   Legacy setting IDs retained so saved merchant preferences remain compatible. */
+.shop-main .shop-primary,.shop-footer .shop-primary,.shop-main .primary,.shop-main .add-product,.style-options .example-solid {border:1px solid transparent;border-radius:100px;background:var(--accent);color:white;box-shadow:none;clip-path:none;min-height:44px;padding:12px 24px;font-size:13px;gap:10px;justify-content:center;transition:background .18s,transform .18s,box-shadow .18s}
+.shop-main .shop-secondary,.shop-main .secondary,.style-options .example-outline {border:1px solid var(--line-strong);border-radius:100px;background:transparent;color:var(--ink);box-shadow:none;clip-path:none;padding:12px 24px;min-height:44px}
+html[data-button-style='outline'] .shop-primary,html[data-button-style='outline'] .add-product {border:1px solid var(--accent);border-radius:100px;background:transparent;color:var(--accent)}
+html[data-button-style='rounded'] .shop-primary,html[data-button-style='rounded'] .add-product,.style-options .example-rounded {border:1px solid #ad442f20;border-radius:16px;background:var(--surface-warm);color:var(--accent);box-shadow:none;clip-path:none}
+html[data-button-style='ticket'] .shop-primary,html[data-button-style='ticket'] .add-product,.style-options .example-ticket {border:0;border-block:1px solid var(--accent);border-radius:0;background:transparent;color:var(--accent);box-shadow:none;clip-path:none}
+.shop-primary:hover:not(:disabled),.primary:hover:not(:disabled),.add-product:hover:not(:disabled) {transform:translateY(-2px);box-shadow:0 5px 14px #263c3210}
+.shop-primary:active:not(:disabled),.shop-secondary:active:not(:disabled),.add-product:active:not(:disabled) {transform:translateY(1px)}
+.shop-secondary:hover:not(:disabled),.secondary:hover:not(:disabled) {background:var(--surface-soft)}
+.shop-main :is(.choice-row,.admin-tabs,.commerce-tabs,.ops-tabs,.knowledge-filters) button {border-radius:14px;min-height:44px}
+.shop-main :is(.choice-row,.admin-tabs,.commerce-tabs,.ops-tabs,.knowledge-filters) button[aria-pressed='true'] {background:var(--surface-soft);color:var(--ink);border-color:var(--line-strong)}
+.shop-main .product-actions>a,.home-contact,.shop-back,.knowledge-back,.inline-link {border-bottom:1px solid currentColor;padding-block:7px;font-size:12px;gap:0;width:fit-content}
+button[aria-busy='true'] {cursor:progress;position:relative}
+button[aria-busy='true']::after {content:'';width:14px;height:14px;flex-shrink:0;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sample-loading .8s linear infinite;display:inline-block;margin-inline-start:8px;vertical-align:middle}
+button:disabled {opacity:.55;transform:none!important;box-shadow:none!important}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px solid var(--accent);outline-offset:4px}
+@keyframes sample-loading {to{transform:rotate(360deg)}}
+/* A factual introductory home, with a separate route for ordering. */
+.home-intro {padding:35px 0 50px}
+.shop-main .home-intro h1 {max-width:840px;font-size:clamp(52px,6.4vw,88px);line-height:1.02;font-weight:500;letter-spacing:-.035em;margin:23px 0}
+.home-service-notice {font-size:13px;margin-bottom:26px}
+.home-intro-bottom {align-items:center;gap:40px}
+.home-intro-bottom>p {font-size:16px;max-width:625px;line-height:1.8}
+.home-intro-bottom>a {min-width:190px}
+.home-service {gap:64px;padding-block:64px}
+.home-photograph picture {overflow:hidden;border-radius:4px}
+.shop-main .home-service h2 {font-size:42px;font-weight:500}
+.home-service-facts dt {font-size:13px}
+.home-journal-link {border:0;border-radius:20px;padding:36px 40px}
+.home-journal-link h2 {font-size:36px}
+/* Service 23 — numbered image catalogue leading to full product details.
+   Light surfaces and honest no-photo placeholders replace the sample's dark overlays. */
+.shop-product-grid {gap:24px}
+.shop-product {background:var(--surface);border:1px solid var(--line);padding:10px 10px 20px;border-radius:16px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.shop-product:hover,.shop-product:focus-within {border-color:var(--line-strong);box-shadow:0 9px 25px #263c3209}
+.shop-product .product-image-link {border:0;border-radius:9px}
+.shop-product .product-title-row,.shop-product>p,.shop-product .product-actions {margin-inline:10px}
+.shop-product .product-title-row h3 {font-size:25px;line-height:1.12;font-weight:600;letter-spacing:-.02em}
+.product-title-row>strong {font-size:15px;color:var(--ink)}
+.shop-product>p {font-size:13px;margin-top:12px;line-height:1.65}
+.shop-product .product-actions {gap:12px;margin-top:10px}
+.shop-product .add-product {font-size:12px;padding:10px 16px}
+.product-index,.product-weight {border:0;background:var(--paper);color:var(--ink);border-radius:30px;font-size:10px}
+.shop-categories {gap:8px;padding-bottom:10px}
+.shop-categories button,.shop-categories button:first-child {padding:10px 16px;border:1px solid var(--line);border-radius:100px;min-height:44px}
+.shop-categories button[aria-pressed='true'] {background:var(--ink);color:white;border-color:var(--ink)}
+.shop-categories button[aria-pressed='true'] small {color:#dae4d9}
+.category-caption h2 {font-family:var(--font-display);font-size:30px}
+.quantity-control {border-radius:100px;padding:3px;min-height:42px;background:var(--surface-soft)}
+.quantity-control button {border-radius:50%;min-width:32px;min-height:32px}
+.quantity-control button:hover {background:white}
+.basket {border-radius:18px;background:#f1f4ed}
+.basket-stamp {display:none}
+.basket h2 {font-size:34px}
+.search-box,.sort-box select,.knowledge-search {border-radius:12px}
+.product-detail-hero {align-items:start}
+.detail-intro {font-size:16px}
+.product-detail-live {animation:sample-detail .3s ease-out}
+@keyframes sample-detail {from{opacity:.5;transform:translateY(6px)}to{opacity:1;transform:none}}
+.knowledge-card {background:var(--surface);border-radius:16px;border:1px solid var(--line);padding:26px}
+.knowledge-card h3 {font-family:var(--font-display);font-size:30px;font-weight:600;line-height:1.15}
+.knowledge-card-bottom {border-top:1px solid var(--line);padding-top:14px}
+.knowledge-feature {border-radius:16px}
+.knowledge-hero h1 {font-family:var(--font-display);font-size:68px}
+/* Service 35 — large image, vertical thumbnails, selection caption. */
+.product-gallery.gallery-carousel {display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:14px}
+.gallery-carousel .gallery-controls {grid-column:2;grid-row:1;display:flex;flex-direction:column;margin:0;gap:10px}
+.gallery-carousel .gallery-stage {grid-column:1;grid-row:1;align-self:start}
+.gallery-carousel .gallery-caption {grid-column:1/-1}
+.gallery-frame {border-radius:12px;overflow:hidden}
+.gallery-frame img {display:block}
+.gallery-controls button {border-radius:8px!important;overflow:hidden;padding:4px;opacity:.65;transition:opacity .2s,border-color .2s}
+.gallery-controls button:hover {opacity:1}
+.gallery-controls button[aria-pressed='true'] {border:2px solid var(--accent);opacity:1}
+.gallery-controls img {width:100%;height:auto;aspect-ratio:3/2;display:block;border-radius:4px}
+.gallery-thumb-number {display:block;font-size:10px;padding:4px;text-align:start;color:var(--ink)}
+.gallery-caption {display:flex;justify-content:space-between;gap:20px;font-size:12px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink-muted)}
+.gallery-tiles .gallery-caption,.gallery-editorial .gallery-caption {display:none}
+/* Footer 44 — real delivery-hours board and contact column, no cafe/dine-in copy. */
+.shop-footer.sample-footer-44 {display:grid;grid-template-columns:1fr 1.45fr;gap:0 70px;border:0;border-radius:22px;max-width:1316px;margin:0 auto 28px;padding:48px 52px 0;background:#edf1e7;color:var(--ink)}
+.morning-board {padding-bottom:38px;min-width:0}
+.morning-board h2 {font-family:var(--font-display);font-size:36px;font-weight:500;margin:12px 0}
+.morning-board>p {font-size:12px;color:var(--ink-muted);line-height:1.8;max-width:370px}
+.morning-hours {margin-top:24px}
+.morning-hours>div {display:flex;justify-content:space-between;gap:18px;border-top:1px solid #cbd5c4;padding:10px 0;font-size:12px}
+.morning-hours b {font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}
+.footer-live-hours {padding-block:14px;border-top:1px solid #cbd5c4;font-size:11px}
+.footer-live-hours small {display:block;font-size:10px;margin-top:5px;color:var(--ink-muted)}
+.morning-farewell {border-inline-start:1px solid #cbd5c4;padding-inline-start:50px;margin-bottom:38px;min-width:0}
+.morning-farewell>h2 {font-family:var(--font-display);font-size:62px;line-height:1;font-weight:500;letter-spacing:-.035em;margin:14px 0 25px}
+.footer-columns {display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+.footer-links h3 {font-size:12px;font-weight:500;margin:14px 0 18px}
+.footer-links a {font-size:12px;margin:14px 0}
+.footer-links a:hover {text-decoration:underline;text-underline-offset:5px}
+.sample-footer-44 .footer-bottom {margin-inline:-52px;padding:20px 52px;background:#dfe7d7;border:0;border-radius:0 0 22px 22px;color:var(--ink-muted);font-size:10px}
+.footer-bottom>div {display:flex;gap:22px}
+html[dir='rtl'] :is(.shop-main h1,.shop-main h2,.shop-main h3,.morning-board h2,.morning-farewell>h2) {font-family:Estedad,sans-serif;letter-spacing:0;line-height:1.6}
+html[dir='rtl'] .shop-main .home-intro h1 {font-size:clamp(36px,4.2vw,60px)}
+html[dir='rtl'] .shop-main h2,html[dir='rtl'] .morning-board h2 {font-size:26px}
+html[dir='rtl'] .shop-product .product-title-row h3 {font-size:17px}
+html[dir='rtl'] .morning-farewell>h2 {font-size:40px}
+@media(max-width:1100px){.sample-header-bar{gap:14px}.header-hairline{min-width:8px}.sample-nav a{padding:10px 12px;font-size:12px}.sample-header-12 .shop-tools{gap:12px}.shop-footer.sample-footer-44{margin-inline:24px;gap:38px}.morning-farewell{padding-inline-start:32px}}
+@media(max-width:900px){.sample-header-12 .shop-tools>a>span{display:none}.header-hairline{display:none}.sample-header-bar{justify-content:space-between}.shop-footer.sample-footer-44{padding:36px 30px 0}.sample-footer-44 .footer-bottom{margin-inline:-30px;padding:20px 30px}.home-service{gap:32px}.shop-main .home-service h2{font-size:36px}}
+@media(max-width:760px){
+ .shop-header.sample-header-12{padding:0 20px;margin:0;max-width:none}.sample-header-12 .header-upper{padding:10px 0;gap:12px;align-items:start}.sample-header-12 .hours-summary{display:block;font-size:10px}.sample-header-12 .hours-summary small{display:block;font-size:9px;margin-top:4px}.sample-header-12 .shop-language{gap:0;flex-shrink:0}.sample-header-12 .shop-language button{min-width:32px;min-height:36px;font-size:10px}.sample-header-bar{min-height:105px;flex-wrap:wrap;gap:0}.sample-header-12 .brand-cell img,.sample-header-12 .brand-cell .restaurant-brand{width:78px;height:60px}.nav-toggle{display:flex}.sample-header-12 .shop-tools{gap:16px}.sample-nav{display:none;order:5;flex-basis:100%;border-radius:16px;margin-bottom:16px;padding:8px;flex-wrap:wrap;justify-content:center}.sample-nav[data-open='true']{display:flex}.sample-nav a{font-size:13px;padding:12px 17px}.shop-main{padding-top:28px}.home-intro{padding:12px 0 32px}.shop-main .home-intro h1{font-size:56px;line-height:1.05;letter-spacing:-.035em}.home-intro-bottom{align-items:start;gap:24px}.home-intro-bottom>p{font-size:15px}.home-service{padding:36px 0;gap:28px}.home-journal-link{padding:26px;border-radius:16px}.home-journal-link h2{font-size:32px}.shop-main h1{font-size:44px}.shop-main h2{font-size:30px}.shop-footer.sample-footer-44{grid-template-columns:1fr;margin:0 16px 22px;padding:30px 24px 0;gap:0;border-radius:18px}.morning-board{padding-bottom:20px}.morning-farewell{border-inline-start:0;border-top:1px solid #cbd5c4;padding:26px 0 0;margin-bottom:28px}.morning-farewell>h2{font-size:48px}.sample-footer-44 .footer-bottom{margin-inline:-24px;padding:20px 24px;border-radius:0 0 18px 18px;gap:14px}.shop-product-grid{gap:20px}.knowledge-hero h1{font-size:48px}.gallery-carousel.product-gallery{grid-template-columns:minmax(0,1fr) 70px;gap:10px}.gallery-carousel .gallery-controls{gap:8px}.gallery-controls button{min-width:0}.gallery-thumb-number{font-size:9px;padding:2px}.style-options{gap:12px}.style-example{font-size:12px;padding:12px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.sample-loading{display:flex;align-items:center;gap:14px;padding:22px 26px;background:var(--surface-soft);border-radius:16px;min-height:76px;color:var(--ink-muted)}
+.sample-loading::before{content:'';width:18px;height:18px;border:2px solid var(--line-strong);border-top-color:var(--accent);border-radius:50%;animation:sample-loading .8s linear infinite}
+@media(prefers-reduced-motion:reduce){.sample-loading::before{animation:none}}
+.product-detail-live .detail-image {background:transparent;border:0;overflow:visible}
+.footer-links h3 {font-family:var(--font-body);font-weight:500}
+.shop-main :is(.panel,.shop-form,.admin-stats,.basket) h3 {font-family:var(--font-body)}

@@ -1,11 +1,16 @@
 import type { Language } from './catalog';
+import { defaultOperations, type Schedule } from './operations';
 export type Localized = Record<Language, string>;
 export type ShopSettings = {
   buttonStyle: 'solid' | 'outline' | 'rounded' | 'ticket';
   galleryStyle: 'carousel' | 'editorial' | 'tiles' | 'focus';
-  taxMode: 'unset' | 'regular' | 'small_business';
+  taxMode: 'unset' | 'regular' | 'small_business' | 'no_vat';
   deliveryMode: 'quote' | 'zones';
   shopOpen: boolean;
+  schedule: Schedule;
+  paymentEnabled: typeof defaultOperations.paymentEnabled;
+  issuer: typeof defaultOperations.issuer;
+  newsletter: typeof defaultOperations.newsletter;
   offer: {
     active: boolean;
     title: Localized;
@@ -17,7 +22,8 @@ export type ShopSettings = {
 export const defaultSettings: ShopSettings = {
   buttonStyle: 'solid',
   galleryStyle: 'carousel',
-  taxMode: 'unset',
+  taxMode: 'small_business',
+  ...defaultOperations,
   deliveryMode: 'quote',
   shopOpen: true,
   offer: {
@@ -55,7 +61,7 @@ export function allocate(amount: number, weights: number[]): number[] {
   if (!total) return weights.map(() => 0);
   const raw = weights.map((w) => (amount * w) / total),
     result = raw.map(Math.floor);
-  let rest = amount - result.reduce((a, b) => a + b, 0);
+  const rest = amount - result.reduce((a, b) => a + b, 0);
   const order = raw
     .map((n, i) => ({ i, fraction: n - Math.floor(n) }))
     .sort((a, b) => b.fraction - a.fraction || a.i - b.i);
@@ -72,7 +78,7 @@ export function totals(
   }[],
   delivery: number | null,
   settings: ShopSettings,
-  coupon?: Coupon,
+  coupon?: Pick<Coupon, 'type' | 'amount' | 'productIds'>,
 ) {
   const weights = items.map((i) => i.price * i.quantity),
     subtotal = weights.reduce((a, b) => a + b, 0),
@@ -105,7 +111,10 @@ export function totals(
     vat: null,
     groups: [],
   };
-  if (total !== null && settings.taxMode === 'small_business') {
+  if (
+    total !== null &&
+    (settings.taxMode === 'small_business' || settings.taxMode === 'no_vat')
+  ) {
     tax.net = total;
     tax.vat = 0;
   }

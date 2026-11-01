@@ -1,0 +1,1 @@
+export { DeliveryNotice } from "./DeliveryNotice";

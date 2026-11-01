@@ -11,7 +11,7 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from '@/components/ui/input-group';
-import { ChevronDownIcon, XIcon, CheckIcon } from 'lucide-react';
+import { PlusIcon, XIcon, CheckIcon } from 'lucide-react';
 
 const Combobox = ComboboxPrimitive.Root;
 
@@ -31,7 +31,7 @@ function ComboboxTrigger({
       {...props}
     >
       {children}
-      <ChevronDownIcon className="text-muted-foreground size-4 pointer-events-none" />
+      <PlusIcon className="text-muted-foreground size-4 pointer-events-none" />
     </ComboboxPrimitive.Trigger>
   );
 }
@@ -55,14 +55,18 @@ function ComboboxInput({
   disabled = false,
   showTrigger = true,
   showClear = false,
+  id,
   ...props
 }: ComboboxPrimitive.Input.Props & {
   showTrigger?: boolean;
   showClear?: boolean;
 }) {
+  const generatedId = React.useId();
+  const inputId = id ?? generatedId;
   return (
-    <InputGroup className={cn('w-auto', className)}>
+    <InputGroup controlId={inputId} className={cn('w-auto', className)}>
       <ComboboxPrimitive.Input
+        id={inputId}
         render={<InputGroupInput disabled={disabled} />}
         {...props}
       />

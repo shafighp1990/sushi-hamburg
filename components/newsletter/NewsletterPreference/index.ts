@@ -1,0 +1,1 @@
+export { NewsletterPreference } from "./NewsletterPreference";

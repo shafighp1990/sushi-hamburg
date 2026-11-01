@@ -1,6 +1,56 @@
+import { ot } from './operations-copy';
 import { ct } from './commerce-copy';
 import type { Language } from './catalog';
 const rows = {
+  serviceNotice: [
+    'Sushi-Catering mit Lieferung · kein Verzehr vor Ort.',
+    'Кейтеринг суші з доставкою · без залу для відвідувачів.',
+    'Sushi catering with delivery · no on-site dining.',
+    'کیترینگ سوشی با ارسال سفارش؛ بدون فضای نشستن و پذیرایی حضوری.',
+  ],
+  home: ['Startseite', 'Головна', 'Home', 'خانه'],
+  homeTitle: [
+    'Sushi in Hamburg.',
+    'Суші в Гамбурзі.',
+    'Sushi in Hamburg.',
+    'سوشی در هامبورگ.',
+  ],
+  homeIntro: [
+    'Sushi HH ist ein Sushi-Catering mit Lieferung in Hamburg. Wir bieten Sushi-Rollen, Maki und Sets zum Teilen. Entdecke unsere Speisekarte mit Zutaten und Preisen und bestelle deine Auswahl zur Lieferung in Hamburg.',
+    'Sushi HH — кейтеринг суші з доставкою в Гамбурзі. Готуємо роли, макі та сети для компанії. Перегляньте меню зі складом і цінами та замовте улюблені страви з доставкою в Гамбурзі.',
+    'Sushi HH is a sushi catering service in Hamburg, offering sushi rolls, maki and sharing sets for delivery. Explore the menu, see ingredients and prices, and order your selection for delivery in Hamburg.',
+    'سوشی HH یک کیترینگ سوشی در هامبورگ است؛ رول‌های سوشی، ماکی و ست‌های چندنفره را برای شما آماده و ارسال می‌کنیم. در منو مواد اولیه و قیمت هر غذا را ببینید، انتخاب کنید و برای تحویل در هامبورگ سفارش بدهید.',
+  ],
+  viewMenu: [
+    'Speisekarte ansehen',
+    'Переглянути меню',
+    'View the menu',
+    'دیدن منو',
+  ],
+  homeDelivery: [
+    'Sushi zu dir nach Hause.',
+    'Суші до вашого дому.',
+    'Sushi delivered to your door.',
+    'سوشی، درِ خانهٔ شما.',
+  ],
+  homeOrderInfo: [
+    'Bestelle als Gast oder mit Kundenkonto. Nach deiner Bestellung bestätigt Sushi HH die Lieferung; den Status kannst du online verfolgen.',
+    'Замовляйте без реєстрації або з кабінету. Після замовлення Sushi HH підтвердить доставку, а ви зможете відстежувати статус онлайн.',
+    'Order as a guest or with an account. Sushi HH confirms your delivery after you place an order, and you can follow its status online.',
+    'می‌توانید مهمان سفارش بدهید یا حساب بسازید. کیترینگ پس از ثبت سفارش، ارسال را تأیید می‌کند و شما می‌توانید وضعیت آن را آنلاین پیگیری کنید.',
+  ],
+  homeJournal: [
+    'Was steckt in deiner Rolle?',
+    'Що всередині вашого ролу?',
+    'What goes into your sushi?',
+    'داخل سوشی شما چیست؟',
+  ],
+  homeJournalIntro: [
+    'Lerne Sushi-Arten, Zutaten und Zubereitung kennen. Unsere Wissenssammlung ergänzt die Zutatenangaben auf jeder Produktseite.',
+    'Дізнайтеся про види суші, інгредієнти та приготування. Наша добірка статей доповнює склад, зазначений на сторінці кожної страви.',
+    'Explore sushi styles, ingredients and preparation. Our journal accompanies the ingredient details on each dish’s page.',
+    'با انواع سوشی، مواد اولیه و روش تهیه آشنا شوید. دانشنامه در کنار توضیحات هر محصول به شما کمک می‌کند انتخاب آگاهانه‌تری داشته باشید.',
+  ],
   productName: ['Produktname', 'Назва страви', 'Product name', 'نام محصول'],
   card: [
     'Kredit- / Debitkarte',
@@ -12,7 +62,7 @@ const rows = {
   knowledge: ['Sushi-Wissen', 'Про суші', 'Sushi journal', 'دانشنامهٔ سوشی'],
   delivery: ['Lieferung', 'Доставка', 'Delivery', 'ارسال'],
   account: ['Mein Konto', 'Мій кабінет', 'My account', 'حساب من'],
-  admin: ['Restaurant', 'Ресторан', 'Restaurant desk', 'مدیریت رستوران'],
+  admin: ['Verwaltung', 'Керування', 'Catering desk', 'مدیریت کیترینگ'],
   cart: ['Deine Bestellung', 'Ваше замовлення', 'Your order', 'سفارش شما'],
   search: [
     'Gericht oder Zutat suchen',
@@ -115,7 +165,7 @@ const rows = {
     'Bei Allergien bitte vor der Bestellung den vollständigen Zutaten- und Allergeninhalt mit uns klären.',
     'За наявності алергії уточніть повний склад та алергени перед замовленням.',
     'If you have allergies, confirm the full ingredients and allergens with us before ordering.',
-    'اگر حساسیت غذایی دارید، پیش از سفارش ترکیبات کامل و مواد حساسیت‌زا را با رستوران بررسی کنید.',
+    'اگر حساسیت غذایی دارید، پیش از سفارش ترکیبات کامل و مواد حساسیت‌زا را با کیترینگ بررسی کنید.',
   ],
   originalMenus: [
     'Original-Speisekarten',
@@ -140,10 +190,10 @@ const rows = {
     'C / D / E · کیلومتری ۰٫۷۰ یورو، با تأیید هزینه',
   ],
   zoneNote: [
-    'Bitte wähle die mit dem Restaurant bestätigte Zone. Unklare Zonen und Fernlieferungen erhalten zuerst ein Angebot.',
-    'Оберіть зону, підтверджену рестораном. Для невідомих зон і віддалених адрес спочатку узгоджуємо вартість.',
-    'Choose the zone confirmed by the restaurant. Unknown zones and distant addresses receive a quote first.',
-    'محدودهٔ تأییدشده با رستوران را انتخاب کنید. هزینهٔ مناطق نامشخص یا دور ابتدا اعلام می‌شود.',
+    'Bitte wähle die mit Sushi HH bestätigte Zone. Unklare Zonen und Fernlieferungen erhalten zuerst ein Angebot.',
+    'Оберіть зону, підтверджену Sushi HH. Для невідомих зон і віддалених адрес спочатку узгоджуємо вартість.',
+    'Choose the zone confirmed by Sushi HH. Unknown zones and distant addresses receive a quote first.',
+    'محدودهٔ تأییدشده با کیترینگ را انتخاب کنید. هزینهٔ مناطق نامشخص یا دور ابتدا اعلام می‌شود.',
   ],
   guest: [
     'Als Gast bestellen',
@@ -208,10 +258,10 @@ const rows = {
     'پرداخت هنگام تحویل',
   ],
   paymentNote: [
-    'Die Bestellung wird gespeichert. Verfügbarkeit und Lieferzeit bestätigt das Restaurant.',
-    'Замовлення буде збережено. Наявність і час доставки підтверджує ресторан.',
-    'Your order is saved. The restaurant confirms availability and delivery time.',
-    'سفارش ثبت می‌شود؛ موجودی و زمان تحویل را رستوران تأیید می‌کند.',
+    'Die Bestellung wird gespeichert. Verfügbarkeit und Lieferzeit bestätigt Sushi HH.',
+    'Замовлення буде збережено. Наявність і час доставки підтверджує Sushi HH.',
+    'Your order is saved. Sushi HH confirms availability and delivery time.',
+    'سفارش ثبت می‌شود؛ موجودی و زمان تحویل را کیترینگ تأیید می‌کند.',
   ],
   consent: [
     'Ich habe Auswahl, Lieferangaben und Datenschutzhinweise geprüft.',
@@ -243,7 +293,7 @@ const rows = {
     'Die Online-Kasse ist momentan nicht verfügbar. Bitte kontaktiere uns.',
     'Онлайн-оформлення зараз недоступне. Зв’яжіться з нами.',
     'Online checkout is currently unavailable. Please contact us.',
-    'ثبت آنلاین سفارش فعلاً در دسترس نیست؛ با رستوران تماس بگیرید.',
+    'ثبت آنلاین سفارش فعلاً در دسترس نیست؛ با کیترینگ تماس بگیرید.',
   ],
   orderReceived: [
     'Bestellung eingegangen.',
@@ -323,10 +373,10 @@ const rows = {
     'اگر حساب وجود داشته باشد، لینک به ایمیل ارسال می‌شود.',
   ],
   resetUnavailable: [
-    'E-Mail-Versand ist noch nicht eingerichtet. Bitte kontaktiere das Restaurant für einen privaten Wiederherstellungslink.',
-    'Надсилання листів ще не налаштовано. Зверніться до ресторану для приватного посилання відновлення.',
-    'Email delivery is not configured yet. Contact the restaurant for a private recovery link.',
-    'ارسال ایمیل هنوز تنظیم نشده است. برای دریافت لینک خصوصی بازیابی با رستوران تماس بگیرید.',
+    'E-Mail-Versand ist noch nicht eingerichtet. Bitte kontaktiere Sushi HH für einen privaten Wiederherstellungslink.',
+    'Надсилання листів ще не налаштовано. Зверніться до Sushi HH для приватного посилання відновлення.',
+    'Email delivery is not configured yet. Contact Sushi HH for a private recovery link.',
+    'ارسال ایمیل هنوز تنظیم نشده است. برای دریافت لینک خصوصی بازیابی با کیترینگ تماس بگیرید.',
   ],
   noOrders: [
     'Noch keine Bestellungen.',
@@ -418,16 +468,16 @@ const rows = {
     'این لینک خصوصی یک ساعت اعتبار دارد؛ فقط در اختیار مشتری احرازشده قرار دهید. رمزها قابل مشاهده نیستند.',
   ],
   adminDenied: [
-    'Dieses Konto hat keinen Restaurant-Zugang.',
+    'Dieses Konto hat keinen Teamzugang.',
     'Цей кабінет не має доступу до керування.',
-    'This account has no restaurant access.',
-    'این حساب دسترسی مدیریت رستوران ندارد.',
+    'This account has no staff access.',
+    'این حساب دسترسی مدیریت کیترینگ ندارد.',
   ],
   emailNote: [
-    'Für eine Änderung der E-Mail-Adresse kontaktiere bitte das Restaurant.',
-    'Для зміни електронної пошти зверніться до ресторану.',
-    'Contact the restaurant to change your email address.',
-    'برای تغییر ایمیل با رستوران تماس بگیرید.',
+    'Für eine Änderung der E-Mail-Adresse kontaktiere bitte Sushi HH.',
+    'Для зміни електронної пошти зверніться до Sushi HH.',
+    'Contact Sushi HH to change your email address.',
+    'برای تغییر ایمیل با کیترینگ تماس بگیرید.',
   ],
   back: ['Zurück', 'Назад', 'Back', 'بازگشت'],
   loading: [
@@ -465,10 +515,10 @@ const rows = {
     'سفارش‌ها و اطلاعات تحویل در یک‌جا.',
   ],
   catalogNote: [
-    'Preise laut Restaurantkarte · Lieferung zusätzlich',
+    'Preise laut Speisekarte · Lieferung zusätzlich',
     'Ціни за меню · доставка окремо',
     'Menu prices · delivery charged separately',
-    'قیمت‌ها طبق منوی رستوران · ارسال جداگانه',
+    'قیمت‌ها طبق منوی کیترینگ · ارسال جداگانه',
   ],
   amountDue: [
     'Bei Lieferung fällig',
@@ -508,6 +558,12 @@ export function t(lang: Language, key: CopyKey) {
   return rows[key][languages.indexOf(lang)];
 }
 export function errorText(lang: Language, code: string) {
+  if (code === 'INVALID_LINK') return ot(lang, 'invalidLink');
+  if (code === 'INVALID_SCHEDULE') return ot(lang, 'invalidSchedule');
+  if (code === 'DELIVERY_SLOT_EXPIRED' || code === 'INVALID_DELIVERY')
+    return ot(lang, 'slotExpired');
+  if (code === 'PAYMENT_DISABLED' || code === 'PAYMENT_UNAVAILABLE')
+    return ot(lang, 'missing');
   const commerce: Record<string, Parameters<typeof ct>[1]> = {
     INVALID_COUPON: 'invalidCoupon',
     COUPON_LOGIN_REQUIRED: 'couponLoginRequired',
@@ -516,6 +572,24 @@ export function errorText(lang: Language, code: string) {
   };
   if (commerce[code]) return ct(lang, commerce[code]);
   const messages: Record<string, readonly string[]> = {
+    REVIEW_ACCOUNT_LOCKED: [
+      'Diese gemeinsamen Testkonten behalten ihre Zugangsdaten. Profil und Adresse können bearbeitet werden.',
+      'Спільні тестові облікові записи зберігають дані входу. Профіль і адресу можна редагувати.',
+      'These shared test accounts keep their sign-in details. Profiles and addresses can be edited.',
+      'مشخصات ورود حساب‌های مشترک آزمایشی ثابت می‌ماند. نمایه و نشانی را می‌توانید ویرایش کنید.',
+    ],
+    INVALID_ARRIVAL: [
+      'Bitte eine gültige Ankunftszeit innerhalb der nächsten 30 Tage wählen.',
+      'Оберіть дійсний час прибуття протягом наступних 30 днів.',
+      'Choose a valid arrival time within the next 30 days.',
+      'زمان رسیدن معتبری در بازهٔ ۳۰ روز آینده انتخاب کنید.',
+    ],
+    MESSAGE_CONFLICT: [
+      'Diese Nachricht wurde bereits anders gespeichert. Bitte den Verlauf aktualisieren und eine neue Nachricht senden.',
+      'Це повідомлення вже збережено з іншим текстом. Оновіть розмову та надішліть нове повідомлення.',
+      'This message was already saved with different text. Refresh the conversation and send a new message.',
+      'این پیام قبلاً با متن دیگری ذخیره شده است. گفت‌وگو را به‌روز کنید و پیام تازه‌ای بفرستید.',
+    ],
     PRICE_CHANGED: [
       'Preise haben sich geändert. Bitte Warenkorb aktualisieren.',
       'Ціни змінилися. Оновіть кошик.',
@@ -541,16 +615,16 @@ export function errorText(lang: Language, code: string) {
       'تعداد درخواست‌ها زیاد است؛ کمی صبر کنید.',
     ],
     INVALID_CREDENTIALS: [
-      'E-Mail oder Passwort stimmt nicht.',
-      'Неправильна пошта або пароль.',
-      'Incorrect email or password.',
-      'ایمیل یا رمز نادرست است.',
+      'Die Zugangsdaten stimmen nicht.',
+      'Неправильні дані входу.',
+      'Incorrect sign-in details.',
+      'مشخصات ورود نادرست است.',
     ],
     INVALID_EMAIL_OR_PASSWORD: [
-      'E-Mail oder Passwort stimmt nicht.',
-      'Неправильна пошта або пароль.',
-      'Incorrect email or password.',
-      'ایمیل یا رمز نادرست است.',
+      'Die Zugangsdaten stimmen nicht.',
+      'Неправильні дані входу.',
+      'Incorrect sign-in details.',
+      'مشخصات ورود نادرست است.',
     ],
     USER_ALREADY_EXISTS: [
       'Für diese E-Mail gibt es bereits ein Konto.',
@@ -571,10 +645,10 @@ export function errorText(lang: Language, code: string) {
     code === 'PAYMENT_NOT_READY'
   )
     return [
-      'Zahlung ist noch nicht verfügbar. Bitte das Restaurant kontaktieren.',
-      'Оплата поки недоступна. Зв’яжіться з рестораном.',
-      'Payment is not available yet. Please contact the restaurant.',
-      'پرداخت هنوز در دسترس نیست؛ با رستوران تماس بگیرید.',
+      'Zahlung ist noch nicht verfügbar. Bitte Sushi HH kontaktieren.',
+      'Оплата поки недоступна. Зв’яжіться з Sushi HH.',
+      'Payment is not available yet. Please contact Sushi HH.',
+      'پرداخت هنوز در دسترس نیست؛ با کیترینگ تماس بگیرید.',
     ][languages.indexOf(lang)];
   if (code === 'PAYMENT_AMOUNT_LOCKED')
     return [
