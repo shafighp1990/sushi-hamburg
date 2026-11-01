@@ -139,14 +139,14 @@ try {
 
   await page.getByLabel('Message', { exact: true }).fill(marker + ' customer question');
   await page.getByRole('button', { name: 'Send message', exact: true }).click();
-  await page.getByText(marker + ' customer question', { exact: true }).waitFor();
+  await page.locator('.order-conversation ol').getByText(marker + ' customer question', { exact: true }).waitFor();
   await admin.bringToFront();
   await admin.getByRole('button', { name: 'Refresh', exact: true }).click();
   let dialog = await openOrder();
   await dialog.getByText(marker + ' customer question', { exact: true }).waitFor();
   await dialog.getByLabel('Message', { exact: true }).fill(marker + ' restaurant reply');
   await dialog.getByRole('button', { name: 'Send message', exact: true }).click();
-  await dialog.getByText(marker + ' restaurant reply', { exact: true }).waitFor();
+  await dialog.locator('.order-conversation ol').getByText(marker + ' restaurant reply', { exact: true }).waitFor();
   await dialog.getByLabel('Status', { exact: true }).selectOption('confirmed');
   await dialog.getByLabel('Delivery fee (€)', { exact: true }).fill('6');
   const arrivalField = dialog.locator('input[type=datetime-local]');
@@ -263,7 +263,7 @@ try {
   await layout(admin, 'Mobile owner order');
   await dialog.getByLabel('Message', { exact: true }).fill(marker + ' mobile owner reply');
   await dialog.getByRole('button', { name: 'Send message', exact: true }).click();
-  await dialog.getByText(marker + ' mobile owner reply', { exact: true }).waitFor();
+  await dialog.locator('.order-conversation ol').getByText(marker + ' mobile owner reply', { exact: true }).waitFor();
   assert.ok((await json(customer, '/orders/' + orderId + '/messages')).messages.some((message) => message.text === marker + ' mobile owner reply'));
   await admin.screenshot({ path: out + '/mobile-admin.png' });
   assert.deepEqual(errors, []);
