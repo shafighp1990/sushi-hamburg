@@ -261,7 +261,11 @@ try {
   await admin.getByRole('button', { name: 'Orders', exact: true }).click();
   dialog = await openOrder();
   await layout(admin, 'Mobile owner order');
-  await admin.screenshot({ path: out + '/mobile-admin.png', fullPage: true });
+  await dialog.getByLabel('Message', { exact: true }).fill(marker + ' mobile owner reply');
+  await dialog.getByRole('button', { name: 'Send message', exact: true }).click();
+  await dialog.getByText(marker + ' mobile owner reply', { exact: true }).waitFor();
+  assert.ok((await json(customer, '/orders/' + orderId + '/messages')).messages.some((message) => message.text === marker + ' mobile owner reply'));
+  await admin.screenshot({ path: out + '/mobile-admin.png' });
   assert.deepEqual(errors, []);
   pass('mobile customer and manager screens have no horizontal overflow, all four languages work, and no page errors occurred');
 } catch (error) {
@@ -284,6 +288,8 @@ try {
         data: { name, phone, address, postcode, city, language }, headers: { Origin: origin },
       });
       assert.equal(response.status(), 200, 'Restore review customer profile: ' + await response.text());
+      const restored = (await json(customer, '/me')).user;
+      for (const field of ['name', 'phone', 'address', 'postcode', 'city', 'language']) assert.equal(restored[field], originalCustomerProfile[field], 'Profile restored: ' + field);
     } catch (error) { cleanupErrors.push(String(error)); }
   }
   if (cleanupErrors.length) { process.exitCode = 1; console.error('Cleanup failures', cleanupErrors); }
