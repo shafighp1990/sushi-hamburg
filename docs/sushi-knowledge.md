@@ -24,6 +24,6 @@ Cart additions from product pages use the same sanitized device-local basket and
 - Global lint also includes pre-existing scaffold/UI diagnostics (generated components, existing home React-compiler and framework rules). Do not confuse those with successful type/build checks. New journal components are checked separately.
 - No interactive browser/visual testing performed in this update.
 
-Existing GitHub to Cloudflare Pages deployment on main remains the publishing route. The owner-only Sites copy is updated from the same source.
+The older Cloudflare Pages project `sushi-hamburg` remains Git-connected to this repository. The current class review uses the separate `sushi-hamburg-review` project, published manually with its isolated configuration. See [current deployment details](../README.md#cloudflare-deployment).
 
 The fourth menu card supplied on 2026-09-07 adds 12 Philadelphia, California and Dragon products. California with salmon is transcribed at the printed €5 (230g); the original Red Dragon line says “сир тобіко”, which is preserved and flagged for clarification. Tobiko and lettuce glossary coverage and matching set-roll links were updated.
