@@ -38,6 +38,11 @@ assert.equal(
   200,
 );
 const original = (await call('/settings')).data.settings;
+const originalProduct = (await call('/admin/products', undefined, true)).data.products.find(
+  (product) => product.id === 'philadelphia',
+);
+assert.ok(originalProduct);
+let productChanged = false;
 const settings = {
   ...original,
   taxMode: 'regular',
@@ -61,6 +66,11 @@ const coupon = {
   version: 0,
 };
 try {
+  assert.equal(
+    (await call('/admin/products', { ...originalProduct, taxRate: 700 }, true)).status,
+    200,
+  );
+  productChanged = true;
   assert.equal((await call('/admin/settings', settings, true)).status, 200);
   assert.equal(
     (await call('/settings')).data.settings.galleryStyle,
@@ -170,5 +180,14 @@ try {
   assert.equal((await call('/quote', basket)).data.error, 'INVALID_COUPON');
   console.log('PASS delivery restriction and coupon deactivation');
 } finally {
+  if (productChanged) {
+    const current = (await call('/admin/products', undefined, true)).data.products.find(
+      (product) => product.id === originalProduct.id,
+    );
+    assert.equal(
+      (await call('/admin/products', { ...originalProduct, version: current.version }, true)).status,
+      200,
+    );
+  }
   await call('/admin/settings', original, true);
 }

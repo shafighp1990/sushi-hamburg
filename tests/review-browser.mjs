@@ -207,8 +207,6 @@ try {
 
   await admin.getByRole('button', { name: 'Add product', exact: true }).click();
   dialog = admin.getByRole('dialog');
-  const productId = 'review-qa-' + runId;
-  await dialog.getByLabel('ID', { exact: true }).fill(productId);
   await dialog.getByLabel('Price (€)', { exact: true }).fill('12.5');
   for (const language of ['DE', 'UA', 'EN', 'فارسی']) {
     await dialog.getByRole('button', { name: language, exact: true }).click();
@@ -223,8 +221,9 @@ try {
     throw new Error('Review image storage is required to verify owner photo uploads');
   }
   await saveDialog(dialog);
-  createdProduct = (await json(manager, '/admin/products')).products.find((product) => product.id === productId);
+  createdProduct = (await json(manager, '/admin/products')).products.find((product) => product.name.en === marker + ' EN');
   assert.ok(createdProduct);
+  const productId = createdProduct.id;
   assert.equal(createdProduct.price, 1250);
   assert.ok(createdProduct.image.startsWith('/api/media/'));
   await page.goto(origin + '/product?id=' + productId, { waitUntil: 'networkidle' });

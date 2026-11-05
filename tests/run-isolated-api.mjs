@@ -123,6 +123,7 @@ try {
   for (const script of [
     'integration.mjs',
     'commerce-integration.mjs',
+    'product-editor.integration.mjs',
     'order-communication.integration.mjs',
   ]) {
     await run(script, address.origin);

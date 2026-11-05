@@ -6,7 +6,7 @@ import { ImagePlus } from "lucide-react";
 import { ProductPhoto } from "../../../../product-photo";
 import { api, send } from "@/lib/shop-api";
 import { t, languages, type CopyKey } from "@/lib/shop-copy";
-import { type Product } from "@/lib/catalog";
+import { productForDisplay, type Product } from "@/lib/catalog";
 import { Heading } from "@/components/primitives/Heading";
 import { Button } from "@/components/primitives/Button";
 import { FieldMessage } from "@/components/primitives/FieldMessage";
@@ -32,9 +32,18 @@ export function ProductEditorDialog({
   action,
 }: ProductEditorDialogProps) {
   if (!editingProduct) return null;
+  const hasCompleteLanguage = languages.some(
+    (language) =>
+      editingProduct.name[language].trim() &&
+      editingProduct.description[language].trim(),
+  );
   return (
     <Modal
-      title={editingProduct.id ? t(lang, "edit") : t(lang, "addProduct")}
+      title={
+        products.some((product) => product.id === editingProduct.id)
+          ? t(lang, "edit")
+          : t(lang, "addProduct")
+      }
       close={() => setEditingProduct(null)}
     >
       <form
@@ -47,18 +56,6 @@ export function ProductEditorDialog({
           });
         }}
       >
-        <Label>
-          ID
-          <Input
-            value={editingProduct.id}
-            required
-            pattern="[a-z0-9]+(-[a-z0-9]+)*"
-            readOnly={products.some((p) => p.id === editingProduct.id)}
-            onChange={(e) =>
-              setEditingProduct((p) => ({ ...p!, id: e.target.value }))
-            }
-          />
-        </Label>
         <div className={styles.div14}>
           <Label>
             {t(lang, "category")}
@@ -111,6 +108,9 @@ export function ProductEditorDialog({
             />
           </Label>
         </div>
+        <Text id="product-translations-hint" className={styles.text4}>
+          {t(lang, "productTranslationHint")}
+        </Text>
         <div className={styles.div15}>
           {languages.map((l) => (
             <Button
@@ -132,7 +132,9 @@ export function ProductEditorDialog({
             <Label>
               {t(l, "productName")}
               <Input
-                required={productLang === l}
+                required={!hasCompleteLanguage && productLang === l}
+                maxLength={160}
+                aria-describedby="product-translations-hint"
                 value={editingProduct.name[l]}
                 onChange={(e) =>
                   setEditingProduct((p) => ({
@@ -146,7 +148,9 @@ export function ProductEditorDialog({
               {t(l, "description")}
               <Textarea
                 rows={4}
-                required={productLang === l}
+                required={!hasCompleteLanguage && productLang === l}
+                maxLength={2000}
+                aria-describedby="product-translations-hint"
                 value={editingProduct.description[l]}
                 onChange={(e) =>
                   setEditingProduct((p) => ({
@@ -158,12 +162,11 @@ export function ProductEditorDialog({
             </Label>
           </div>
         ))}
-        <Text className={styles.text4}>DE / UA / EN / FA</Text>
-        <ProductPhoto product={editingProduct} lang={lang} />
+        <ProductPhoto product={productForDisplay(editingProduct)} lang={lang} />
         <Label>
           {ct(lang, "taxRate")}
           <Select
-            value={editingProduct.taxRate ?? 700}
+            value={editingProduct.taxRate ?? 0}
             onChange={(e) =>
               setEditingProduct((p) => ({
                 ...p!,
@@ -171,6 +174,7 @@ export function ProductEditorDialog({
               }))
             }
           >
+            <option value={0}>0%</option>
             <option value={700}>7%</option>
             <option value={1900}>19%</option>
           </Select>

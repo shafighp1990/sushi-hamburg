@@ -108,6 +108,9 @@ export function OrderTrackingView({
             <Text>
               {order.customer.name} · {order.date} / {order.time}
             </Text>
+            {order.status === "new" && !order.userId && order.payment === "cash_on_delivery" && (
+              <FieldMessage>{t(lang, "phoneConfirmationPending")}</FieldMessage>
+            )}
             {!["cancelled", "delivered"].includes(order.status) && <FieldMessage>
               {order.estimatedArrivalAt ? `${orderCopy(lang).eta}: ${formatArrival(order.estimatedArrivalAt, lang)}` : orderCopy(lang).etaPending}
             </FieldMessage>}

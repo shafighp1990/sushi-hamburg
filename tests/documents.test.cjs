@@ -104,6 +104,18 @@ void test('incomplete seller details produce explicit preview, not issued invoic
     0,
   );
 });
+void test('phone-only guest orders keep private documents without queuing email to an empty recipient', async () => {
+  const { env, id, order } = setup();
+  try {
+    env.DB.sql.prepare("UPDATE orders SET customer=json_set(customer,'$.email','') WHERE id=?").run(id);
+    await docs.ensureDocuments(env, id);
+    assert.equal(env.DB.sql.prepare('SELECT count(*) n FROM order_documents').get().n, 2);
+    assert.equal(env.DB.sql.prepare('SELECT count(*) n FROM mail_outbox').get().n, 0);
+    assert.equal((await docs.getDocument(env, order(), 'invoice')).customer.email, '');
+  } finally {
+    env.DB.sql.close();
+  }
+});
 void test('local email mode never calls external email API even with credentials', async (t) => {
   const { env } = setup();
   t.mock.method(globalThis, 'fetch', async () => {

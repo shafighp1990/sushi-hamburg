@@ -64,13 +64,14 @@ export async function ensureDocuments(env: ShopEnv, orderId: string) {
       .bind(row.id, kind, JSON.stringify(snapshot), Date.now(), row.id, kind)
       .run();
   }
-  await enqueueMail(
-    env,
-    `documents-${row.id}-${row.paid ? 'paid' : 'confirmed'}`,
-    'documents',
-    snapshot.customer.email,
-    { orderId: row.id },
-  );
+  if (snapshot.customer.email)
+    await enqueueMail(
+      env,
+      `documents-${row.id}-${row.paid ? 'paid' : 'confirmed'}`,
+      'documents',
+      snapshot.customer.email,
+      { orderId: row.id },
+    );
 }
 export async function getDocument(
   env: ShopEnv,

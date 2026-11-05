@@ -1,6 +1,7 @@
 'use client';
 import { ProductGallery } from '../../../product-gallery';
 import { ct } from '@/lib/commerce-copy';
+import { productText } from '@/lib/catalog';
 import { languages } from '@/lib/shop-copy';
 import type { ShopSettings } from '@/lib/commerce';
 import { send } from '@/lib/shop-api';
@@ -186,7 +187,7 @@ export function CommerceAdminAppearance({
                       })
                     }
                   />
-                  {p.name[lang]}
+                  {productText(p, lang).name}
                 </Label>
               ))}
             </div>

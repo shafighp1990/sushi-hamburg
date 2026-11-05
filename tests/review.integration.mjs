@@ -156,6 +156,50 @@ pass(
   'Review cash order, private customer/staff replies and ETA work while the second customer is denied',
 );
 
+const customerCount = (await admin.call('/admin/customers')).body.customers.length;
+const guestOrderInput = await orderFixture(guest, { mode: 'guest', language: 'de' });
+delete guestOrderInput.customer.email;
+guestOrderInput.customer.phone = '0000000000';
+const anonymousOrder = await guest.call('/orders', 'POST', guestOrderInput);
+assert.equal(anonymousOrder.status, 201, JSON.stringify(anonymousOrder.body));
+const guestOrder = anonymousOrder.body.order;
+assert.equal(guestOrder.userId, null);
+assert.equal(guestOrder.customer.email, '');
+assert.equal(guestOrder.customer.phone, '0000000000');
+assert.equal(guestOrder.status, 'new');
+assert.equal(guestOrder.paid, false);
+assert.equal(guestOrder.payment, 'cash_on_delivery');
+assert.equal((await guest.call('/me')).body.user, null);
+assert.equal((await admin.call('/admin/customers')).body.customers.length, customerCount);
+const repeatGuestOrder = await guest.call('/orders', 'POST', guestOrderInput);
+assert.equal(repeatGuestOrder.status, 200);
+assert.equal(repeatGuestOrder.body.order.id, guestOrder.id);
+pass('Anonymous guest can submit COD with only phone contact, stays unconfirmed/unpaid, and creates no account or duplicate order');
+
+const guestPath = '/orders/' + guestOrder.id;
+const trackingToken = { 'X-Order-Token': guestOrderInput.guestToken };
+for (const path of [guestPath, guestPath + '/messages', guestPath + '/documents/summary']) {
+  assert.equal((await guest.call(path)).status, 404, path);
+  assert.equal((await guest.call(path, 'GET', undefined, { 'X-Order-Token': 'incorrect' })).status, 404, path);
+  assert.equal((await kunde2.call(path)).status, 404, path);
+}
+assert.equal((await guest.call(guestPath, 'GET', undefined, trackingToken)).status, 200);
+assert.equal((await guest.call(guestPath + '/messages', 'POST', {
+  text: 'Please call to confirm this synthetic guest order.',
+  clientMessageId: crypto.randomUUID(),
+}, trackingToken)).status, 200);
+assert.equal((await guest.call(guestPath + '/messages', 'GET', undefined, trackingToken)).body.messages.length, 1);
+const staffGuestOrder = (await admin.call('/admin/orders')).body.orders.find((order) => order.id === guestOrder.id);
+assert.equal(staffGuestOrder.customer.phone, '0000000000');
+assert.equal((await admin.call('/admin' + guestPath, 'PATCH', {
+  status: 'confirmed', paid: false, delivery: 600, version: staffGuestOrder.version,
+  note: 'Synthetic telephone confirmation recorded by staff.',
+})).status, 200);
+const confirmedGuestOrder = (await guest.call(guestPath, 'GET', undefined, trackingToken)).body.order;
+assert.equal(confirmedGuestOrder.status, 'confirmed');
+assert.equal(confirmedGuestOrder.paid, false);
+pass('Phone-only guest tracking, messages and documents remain token-private; staff can inspect phone and manually confirm without payment');
+
 assert.equal(
   (
     await guest.call('/webhooks/stripe', 'POST', {

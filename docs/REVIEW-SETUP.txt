@@ -20,11 +20,24 @@ the review UI. Customer profile/contact fields can be edited for testing.
 Owner test flow
 1. Sign in as manager. Review Products and Offers / Settings.
 2. Change a price or photo, add a product, and enable an offer.
-3. In another browser profile, sign in as a customer and place a COD test order.
-4. Open the incoming order as manager; confirm delivery cost, set status and
+3. In another browser profile, place a guest COD test order without an account,
+   email address or online payment. Customer account checkout is also available.
+4. Open the incoming order as manager; use the customer's phone number to agree
+   the order, delivery time and cost, then set status to Confirmed. Set
    estimated arrival in Berlin time. Reply using the private conversation.
 5. Check tracking as the customer and reply. Mark delivery and cash received
    as manager. The second customer must not see the first customer's order.
+
+Update 2026-11-05
+New and existing catalogue products use a 0% rate. Migration 0006 changes only
+catalogue rates and versions; it preserves prices, photos, shop settings and
+historical order/document snapshots. The existing small_business shop status
+continues to calculate zero VAT.
+Product IDs are generated automatically. A name and description in one language
+are sufficient; optional translations remain blank in the editor until supplied.
+The customer view uses the completed original text where a translation is absent.
+Guest tracking remains private through its random order token. Staff confirmation
+is manual after the telephone conversation; the site does not make phone calls.
 
 Deployment
 The canonical review settings are wrangler.review.json. Wrangler 4.92 Pages

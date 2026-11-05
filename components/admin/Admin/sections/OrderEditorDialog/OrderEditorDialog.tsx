@@ -68,6 +68,9 @@ export function OrderEditorDialog({
         }}
       >
         <Heading as="h3">{editingOrder.customer.name}</Heading>
+        {editingOrder.status === "new" && !editingOrder.userId && editingOrder.payment === "cash_on_delivery" && (
+          <Text>{t(lang, "phoneConfirmationStaff")}</Text>
+        )}
         <Text>
           {editingOrder.customer.address}
           <br />

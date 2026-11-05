@@ -213,7 +213,7 @@ export function quoteItems(
       name: p!.name,
       price: p!.price,
       quantity: line.quantity,
-      taxRate: p!.taxRate ?? 700,
+      taxRate: p!.taxRate ?? 0,
     };
   });
 }

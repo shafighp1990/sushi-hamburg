@@ -77,9 +77,14 @@ export function validateOrder(
   if (!isOneOf(body.language, ['de', 'uk', 'en', 'fa']))
     return fail('INVALID_INPUT');
   const utensils = integer(c.utensils, 0, 50);
+  const guestCash = body.mode === 'guest' && body.payment === 'cash_on_delivery';
+  const emailValue = typeof c.email === 'string' ? c.email.trim() : c.email;
   const customer = {
     name: string(c.name, 120),
-    email: email(c.email),
+    email:
+      guestCash && (emailValue === undefined || emailValue === null || emailValue === '')
+        ? ''
+        : email(emailValue),
     phone: string(c.phone, 40),
     address: string(c.address, 500),
     notes: string(c.notes ?? '', 1000, false),
@@ -144,9 +149,22 @@ export function validateProduct(input: unknown): Product {
   const name = {} as Product['name'],
     description = {} as Product['description'];
   for (const l of ['de', 'uk', 'en', 'fa'] as const) {
-    name[l] = string(names[l], 160);
-    description[l] = string(descriptions[l], 2000);
+    if (
+      (names[l] !== undefined &&
+        (typeof names[l] !== 'string' || names[l].length > 160)) ||
+      (descriptions[l] !== undefined &&
+        (typeof descriptions[l] !== 'string' || descriptions[l].length > 2000))
+    )
+      return fail('INVALID_PRODUCT_TEXT');
+    name[l] = string(names[l] ?? '', 160, false);
+    description[l] = string(descriptions[l] ?? '', 2000, false);
   }
+  if (
+    !(['de', 'uk', 'en', 'fa'] as const).some(
+      (language) => name[language] && description[language],
+    )
+  )
+    return fail('PRODUCT_TEXT_REQUIRED');
   const image = string(raw.image ?? '', 250, false);
   if (
     image &&
@@ -168,8 +186,8 @@ export function validateProduct(input: unknown): Product {
     )
   )
     fail('INVALID_IMAGE');
-  const taxRate = raw.taxRate ?? 700;
-  if (typeof taxRate !== 'number' || ![700, 1900].includes(taxRate))
+  const taxRate = raw.taxRate ?? 0;
+  if (typeof taxRate !== 'number' || ![0, 700, 1900].includes(taxRate))
     fail('INVALID_PRODUCT');
   if (
     raw.weight !== undefined &&

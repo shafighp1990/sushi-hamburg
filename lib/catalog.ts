@@ -16,6 +16,29 @@ export type Product = {
   poster: 'sets' | 'new' | 'classics' | 'signature';
   crop: [number, number, number, number];
 };
+export function productText(product: Product, language: Language) {
+  const languages: Language[] = ['de', 'uk', 'en', 'fa'];
+  const original =
+    languages.find((candidate) =>
+      product.name[candidate]?.trim() && product.description[candidate]?.trim(),
+    ) ?? languages.find((candidate) => product.name[candidate]?.trim()) ?? 'de';
+  return {
+    name:
+      product.name[language]?.trim() || product.name[original]?.trim() || product.id,
+    description:
+      product.description[language]?.trim() || product.description[original]?.trim() || '',
+  };
+}
+export function productForDisplay(product: Product): Product {
+  const name = { ...product.name };
+  const description = { ...product.description };
+  for (const language of ['de', 'uk', 'en', 'fa'] as const) {
+    const text = productText(product, language);
+    name[language] = text.name;
+    description[language] = text.description;
+  }
+  return { ...product, name, description };
+}
 const make = (
   id: keyof typeof translations,
   category: Category,
@@ -38,6 +61,7 @@ const make = (
     fa: translations[id].fa.description,
   },
   price: price * 100,
+  taxRate: 0,
   weight,
   poster,
   crop,

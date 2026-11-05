@@ -24,6 +24,7 @@ export function OrderCard({ order: o, onClick }: OrderCardProps) {
       <Text>
         {o.date} · {o.time}
       </Text>
+      {o.status === "new" && !o.userId && o.payment === "cash_on_delivery" && <Text>{t(lang, "phoneConfirmationRequired")}</Text>}
       {o.estimatedArrivalAt && !["delivered", "cancelled"].includes(o.status) && <Text>{orderCopy(lang).eta}: {formatArrival(o.estimatedArrivalAt, lang)}</Text>}
       <Text>
         {o.items.map((i) => `${i.quantity} × ${i.name[lang]}`).join(" · ")}

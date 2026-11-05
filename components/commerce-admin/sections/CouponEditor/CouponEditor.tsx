@@ -1,5 +1,6 @@
 'use client';
 import { ct } from '@/lib/commerce-copy';
+import { productText } from '@/lib/catalog';
 import { t } from '@/lib/shop-copy';
 import type { CouponRecord } from '@/lib/shop-types';
 import type { Coupon } from '@/lib/commerce';
@@ -168,7 +169,7 @@ export function CouponEditor({
                   })
                 }
               />
-              {p.name[lang]}
+              {productText(p, lang).name}
             </Label>
           ))}
         </div>

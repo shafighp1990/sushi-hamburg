@@ -125,7 +125,7 @@ export function totals(
     );
     const groups = new Map<number, number>();
     items.forEach((p, i) => {
-      const rate = p.taxRate ?? 700;
+      const rate = p.taxRate ?? 0;
       groups.set(rate, (groups.get(rate) || 0) + food[i] + deliveryParts[i]);
     });
     tax.groups = [...groups]

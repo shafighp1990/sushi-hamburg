@@ -53,7 +53,7 @@ import {
   type PaymentEnv,
 } from './payments';
 import { authFor } from './auth';
-import { products } from '../lib/catalog';
+import { products, productForDisplay } from '../lib/catalog';
 import {
   ShopError,
   fail,
@@ -136,7 +136,9 @@ async function catalogue(env: PaymentEnv, all = false) {
         active: !!r.active,
         version: r.version,
       });
-  return all ? result : result.filter((p) => p.active !== false);
+  return all
+    ? result
+    : result.filter((p) => p.active !== false).map(productForDisplay);
 }
 async function identity(req: Request, env: PaymentEnv) {
   const s = await authFor(env, new URL(req.url).origin).api.getSession({
@@ -1095,7 +1097,7 @@ export async function handleShop(
       const u = await mustAdmin(req, env),
         b = await body(req),
         p = validateProduct(b),
-        old = (await catalogue(env, true)).find((p) => p.id === b.id);
+        old = (await catalogue(env, true)).find((product) => product.id === p.id);
       if (old && old.version !== b.version) fail('EDIT_CONFLICT', 409);
       if (old === undefined && b.version !== 0) fail('EDIT_CONFLICT', 409);
       const row = await env.DB.prepare(
@@ -1111,7 +1113,7 @@ export async function handleShop(
         .first();
       if (!row) fail('EDIT_CONFLICT', 409);
       await audit(env, u.id, 'product.save', p.id).run();
-      if (!old && p.active !== false) await newProductCampaign(env, p);
+      if (!old && p.active !== false) await newProductCampaign(env, productForDisplay(p));
       return json({ ok: true });
     }
     if (path === '/api/admin/customers' && method === 'GET') {

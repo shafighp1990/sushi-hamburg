@@ -51,7 +51,7 @@ export function CheckoutDetailsForm({
     <form className={styles.form} onSubmit={submit}>
       <fieldset className={styles.fieldset}>
         <legend>01 / {t(lang, "account")}</legend>
-        {!reviewMode && <div className={styles.div4}>
+        <div className={styles.div4}>
           <Button
             type="button"
             aria-pressed={mode === "guest"}
@@ -67,7 +67,7 @@ export function CheckoutDetailsForm({
             <UserRound size={16} />
             {t(lang, "member")}
           </Button>
-        </div>}
+        </div>
         {mode === "guest" ? (
           <Text className={styles.text2}>{t(lang, "guestNote")}</Text>
         ) : user ? (
@@ -93,7 +93,7 @@ export function CheckoutDetailsForm({
               onChange={(e) => set("name", e.target.value)}
             />
           </Label>
-          {!reviewMode && <Label>
+          {!reviewMode && mode === "member" && <Label>
             {t(lang, "email")}
             <Input
               required
@@ -239,7 +239,7 @@ export function CheckoutDetailsForm({
             {money(pricing.newsletterDiscount)}
           </Text>
         )}
-        {mode === "guest" && (
+        {mode === "guest" && !reviewMode && (
           <Text>
             <Link href="/account?return=/checkout">
               {ot(lang, "newsletter")} · −5%
@@ -261,7 +261,7 @@ export function CheckoutDetailsForm({
             ["paypal", "PayPal", settings.paymentEnabled.paypal],
             ["revolut", "Revolut", settings.paymentEnabled.revolut],
             ["sumup", "SumUp", settings.paymentEnabled.sumup],
-          ].filter(([id]) => !reviewMode || id === "cash_on_delivery").map(([id, label, enabled]) => (
+          ].filter(([id]) => (!reviewMode && mode !== "guest") || id === "cash_on_delivery").map(([id, label, enabled]) => (
             <Label
               className={!enabled ? "payment-disabled" : ""}
               key={String(id)}
@@ -292,7 +292,7 @@ export function CheckoutDetailsForm({
             </Label>
           ))}
         </div>
-        <Text className={styles.text4}>{t(lang, "paymentNote")}</Text>
+        <Text className={styles.text4}>{t(lang, mode === "guest" ? "phoneConfirmation" : "paymentNote")}</Text>
         {fee === null && (
           <Text className={styles.text5}>{t(lang, "deliveryQuote")}</Text>
         )}
@@ -346,7 +346,7 @@ export function CheckoutDetailsForm({
           </Text>
         </div>
       </div>
-      <TaxBreakdown tax={pricing?.tax} />
+      {pricing && <TaxBreakdown tax={pricing.tax} />}
       <Label className={styles.label4}>
         <Input
           type="checkbox"

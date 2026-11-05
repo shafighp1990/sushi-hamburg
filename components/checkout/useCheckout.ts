@@ -23,12 +23,13 @@ export function useCheckout() {
     reviewMode,
   } = useShop();
   const [selectedMode, setMode] = useState<"guest" | "member" | null>(null);
-  const mode = reviewMode ? "member" : selectedMode ?? (user ? "member" : "guest");
+  const mode = selectedMode ?? (user ? "member" : "guest");
   const [zone, setZone] = useState("unknown"),
-    [payment, setPayment] = useState("cash_on_delivery"),
+    [selectedPayment, setPayment] = useState("cash_on_delivery"),
     [methods, setMethods] = useState<Record<string, boolean>>({ stripe: false, paypal: false, revolut: false, sumup: false }),
     [busy, setBusy] = useState(false),
     [errorCode, setError] = useState("");
+  const payment = reviewMode || mode === "guest" ? "cash_on_delivery" : selectedPayment;
   const savedCoupon = useBrowserStorage("session", "sushi-coupon");
   const [editedCoupon, setCoupon] = useState<string | null>(null);
   const coupon = editedCoupon ?? savedCoupon;
@@ -100,7 +101,7 @@ export function useCheckout() {
       const data = {
         mode,
         language: lang,
-        payment: reviewMode ? "cash_on_delivery" : payment,
+        payment,
         couponCode: coupon,
         saveAddress: mode === "member" && form.saveAddress,
         items: products
@@ -108,7 +109,7 @@ export function useCheckout() {
           .map((p) => ({ id: p.id, quantity: cart[p.id], price: p.price })),
         customer: {
           name: form.name,
-          email: form.email,
+          ...(mode === "member" ? { email: form.email } : {}),
           phone: form.phone,
           address: form.address,
           city: form.city,

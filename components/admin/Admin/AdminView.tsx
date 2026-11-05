@@ -19,7 +19,7 @@ import { ShopShell } from "../../shop-shell";
 import { ProductPhoto } from "../../product-photo";
 import { send } from "@/lib/shop-api";
 import { t, statusKey, type CopyKey } from "@/lib/shop-copy";
-import { money } from "@/lib/catalog";
+import { money, productText, productForDisplay } from "@/lib/catalog";
 import { Heading } from "@/components/primitives/Heading";
 import { Button } from "@/components/primitives/Button";
 import { FieldMessage } from "@/components/primitives/FieldMessage";
@@ -321,16 +321,16 @@ export function AdminView({
             <div className={styles.div12}>
               {products
                 .filter((p) =>
-                  `${p.id} ${p.name[lang]}`.toLocaleLowerCase().includes(q),
+                  `${p.id} ${productText(p, lang).name}`.toLocaleLowerCase().includes(q),
                 )
                 .map((p) => (
                   <div
                     key={p.id}
                     className={p.active === false ? "inactive" : ""}
                   >
-                    <ProductPhoto product={p} lang={lang} />
+                    <ProductPhoto product={productForDisplay(p)} lang={lang} />
                     <Text as="span">
-                      <Text as="b">{p.name[lang]}</Text>
+                      <Text as="b">{productText(p, lang).name}</Text>
                       <Text as="small">
                         {t(lang, p.category)} · {p.active === false ? "○" : "●"}
                       </Text>

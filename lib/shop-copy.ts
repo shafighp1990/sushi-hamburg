@@ -52,6 +52,12 @@ const rows = {
     'با انواع سوشی، مواد اولیه و روش تهیه آشنا شوید. دانشنامه در کنار توضیحات هر محصول به شما کمک می‌کند انتخاب آگاهانه‌تری داشته باشید.',
   ],
   productName: ['Produktname', 'Назва страви', 'Product name', 'نام محصول'],
+  productTranslationHint: [
+    'Name und Beschreibung in einer Sprache reichen aus. Übersetzungen sind optional. Leere Texte werden im Shop in der ausgefüllten Sprache angezeigt; sie werden nicht automatisch übersetzt.',
+    'Достатньо назви й опису однією мовою. Переклади необов’язкові. Замість порожніх текстів магазин покаже заповнену мовну версію; автоматичного перекладу немає.',
+    'A name and description in one language are enough. Translations are optional. The shop uses the completed language for empty texts; it does not translate them automatically.',
+    'نام و توضیح به یک زبان کافی است. ترجمه‌ها اختیاری‌اند. متن‌های خالی در فروشگاه با زبان تکمیل‌شده نمایش داده می‌شوند؛ ترجمهٔ خودکار انجام نمی‌شود.',
+  ],
   card: [
     'Kredit- / Debitkarte',
     'Банківська картка',
@@ -208,10 +214,34 @@ const rows = {
     'سفارش با حساب کاربری',
   ],
   guestNote: [
-    'Kein Konto nötig. Deinen privaten Link zur Sendungsverfolgung erhältst du nach der Bestellung.',
-    'Реєстрація не потрібна. Після замовлення ви отримаєте приватне посилання для відстеження.',
-    'No account needed. Save your private tracking link after placing your order.',
-    'نیازی به ثبت‌نام نیست. پس از سفارش، لینک خصوصی پیگیری را نگه دارید.',
+    'Kein Konto und keine E-Mail nötig. Nach der Bestellung erhältst du deinen privaten Link zur Verfolgung.',
+    'Обліковий запис та електронна пошта не потрібні. Після замовлення збережіть приватне посилання для відстеження.',
+    'No account or email needed. Save your private tracking link after placing your order.',
+    'نیازی به حساب کاربری یا ایمیل نیست. پس از سفارش، لینک خصوصی پیگیری را نگه دارید.',
+  ],
+  phoneConfirmation: [
+    'Sushi HH ruft dich unter der angegebenen Telefonnummer an, um Bestellung, Lieferzeit und Lieferkosten zu bestätigen. Du zahlst erst bei Lieferung; eine Onlinezahlung ist nicht nötig.',
+    'Sushi HH зателефонує за вказаним номером, щоб підтвердити замовлення, час і вартість доставки. Оплата при доставці; онлайн-оплата не потрібна.',
+    'Sushi HH will call the phone number you provide to confirm your order, delivery time and delivery fee. Pay on delivery; no online payment is needed.',
+    'رستوران برای تأیید سفارش، زمان و هزینهٔ تحویل با شماره‌ای که وارد کرده‌اید تماس می‌گیرد. پرداخت هنگام تحویل است و نیازی به پرداخت آنلاین نیست.',
+  ],
+  phoneConfirmationPending: [
+    'Deine Bestellung ist eingegangen. Sushi HH ruft dich zur Bestätigung an. Bis dahin ist die Bestellung noch nicht bestätigt.',
+    'Ваше замовлення отримано. Sushi HH зателефонує для підтвердження. До цього замовлення ще не підтверджене.',
+    'Your order has been received. Sushi HH will call you to confirm it. Until then, your order is not yet confirmed.',
+    'سفارش شما دریافت شد. رستوران برای تأیید با شما تماس می‌گیرد. تا آن زمان، سفارش هنوز تأیید نشده است.',
+  ],
+  phoneConfirmationStaff: [
+    'Bitte den Kunden anrufen und Bestellung, Lieferzeit und Lieferkosten bestätigen. Danach den Status auf „Bestätigt“ setzen.',
+    'Зателефонуйте клієнту та узгодьте замовлення, час і вартість доставки. Потім змініть статус на «Підтверджено».',
+    'Call the customer to confirm the order, delivery time and delivery fee. Then change the status to Confirmed.',
+    'با مشتری تماس بگیرید و سفارش، زمان و هزینهٔ تحویل را تأیید کنید. سپس وضعیت سفارش را به «تأییدشده» تغییر دهید.',
+  ],
+  phoneConfirmationRequired: [
+    'Telefonische Bestätigung ausstehend',
+    'Очікує підтвердження телефоном',
+    'Awaiting phone confirmation',
+    'در انتظار تأیید تلفنی',
   ],
   signIn: ['Anmelden', 'Увійти', 'Sign in', 'ورود'],
   signUp: [
@@ -657,12 +687,26 @@ export function errorText(lang: Language, code: string) {
       'Payment amount is locked. Resolve the payment with the provider first.',
       'مبلغ پرداخت نهایی شده است؛ ابتدا وضعیت پرداخت را با سرویس مربوط بررسی کنید.',
     ][languages.indexOf(lang)];
+  if (code === 'PRODUCT_TEXT_REQUIRED')
+    return [
+      'Bitte Produktname und Beschreibung in mindestens einer Sprache ausfüllen.',
+      'Заповніть назву й опис страви принаймні однією мовою.',
+      'Enter a product name and description in at least one language.',
+      'نام و توضیح محصول را حداقل به یک زبان وارد کنید.',
+    ][languages.indexOf(lang)];
+  if (code === 'INVALID_PRODUCT_TEXT')
+    return [
+      'Produktnamen dürfen höchstens 160 und Beschreibungen höchstens 2000 Zeichen haben.',
+      'Назва страви може містити до 160 символів, опис — до 2000.',
+      'Product names can have up to 160 characters and descriptions up to 2000.',
+      'نام محصول حداکثر ۱۶۰ نویسه و توضیح حداکثر ۲۰۰۰ نویسه باشد.',
+    ][languages.indexOf(lang)];
   if (code === 'INVALID_INPUT' || code === 'INVALID_PRODUCT')
     return [
-      'Bitte alle Pflichtfelder und vier Sprachversionen prüfen.',
-      'Перевірте обов’язкові поля та чотири мовні версії.',
-      'Check required fields and all four language versions.',
-      'فیلدهای ضروری و نسخهٔ هر چهار زبان را بررسی کنید.',
+      'Bitte die Pflichtfelder und Zahlenwerte prüfen.',
+      'Перевірте обов’язкові поля та числові значення.',
+      'Check the required fields and numeric values.',
+      'فیلدهای ضروری و مقدارهای عددی را بررسی کنید.',
     ][languages.indexOf(lang)];
   if (code === 'SHOP_UNAVAILABLE') return t(lang, 'unavailable');
   if (code === 'EMAIL_NOT_CONFIGURED') return t(lang, 'resetUnavailable');
