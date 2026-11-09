@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HoursSummary } from "../../delivery-notice";
 import { Clock3, Truck } from "lucide-react";
+import { ProductCard } from "../../storefront/ProductCard";
 import { ShopShell } from "../../shop-shell";
 import { useShop } from "../../shop-context";
 import { t } from "@/lib/shop-copy";
@@ -13,11 +14,46 @@ import { Heading } from "@/components/primitives/Heading";
 import { styles } from "./RestaurantHome.styles";
 import { HomeHero } from "../HomeHero";
 
+// Signature rolls that already have studio photographs.
+const featuredIds = ["philadelphia", "california-salmon", "green-dragon", "philadelphia-unagi"];
+
 export function RestaurantHome() {
-  const { lang } = useShop();
+  const { lang, products, cart, change } = useShop();
+  const featured = featuredIds
+    .map((id) => products.find((p) => p.id === id && p.active !== false))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
   return (
     <ShopShell>
       <HomeHero />
+      {featured.length > 0 && (
+        <section className={styles.featured} aria-labelledby="home-featured-title">
+          <div className={styles.featuredHead}>
+            <div>
+              <Text as="span" className={styles.text3}>
+                {t(lang, "menu")}
+              </Text>
+              <Heading as="h2" id="home-featured-title">
+                {t(lang, "signature")}
+              </Heading>
+            </div>
+            <Link className={styles.a3} href="/menu">
+              {t(lang, "viewMenu")}
+            </Link>
+          </div>
+          <div className={styles.featuredGrid}>
+            {featured.map((p, index) => (
+              <ProductCard
+                key={p.id}
+                p={p}
+                index={index}
+                lang={lang}
+                quantity={cart[p.id] || 0}
+                onAdd={() => change(p.id, 1)}
+              />
+            ))}
+          </div>
+        </section>
+      )}
       <section
         className={styles.section2}
         id="delivery"
@@ -53,9 +89,12 @@ export function RestaurantHome() {
             <div>
               <dt>
                 <Clock3 size={18} />
-                <HoursSummary />
+                {t(lang, "hours")}
               </dt>
-              <dd>Europe/Berlin</dd>
+              <dd>
+                {t(lang, "cutoff")}
+                <HoursSummary />
+              </dd>
             </div>
             <div>
               <dt>

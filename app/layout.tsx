@@ -4,8 +4,8 @@ import { languageBootstrap } from "@/lib/language-bootstrap";
 import type { Metadata } from 'next';
 import './globals.css';
 import './shop.css';
-import './samples.css'; // Local sample collection, October 2026.
 import './language.css';
+import './redesign.css'; // Dark Lacquer redesign, November 2026 (loaded last).
 import {ShopProvider} from '@/components/shop-context';
 export const metadata: Metadata = {title:'Sushi HH Hamburg · Sushi-Catering & Lieferung',icons:{icon:[{url:'/brand/sushi-hh-icon.svg',type:'image/svg+xml'}],apple:'/brand/sushi-hh-original.jpg'},description:'Sushi-Catering in Hamburg: Sushi, Maki und Sets mit Lieferung. Kein Verzehr vor Ort. Donnerstag bis Sonntag. Bestellungen bis 13 Uhr, Lieferung bis 21 Uhr. Menü entdecken, als Gast oder mit Kundenkonto bestellen.'};
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

@@ -70,7 +70,7 @@ try {
   await layoutCheck(page, 'Menu');
   if (mobile) {
     await page.locator('.nav-toggle').click();
-    await page.locator('.sample-nav a[href="/menu"]').waitFor({state:'visible'});
+    await page.locator('.site-nav a[href="/menu"]').waitFor({state:'visible'});
     await page.locator('.nav-toggle').click();
   }
   await page

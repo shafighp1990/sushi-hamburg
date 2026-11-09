@@ -8,4 +8,7 @@ export const styles = {
   section3: "home-journal-link",
   text4: "edition",
   a3: "shop-secondary",
+  featured: "home-featured",
+  featuredHead: "home-featured-head",
+  featuredGrid: "shop-product-grid home-featured-grid",
 } as const;

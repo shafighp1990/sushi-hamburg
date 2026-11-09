@@ -5,7 +5,7 @@ import { products, type Language } from "../lib/catalog";
 import { defaultSettings } from "../lib/commerce";
 import "../app/globals.css";
 import "../app/shop.css";
-import "../app/samples.css";
+import "../app/redesign.css";
 function LanguagePreview({
   locale,
   children,
