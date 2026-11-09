@@ -14,7 +14,7 @@
   /* Text */
   --bone: #f4ede0;
   --bone-muted: #a89f90;
-  --bone-faint: #6f685d;
+  --bone-faint: #8a8274; /* ≥4.5:1 on every ink surface (WCAG AA for small text) */
   /* Accents */
   --salmon: #e35a3c;
   --salmon-hover: #f26f52;
@@ -1402,7 +1402,7 @@ html[dir="rtl"] .shop-categories {
 }
 .shop-categories button[aria-pressed="true"] small {
   color: var(--ink-0);
-  opacity: 0.6;
+  opacity: 0.75;
 }
 .category-caption {
   display: flex;
@@ -2226,11 +2226,37 @@ html[dir="rtl"] .product-title-row h3 {
   border-radius: var(--radius-s);
   background: var(--ink-1);
   border: 1px solid var(--line);
+  color: var(--bone-muted);
+  opacity: 1; /* the legacy base dims the whole button; dim only the image */
+}
+.gallery-controls button img {
   opacity: 0.55;
+  transition: opacity 0.25s var(--ease);
+}
+.gallery-controls button:hover img {
+  opacity: 0.85;
 }
 .gallery-controls button[aria-pressed="true"] {
   border-color: var(--gold);
+  color: var(--bone);
+}
+.gallery-controls button[aria-pressed="true"] img {
   opacity: 1;
+}
+.gallery-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bone-muted);
+}
+.gallery-caption span:last-child {
+  color: var(--bone-faint);
+  font-variant-numeric: tabular-nums;
 }
 .gallery-focus .gallery-controls button {
   border-bottom-color: var(--gold);
@@ -3133,6 +3159,43 @@ html[dir="rtl"] .product-title-row h3 {
 }
 .home-hero-photo {
   animation: rise 0.9s var(--ease) both;
+}
+/* Product cards drift in with a slight stagger; `backwards` keeps the hover
+   transform free once the entrance has finished. */
+.shop-product {
+  animation: rise 0.5s var(--ease) backwards;
+}
+.shop-product:nth-child(2) {
+  animation-delay: 0.06s;
+}
+.shop-product:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.shop-product:nth-child(4) {
+  animation-delay: 0.18s;
+}
+.shop-product:nth-child(n + 5) {
+  animation-delay: 0.24s;
+}
+/* Scrollbars follow the lacquer palette. */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+  border: 2px solid var(--ink-0);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bone-faint);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 .language-startup {
   color: var(--bone-muted);

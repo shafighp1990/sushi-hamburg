@@ -13,7 +13,7 @@ export function DeliveryNotice({ date, time }: DeliveryNoticeProps) {
   if (!now) return null;
   const first = deliveryOptions(settings.schedule, now)[0];
   return (
-    <aside className={styles.aside} aria-live="polite">
+    <div className={styles.aside} aria-live="polite">
       <Text>{ot(lang, "lead")}</Text>
       {!acceptingNow(settings.schedule, now) && (
         <Text>
@@ -33,6 +33,6 @@ export function DeliveryNotice({ date, time }: DeliveryNoticeProps) {
           </Text>
         </Text>
       )}
-    </aside>
+    </div>
   );
 }

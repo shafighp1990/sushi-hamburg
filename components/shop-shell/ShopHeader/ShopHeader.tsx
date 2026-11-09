@@ -46,16 +46,21 @@ export function ShopHeader() {
           <HoursSummary />
         </div>
         <div className={styles.div3} aria-label={t(lang, "language")}>
-          {languages.map((l) => (
-            <Button
-              key={l}
-              lang={l}
-              onClick={() => setLang(l)}
-              aria-pressed={lang === l}
-            >
-              {l === "uk" ? "UA" : l === "fa" ? "فا" : l.toUpperCase()}
-            </Button>
-          ))}
+          {languages.map((l) => {
+            const short = l === "uk" ? "UA" : l === "fa" ? "فا" : l.toUpperCase();
+            const native = { de: "Deutsch", uk: "Українська", en: "English", fa: "فارسی" }[l];
+            return (
+              <Button
+                key={l}
+                lang={l}
+                onClick={() => setLang(l)}
+                aria-pressed={lang === l}
+                aria-label={`${short} · ${native}`}
+              >
+                {short}
+              </Button>
+            );
+          })}
         </div>
       </div>
       <div className={styles.div4}>

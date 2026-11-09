@@ -67,7 +67,7 @@ export function ProductGallery({
             <Button
               key={src}
               type="button"
-              aria-label={`${p.name[lang]} · ${i + 1}`}
+              aria-label={`${p.name[lang]} · ${String(i + 1).padStart(2, "0")}`}
               aria-pressed={active === i}
               onClick={() => setIndex(i)}
             >
